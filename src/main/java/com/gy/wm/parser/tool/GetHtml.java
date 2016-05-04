@@ -12,7 +12,6 @@ import java.io.Serializable;
  */
 public class GetHtml implements Serializable,PageProcessor
 {
-
     private String htmlSrc;
     private Site site = Site.me().setRetryTimes(3).setSleepTime(1000);
 

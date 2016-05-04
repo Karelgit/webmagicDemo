@@ -1,6 +1,5 @@
 package com.gy.wm.parser.analysis;
 
-
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.urljudge.HtmlSort;
 

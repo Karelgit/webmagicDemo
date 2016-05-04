@@ -1,0 +1,424 @@
+gngj.gog.cn
+<html lang="en">
+<head>
+<title>
+</title>
+<script src="http://news.gog.cn/template/js/html5.js">
+</script>
+<script src="http://news.gog.cn/template/js/css3-mediaqueries.js">
+</script>
+</head>
+<body>
+<div class="wrap-body">
+<header>
+<div class="wrap-header zerogrid">
+<div id="logo" style="position:relative;">
+<div id="link001">
+<a href="http://news.gog.cn/">
+</div>
+<div id="link002">
+<a href="http://android.myapp.com/myapp/detail.htm?apkName=cn.com.gog">
+</div>
+您当前的位置：
+<a href="http://www.gog.cn/index.shtml">
+多彩贵州网
+<a href="http://gngj.gog.cn/index.shtml">
+多彩贵州网国内国际
+</div>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a href="http://www.gog.cn/">
+首页
+</li>
+<li class="nav-item">
+<a href="http://news.gog.cn/" target="_blank">
+新闻
+</li>
+<li class="nav-item">
+<a href="http://zt.gog.cn/system/2014/09/25/013818672.shtml" target="_blank">
+客户端
+</li>
+<li class="nav-item">
+<a href="http://www.gog.cn/sjb/index.shtml" target="_blank">
+手机报
+</li>
+<li class="nav-item" id="navphone">
+<a href="http://www.gogbuy.com/" target="_blank">
+贵州电商云
+</li>
+<li class="nav-item" id="navphone">
+<a href="http://www.gogpay.cn/" target="_blank">
+多彩宝|贵州便民缴费平台
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<section id="content">
+<div class="wrap-content zerogrid">
+<div class="row block">
+<div id="main-content" class="col-2-3">
+<div class="row">
+<div class="col-full">
+<div class="wrap-col">
+<article>
+<div class="heading">
+<h1 class="title">
+</h1>
+</div>
+<div class="extra">
+<div class="info">
+<div data-bd-bind="1442556363783" class="bdsharebuttonbox bdshare-button-style0-16">
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="content">
+<div class="clear">
+</div>
+</div>
+<div class="extra" style="border-bottom:none; margin-top:30px;">
+<div class="info">
+作者：
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="return">
+<a href="http://news.gog.cn/" target="_blank">
+返回频道首页
+<a href="http://club.gog.cn/" target="_blank">
+进入论坛
+</div>
+<div class="articlelink">
+<h2>
+相关阅读
+</h2>
+<table width="100%">
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="articlelink">
+<h2>
+本网各平台二维码，扫一扫新闻更精彩
+</h2>
+<div style="text-align:left;">
+<table style="margin:20px 0px;" border="0" cellpadding="0" cellspacing="0" height="20" width="100%">
+<tbody>
+<tr>
+<td align="center" valign="middle">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="sidebar" class="col-1-3">
+<div class="wrap-col">
+<div class="box" style="width:320px;margin:0 auto; margin-bottom:10px;">
+</div>
+<div class="box">
+<div class="heading">
+<h4 class="title">
+专题策划
+</h4>
+</div>
+<div class="content">
+<div class="post">
+<a href="http://news.gog.cn/system/2016/04/08/014854417.shtml" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://news.gog.cn/system/2016/04/08/014854417.shtml" target="_blank">
+【图解】赏花非去不可身边的“普罗旺斯”黔北花海
+</h5>
+</div>
+<div class="post">
+<a href="http://news.gog.cn/system/2016/04/08/014854227.shtml" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://news.gog.cn/system/2016/04/08/014854227.shtml" target="_blank">
+【图解】贵州省考试招生制度改革从初中到大学要过哪几关？
+</h5>
+</div>
+<div class="post">
+<a href="http://news.gog.cn/system/2016/04/08/014854469.shtml" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://news.gog.cn/system/2016/04/08/014854469.shtml" target="_blank">
+【图解】好消息！贵州省居民身份证可异地办理
+</h5>
+</div>
+<div class="post">
+<a href="http://news.gog.cn/system/2016/04/01/014844634.shtml" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://news.gog.cn/system/2016/04/01/014844634.shtml" target="_blank">
+【图解】二孩新政、产假新条例你关心的都在这里
+</h5>
+</div>
+<div class="post">
+<a href="http://news.gog.cn/cms_udf/2016/gyr/index.shtml#!/scene-1" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://news.gog.cn/cms_udf/2016/gyr/index.shtml#!/scene-1" target="_blank">
+【H5】贵阳人必看，4月贵阳大事小事有哪些
+</h5>
+</div>
+<div class="post">
+<a href="http://news.gog.cn/system/2016/03/21/014826769.shtml" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://www.gogbuy.com/item/20977" target="_blank">
+刺梨茶
+</h5>
+</div>
+<div class="post">
+<a href="http://gly.gogbuy.com/" target="_blank">
+<div class="clear">
+</div>
+<h5 class="title">
+<a href="http://gly.gogbuy.com/" target="_blank">
+果乐源
+</h5>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="heading">
+<h4 class="title">
+精彩新闻
+</h4>
+</div>
+<div class="content1">
+<ul>
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<li>
+<a href="http://www.gog.cn/zonghe/system/2016/05/01/014889259.shtml" target="_blank">
+<a href="http://www.gog.cn/zonghe/system/2016/05/01/014889259.shtml" target="_blank">
+“五一”首日贵州高速迎近百万车流旅游站点热度不减
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://www.gog.cn/zonghe/system/2016/05/01/014889339.shtml" target="_blank">
+<a href="http://www.gog.cn/zonghe/system/2016/05/01/014889339.shtml" target="_blank">
+贵阳市中心城区禁止活禽宰杀首日白条禽持“证”面世
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://www.gog.cn/zonghe/system/2016/05/01/014889408.shtml" target="_blank">
+<a href="http://www.gog.cn/zonghe/system/2016/05/01/014889408.shtml" target="_blank">
+雷雨“报到”贵州省气象台发布雷雨冰雹预报
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://www.gog.cn/zonghe/system/2016/04/30/014888976.shtml" target="_blank">
+<a href="http://www.gog.cn/zonghe/system/2016/04/30/014888976.shtml" target="_blank">
+【高清组图】向平凡而伟大的劳动者致敬
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://www.gog.cn/zonghe/system/2016/04/29/014888470.shtml" target="_blank">
+<a href="http://www.gog.cn/zonghe/system/2016/04/29/014888470.shtml" target="_blank">
+APP上线市民以后可以掐点等公交
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://www.gog.cn/zonghe/system/2016/04/30/014888509.shtml" target="_blank">
+<a href="http://www.gog.cn/zonghe/system/2016/04/30/014888509.shtml" target="_blank">
+贵州省表彰222名先进个人授予“贵州省五一劳动奖章”
+</li>
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+</div>
+</div>
+<div class="box" style=" width:300px;margin:0 auto; margin-bottom:20px;">
+<table width="300" height="306" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="left" valign="top" bgcolor="#FFFFFF">
+<iframe src="http://zt.gogbuy.com/ad/" frameborder="0" scrolling="no" width="300" height="306">
+</iframe>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="box">
+<div class="heading">
+<h4 class="title">
+新闻排行
+</h4>
+</div>
+<div class="content1">
+<ul>
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889515.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889515.shtml" target="_blank">
+贵州榕江：深山古侗寨引客来
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889434.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889434.shtml" target="_blank">
+五一小长假第二日贵州省旅游人数与旅游总收入创历史新高
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889473.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889473.shtml" target="_blank">
+贵阳市1.5环路火车北站联络线工程隧道全线贯通
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889431.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889431.shtml" target="_blank">
+全国政协副主席罗富和赴贵州省调研和出席相关活动
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889432.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889432.shtml" target="_blank">
+贵州打出“组合拳”直击旅游“痛点”
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889455.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889455.shtml" target="_blank">
+多处施工交警建议去青岩最好走贵惠大道
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889454.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889454.shtml" target="_blank">
+蓉遵高速出现地质灾害往赤水习水车辆需绕行
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889438.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889438.shtml" target="_blank">
+白条禽来了！首日卖出2.1万只超市白条鸡最低每斤9.8元
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889453.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889453.shtml" target="_blank">
+返程小高峰昨天下午开始贵遵贵清路往贵阳短时缓行
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li>
+<a href="http://news.gog.cn/system/2016/05/02/014889514.shtml" target="_blank">
+<a href="http://news.gog.cn/system/2016/05/02/014889514.shtml" target="_blank">
+凌晨吃夜宵拒绝陌生男子相邀引来横祸
+</li>
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+</div>
+</div>
+<div class="box" style="width:300px;margin:0 auto; margin-bottom:10px;">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="copyright">
+<a>
+网站简介
+<a href="http://zt.gog.cn/system/2014/08/06/013717092.shtml" target="_blank">
+广告刊例
+<a href="http://zt.gog.cn/system/2014/08/06/013717092.shtml" target="_blank">
+联系方式
+<a>
+网站地图
+版权所有未经授权禁止复制或建立镜像增值电信业经营许可证（ICP）：黔B2-20010009互联网新闻信息服务许可证:5212006001
+营业执照：520000000029527信息网络传播视听节目许可证：2408241
+互联网出版许可证：新出网证（黔）字001号
+</div>
+<div class="copyrightphone">
+多彩贵州网版权所有
+</div>
+</footer>
+</div>
+</body>
+</html>

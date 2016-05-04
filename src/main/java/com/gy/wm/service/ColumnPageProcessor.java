@@ -8,6 +8,7 @@ import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -18,15 +19,17 @@ import java.util.Queue;
  * 2014-3-5 下午4:27:51
  */
 public class ColumnPageProcessor implements PageProcessor {
-    private CrawlData crawlData;
+    public List<String> unfetchCrawlQueue = new ArrayList<>();
+    private List<CrawlData> crawlDataList = new ArrayList<>();
 
-    public CrawlData getCrawlData() {
-        return crawlData;
+    public List<CrawlData> getCrawlDataList() {
+        return crawlDataList;
     }
 
-    public void setCrawlData(CrawlData crawlData) {
-        this.crawlData = crawlData;
+    public void setCrawlDataList(List<CrawlData> crawlDataList) {
+        this.crawlDataList = crawlDataList;
     }
+
     private  Queue<String> linkQueue = new LinkedList<>();
     private TextAnalysis textAnalysis = new TextAnalysis(new ConfigLoader().loadTemplateConfig());
 
@@ -35,19 +38,6 @@ public class ColumnPageProcessor implements PageProcessor {
     @Override
     public void process(Page page) {
 
-
-
-        // part2:extract and save
-        page.putField("author", page.getUrl().regex("https://github\\.com/(\\w+)/.*").toString());
-        page.putField("name", page.getHtml().xpath("//h1[@class='entry-title public']/strong/a/text()").toString());
-        if (page.getResultItems().get("name") == null) {
-            //skip this page
-            page.setSkip(true);
-        }
-        page.putField("readme", page.getHtml().xpath("//div[@id='readme']/tidyText()"));
-
-        // part3: fetch from the url founded later
-        page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/\\w+/\\w+)").all());
     }
 
     @Override
@@ -56,9 +46,8 @@ public class ColumnPageProcessor implements PageProcessor {
 
     }
 
-    public static void main(String[] args) {
+    public  void crawl() {
         List<String> seedsList = new ConfigLoader().loadSeedConfig();
-        CrawlData crawlData = new ColumnPageProcessor().getCrawlData();
 
         for(String seed:seedsList) {
             Spider.create(new ColumnPageProcessor())
@@ -69,6 +58,10 @@ public class ColumnPageProcessor implements PageProcessor {
                             //启动爬虫
                     .run();
         }
+
+    }
+
+    public static void main(String[] args) {
 
     }
 }

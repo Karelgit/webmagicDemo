@@ -1,5 +1,10 @@
 package com.gy.wm.parser.urljudge;
 
+
+import com.gy.wm.parser.tool.GetHtml;
+
+import java.io.IOException;
+
 /**
  * Created by Administrator on 2015/9/17.
  */
@@ -26,6 +31,11 @@ public class HtmlSort {
 
         }
         return (sort);
+    }
+
+    public static void main(String[] args) throws IOException {
+        String url="http://www.qxn.gov.cn/OrgArtList/QxnGov.XMJ/QxnGov.XMJ.Info/1.html";
+        System.out.println(getHtmlSort(url, GetHtml.getHtmlFromUrl(url)));
     }
 
 
