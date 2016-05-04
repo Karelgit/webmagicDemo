@@ -38,10 +38,10 @@ public abstract class AbstractDBClient implements DBClient {
 //
 //    }
 
-    public void loadDBConfig() {
-
-        DBConfig.loadConfigFile(this.dbConfigFilePath);
-    }
+//    public void loadDBConfig() {
+//
+//        DBConfig.loadConfigFile(this.dbConfigFilePath);
+//    }
 
     public String getDbHostname() {
         return dbHostname;

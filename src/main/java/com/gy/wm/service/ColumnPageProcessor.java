@@ -88,10 +88,19 @@ public class ColumnPageProcessor implements PageProcessor {
                             //启动爬虫
                     .run();
         }
+
+//        MysqlPipeline mysqlPipeline = new MysqlPipeline();
+
+//        mysqlPipeline.add("tb_crawler", crawlDataList.get(0));
+//        mysqlPipeline.add("tb_crawler", crawlDataList.get(1));
+
+
+
         for(CrawlData crawlData : crawlDataList)    {
             if(!crawlData.isFetched())   {
                 System.out.println(crawlData.getUrl()+"\n"+"title:"+crawlData.getTitle());
             }
         }
+//        System.out.println("InsertSet return code: " + mysqlPipeline.doInser());
     }
 }
