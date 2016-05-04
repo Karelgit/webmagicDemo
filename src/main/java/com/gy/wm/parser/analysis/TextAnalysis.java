@@ -2,7 +2,6 @@ package com.gy.wm.parser.analysis;
 
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.urljudge.HtmlSort;
-import us.codecraft.webmagic.Page;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -22,15 +21,13 @@ public class TextAnalysis implements Serializable {
         this.analysisArticle = new AnalysisArticle();
     }
 
-    public List<CrawlData> analysisHtml(Page page,List<CrawlData> crawlDataList)   {
+    public List<CrawlData> analysisHtml(CrawlData crawlData,List<CrawlData> crawlDataList)   {
         List<BaseAnalysisURL> baseAnalysisURLList = new ArrayList<>();
         //初始化
         AnalysisNavigation analysisNavigation = new AnalysisNavigation();
-        CrawlData crawlData = new CrawlData();
-        String url = page.getRequest().getUrl();
-        String html = page.getHtml().toString();
-        crawlData.setUrl(url);
-        crawlData.setHtml(html);
+
+        String url = crawlData.getUrl();
+        String html = crawlData.getHtml();
         String title = "";
         Long date = 0L;
 
@@ -66,11 +63,11 @@ public class TextAnalysis implements Serializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
             crawlData.setTitle(oldUrl.getTitle());
             crawlData.setPublicTme(oldUrl.getDate());
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());
-            crawlData.setText(oldUrl.getText());
             crawlData.setFetched(true);
 
             crawlDataList.add(crawlData);
