@@ -2,6 +2,7 @@ package com.gy.wm.parser.analysis;
 
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.urljudge.HtmlSort;
+import us.codecraft.webmagic.Page;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -21,19 +22,19 @@ public class TextAnalysis implements Serializable {
         this.analysisArticle = new AnalysisArticle();
     }
 
-    public CrawlData analysisHtml(CrawlData crawlData)   {
-        List<CrawlData> crawlDataList = new ArrayList<>();
+    public List<CrawlData> analysisHtml(Page page,List<CrawlData> crawlDataList)   {
         List<BaseAnalysisURL> baseAnalysisURLList = new ArrayList<>();
         //初始化
         AnalysisNavigation analysisNavigation = new AnalysisNavigation();
-
-        String url = crawlData.getUrl();
-        String title = crawlData.getTitle();
-        Long date = crawlData.getPublicTme();
-        String html = crawlData.getHtml();
+        CrawlData crawlData = new CrawlData();
+        String url = page.getRequest().getUrl();
+        String html = page.getHtml().toString();
+        crawlData.setUrl(url);
+        crawlData.setHtml(html);
+        String title = "";
+        Long date = 0L;
 
         BaseAnalysisURL oldUrl = new BaseAnalysisURL(url, title, date, html);
-
 
         //网页分类
         int sort = HtmlSort.getHtmlSort(url, html);
@@ -49,9 +50,11 @@ public class TextAnalysis implements Serializable {
                     newCrawlData.setPublicTme(baseAnalysisURL.getDate());
                     newCrawlData.setHtml(baseAnalysisURL.getHtml());
                     newCrawlData.setText(baseAnalysisURL.getText());
+                    newCrawlData.setFetched(false);
 
                     crawlDataList.add(newCrawlData);
                 }
+                crawlData.setFetched(true);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -68,10 +71,11 @@ public class TextAnalysis implements Serializable {
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());
             crawlData.setText(oldUrl.getText());
+            crawlData.setFetched(true);
 
             crawlDataList.add(crawlData);
         }
-        return crawlData;
+        return crawlDataList;
 
     }
 }
