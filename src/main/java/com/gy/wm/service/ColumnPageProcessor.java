@@ -43,9 +43,15 @@ public class ColumnPageProcessor implements PageProcessor {
 
     @Override
     public void process(Page page) {
-        new TextAnalysis(baseTemplates).analysisHtml(page,crawlDataList);
+
+        String url = page.getRequest().getUrl();
+        String html = page.getHtml().toString();
+        CrawlData beginCralwerData = initCrawlData(url,html);
+        crawlDataList.add(beginCralwerData);
+
+        new TextAnalysis(baseTemplates).analysisHtml(beginCralwerData,crawlDataList);
         for(CrawlData crawlData : crawlDataList)    {
-            if(!crawlData.isFetched())  {
+            if(crawlData.isFetched() == false)  {
                 page.addTargetRequest(crawlData.getUrl());
             }
         }
@@ -56,9 +62,11 @@ public class ColumnPageProcessor implements PageProcessor {
         return site;
     }
 
-    public static  CrawlData initCrawlData(String url)    {
+    public static  CrawlData initCrawlData(String url,String html)    {
         CrawlData crawlData = new CrawlData();
         crawlData.setUrl(url);
+        crawlData.setHtml(html);
+        crawlData.setFetched(false);
         return crawlData;
     }
 
@@ -69,7 +77,7 @@ public class ColumnPageProcessor implements PageProcessor {
         List<BaseTemplate> baseTemplates = configLoader.loadTemplateConfig();
         List<CrawlData> crawlDataList = new ArrayList<>();
         for(String url : seedsList) {
-            crawlDataList.add(initCrawlData(url));
+            crawlDataList.add(initCrawlData(url,""));
         }
         for(String seed:seedsList) {
             Spider.create(new ColumnPageProcessor(crawlDataList,baseTemplates))
@@ -81,8 +89,8 @@ public class ColumnPageProcessor implements PageProcessor {
                     .run();
         }
         for(CrawlData crawlData : crawlDataList)    {
-            if (!crawlData.isFetched()) {
-                System.out.println("title:" + crawlData.getTitle());
+            if(!crawlData.isFetched())   {
+                System.out.println(crawlData.getUrl()+"\n"+"title:"+crawlData.getTitle());
             }
         }
     }
