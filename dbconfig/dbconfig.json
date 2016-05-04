@@ -1,0 +1,7 @@
+{
+  "hostname":"118.118.118.140",
+  "port":3306,
+  "DBName":"wifi_auth",
+  "user":"root",
+  "password":"root"
+}

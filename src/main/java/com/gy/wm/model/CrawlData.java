@@ -6,7 +6,7 @@ package com.gy.wm.model;
 public class CrawlData {
     private String url;
     private String title;
-    private Long publicTme;
+    private Long publicTime;
     private String html;
     private String text;
     private boolean fetched;
@@ -19,12 +19,12 @@ public class CrawlData {
         this.html = html;
     }
 
-    public Long getPublicTme() {
-        return publicTme;
+    public Long getPublicTime() {
+        return publicTime;
     }
 
-    public void setPublicTme(Long publicTme) {
-        this.publicTme = publicTme;
+    public void setPublicTime(Long publicTime) {
+        this.publicTime = publicTime;
     }
 
     public String getTitle() {

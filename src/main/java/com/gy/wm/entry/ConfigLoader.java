@@ -30,7 +30,8 @@ public class ConfigLoader {
        String projPath = System.getProperty("user.dir");
        listTemplate = new ArrayList<>();
        String str;
-       File files = new File(projPath+"\\templates");
+//       File files = new File(projPath+"\\templates");
+       File files = new File(projPath + "/templates");
        File[] templateFiles = files.listFiles();
        List<File> fileList = new ArrayList<>();
        for(File templateFile : templateFiles)    {

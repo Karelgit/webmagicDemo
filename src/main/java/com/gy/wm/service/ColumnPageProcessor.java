@@ -81,7 +81,9 @@ public class ColumnPageProcessor implements PageProcessor {
                     .run();
         }
         for(CrawlData crawlData : crawlDataList)    {
-            System.out.println("title:"+crawlData.getTitle());
+            if (!crawlData.isFetched()) {
+                System.out.println("title:" + crawlData.getTitle());
+            }
         }
     }
 }

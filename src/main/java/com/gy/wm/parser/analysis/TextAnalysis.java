@@ -47,7 +47,7 @@ public class TextAnalysis implements Serializable {
                     CrawlData newCrawlData = new CrawlData();
                     newCrawlData.setUrl(baseAnalysisURL.getUrl());
                     newCrawlData.setTitle(baseAnalysisURL.getTitle());
-                    newCrawlData.setPublicTme(baseAnalysisURL.getDate());
+                    newCrawlData.setPublicTime(baseAnalysisURL.getDate());
                     newCrawlData.setHtml(baseAnalysisURL.getHtml());
                     newCrawlData.setText(baseAnalysisURL.getText());
                     newCrawlData.setFetched(false);
@@ -67,7 +67,7 @@ public class TextAnalysis implements Serializable {
                 e.printStackTrace();
             }
             crawlData.setTitle(oldUrl.getTitle());
-            crawlData.setPublicTme(oldUrl.getDate());
+            crawlData.setPublicTime(oldUrl.getDate());
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());
             crawlData.setText(oldUrl.getText());
