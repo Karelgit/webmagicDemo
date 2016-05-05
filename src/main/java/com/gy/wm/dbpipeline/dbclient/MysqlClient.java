@@ -1,5 +1,7 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.gy.wm.model.CrawlData;
 
 import java.sql.DriverManager;
@@ -140,17 +142,19 @@ public class MysqlClient extends AbstractDBClient {
     public Object addItem(String tableName, CrawlData data) {
 
         InsertSqlModel model = new InsertSqlModel(tableName);
+
         model.addKeyValue("title", "'" + data.getTitle() + "'");
         Long time = data.getPublicTime();
         if (time == null) {
-//            time = new Date().getTime();
             model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date().getTime()) + "'");
         } else
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublicTime()).getTime()) + "'");
+            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublicTime())) + "'");
+
         model.addKeyValue("url", "'" + data.getUrl() + "'");
-        model.addKeyValue("html", "'" + data.getHtml() + "'");
         model.addKeyValue("text", "'" + data.getText() + "'");
         model.addKeyValue("fetched", data.isFetched());
+        model.addKeyValue("html", "'" + data.getHtml().replace("\\\'","\'").replace("\'", "\\\'") + "'");
+
         insertSqlModels.add(model);
         return model;
     }

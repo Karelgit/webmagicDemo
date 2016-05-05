@@ -32,6 +32,10 @@ public class MysqlPipeline implements DatabasePipeline {
     @Override
     public void process(ResultItems resultItems, Task task) {
 
+//        for (Object o :) {
+//
+//        }
+
     }
 
     public void add(String tablename, CrawlData data) {

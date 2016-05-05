@@ -50,10 +50,12 @@ public class ColumnPageProcessor implements PageProcessor {
         CrawlData beginCralwerData = initCrawlData(url,html);
         crawlDataList.add(beginCralwerData);
 
-        new TextAnalysis(baseTemplates).analysisHtml(beginCralwerData,crawlDataList);
-        for(CrawlData crawlData : crawlDataList)    {
+        List<CrawlData> perPageCrawlDateList = new TextAnalysis(baseTemplates).analysisHtml(beginCralwerData);
+        for(CrawlData crawlData : perPageCrawlDateList)    {
             if(crawlData.isFetched() == false)  {
                 page.addTargetRequest(crawlData.getUrl());
+            }else {
+                crawlDataList.add(crawlData);
             }
         }
     }
@@ -83,7 +85,7 @@ public class ColumnPageProcessor implements PageProcessor {
         for(String seed:seedsList) {
             Spider.create(new ColumnPageProcessor(crawlDataList,baseTemplates))
                     //从seed开始抓
-                    .addUrl(seed)
+                    .addUrl(seed).addPipeline(new MysqlPipeline())
                             //开启5个线程抓取
                     .thread(5)
                             //启动爬虫
@@ -98,7 +100,7 @@ public class ColumnPageProcessor implements PageProcessor {
 
 
         for(CrawlData crawlData : crawlDataList)    {
-            if(!crawlData.isFetched())   {
+            if(crawlData.isFetched())   {
                 System.out.println(crawlData.getUrl()+"\n"+"title:"+crawlData.getTitle());
                 mysqlPipeline.add("tb_crawler", crawlData);
             }
