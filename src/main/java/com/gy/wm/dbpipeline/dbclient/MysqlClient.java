@@ -22,6 +22,8 @@ public class MysqlClient extends AbstractDBClient {
 
     private Statement myStatement;
 
+    private DBConfig dbConfig;
+
 
     private List<InsertSqlModel> insertSqlModels;
 
@@ -29,11 +31,12 @@ public class MysqlClient extends AbstractDBClient {
 
         this.characterEnconding = "UTF-8";
         this.insertSqlModels = new ArrayList<>();
-        this.dbHostname = DBConfig.getHostname();
-        this.dbPort = DBConfig.getPort();
-        this.dbName = DBConfig.getDBName();
-        this.dbUser = DBConfig.getUser();
-        this.dbPassword = DBConfig.getPassword();
+        this.dbConfig = DBConfig.getDBConfig("MYSQL_");
+        this.dbHostname = dbConfig.getHostname();
+        this.dbPort = dbConfig.getPort();
+        this.dbName = dbConfig.getDBName();
+        this.dbUser = dbConfig.getUser();
+        this.dbPassword = dbConfig.getPassword();
         this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
                 "/" + dbName + "?user=" + dbUser + "&password=" +
                 dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
@@ -47,11 +50,12 @@ public class MysqlClient extends AbstractDBClient {
 
         this.characterEnconding = characterEnconding;
         this.insertSqlModels = new ArrayList<>();
-        this.dbHostname = DBConfig.getHostname();
-        this.dbPort = DBConfig.getPort();
-        this.dbName = DBConfig.getDBName();
-        this.dbUser = DBConfig.getUser();
-        this.dbPassword = DBConfig.getPassword();
+        this.dbConfig = DBConfig.getDBConfig("MYSQL_");
+        this.dbHostname = dbConfig.getHostname();
+        this.dbPort = dbConfig.getPort();
+        this.dbName = dbConfig.getDBName();
+        this.dbUser = dbConfig.getUser();
+        this.dbPassword = dbConfig.getPassword();
         this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
                 "/" + dbName + "?user=" + dbUser + "&password=" +
                 dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
@@ -67,12 +71,10 @@ public class MysqlClient extends AbstractDBClient {
 
             Class.forName("com.mysql.jdbc.Driver");
 
-            System.out.println("Loading jdbc Driver....");
+            System.out.println("Loading jdbc Driver ....");
 
             this.connection = DriverManager.getConnection(this.connUrl);
-
             this.myStatement = this.connection.createStatement();
-
             this.setConnOpen(true);
 
         } catch (Exception ex) {

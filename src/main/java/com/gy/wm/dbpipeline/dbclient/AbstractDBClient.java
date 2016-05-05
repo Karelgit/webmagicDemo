@@ -18,30 +18,13 @@ public abstract class AbstractDBClient implements DBClient {
     protected String dbPassword;
     protected String connUrl;
 
-
-//    @Override
-//    public Connection getConnection() {
-//        return connection;
-//    }
-
     protected boolean connOpen;
-
-    protected String dbConfigFilePath;
-
     protected Connection connection;
 
-//    public Object getConnection() {
-//        return this.connection;
-//    }
-//
-//    public void closeConnection() {
-//
-//    }
 
-//    public void loadDBConfig() {
-//
-//        DBConfig.loadConfigFile(this.dbConfigFilePath);
-//    }
+    protected void setConnOpen(boolean connOpen) {
+        this.connOpen = connOpen;
+    }
 
     public String getDbHostname() {
         return dbHostname;
@@ -91,30 +74,11 @@ public abstract class AbstractDBClient implements DBClient {
         this.connUrl = connUrl;
     }
 
-    public String getDbConfigFilePath() {
-        return dbConfigFilePath;
-    }
-
-    public void setDbConfigFilePath(String dbConfigFilePath) {
-        this.dbConfigFilePath = dbConfigFilePath;
-    }
-
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
 
-
-//    public boolean isConnOpen() {
-//        return connOpen;
-//    }
-
-    public void setConnOpen(boolean connOpen) {
-        this.connOpen = connOpen;
-    }
-
     class InsertSqlModel {
-
-
 
         private String tableName;
         private Map<String, Object> keyValuePair;
@@ -155,13 +119,14 @@ public abstract class AbstractDBClient implements DBClient {
             return this.keyValuePair.get(key);
         }
 
-        public String getInsertSql(){
+        public String getInsertSql() {
+
             String prefix = "INSERT INTO " + this.tableName + " ";
             String attr = new String();
             String value = new String();
 
             int i = 0;
-            for (String k : keys){
+            for (String k : keys) {
                 ++i;
                 attr += k;
                 value += keyValuePair.get(k);
@@ -183,4 +148,5 @@ public abstract class AbstractDBClient implements DBClient {
             this.tableName = tableName;
         }
     }
+
 }
