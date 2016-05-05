@@ -1,5 +1,6 @@
 package com.gy.wm.service;
 
+import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.entry.ConfigLoader;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
@@ -89,7 +90,7 @@ public class ColumnPageProcessor implements PageProcessor {
                     .run();
         }
 
-//        MysqlPipeline mysqlPipeline = new MysqlPipeline();
+        MysqlPipeline mysqlPipeline = new MysqlPipeline();
 
 //        mysqlPipeline.add("tb_crawler", crawlDataList.get(0));
 //        mysqlPipeline.add("tb_crawler", crawlDataList.get(1));
@@ -99,8 +100,10 @@ public class ColumnPageProcessor implements PageProcessor {
         for(CrawlData crawlData : crawlDataList)    {
             if(!crawlData.isFetched())   {
                 System.out.println(crawlData.getUrl()+"\n"+"title:"+crawlData.getTitle());
+                mysqlPipeline.add("tb_crawler", crawlData);
             }
         }
-//        System.out.println("InsertSet return code: " + mysqlPipeline.doInser());
+
+        System.out.println("InsertSet return code: " + mysqlPipeline.doInser());
     }
 }
