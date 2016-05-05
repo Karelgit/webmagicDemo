@@ -47,8 +47,9 @@
       <column name="fetched" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <column name="html" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
       <column name="title" sqlType="VARCHAR" precision="1024" scale="0" nullable="true" jdbcType="12"/>
-      <column name="url" sqlType="VARCHAR" precision="1024" scale="0" nullable="false" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <index name="urlIndex" unique="true" columns="url"/>
     </table>
   </data-source>
 </component>
