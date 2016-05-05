@@ -1,5 +1,7 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.gy.wm.model.CrawlData;
 
 import java.sql.DriverManager;
@@ -25,10 +27,8 @@ public class MysqlClient extends AbstractDBClient {
 
     public MysqlClient() {
 
-//        this.dbConfigFilePath = dbconfigFileName;
         this.characterEnconding = "UTF-8";
         this.insertSqlModels = new ArrayList<>();
-//        super.loadDBConfig();
         this.dbHostname = DBConfig.getHostname();
         this.dbPort = DBConfig.getPort();
         this.dbName = DBConfig.getDBName();
@@ -45,10 +45,8 @@ public class MysqlClient extends AbstractDBClient {
 
     public MysqlClient(String characterEnconding) {
 
-//        this.dbConfigFilePath = dbconfigFileName;
         this.characterEnconding = characterEnconding;
         this.insertSqlModels = new ArrayList<>();
-//        super.loadDBConfig();
         this.dbHostname = DBConfig.getHostname();
         this.dbPort = DBConfig.getPort();
         this.dbName = DBConfig.getDBName();
@@ -108,7 +106,6 @@ public class MysqlClient extends AbstractDBClient {
     @Override
     public int doSetInsert() {
         int lineSum = 0;
-//        int i = 0;
         if (!this.connOpen) {
             System.out.println("Warning: the connection is NOT open!!!");
             return lineSum;
@@ -118,13 +115,12 @@ public class MysqlClient extends AbstractDBClient {
             try {
 
                 String sql = model.getInsertSql();
-//                this.insertSqlModels.remove(i);
-//                ++i;
                 lineSum += this.myStatement.executeUpdate(sql);
 
             } catch (Exception ex) {
 
-                ex.printStackTrace();
+                //ex.printStackTrace();
+                System.out.println("SQL excute Exception ...");
             }
         }
         this.insertSqlModels.clear();
@@ -140,17 +136,19 @@ public class MysqlClient extends AbstractDBClient {
     public Object addItem(String tableName, CrawlData data) {
 
         InsertSqlModel model = new InsertSqlModel(tableName);
+
         model.addKeyValue("title", "'" + data.getTitle() + "'");
         Long time = data.getPublicTime();
         if (time == null) {
-//            time = new Date().getTime();
             model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date().getTime()) + "'");
         } else
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublicTime()).getTime()) + "'");
+            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublicTime())) + "'");
+
         model.addKeyValue("url", "'" + data.getUrl() + "'");
-        model.addKeyValue("html", "'" + data.getHtml() + "'");
         model.addKeyValue("text", "'" + data.getText() + "'");
         model.addKeyValue("fetched", data.isFetched());
+        model.addKeyValue("html", "'" + data.getHtml().replace("\\\'","\'").replace("\'", "\\\'") + "'");
+
         insertSqlModels.add(model);
         return model;
     }

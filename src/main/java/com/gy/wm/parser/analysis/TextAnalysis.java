@@ -21,7 +21,8 @@ public class TextAnalysis implements Serializable {
         this.analysisArticle = new AnalysisArticle();
     }
 
-    public List<CrawlData> analysisHtml(CrawlData crawlData,List<CrawlData> crawlDataList)   {
+    public List<CrawlData> analysisHtml(CrawlData crawlData)   {
+        List<CrawlData> crawlDataList = new ArrayList<>();
         List<BaseAnalysisURL> baseAnalysisURLList = new ArrayList<>();
         //初始化
         AnalysisNavigation analysisNavigation = new AnalysisNavigation();

@@ -53,7 +53,7 @@ public class AnalysisArticle implements Serializable{
             url.setText(text);
             date = getDate();
             if (date != 0) url.setDate(date);
-            if (url.getTitle() == null) {
+            if (url.getTitle() == null || url.getTitle()=="") {
                 title = getTitle();
                 url.setTitle(title);
             }

@@ -1,5 +1,6 @@
 package com.gy.wm.service;
 
+import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.entry.ConfigLoader;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
@@ -49,12 +50,16 @@ public class ColumnPageProcessor implements PageProcessor {
         CrawlData beginCralwerData = initCrawlData(url,html);
         crawlDataList.add(beginCralwerData);
 
-        new TextAnalysis(baseTemplates).analysisHtml(beginCralwerData,crawlDataList);
-        for(CrawlData crawlData : crawlDataList)    {
+        List<CrawlData> perPageCrawlDateList = new TextAnalysis(baseTemplates).analysisHtml(beginCralwerData);
+        for(CrawlData crawlData : perPageCrawlDateList)    {
             if(crawlData.isFetched() == false)  {
                 page.addTargetRequest(crawlData.getUrl());
+            }else {
+                crawlDataList.add(crawlData);
             }
         }
+
+        page.putField("crawlerDataList", crawlDataList);
     }
 
     @Override
@@ -82,25 +87,19 @@ public class ColumnPageProcessor implements PageProcessor {
         for(String seed:seedsList) {
             Spider.create(new ColumnPageProcessor(crawlDataList,baseTemplates))
                     //从seed开始抓
-                    .addUrl(seed)
+                    .addUrl(seed).addPipeline(new MysqlPipeline("tb_crawler"))
                             //开启5个线程抓取
                     .thread(5)
                             //启动爬虫
                     .run();
         }
 
-//        MysqlPipeline mysqlPipeline = new MysqlPipeline();
-
-//        mysqlPipeline.add("tb_crawler", crawlDataList.get(0));
-//        mysqlPipeline.add("tb_crawler", crawlDataList.get(1));
-
-
 
         for(CrawlData crawlData : crawlDataList)    {
-            if(!crawlData.isFetched())   {
-                System.out.println(crawlData.getUrl()+"\n"+"title:"+crawlData.getTitle());
+            if(crawlData.isFetched())   {
+//                System.out.println(crawlData.getUrl() + "\n" + "title:" + crawlData.getTitle());
             }
         }
-//        System.out.println("InsertSet return code: " + mysqlPipeline.doInser());
+
     }
 }

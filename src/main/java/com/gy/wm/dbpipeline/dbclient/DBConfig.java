@@ -1,5 +1,9 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
@@ -9,13 +13,40 @@ import java.util.ResourceBundle;
 public class DBConfig {
 
 
-//    private final static ResourceBundle dbconfig = PropertyResourceBundle.getBundle("dbconfig");
+    private static String hostname;
+    private static int port;
+    private static String DBName;
+    private static String user;
+    private static String password;
 
-    private final static String hostname = "108.108.108.8"; //dbconfig.getString("HOSTNAME");
-    private final static int port = 3306;//Integer.parseInt(dbconfig.getString("PORT"));
-    private final static String DBName = "wifi_ac";//dbconfig.getString("DBNAME");
-    private final static String user = "builder";//dbconfig.getString("USER");
-    private final static String password = "builder";//dbconfig.getString("PASSWORD");
+
+    private static ResourceBundle rb;
+    private static BufferedInputStream inputStream;
+
+    static {
+
+        String proFilePath = System.getProperty("user.dir") + "/resources/dbconfig.properties";
+        try {
+
+            inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
+            rb = new PropertyResourceBundle(inputStream);
+
+            hostname = rb.getString("HOSTNAME");
+            port = Integer.parseInt(rb.getString("PORT"));
+            DBName = rb.getString("DBNAME");
+            user = rb.getString("USER");
+            password = rb.getString("PASSWORD");
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+
+        } catch (IOException e) {
+
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
 
     public static String getHostname() {
@@ -37,4 +68,5 @@ public class DBConfig {
     public static String getPassword() {
         return password;
     }
+
 }
