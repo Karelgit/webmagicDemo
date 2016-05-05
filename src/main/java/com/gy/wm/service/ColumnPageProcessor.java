@@ -56,7 +56,6 @@ public class ColumnPageProcessor implements PageProcessor {
                 page.addTargetRequest(crawlData.getUrl());
             }else {
                 crawlDataList.add(crawlData);
-
             }
         }
 
