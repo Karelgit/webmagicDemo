@@ -12,7 +12,6 @@ import java.util.ResourceBundle;
  */
 public class DBConfig {
 
-
     private  String hostname;
     private  int port;
     private  String DBName;
@@ -20,11 +19,10 @@ public class DBConfig {
     private  String password;
 
 
-
-
     DBConfig(){
 
     }
+
     public static DBConfig getDBConfig(String prefix){
 
         String proFilePath = System.getProperty("user.dir") + "/resources/dbconfig.properties";
@@ -56,6 +54,32 @@ public class DBConfig {
         }
 
         return dbConfig;
+    }
+
+    public static ResourceBundle getResourceBundle(){
+
+        String proFilePath = System.getProperty("user.dir") + "/resources/dbconfig.properties";
+        ResourceBundle rb;
+        BufferedInputStream inputStream;
+
+        try {
+
+            inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
+            rb = new PropertyResourceBundle(inputStream);
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+
+        } catch (IOException e) {
+
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+
+        return rb;
     }
 
 

@@ -1,6 +1,6 @@
 package com.gy.wm.service;
 
-import com.gy.wm.dbpipeline.impl.MysqlPipeline;
+import com.gy.wm.dbpipeline.impl.EsPipeline;
 import com.gy.wm.entry.ConfigLoader;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
@@ -56,10 +56,12 @@ public class ColumnPageProcessor implements PageProcessor {
                 page.addTargetRequest(crawlData.getUrl());
             }else {
                 crawlDataList.add(crawlData);
+                page.putField("crawlerData", crawlData);
             }
         }
 
         page.putField("crawlerDataList", crawlDataList);
+
     }
 
     @Override
@@ -85,9 +87,11 @@ public class ColumnPageProcessor implements PageProcessor {
             crawlDataList.add(initCrawlData(url,""));
         }
         for(String seed:seedsList) {
-            Spider.create(new ColumnPageProcessor(crawlDataList,baseTemplates))
+            Spider.create(new ColumnPageProcessor(crawlDataList, baseTemplates))
                     //从seed开始抓
-                    .addUrl(seed).addPipeline(new MysqlPipeline("tb_crawler"))
+                    .addUrl(seed)
+//                    .addPipeline(new MysqlPipeline("tb_crawler"))
+                    .addPipeline(new EsPipeline())
                             //开启5个线程抓取
                     .thread(5)
                             //启动爬虫

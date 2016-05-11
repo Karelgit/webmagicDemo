@@ -31,12 +31,17 @@
         <dependency>
             <groupId>us.codecraft</groupId>
             <artifactId>webmagic-core</artifactId>
-            <version>0.4.2</version>
+            <version>0.5.3</version>
         </dependency>
         <dependency>
             <groupId>us.codecraft</groupId>
             <artifactId>webmagic-extension</artifactId>
-            <version>0.4.2</version>
+            <version>0.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.33.0</version>
         </dependency>
 
         <!-- JDBC -->
@@ -56,6 +61,28 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.7</version>
+        </dependency>
+
+
+
+        <!-- js page test -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.33.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>2.52.0</version>
+        </dependency>
+
+
+        <!-- elasticsearch dependence -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>2.3.2</version>
         </dependency>
 
 
