@@ -5,6 +5,7 @@ import com.gy.wm.entry.ConfigLoader;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
 import com.gy.wm.parser.analysis.TextAnalysis;
+import com.gy.wm.schedular.RedisScheduler;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
@@ -88,6 +89,7 @@ public class ColumnPageProcessor implements PageProcessor {
         }
         for(String seed:seedsList) {
             Spider.create(new ColumnPageProcessor(crawlDataList, baseTemplates))
+                    .setScheduler(new RedisScheduler("118.118.118.11",6379))
                     //从seed开始抓
                     .addUrl(seed)
 //                    .addPipeline(new MysqlPipeline("tb_crawler"))
