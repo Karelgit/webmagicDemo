@@ -35,7 +35,6 @@ public class EsPipeline implements DatabasePipeline {
 
         CrawlData crawlerData = resultItems.get("crawlerData");
 
-
         if (crawlerData != null) {
 
             this.esClient.add(crawlerData);
