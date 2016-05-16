@@ -23,6 +23,9 @@ public class RedisScheduler implements Scheduler {
             e.printStackTrace();
         }
 
+        System.out.println("Task's UUID      ===> " + task.getUUID());
+        System.out.println("push request.url ===> " + request.getUrl());
+
         //使用SortedSet进行url去重
     if (jedis.zrank(SET_PREFIX+task.getUUID(),request.getUrl())==null){
         //使用List保存队列

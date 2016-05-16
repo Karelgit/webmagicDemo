@@ -1,6 +1,6 @@
 package com.gy.wm.service;
 
-import com.gy.wm.dbpipeline.impl.MysqlPipeline;
+import com.gy.wm.dbpipeline.impl.EsPipeline;
 import com.gy.wm.entry.ConfigLoader;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
@@ -12,7 +12,9 @@ import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * 网页抓取器。
@@ -20,8 +22,12 @@ import java.util.List;
  * 2014-3-5 下午4:27:51
  */
 public class ColumnPageProcessor implements PageProcessor {
+    public List<String> unfetchCrawlQueue = new ArrayList<>();
     private List<CrawlData> crawlDataList = new ArrayList<>();
     List<BaseTemplate> baseTemplates = new ArrayList<>();
+    public List<CrawlData> getCrawlDataList() {
+        return crawlDataList;
+    }
 
     private Site site = Site.me().setDomain("http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
 
@@ -76,11 +82,12 @@ public class ColumnPageProcessor implements PageProcessor {
         }
         for(String seed:seedsList) {
             Spider.create(new ColumnPageProcessor(crawlDataList, baseTemplates))
-                    .setScheduler(new RedisScheduler())
+                    .setScheduler(new RedisScheduler("127.0.0.1",6379))
                     //从seed开始抓
                     .addUrl(seed)
-                    .addPipeline(new MysqlPipeline("tb_crawler"))
+//                    .addPipeline(new MysqlPipeline("tb_crawler"))
 //                    .addPipeline(new EsPipeline())
+                    .addPipeline(new ConsolePipeline())
                             //开启5个线程抓取
                     .thread(5)
                             //启动爬虫
@@ -90,7 +97,7 @@ public class ColumnPageProcessor implements PageProcessor {
 
         for(CrawlData crawlData : crawlDataList)    {
             if(crawlData.isFetched())   {
-//                System.out.println(crawlData.getUrl() + "\n" + "title:" + crawlData.getTitle());
+                System.out.println(crawlData.getUrl() + "\n" + "title:" + crawlData.getTitle());
             }
         }
 

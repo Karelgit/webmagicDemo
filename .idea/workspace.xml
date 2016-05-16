@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874828a5-1c59-47b9-a3d1-2e865488ad4d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/dbconfig.properties" afterPath="$PROJECT_DIR$/resources/dbconfig.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gy/wm/service/ColumnPageProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/gy/wm/service/ColumnPageProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gy/wm/parser/tool/CreateTemplate.class" afterPath="$PROJECT_DIR$/target/classes/com/gy/wm/parser/tool/CreateTemplate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webmagicDemo.iws" />
@@ -54,88 +61,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ColumnPageProcessor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ColumnPageProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5866852">
-              <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbconfig.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/dbconfig.properties">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spider.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Spider.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="38" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Page.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Page.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTemplate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="91" column="36" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#444#445#0" expanded="false" />
-                <element signature="e#473#474#0" expanded="false" />
-                <element signature="e#523#524#0" expanded="false" />
-                <element signature="e#559#560#0" expanded="false" />
-                <element signature="e#592#593#0" expanded="false" />
-                <element signature="e#621#622#0" expanded="false" />
-                <element signature="e#665#666#0" expanded="false" />
-                <element signature="e#701#702#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1099#1100#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#2429#2430#0" expanded="true" />
+                <element signature="e#2456#2457#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EsPipeline.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java">
+      <file leaf-file-name="CreateTemplate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
-                <element signature="e#504#505#0" expanded="false" />
-                <element signature="e#528#529#0" expanded="false" />
+                <element signature="e#7570#7578#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EsClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java">
+      <file leaf-file-name="seeds.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/seeds.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="65" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+              <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spider.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1894#1895#0" expanded="false" />
-                <element signature="e#1930#1931#0" expanded="false" />
+                <element signature="e#8988#9945#0" expanded="true" />
+                <element signature="e#9944#9945#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisScheduler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33275563">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <folding>
+                <element signature="e#513#514#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JedisPool.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/JedisPool.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.535714">
+              <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JedisPoolUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,10 +192,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/GetHtml.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/urljudge/HtmlSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/urljudge/JudgeDensity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/LoadSeeds.java" />
-        <option value="$PROJECT_DIR$/data/seeds.txt" />
-        <option value="$PROJECT_DIR$/data/tempin.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/loadSeeds.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/ConfigLoader.java" />
@@ -205,14 +210,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/JsPageProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/IfengPageProcessor.java" />
         <option value="dbtable:/2408d53c/be10d778-e9b7-4c90-a2f6-340147c89f8b/wifi_ac..tb_crawler" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/ElasPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/ElasClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/DBConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" />
         <option value="$PROJECT_DIR$/resources/dbconfig.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java" />
+        <option value="$PROJECT_DIR$/data/tempin.txt" />
+        <option value="$PROJECT_DIR$/data/seeds.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" />
       </list>
     </option>
   </component>
@@ -240,6 +250,10 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="webmagicDemo" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -276,7 +290,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,12 +341,188 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbpipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webmagicDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbpipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,8 +556,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,26 +599,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.gy.wm.service.ColumnPageProcessor" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="webmagicDemo" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="MysqlPipeline" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.gy.wm.dbpipeline.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.gy.wm.dbpipeline.impl.MysqlPipeline" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -489,6 +659,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.gy.wm.dbpipeline.dbclient.EsClient" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="webmagicDemo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CreateTemplate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gy.wm.parser.tool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gy.wm.parser.tool.CreateTemplate" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -735,6 +925,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -752,18 +945,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.ColumnPageProcessor" />
-      <item index="1" class="java.lang.String" itemvalue="Application.MysqlPipeline" />
-      <item index="2" class="java.lang.String" itemvalue="Application.JsPageProcessorTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.IfengPageProcessor" />
-      <item index="4" class="java.lang.String" itemvalue="Application.EsClient" />
+      <item index="1" class="java.lang.String" itemvalue="Application.JsPageProcessorTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.IfengPageProcessor" />
+      <item index="3" class="java.lang.String" itemvalue="Application.EsClient" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CreateTemplate" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.ColumnPageProcessor" />
-        <item index="1" class="java.lang.String" itemvalue="Application.EsClient" />
-        <item index="2" class="java.lang.String" itemvalue="Application.IfengPageProcessor" />
-        <item index="3" class="java.lang.String" itemvalue="Application.JsPageProcessorTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MysqlPipeline" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CreateTemplate" />
+        <item index="2" class="java.lang.String" itemvalue="Application.EsClient" />
+        <item index="3" class="java.lang.String" itemvalue="Application.IfengPageProcessor" />
+        <item index="4" class="java.lang.String" itemvalue="Application.JsPageProcessorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -790,7 +983,8 @@
       <workItem from="1462503054128" duration="14419000" />
       <workItem from="1462762694087" duration="42236000" />
       <workItem from="1463032714125" duration="4417000" />
-      <workItem from="1463132494916" duration="699000" />
+      <workItem from="1463132494916" duration="725000" />
+      <workItem from="1463186367446" duration="15863000" />
     </task>
     <task id="LOCAL-00001" summary="webmagicDemo init 2016-4-29 17:49:09">
       <created>1461923362720</created>
@@ -840,15 +1034,21 @@
       <option name="project" value="LOCAL" />
       <updated>1462936818734</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加 Elasticsearch 的 Pipeline, 修改类DBConfig.java">
+      <created>1463186324569</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1463186324569</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174476000" />
+    <option name="totallyTimeSpent" value="190365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="28" width="1922" height="1019" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -857,17 +1057,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11128861" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55581397" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29651162" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3523256" sideWeight="0.5021299" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13604651" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17209302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46627906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1656017" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2401491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12906976" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2401491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4356223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -889,19 +1089,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39914164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.02764977" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2972103" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17419355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19565217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19565217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -928,7 +1128,57 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="74" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -937,156 +1187,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35697114">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/dbconfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/www.gygov.gov.cn20160504123625.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9007092">
-          <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/be10d778-e9b7-4c90-a2f6-340147c89f8b/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/ConfigLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6055409">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.4.2/webmagic-core-0.4.2.jar!/us/codecraft/webmagic/Spider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.4.2/webmagic-core-0.4.2-sources.jar!/us/codecraft/webmagic/Spider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323782">
-          <caret line="246" column="18" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/selector/Selectable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35402298">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/selector/HtmlNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/2408d53c/be10d778-e9b7-4c90-a2f6-340147c89f8b/wifi_ac..t_cmd">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Task.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29485178">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/usr/jdk1.7.0_79/src.zip!/java/io/FilterInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/2408d53c/be10d778-e9b7-4c90-a2f6-340147c89f8b/wifi_ac..tb_crawler">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/usr/jdk1.7.0_79/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026">
-          <caret line="969" column="25" selection-start-line="969" selection-start-column="25" selection-end-line="969" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/usr/jdk1.7.0_79/src.zip!/java/net/HttpURLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/DBClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25714287">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/usr/jdk1.7.0_79/src.zip!/java/io/DataOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33293268">
           <caret line="272" column="22" selection-start-line="272" selection-start-column="22" selection-end-line="272" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74038464">
-          <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news.gog.cn20160504205249.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61658657">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1259,47 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#444#445#0" expanded="false" />
-            <element signature="e#473#474#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#592#593#0" expanded="false" />
-            <element signature="e#621#622#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-          <folding>
-            <element signature="e#504#505#0" expanded="false" />
-            <element signature="e#528#529#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="65" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1894#1895#0" expanded="false" />
-            <element signature="e#1930#1931#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Page.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1316,6 +1379,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/2408d53c/be10d778-e9b7-4c90-a2f6-340147c89f8b/wifi_ac..tb_crawler">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5701754">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/xalan/xalan/2.7.1/xalan-2.7.1-sources.jar!/org/apache/xpath/operations/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#1619#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/usr/jdk1.7.0_79/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33178654">
+          <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1865#1866#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6492986">
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/Protocol.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35257733">
+          <caret line="198" column="25" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
+          <folding>
+            <element signature="e#7888#7889#0" expanded="true" />
+            <element signature="e#7922#7923#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44329897">
+          <caret line="280" column="31" selection-start-line="280" selection-start-column="31" selection-end-line="280" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/Jedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68659794">
+          <caret line="561" column="34" selection-start-line="561" selection-start-column="34" selection-end-line="561" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/usr/jdk1.7.0_79/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8083832">
+          <caret line="512" column="16" selection-start-line="512" selection-start-column="16" selection-end-line="512" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#7570#7578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/dbconfig.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1324,11 +1492,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.97360706">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49120235">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tempin.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11876833">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/seeds.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5866852">
-          <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="36" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#2429#2430#0" expanded="true" />
+            <element signature="e#2456#2457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+          <folding>
+            <element signature="e#8988#9945#0" expanded="true" />
+            <element signature="e#9944#9945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/JedisPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.535714">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33275563">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding>
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - wifi_ac@108.108.108.8" uuid="be10d778-e9b7-4c90-a2f6-340147c89f8b">
-    <database-info product="MySQL" version="5.5.39-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )">
+    <database-info product="MySQL" version="5.5.39-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
