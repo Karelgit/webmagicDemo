@@ -1,25 +1,27 @@
 package com.gy.wm.schedular;
 
+import com.gy.wm.util.JedisPoolUtils;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.scheduler.Scheduler;
 
+import java.io.IOException;
+
 public class RedisScheduler implements Scheduler {
-    private JedisPool pool;
     private static final String QUEUE_PREFIX = "queue_";
     private static final String SET_PREFIX = "set_";
 
-    public RedisScheduler(String host,Integer port){
-        pool = new JedisPool(new JedisPoolConfig(), host, port);
-    }
 
     @Override
     public void push(Request request, Task task) {
 
-        Jedis jedis = pool.getResource();
+        Jedis jedis = null;
+        try {
+            jedis = new JedisPoolUtils().getJedisPool().getResource();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //使用SortedSet进行url去重
     if (jedis.zrank(SET_PREFIX+task.getUUID(),request.getUrl())==null){
@@ -30,7 +32,13 @@ public class RedisScheduler implements Scheduler {
     }
     @Override
     public Request poll(Task task) {
-        Jedis jedis = pool.getResource();
+        Jedis jedis = null;
+        try {
+            jedis = new JedisPoolUtils().getJedisPool().getResource();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         String url = jedis.lpop(QUEUE_PREFIX+task.getUUID());
         if (url==null) {
             return null;
