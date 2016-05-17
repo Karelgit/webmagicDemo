@@ -30,6 +30,8 @@ public class RedisScheduler implements Scheduler {
         jedis.zadd(SET_PREFIX+task.getUUID(),System.currentTimeMillis(),request.getUrl());
         }
     }
+
+
     @Override
     public Request poll(Task task) {
         Jedis jedis = null;
