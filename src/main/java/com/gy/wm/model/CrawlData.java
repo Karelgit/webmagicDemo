@@ -9,6 +9,7 @@ public class CrawlData implements Serializable {
     private final static long serialVersionUID = -2344403674643228206L;
 
     private String tid;
+
     private String url;
     private int statusCode;
     private int pass;//遍数;
@@ -18,17 +19,17 @@ public class CrawlData implements Serializable {
     private String text;
     private String html;
     private String title;
-    private long startTime;
+    private String startTime;
+    private long crawlTime;
     private long publishTime;
     private long depthfromSeed;//层数
     private boolean tag;//true：文章，fallse：导航
     private long count;
     private boolean fetched;
-
     public CrawlData() {}
 
     public CrawlData(String url, int statusCode, int pass, String type, String rootUrl, String fromUrl, String text, String html, String title,
-                     long startTime, long publishTime, long depthfromSeed, boolean tag, long count, boolean fetched)  {
+                     String startTime, long crawlTime, long publishTime, long depthfromSeed, boolean tag, long count, boolean fetched)  {
         this.url = url;
         this.statusCode = statusCode;
         this.pass = pass;
@@ -39,6 +40,7 @@ public class CrawlData implements Serializable {
         this.html = html;
         this.title = title;
         this.startTime = startTime;
+        this.crawlTime = crawlTime;
         this.publishTime = publishTime;
         this.depthfromSeed = depthfromSeed;
         this.tag = tag;
@@ -126,12 +128,20 @@ public class CrawlData implements Serializable {
         this.title = title;
     }
 
-    public long getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(long startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
+    }
+
+    public long getCrawlTime() {
+        return crawlTime;
+    }
+
+    public void setCrawlTime(long crawlTime) {
+        this.crawlTime = crawlTime;
     }
 
     public long getPublishTime() {
@@ -173,4 +183,6 @@ public class CrawlData implements Serializable {
     public void setFetched(boolean fetched) {
         this.fetched = fetched;
     }
+
+
 }

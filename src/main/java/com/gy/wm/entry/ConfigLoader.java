@@ -1,5 +1,6 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
 
 import java.io.*;
@@ -12,7 +13,7 @@ import java.util.List;
 public class ConfigLoader {
     private List<BaseTemplate> listTemplate;
 
-    public List<BaseTemplate> loadTemplateConfig() {
+    public List<BaseTemplate> loadTemplateConfig(String templatesPath) {
        String projPath = System.getProperty("user.dir");
        listTemplate = new ArrayList<>();
        String str;
@@ -37,7 +38,7 @@ public class ConfigLoader {
    }
 
 
-    public List<String> loadSeedConfig()    {
+    public List<String> loadSeedConfig(String inputFilePath)    {
         String projPath = System.getProperty("user.dir");
         List<String> seedsList = new ArrayList<>();
         try {
@@ -64,6 +65,17 @@ public class ConfigLoader {
         return seedsList;
     }
 
-//    public List<CrawlData> load(String tid,)
+    public List<CrawlData> load(int depth,String tid,String startTime,int pass,String seedPath,String type) {
+        List<String>    seedingUrls = loadSeedConfig(seedPath);
+
+        for(String seed : seedingUrls)  {
+            CrawlData crawlData = new CrawlData();
+            crawlData.setTid(tid);
+            crawlData.setStartTime(startTime);
+
+
+        }
+        return null;
+    }
 
 }
