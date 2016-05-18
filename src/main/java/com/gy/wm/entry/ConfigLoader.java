@@ -1,7 +1,7 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.BaseTemplate;
-import com.gy.wm.util.LoadSeeds;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -12,25 +12,11 @@ import java.util.List;
  */
 public class ConfigLoader {
     private List<BaseTemplate> listTemplate;
-    private final static LoadSeeds loadSeeds = new LoadSeeds();
 
-    public List<BaseTemplate> getListTemplate() {
-        return listTemplate;
-    }
-
-    public void setListTemplate(List<BaseTemplate> listTemplate) {
-        this.listTemplate = listTemplate;
-    }
-
-    public List<String> loadSeedConfig()  {
-        return LoadSeeds.load();
-    }
-
-   public List<BaseTemplate> loadTemplateConfig() {
+    public List<BaseTemplate> loadTemplateConfig(String templatesPath) {
        String projPath = System.getProperty("user.dir");
        listTemplate = new ArrayList<>();
        String str;
-//       File files = new File(projPath+"\\templates");
        File files = new File(projPath + "/templates");
        File[] templateFiles = files.listFiles();
        List<File> fileList = new ArrayList<>();
@@ -50,4 +36,46 @@ public class ConfigLoader {
        }
        return listTemplate;
    }
+
+
+    public List<String> loadSeedConfig(String inputFilePath)    {
+        String projPath = System.getProperty("user.dir");
+        List<String> seedsList = new ArrayList<>();
+        try {
+            // read file content from file
+            StringBuffer sb= new StringBuffer("");
+
+            FileReader reader = new FileReader(projPath+"//data//seeds.txt");
+            BufferedReader br = new BufferedReader(reader);
+
+            String str = null;
+
+            while((str = br.readLine()) != null) {
+                seedsList.add(str);
+            }
+            br.close();
+            reader.close();
+        }
+        catch(FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+        return seedsList;
+    }
+
+    public List<CrawlData> load(int depth,String tid,String startTime,int pass,String seedPath,String type) {
+        List<String>    seedingUrls = loadSeedConfig(seedPath);
+
+        for(String seed : seedingUrls)  {
+            CrawlData crawlData = new CrawlData();
+            crawlData.setTid(tid);
+            crawlData.setStartTime(startTime);
+
+
+        }
+        return null;
+    }
+
 }

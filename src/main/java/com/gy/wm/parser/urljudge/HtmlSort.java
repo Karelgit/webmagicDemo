@@ -37,9 +37,4 @@ public class HtmlSort {
         String url="http://www.qxn.gov.cn/OrgArtList/QxnGov.XMJ/QxnGov.XMJ.Info/1.html";
         System.out.println(getHtmlSort(url, GetHtml.getHtmlFromUrl(url)));
     }
-
-
-
-
-
 }
