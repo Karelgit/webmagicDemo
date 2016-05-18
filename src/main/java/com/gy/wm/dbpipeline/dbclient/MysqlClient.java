@@ -1,17 +1,11 @@
 package com.gy.wm.dbpipeline.dbclient;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.gy.wm.model.CrawlData;
 
 import java.sql.DriverManager;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.SimpleTimeZone;
-import java.util.logging.SimpleFormatter;
 
 /**
  * Created by TianyuanPan on 5/4/16.
@@ -137,7 +131,7 @@ public class MysqlClient extends AbstractDBClient {
 
     public Object addItem(String tableName, CrawlData data) {
 
-        InsertSqlModel model = new InsertSqlModel(tableName);
+        /*InsertSqlModel model = new InsertSqlModel(tableName);
 
         model.addKeyValue("title", "'" + data.getTitle() + "'");
         Long time = data.getPublicTime();
@@ -152,7 +146,8 @@ public class MysqlClient extends AbstractDBClient {
         model.addKeyValue("html", "'" + data.getHtml().replace("\\\'","\'").replace("\'", "\\\'") + "'");
 
         insertSqlModels.add(model);
-        return model;
+        return model;*/
+        return null;
     }
 
     public Object addItem(CrawlData data) {
