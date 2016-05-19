@@ -5,7 +5,7 @@ import redis.clients.jedis.Jedis;
 /**
  * 实现基于Redis的布隆过滤器
  */
-public class SparkBloomFilter {
+public class BloomFilter {
 
     private int maxKey;
     private float errorRate;
@@ -16,7 +16,7 @@ public class SparkBloomFilter {
 
     private String defaultKey = "redis:bloomfilter";
 
-    public SparkBloomFilter(Jedis jedis, int timeout, float errorRate, int maxKey) {
+    public BloomFilter(Jedis jedis, int timeout, float errorRate, int maxKey) {
         this.maxKey = maxKey;
         this.errorRate = errorRate;
         this.jedis = jedis;
