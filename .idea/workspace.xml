@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e9e3b-c032-427c-ac90-c2062ea63539" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/BaseDBPipeline.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EsMappings/CrawlerDataMapping.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gy/wm/service/ColumnPageProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/gy/wm/service/ColumnPageProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gy/wm/dbpipeline/impl/MysqlPipeline.class" afterPath="$PROJECT_DIR$/target/classes/com/gy/wm/dbpipeline/impl/MysqlPipeline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/EsPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/HbaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/HbaseClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/HbaseEsPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/HbaseEsPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/HbasePipeline.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/HbasePipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/MysqlClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/MysqlClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/MysqlPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/impl/MysqlPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/seeds.txt" afterPath="$PROJECT_DIR$/data/seeds.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gycrawlerWebmagicDemo.iws" />
@@ -45,7 +29,7 @@
       <file leaf-file-name="ColumnPageProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23115578">
+            <state vertical-scroll-proportion="0.12939699">
               <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -798,12 +782,19 @@
       <created>1463566844118</created>
       <option name="number" value="Default" />
       <updated>1463566844118</updated>
-      <workItem from="1463566847778" duration="34362000" />
+      <workItem from="1463566847778" duration="34553000" />
     </task>
+    <task id="LOCAL-00001" summary="添加Es数据映射 2015-05-19 19:30">
+      <created>1463655793303</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1463655793303</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34362000" />
+    <option name="totallyTimeSpent" value="34553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="28" width="1922" height="1019" extended-state="6" />
@@ -847,6 +838,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加Es数据映射 2015-05-19 19:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加Es数据映射 2015-05-19 19:30" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1173,7 +1168,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23115578">
+        <state vertical-scroll-proportion="0.12939699">
           <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
