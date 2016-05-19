@@ -89,7 +89,7 @@ public class ColumnPageProcessor implements PageProcessor {
                     .addUrl(seed)
 //                    .addPipeline(new MysqlPipeline("tb_crawler"))
 //                    .addPipeline(new EsPipeline())
-//                    .addPipeline(new ConsolePipeline())
+                    .addPipeline(new ConsolePipeline())
 //                    .addPipeline(new HbaseEsPipeline())
                     .addPipeline(new HbasePipeline())
                             //开启5个线程抓取
