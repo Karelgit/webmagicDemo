@@ -16,6 +16,7 @@ public class Test {
         for (String seed : seeds) {
             urls+=seed+",";
         }
+        System.out.println(urls.substring(0,urls.length()-1));
     }
 
 }

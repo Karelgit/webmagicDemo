@@ -1,6 +1,7 @@
 package com.gy.wm.entry;
 
 import com.gy.wm.parser.analysis.BaseTemplate;
+import com.gy.wm.util.BloomFilter;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class InitCrawlerConfig {
     private static List<String> regexList;
     private static List<String> protocols;
     private static int recalldepth;
+    private static BloomFilter sparkBloomFilter;
 
     public List<String> getPostRegex() {
         return postRegex;
@@ -57,6 +59,14 @@ public class InitCrawlerConfig {
         this.recalldepth = recalldepth;
     }
 
+    public static BloomFilter getSparkBloomFilter() {
+        return sparkBloomFilter;
+    }
+
+    public static void setSparkBloomFilter(BloomFilter sparkBloomFilter) {
+        InitCrawlerConfig.sparkBloomFilter = sparkBloomFilter;
+    }
+
 
     public InitCrawlerConfig(String appname, int recalldepth, String templatesDir, String clickregexDir, String protocolDir, String postregexDir)   {
 
@@ -83,7 +93,7 @@ public class InitCrawlerConfig {
 
         setListTemplate(listTemplate);
 
-        //读取点击标签
+        /*//读取点击标签
         List<String> regexs = new ArrayList<String>();
         File regexs_file = new File("C:\\temp\\regexs");
         String regexStr;
@@ -138,6 +148,6 @@ public class InitCrawlerConfig {
             e.printStackTrace();
         }
 
-        setPostRegex(postRegexs);
+        setPostRegex(postRegexs)*/;
     }
 }

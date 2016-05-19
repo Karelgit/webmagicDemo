@@ -10,7 +10,6 @@ import com.gy.wm.schedular.RedisScheduler;
 import com.gy.wm.service.ColumnPageProcessor;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
-import redis.clients.jedis.Jedis;
 import us.codecraft.webmagic.Spider;
 
 import java.io.IOException;
@@ -29,48 +28,37 @@ public class CrawlerWorkflowManager {
     //已爬取队列
     private RedisCrawledQue crawledQueue =InstanceFactory.getRedisCrawledQue();
 
-    private String taskid;
+    private String tid;
 
     private String appname;
 
-    public CrawlerWorkflowManager(String taskid,String appname)  {
-        this.taskid = taskid;
+    public CrawlerWorkflowManager(String tid,String appname)  {
+        this.tid = tid;
         this.appname = appname;
     }
 
-    public void crawl(List<CrawlData> seeds,String taskid,String starttime,int pass) throws IOException{
+    public void crawl(List<CrawlData> seeds,String tid,String starttime,int pass) throws IOException{
 
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
-        Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
-        nextQueue.putNextUrls(seeds, jedisPoolUtils, taskid);
 
-
+        for (CrawlData seed : seeds) {
+            nextQueue.putNextUrls(seed, jedisPoolUtils, tid);
+        }
         //初始化webMagic的Spider程序
         initSpider(seeds,textAnalysis);
-
-        while(shouldContinue(jedisPoolUtils))   {
-            List<CrawlData> currentBatch = nextQueue.nextBatch(jedisPoolUtils,taskid);
-            //
-        }
-
-
-    }
-
-    protected boolean shouldContinue(JedisPoolUtils jedisPoolUtils) throws IOException {
-        boolean rs = nextQueue.hasMoreUrls(taskid,jedisPoolUtils);
-        logger.logInfo("should continue: " + rs);
-        return rs;
     }
 
     protected  void initSpider(List<CrawlData> seeds,TextAnalysis textAnalysis)   {
-        String urls;/*
-        for (CrawlData seed : seeds) {
-            urls+=seed+",";
-        }*/
-        Spider.create(new ColumnPageProcessor(textAnalysis))
+        String tempUrl = "";
+        for (CrawlData crawlData : seeds) {
+            tempUrl+=crawlData.getUrl()+",";
+        }
+        String urls = tempUrl.substring(0, tempUrl.length() - 1);
+
+        Spider.create(new ColumnPageProcessor(tid,textAnalysis))
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
-                .addUrl()
+                .addUrl(urls)
                         //存入mysql
                 .addPipeline(new MysqlPipeline("tb_crawler"))
                         //存入elasticSearch
@@ -79,5 +67,11 @@ public class CrawlerWorkflowManager {
                 .thread(5)
                         //启动爬虫
                 .run();
+    }
+
+    protected boolean shouldContinue(JedisPoolUtils jedisPoolUtils) throws IOException {
+        boolean rs = nextQueue.hasMoreUrls(tid, jedisPoolUtils);
+        logger.logInfo("should continue: " + rs);
+        return rs;
     }
 }

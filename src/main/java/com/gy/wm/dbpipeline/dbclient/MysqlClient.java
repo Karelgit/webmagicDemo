@@ -4,7 +4,9 @@ import com.gy.wm.model.CrawlData;
 
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -131,14 +133,14 @@ public class MysqlClient extends AbstractDBClient {
 
     public Object addItem(String tableName, CrawlData data) {
 
-        /*InsertSqlModel model = new InsertSqlModel(tableName);
+        InsertSqlModel model = new InsertSqlModel(tableName);
 
         model.addKeyValue("title", "'" + data.getTitle() + "'");
-        Long time = data.getPublicTime();
+        Long time = data.getPublishTime();
         if (time == null) {
             model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date().getTime()) + "'");
         } else
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublicTime())) + "'");
+            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublishTime())) + "'");
 
         model.addKeyValue("url", "'" + data.getUrl() + "'");
         model.addKeyValue("text", "'" + data.getText() + "'");
@@ -146,8 +148,7 @@ public class MysqlClient extends AbstractDBClient {
         model.addKeyValue("html", "'" + data.getHtml().replace("\\\'","\'").replace("\'", "\\\'") + "'");
 
         insertSqlModels.add(model);
-        return model;*/
-        return null;
+        return model;
     }
 
     public Object addItem(CrawlData data) {

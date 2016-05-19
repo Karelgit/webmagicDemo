@@ -23,12 +23,7 @@ public class RedisScheduler implements Scheduler {
             e.printStackTrace();
         }
 
-        //使用SortedSet进行url去重
-    if (jedis.zrank(SET_PREFIX+task.getUUID(),request.getUrl())==null){
-        //使用List保存队列
-        jedis.rpush(QUEUE_PREFIX+task.getUUID(),request.getUrl());
-        jedis.zadd(SET_PREFIX+task.getUUID(),System.currentTimeMillis(),request.getUrl());
-        }
+        jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
     }
 
 

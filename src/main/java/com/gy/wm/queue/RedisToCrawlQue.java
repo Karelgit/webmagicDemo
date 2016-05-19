@@ -6,10 +6,6 @@ import com.gy.wm.util.JsonUtil;
 import com.gy.wm.util.LogManager;
 import redis.clients.jedis.Jedis;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Administrator on 2016/5/17.
  */
@@ -18,7 +14,7 @@ public class RedisToCrawlQue {
 
     private static final int batchsize = 100;
 
-    public List<CrawlData> nextBatch(JedisPoolUtils jedisPoolUtils, String taskid) throws IOException {
+    /*public List<CrawlData> nextBatch(JedisPoolUtils jedisPoolUtils, String taskid) throws IOException {
         List<CrawlData> result = new ArrayList<>();
         List<String> redisData =new ArrayList<>();
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
@@ -34,7 +30,7 @@ public class RedisToCrawlQue {
             result.add(crawlData);
         }
         return result;
-    }
+    }*/
 
 
     public boolean hasMoreUrls(String taskid,JedisPoolUtils jedisPoolUtils) {
@@ -48,12 +44,12 @@ public class RedisToCrawlQue {
         }
     }
 
-    public void putNextUrls(List<CrawlData> nextUrls,JedisPoolUtils jedisPoolUtils, String tid ) {
+    public void putNextUrls(CrawlData crawlData,JedisPoolUtils jedisPoolUtils, String tid ) {
+
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
         jedis.select(0);
-        for (CrawlData nextUrl : nextUrls) {
-            jedis.rpush("sparkcrawler::ToCrawl::" + tid, nextUrl.getUrl());
-        }
+        String crawlDataJson = JsonUtil.toJson(crawlData);
+        jedis.hset("webmagicCrawle::ToCrawl::" + tid, crawlData.getUrl(), crawlDataJson);
     }
 
 }

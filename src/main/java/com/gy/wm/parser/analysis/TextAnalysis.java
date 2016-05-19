@@ -29,6 +29,13 @@ public class TextAnalysis implements Serializable {
 
         String url = crawlData.getUrl();
         String html = crawlData.getHtml();
+        String tid = crawlData.getTid();
+        int pass = crawlData.getPass();
+        String type = crawlData.getType();
+        String startTime = crawlData.getStartTime();
+        long depthfromSeed = crawlData.getDepthfromSeed();
+
+
         String title = "";
         Long date = 0L;
 
@@ -43,12 +50,21 @@ public class TextAnalysis implements Serializable {
                 baseAnalysisURLList = analysisNavigation.getUrlList(url,html);
                 for(BaseAnalysisURL baseAnalysisURL : baseAnalysisURLList)  {
                     CrawlData newCrawlData = new CrawlData();
+                    newCrawlData.setTid(tid);
+                    newCrawlData.setPass(pass);
+                    newCrawlData.setType(type);
+                    newCrawlData.setStartTime(startTime);
+                    newCrawlData.setDepthfromSeed(depthfromSeed + 1);
+                    newCrawlData.setRootUrl(url);
+                    newCrawlData.setFromUrl(url);
                     newCrawlData.setUrl(baseAnalysisURL.getUrl());
                     newCrawlData.setTitle(baseAnalysisURL.getTitle());
-//                    newCrawlData.setPublicTime(baseAnalysisURL.getDate());
+                    newCrawlData.setPublishTime(baseAnalysisURL.getDate());
+                    newCrawlData.setCrawlTime(System.currentTimeMillis());
                     newCrawlData.setHtml(baseAnalysisURL.getHtml());
                     newCrawlData.setText(baseAnalysisURL.getText());
                     newCrawlData.setFetched(false);
+                    newCrawlData.setTag(false);
 
                     crawlDataList.add(newCrawlData);
                 }
@@ -66,14 +82,14 @@ public class TextAnalysis implements Serializable {
             }
 
             crawlData.setTitle(oldUrl.getTitle());
-//            crawlData.setPublicTime(oldUrl.getDate());
+            crawlData.setPublishTime(oldUrl.getDate());
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());
             crawlData.setFetched(true);
+            crawlData.setTag(true);
 
             crawlDataList.add(crawlData);
         }
         return crawlDataList;
-
     }
 }

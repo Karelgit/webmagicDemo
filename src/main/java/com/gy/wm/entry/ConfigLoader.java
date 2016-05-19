@@ -41,6 +41,7 @@ public class ConfigLoader {
         return seedsList;
     }
 
+    //对种子对应的CrawlData进行赋值
     public List<CrawlData> load(int depth,String tid,String startTime,int pass,String seedPath,String type) {
         List<String> seedingUrls = loadSeedConfig(seedPath);
 
@@ -48,6 +49,7 @@ public class ConfigLoader {
         for(String seed : seedingUrls)  {
             CrawlData crawlData = new CrawlData();
             crawlData.setTid(tid);
+            crawlData.setUrl(seed);
             crawlData.setStartTime(startTime);
             crawlData.setPass(pass);
             crawlData.setType(type);
