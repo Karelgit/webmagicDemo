@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 @ThreadSafe
-public class MysqlPipeline implements DatabasePipeline {
+public class MysqlPipeline extends BaseDBPipeline {
 
     MysqlClient dbClient;
     String tableName;
@@ -42,12 +42,22 @@ public class MysqlPipeline implements DatabasePipeline {
         System.out.println("MysqlPipeline resultItems size: " + resultItems.getAll().size() +
                 "\n\tTask uuid: " + task.getUUID());
 
+        logger.debug("MysqlPipeline resultItems size: " + resultItems.getAll().size() +
+                "\n\tTask uuid: " + task.getUUID());
+
         List<CrawlData> crawlDataList = resultItems.get("crawlerDataList");
-        System.out.println("MysqlPipeline crwalerDataList Size: " + crawlDataList.size());
+
+        int dataSize = crawlDataList.size();
+
+        System.out.println("MysqlPipeline crwalerDataList Size: " + dataSize);
+        logger.debug("MysqlPipeline crwalerDataList Size: " + dataSize);
+
         for (CrawlData data : crawlDataList) {
             add(tableName, data);
         }
-        System.out.println("MysqlPipeline doInsert return Code: " + doInsert());
+        int sum = doInsert();
+        System.out.println("MysqlPipeline doInsert Successful number: " + sum);
+        logger.debug("MysqlPipeline doInsert Successful number: " + sum);
 
     }
 

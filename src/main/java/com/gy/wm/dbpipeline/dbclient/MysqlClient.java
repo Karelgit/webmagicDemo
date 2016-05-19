@@ -127,9 +127,10 @@ public class MysqlClient extends AbstractDBClient {
                 lineSum += this.myStatement.executeUpdate(sql);
 
             } catch (Exception ex) {
-
-                //ex.printStackTrace();
                 System.out.println("SQL excute Exception ...");
+                logger.warn("SQL excute Exception ...");
+                //ex.printStackTrace();
+
             }
         }
         this.insertSqlModels.clear();

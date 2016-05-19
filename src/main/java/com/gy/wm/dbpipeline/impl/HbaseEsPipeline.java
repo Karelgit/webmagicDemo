@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by TianyuanPan on 5/18/16.
  */
-public class HbaseEsPipeline implements DatabasePipeline{
+public class HbaseEsPipeline extends BaseDBPipeline {
 
     private EsClient esClient;
     private HbaseClient hbaseClient;
@@ -34,29 +34,34 @@ public class HbaseEsPipeline implements DatabasePipeline{
     @Override
     public int insertRecord(Object obj) {
 
+        int i = 0, j = 0;
+
         String rowkey = RandomUtils.getRandomString(50) + "_" + new Date().getTime();
 
         try {
 
-            this.esClient.doPut(this.esClient.getRequestUrl() + rowkey, JSON.toJSONString(obj));
+           this.esClient.doPut(this.esClient.getRequestUrl() + rowkey, JSON.toJSONString(obj));
+            ++i;
+        } catch (Exception ex) {
 
-        }catch (Exception ex){
-
-            ex.printStackTrace();
+            logger.warn("HbaseEsPipeline EsClient.doPut Exception!!! Message:" + ex.getMessage());
+//            ex.printStackTrace();
         }
 
         try {
 
-           this.hbaseClient.insertRecord(HbaseClient.getTableName(),
-                   rowkey, HbaseClient.getColumnFamilyName(), (CrawlData)obj);
+            this.hbaseClient.insertRecord(HbaseClient.getTableName(),
+                    rowkey, HbaseClient.getColumnFamilyName(), (CrawlData) obj);
+            ++j;
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
-            ex.printStackTrace();
+            logger.warn("HbaseEsPipeline HbaseClient.insertRecord Exception!!! Message:" + ex.getMessage());
+//            ex.printStackTrace();
         }
 
 
-        return 1;
+        return (i & j);
     }
 
     @Override
@@ -65,16 +70,21 @@ public class HbaseEsPipeline implements DatabasePipeline{
         System.out.println("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
                 "\n\tTask uuid: " + task.getUUID());
 
+        logger.debug("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
+                "\n\tTask uuid: " + task.getUUID());
+
         CrawlData crawlerData = resultItems.get("crawlerData");
 
         if (crawlerData != null) {
 
-           int i = this.insertRecord(crawlerData);
-            System.out.println("HbaseEsPipeline doSetInser return code: " + i);
+            int i = this.insertRecord(crawlerData);
+            System.out.println("HbaseEsPipeline doInsert Successful number: " + i);
+            logger.debug("HbaseEsPipeline doInsert Successful number: " + i);
             return;
         }
 
-        System.out.println("crawler data IS NULL !!!");
+        System.out.println("at HbaseEsPipeline, crawler data IS NULL !!!");
+        logger.debug("at HbaseEsPipeline, crawler data IS NULL !!!");
 
     }
 }

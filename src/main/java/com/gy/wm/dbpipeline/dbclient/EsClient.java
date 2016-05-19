@@ -2,6 +2,7 @@ package com.gy.wm.dbpipeline.dbclient;
 
 import com.alibaba.fastjson.JSON;
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.RandomUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -23,7 +24,7 @@ public class EsClient extends AbstractDBClient {
     private static final String REQUEST_PUT = "PUT";
 
     private String hostname;
-    private int    port;
+    private int port;
     private String indexName;
     private String typeName;
 
@@ -70,15 +71,14 @@ public class EsClient extends AbstractDBClient {
 
             try {
 
-                this.doPut(this.requestUrl + new Date().getTime(), dataJson);
+                this.doPut(this.requestUrl + RandomUtils.getRandomString(50) + "_" + new Date().getTime(), dataJson);
                 ++i;
 
             } catch (Exception ex) {
-
+                logger.warn("EsClient doSetInsert Exception!!! Message: " + ex.getMessage());
                 ex.printStackTrace();
             }
         }
-
         this.dataList.clear();
 
         return i;
@@ -119,7 +119,7 @@ public class EsClient extends AbstractDBClient {
         while ((line = br.readLine()) != null) {
             result += line;
         }
-//        System.out.println(result);
+
         logger.debug("EsClient.doPost result:\n" + result + "\n==========");
         br.close();
         return result;
@@ -166,7 +166,6 @@ public class EsClient extends AbstractDBClient {
         while ((line = br.readLine()) != null) {
             result += line;
         }
-//        System.out.println(result);
         logger.debug("EsClient.doPut result:\n" + result + "\n==========");
         br.close();
         return result;
@@ -189,7 +188,6 @@ public class EsClient extends AbstractDBClient {
         while ((line = br.readLine()) != null) {
             result += line;
         }
-//        System.out.println(result);
         br.close();
         logger.debug("EsClient.doDelete ResponseCode: " + conn.getResponseCode());
         logger.debug("EsClient.doDelete result:\n" + result + "\n==========");

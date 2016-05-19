@@ -9,7 +9,6 @@ public class CrawlData implements Serializable {
 //    private final static long serialVersionUID = -2344403674643228206L;
 
     private String tid;
-
     private String url;
     private int statusCode;
     private int pass;//遍数;
@@ -23,9 +22,11 @@ public class CrawlData implements Serializable {
     private long crawlTime;
     private long publishTime;
     private long depthfromSeed;//层数
-    private boolean tag;//true：文章，fallse：导航
     private long count;
+    private boolean tag;//true：文章，fallse：导航
     private boolean fetched;
+
+
     public CrawlData() {}
 
     public CrawlData(String url, int statusCode, int pass, String type, String rootUrl, String fromUrl, String text, String html, String title,

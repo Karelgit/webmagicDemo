@@ -77,11 +77,10 @@ public class HbaseClient extends AbstractDBClient {
             try {
                 i += this.insertRecord(tableName, RandomUtils.getRandomString(50) + "_" + new Date().getTime(), columnFamilyName, o);
             } catch (Exception ex) {
-
+                logger.warn("HbaseClient doSetInsert Exception!!! Message: " + ex.getMessage());
                 ex.printStackTrace();
             }
         }
-
         this.dataList.clear();
 
         return i;
@@ -103,44 +102,51 @@ public class HbaseClient extends AbstractDBClient {
 
         HTableInterface myTable = myPool.getTable(tableName);
         Put put = new Put(Bytes.toBytes(rowKey));// 设置rowkey
+
         String columnQualifier = null;
         String value = null;
+        String type = null;
+
         CrawlerDataUtils utils = CrawlerDataUtils.getCrawlerDataUtils(data);
 
         List<Map<String, Object>> myDataList = utils.getAttributeInfoList();
 
         try {
-
             for (Map<String, Object> o : myDataList) {
-
                 try {
-
                     columnQualifier = o.get("name").toString();
-                    value = o.get("value").toString();
+                    type = o.get("type").toString();
+
+                    switch (type) {
+
+                        case "int":
+                            value = Integer.toString((int) o.get("value"));
+                            break;
+                        case "long":
+                            value = Long.toString((long) o.get("value"));
+                            break;
+                        case "boolean":
+                            value = Boolean.toString((boolean) o.get("value"));
+                            break;
+                        default:
+                            value = (String) o.get("value");
+                            break;
+                    }
 
                 } catch (Exception ex) {
 
-
-//                    ex.printStackTrace();
-                    if (value == null)
-                        value = "null";
-
                     logger.warn("get data Exception! columnQualifier = " + columnQualifier + ", value = " + value);
+                    ex.printStackTrace();
 
                 }
 
+                if (value == null)
+                    value = "null";
 
                 if (columnQualifier != null)
                     put.add(Bytes.toBytes(columnFamilyName),
                             Bytes.toBytes(columnQualifier),
                             Bytes.toBytes(value));
-/*
-                System.out.println("------------------------------------------");
-                System.out.println("type ==> " + o.get("type").toString());
-                System.out.println("name ==> " + o.get("name").toString());
-                System.out.println("value ==> " + o.get("value"));
-                System.out.println("--------------------------------------------");*/
-
             }
 
             myTable.put(put);
@@ -148,8 +154,8 @@ public class HbaseClient extends AbstractDBClient {
         } catch (Exception ex) {
 
             myTable.close();
-            logger.warn("HBase Put data Exception!!!");
-//            ex.printStackTrace();
+            logger.warn("HBase Put data Exception!!! Message: " + ex.getMessage());
+            ex.printStackTrace();
             return 0;
         }
 
@@ -157,11 +163,9 @@ public class HbaseClient extends AbstractDBClient {
         myTable.close();
 
         System.out.println("add data Success!");
-
         logger.debug("Insert data Success!");
 
         return 1;
-
     }
 
 }

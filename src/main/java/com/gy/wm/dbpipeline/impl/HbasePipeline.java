@@ -9,7 +9,7 @@ import us.codecraft.webmagic.Task;
 /**
  * Created by TianyuanPan on 5/18/16.
  */
-public class HbasePipeline implements DatabasePipeline {
+public class HbasePipeline extends BaseDBPipeline {
 
 
     private HbaseClient hbaseClient;
@@ -31,17 +31,22 @@ public class HbasePipeline implements DatabasePipeline {
         System.out.println("HbasePipeline resultItems size: " + resultItems.getAll().size() +
                 "\n\tTask uuid: " + task.getUUID());
 
+        logger.debug("HbasePipeline resultItems size: " + resultItems.getAll().size() +
+                "\n\tTask uuid: " + task.getUUID());
+
         CrawlData crawlerData = resultItems.get("crawlerData");
 
         if (crawlerData != null) {
 
             this.hbaseClient.add(crawlerData);
             int i = this.hbaseClient.doSetInsert();
-            System.out.println("HbasePipeline doSetInser return code: " + i);
+            System.out.println("HbasePipeline doInsert Successful number: " + i);
+            logger.debug("HbasePipeline doInsert Successful number: " + i);
             return;
         }
 
-        System.out.println("crawler data IS NULL !!!");
+        System.out.println("at HbasePipeline, crawler data IS NULL !!!");
+        logger.debug("at HbasePipeline, crawler data IS NULL !!!");
 
     }
 

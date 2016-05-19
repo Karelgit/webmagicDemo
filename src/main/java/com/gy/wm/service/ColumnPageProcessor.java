@@ -30,7 +30,7 @@ public class ColumnPageProcessor implements PageProcessor {
         return crawlDataList;
     }
 
-    private Site site = Site.me().setDomain("http://blog.ifeng.com/"/*"http://www.gog.cn"*/).setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setDomain(/*"http://blog.ifeng.com/"*/"http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
 
     public ColumnPageProcessor(List<CrawlData> crawlDataList, List<BaseTemplate> baseTemplates) {
         this.crawlDataList = crawlDataList;
@@ -89,9 +89,9 @@ public class ColumnPageProcessor implements PageProcessor {
                     .addUrl(seed)
 //                    .addPipeline(new MysqlPipeline("tb_crawler"))
 //                    .addPipeline(new EsPipeline())
-                    .addPipeline(new ConsolePipeline())
-                    .addPipeline(new HbaseEsPipeline())
-//                    .addPipeline(new HbasePipeline())
+//                    .addPipeline(new ConsolePipeline())
+//                    .addPipeline(new HbaseEsPipeline())
+                    .addPipeline(new HbasePipeline())
                             //开启5个线程抓取
                     .thread(5)
                             //启动爬虫
