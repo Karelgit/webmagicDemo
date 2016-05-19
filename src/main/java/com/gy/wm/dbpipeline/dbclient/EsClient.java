@@ -1,6 +1,7 @@
 package com.gy.wm.dbpipeline.dbclient;
 
 import com.alibaba.fastjson.JSON;
+import com.gy.wm.model.CrawlData;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,30 +17,31 @@ import java.util.List;
  */
 public class EsClient extends AbstractDBClient {
 
-
     private static final String REQUEST_POST = "POST";
     private static final String REQUEST_GET = "GET";
     private static final String REQUEST_DELETE = "DELETE";
     private static final String REQUEST_PUT = "PUT";
 
+    private String hostname;
+    private int    port;
     private String indexName;
     private String typeName;
 
 
-    private List<Object> dataList;
+    private List<CrawlData> dataList;
 
     private String requestUrl;
 
 
     public EsClient() {
 
-        this.dbHostname = DBConfig.getResourceBundle().getString("ES_HOSTNAME");
-        this.dbPort = Integer.parseInt(DBConfig.getResourceBundle().getString("ES_PORT"));
+        this.hostname = DBConfig.getResourceBundle().getString("ES_HOSTNAME");
+        this.port = Integer.parseInt(DBConfig.getResourceBundle().getString("ES_PORT"));
         this.indexName = DBConfig.getResourceBundle().getString("ES_INDEX_NAME");
         this.typeName = DBConfig.getResourceBundle().getString("ES_TYPE_NAME");
 
-        this.requestUrl = "http://" + this.dbHostname + ":" +
-                this.dbPort + "/" + this.indexName + "/" + this.typeName + "/";
+        this.requestUrl = "http://" + this.hostname + ":" +
+                this.port + "/" + this.indexName + "/" + this.typeName + "/";
 
         this.dataList = new ArrayList<>();
 
@@ -57,11 +59,12 @@ public class EsClient extends AbstractDBClient {
 
     }
 
+
     public int doSetInsert() {
 
         int i = 0;
 
-        for (Object o : dataList) {
+        for (CrawlData o : dataList) {
 
             String dataJson = JSON.toJSONString(o);
 
@@ -86,14 +89,19 @@ public class EsClient extends AbstractDBClient {
         return this.connOpen;
     }
 
-    public void add(Object data) {
+    public void add(CrawlData data) {
 
         this.dataList.add(data);
     }
 
+    public String getRequestUrl() {
+
+        return requestUrl;
+    }
 
     public String doPost(String urlStr, String data) throws Exception {
         System.out.println("EsClient.doPost Request Url: " + urlStr);
+        logger.debug("EsClient.doPost Request Url: + urlStr");
         URL url = new URL(urlStr);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod(REQUEST_POST);
@@ -112,12 +120,15 @@ public class EsClient extends AbstractDBClient {
             result += line;
         }
 //        System.out.println(result);
+        logger.debug("EsClient.doPost result:\n" + result + "\n==========");
         br.close();
         return result;
     }
 
+
     public String doGet(String urlStr) throws Exception {
         System.out.println("EsClient.doGet Request Url: " + urlStr);
+        logger.debug("EsClient.doGet Request Url: + urlStr");
         URL url = new URL(urlStr);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod(REQUEST_GET);
@@ -130,6 +141,7 @@ public class EsClient extends AbstractDBClient {
             result += line;
         }
         System.out.println(result);
+        logger.debug("EsClient.doGet result:\n" + result + "\n==========");
         br.close();
         return result;
     }
@@ -137,6 +149,7 @@ public class EsClient extends AbstractDBClient {
 
     public String doPut(String urlStr, String data) throws Exception {
         System.out.println("EsClient.doPut Request Url: " + urlStr);
+        logger.debug("EsClient.doPut Request Url: + urlStr");
         URL url = new URL(urlStr);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod(REQUEST_PUT);
@@ -154,6 +167,7 @@ public class EsClient extends AbstractDBClient {
             result += line;
         }
 //        System.out.println(result);
+        logger.debug("EsClient.doPut result:\n" + result + "\n==========");
         br.close();
         return result;
 
@@ -163,6 +177,7 @@ public class EsClient extends AbstractDBClient {
     public String doDelete(String urlStr) throws Exception {
 
         System.out.println("EsClient.doDelete Request Url: " + urlStr);
+        logger.debug("EsClient.doDelete Request Url: + urlStr");
         URL url = new URL(urlStr);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setDoInput(true);
@@ -176,7 +191,8 @@ public class EsClient extends AbstractDBClient {
         }
 //        System.out.println(result);
         br.close();
-
+        logger.debug("EsClient.doDelete ResponseCode: " + conn.getResponseCode());
+        logger.debug("EsClient.doDelete result:\n" + result + "\n==========");
         System.out.println("EsClient.doDelete ResponseCode: " + conn.getResponseCode());
 
         return result;

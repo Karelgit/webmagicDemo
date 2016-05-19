@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Administrator on 2016/4/29.
  */
 public class CrawlData implements Serializable {
-    private final static long serialVersionUID = -2344403674643228206L;
+//    private final static long serialVersionUID = -2344403674643228206L;
 
     private String tid;
 

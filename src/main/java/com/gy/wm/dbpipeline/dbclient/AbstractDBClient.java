@@ -1,5 +1,8 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,12 +14,7 @@ import java.util.Map;
  */
 public abstract class AbstractDBClient implements DBClient {
 
-    protected String dbHostname;
-    protected int dbPort;
-    protected String dbName;
-    protected String dbUser;
-    protected String dbPassword;
-    protected String connUrl;
+    protected Logger logger = LoggerFactory.getLogger(getClass());
 
     protected boolean connOpen;
     protected Connection connection;
@@ -26,59 +24,13 @@ public abstract class AbstractDBClient implements DBClient {
         this.connOpen = connOpen;
     }
 
-    public String getDbHostname() {
-        return dbHostname;
-    }
-
-    public void setDbHostname(String dbHostname) {
-        this.dbHostname = dbHostname;
-    }
-
-    public int getDbPort() {
-        return dbPort;
-    }
-
-    public void setDbPort(int dbPort) {
-        this.dbPort = dbPort;
-    }
-
-    public String getDbName() {
-        return dbName;
-    }
-
-    public void setDbName(String dbName) {
-        this.dbName = dbName;
-    }
-
-    public String getDbUser() {
-        return dbUser;
-    }
-
-    public void setDbUser(String dbUser) {
-        this.dbUser = dbUser;
-    }
-
-    public String getDbPassword() {
-        return dbPassword;
-    }
-
-    public void setDbPassword(String dbPassword) {
-        this.dbPassword = dbPassword;
-    }
-
-    public String getConnUrl() {
-        return connUrl;
-    }
-
-    public void setConnUrl(String connUrl) {
-        this.connUrl = connUrl;
-    }
 
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
 
-    class InsertSqlModel {
+
+    protected class InsertSqlModel {
 
         private String tableName;
         private Map<String, Object> keyValuePair;

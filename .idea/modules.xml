@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/webmagicDemo.iml" filepath="$PROJECT_DIR$/webmagicDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gycrawlerWebmagicDemo.iml" filepath="$PROJECT_DIR$/gycrawlerWebmagicDemo.iml" />
     </modules>
   </component>
 </project>

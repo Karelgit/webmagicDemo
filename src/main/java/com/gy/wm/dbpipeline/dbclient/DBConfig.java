@@ -25,7 +25,7 @@ public class DBConfig {
 
     public static DBConfig getDBConfig(String prefix){
 
-        String proFilePath = System.getProperty("user.dir") + "/resources/dbconfig.properties";
+        String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
 
         ResourceBundle rb;
         BufferedInputStream inputStream;
@@ -58,7 +58,7 @@ public class DBConfig {
 
     public static ResourceBundle getResourceBundle(){
 
-        String proFilePath = System.getProperty("user.dir") + "/resources/dbconfig.properties";
+        String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
         ResourceBundle rb;
         BufferedInputStream inputStream;
 
