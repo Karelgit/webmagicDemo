@@ -111,7 +111,7 @@ public class Crawl {
             e.printStackTrace();
         }
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
-        Map map = jedis.hgetAll("sparkcrawler::Crawled::WebmagicCrawler20160519140823");
-            System.out.println(map.get("http://www.gog.cn/zonghe/system/2016/05/18/014918062.shtml"));
+        Map map = jedis.hgetAll("webmagicCrawler::ToCrawl::WholeSiteCrawler20160519140823");
+            System.out.println(map.get("http://gngj.gog.cn/system/2016/05/19/014919710.shtml"));
     }
 }

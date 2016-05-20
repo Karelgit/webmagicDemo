@@ -3,7 +3,6 @@ package com.gy.wm.service;
 import com.gy.wm.entry.InstanceFactory;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
-import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisBloomFilter;
 import com.gy.wm.util.BloomFilter;
@@ -15,6 +14,7 @@ import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -42,7 +42,7 @@ public class WholesitePageProcessor implements PageProcessor {
 
         try {
             jedisPoolUtils = new JedisPoolUtils();
-            jedis = jedisPoolUtils.getJedisPool().getResource();
+            jedis = jedisPoolUtils.getJedis();
             String json_crawlData = jedis.hget("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
             CrawlData page_crawlData = JsonUtil.toObject(json_crawlData, CrawlData.class);
             jedis.hdel("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
@@ -57,23 +57,34 @@ public class WholesitePageProcessor implements PageProcessor {
             //解析过程
             List<CrawlData> perPageCrawlDateList = this.getTextAnalysis().analysisHtml(page_crawlData);
 
+            List<CrawlData> nextCrawlData = new ArrayList<>();
+            List<CrawlData> crawledData = new ArrayList<>();
+
             for (CrawlData crawlData : perPageCrawlDateList) {
                 if (crawlData.isFetched() == false) {
-                    //栏目分析fetched为false,即导航页
+                    //链接fetched为false,即导航页
                     BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
 
                     //bloomFilter判断待爬取队列没有记录
                     if (RedisBloomFilter.notExistInBloomHash(url, jedis, bloomFilter)) {
-                        RedisToCrawlQue nextQueue = InstanceFactory.getRedisToCrawlQue();
-                        //加入到待爬取队列
-                        nextQueue.putNextUrls(crawlData, jedisPoolUtils, tid);
-                        page.addTargetRequest(crawlData.getUrl());
+                        nextCrawlData.add(crawlData);
+
                     }
                 } else {
-                    //全站数据fetched为true,即文章页，添加到redis的已爬取队列
-                    new RedisCrawledQue().putCrawledQue(crawlData, jedisPoolUtils, this.tid);
+                    //链接fetched为true,即文章页，添加到redis的已爬取队列
+//                    new RedisCrawledQue().putCrawledQue(crawlData, jedisPoolUtils, this.tid);
                     page.putField("crawlerData", crawlData);
                 }
+            }
+
+            RedisToCrawlQue nextQueue = InstanceFactory.getRedisToCrawlQue();
+
+            //加入到待爬取队列
+            nextQueue.putNextUrls(nextCrawlData, jedis, tid);
+
+            //添加到待爬取的targetRequest中
+            for (CrawlData crawlData : nextCrawlData) {
+                page.addTargetRequest(crawlData.getUrl());
             }
         } catch (IOException e) {
             e.printStackTrace();

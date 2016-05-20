@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e9e3b-c032-427c-ac90-c2062ea63539" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/HtmlChangeTokens.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/TokenUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/WholeSiteAnalysis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseURL.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseURL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/InstanceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/InstanceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gycrawlerWebmagicDemo.iml" afterPath="$PROJECT_DIR$/gycrawlerWebmagicDemo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gycrawlerWebmagicDemo.iws" />
@@ -36,40 +33,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RedisCrawledQue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JedisPoolUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
               <folding>
-                <element signature="e#796#797#0" expanded="false" />
-                <element signature="e#823#824#0" expanded="false" />
-                <marker date="1463715768482" expanded="false" signature="32:202" placeholder="..." />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Templates.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/Templates.java">
+      <file leaf-file-name="RedisCrawledQue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,61 +60,70 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WholesitePageProcessor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Crawl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="42" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WholesitePageProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.26994908">
+              <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InitCrawlerConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/InitCrawlerConfig.java">
+      <file leaf-file-name="Page.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Page.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5">
+              <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextAnalysis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spider.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Spider.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.733334">
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#570#571#0" expanded="false" />
-                <element signature="e#602#603#0" expanded="false" />
-                <element signature="e#658#659#0" expanded="false" />
-                <element signature="e#700#701#0" expanded="false" />
-                <element signature="e#751#752#0" expanded="false" />
-                <element signature="e#786#787#0" expanded="false" />
-                <element signature="e#854#855#0" expanded="false" />
-                <element signature="e#902#903#0" expanded="false" />
-                <element signature="e#944#945#0" expanded="false" />
-                <element signature="e#976#977#0" expanded="false" />
-                <element signature="e#1032#1033#0" expanded="false" />
-                <element signature="e#1074#1075#0" expanded="false" />
-                <element signature="e#1116#1117#0" expanded="false" />
-                <element signature="e#1148#1149#0" expanded="false" />
-                <element signature="e#1204#1205#0" expanded="false" />
-                <element signature="e#1246#1247#0" expanded="false" />
-                <element signature="e#1281#1282#0" expanded="false" />
-                <element signature="e#1315#1316#0" expanded="false" />
-                <element signature="e#1366#1367#0" expanded="false" />
-                <element signature="e#1412#1413#0" expanded="false" />
-                <element signature="e#1467#1468#0" expanded="false" />
-                <element signature="e#1506#1507#0" expanded="false" />
+                <element signature="e#6532#7503#0" expanded="true" />
+                <element signature="e#7502#7503#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrawlerWorkflowManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrawlerWorkflowManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1239389">
-              <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -142,19 +133,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="64" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spider.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Spider.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -199,12 +178,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java" />
         <option value="$PROJECT_DIR$/EsMappings/CrawlerDataMapping.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/InitCrawlerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/ColumnPageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" />
       </list>
     </option>
   </component>
@@ -238,8 +219,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-2" />
+    <option name="y" value="4" />
     <option name="width" value="1924" />
     <option name="height" value="1084" />
   </component>
@@ -675,7 +656,7 @@
       <workItem from="1463656538618" duration="263000" />
       <workItem from="1463657208148" duration="1708000" />
       <workItem from="1463706757643" duration="1428000" />
-      <workItem from="1463727866405" duration="516000" />
+      <workItem from="1463727866405" duration="8150000" />
     </task>
     <task id="LOCAL-00001" summary="添加Es数据映射 2015-05-19 19:30">
       <created>1463655793303</created>
@@ -701,40 +682,46 @@
       <option name="project" value="LOCAL" />
       <updated>1463658461353</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="全站爬虫极粗糙版本_2016-5-20 15:14:52">
+      <created>1463728504547</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1463728504547</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39004000" />
+    <option name="totallyTimeSpent" value="46638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1084" extended-state="0" />
+    <frame x="-2" y="4" width="1924" height="1084" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38043478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38043478" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30150214" sideWeight="0.50427353" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7162791" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42391303" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30108696" sideWeight="0.4957265" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7162791" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42282608" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30108696" sideWeight="0.4957265" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23064516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2671674" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -754,7 +741,8 @@
     <MESSAGE value="添加Es数据映射 2015-05-19 19:30" />
     <MESSAGE value="lll" />
     <MESSAGE value="Merge branch 'devel_gonali' of https://github.com/gengyunCrawler/webmagicDemo into devel_maven&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java&#10;&#9;src/main/java/com/gy/wm/schedular/RedisScheduler.java&#10;&#9;src/main/java/com/gy/wm/service/ColumnPageProcessor.java&#10;&#9;src/main/resources/outerHost.properties&#10;&#9;target/classes/com/gy/wm/dbpipeline/dbclient/MysqlClient.class&#10;&#9;target/classes/com/gy/wm/entry/ConfigLoader.class&#10;&#9;target/classes/com/gy/wm/model/CrawlData.class&#10;&#9;target/classes/com/gy/wm/parser/analysis/TextAnalysis.class&#10;&#9;target/classes/com/gy/wm/service/ColumnPageProcessor.class&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'devel_gonali' of https://github.com/gengyunCrawler/webmagicDemo into devel_maven&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java&#10;&#9;src/main/java/com/gy/wm/schedular/RedisScheduler.java&#10;&#9;src/main/java/com/gy/wm/service/ColumnPageProcessor.java&#10;&#9;src/main/resources/outerHost.properties&#10;&#9;target/classes/com/gy/wm/dbpipeline/dbclient/MysqlClient.class&#10;&#9;target/classes/com/gy/wm/entry/ConfigLoader.class&#10;&#9;target/classes/com/gy/wm/model/CrawlData.class&#10;&#9;target/classes/com/gy/wm/parser/analysis/TextAnalysis.class&#10;&#9;target/classes/com/gy/wm/service/ColumnPageProcessor.class&#10;" />
+    <MESSAGE value="全站爬虫极粗糙版本_2016-5-20 15:14:52" />
+    <option name="LAST_COMMIT_MESSAGE" value="全站爬虫极粗糙版本_2016-5-20 15:14:52" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -766,7 +754,7 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -775,24 +763,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding>
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <marker date="1463715768482" expanded="false" signature="32:202" placeholder="..." />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,9 +778,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -811,31 +786,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#570#571#0" expanded="false" />
-            <element signature="e#602#603#0" expanded="false" />
-            <element signature="e#658#659#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
-            <element signature="e#751#752#0" expanded="false" />
-            <element signature="e#786#787#0" expanded="false" />
-            <element signature="e#854#855#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#944#945#0" expanded="false" />
-            <element signature="e#976#977#0" expanded="false" />
-            <element signature="e#1032#1033#0" expanded="false" />
-            <element signature="e#1074#1075#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1246#1247#0" expanded="false" />
-            <element signature="e#1281#1282#0" expanded="false" />
-            <element signature="e#1315#1316#0" expanded="false" />
-            <element signature="e#1366#1367#0" expanded="false" />
-            <element signature="e#1412#1413#0" expanded="false" />
-            <element signature="e#1467#1468#0" expanded="false" />
-            <element signature="e#1506#1507#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -851,9 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,7 +810,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6532#7503#0" expanded="true" />
+            <element signature="e#7502#7503#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -870,9 +822,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <marker date="1463715768482" expanded="false" signature="32:202" placeholder="..." />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1059,6 +1010,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,14 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37574553">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/HashUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.599364">
@@ -1104,71 +1048,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#570#571#0" expanded="false" />
-            <element signature="e#602#603#0" expanded="false" />
-            <element signature="e#658#659#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
-            <element signature="e#751#752#0" expanded="false" />
-            <element signature="e#786#787#0" expanded="false" />
-            <element signature="e#854#855#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#944#945#0" expanded="false" />
-            <element signature="e#976#977#0" expanded="false" />
-            <element signature="e#1032#1033#0" expanded="false" />
-            <element signature="e#1074#1075#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1246#1247#0" expanded="false" />
-            <element signature="e#1281#1282#0" expanded="false" />
-            <element signature="e#1315#1316#0" expanded="false" />
-            <element signature="e#1366#1367#0" expanded="false" />
-            <element signature="e#1412#1413#0" expanded="false" />
-            <element signature="e#1467#1468#0" expanded="false" />
-            <element signature="e#1506#1507#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Spider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java">
+    <entry file="jar://C:/Java/jdk1.7.0_13/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <marker date="1463715768482" expanded="false" signature="32:202" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="64" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-0.23529412">
+          <caret line="721" column="0" selection-start-line="721" selection-start-column="0" selection-end-line="721" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1176,32 +1064,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/scheduler/Scheduler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Spider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.733334">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#6532#7503#0" expanded="true" />
+            <element signature="e#7502#7503#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3.jar!/us/codecraft/webmagic/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="42" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding>
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1239389">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.26994908">
+          <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
           <folding />
         </state>
       </provider>
