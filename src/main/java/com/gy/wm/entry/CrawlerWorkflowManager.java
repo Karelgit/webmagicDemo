@@ -59,7 +59,7 @@ public class CrawlerWorkflowManager {
                         //从seed开始抓
                 .addUrl(urls)
                         //存入mysql
-                .addPipeline(new MysqlPipeline("tb_fbird"))
+//                .addPipeline(new MysqlPipeline("tb_fbird"))
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())

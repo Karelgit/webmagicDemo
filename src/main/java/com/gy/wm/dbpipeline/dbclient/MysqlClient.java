@@ -154,9 +154,9 @@ public class MysqlClient extends AbstractDBClient {
 
         for (Map<String, Object> m : fieldList) {
 
-            String fied = (String) m.get("name");
+            String field = (String) m.get("name");
 
-            switch (fied) {
+            switch (field) {
                 case "tid":
                     fengBirdModel.setTopicTaskID((String) m.get("value"));
                     break;

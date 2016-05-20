@@ -13,16 +13,16 @@ import java.util.Map;
  */
 public class Crawl {
     public static void kick(int depth, int pass, String tid, String starttime, String seedpath, String protocolDir,
-                            String postregexDir, String type, int recalldepth, String templatesDir, String clickregexDir,String configpath)  throws Exception  {
+                            String postregexDir, String type, int recalldepth, String templatesDir, String clickregexDir, String configpath) throws Exception {
         //tid_startTime作为appname，即作为这个爬虫的任务名称
-        InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid+starttime,recalldepth,templatesDir,clickregexDir,protocolDir,postregexDir);
+        InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid + starttime, recalldepth, templatesDir, clickregexDir, protocolDir, postregexDir);
         InstanceFactory.getInstance(crawlerConfig);
 
         ConfigLoader configLoader = new ConfigLoader();
-        List<CrawlData> crawlDataList = configLoader.load(depth,tid,starttime,pass,seedpath,type);
+        List<CrawlData> crawlDataList = configLoader.load(depth, tid, starttime, pass, seedpath, type);
 
-        CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid,"appname");
-        workflow.crawl(crawlDataList,tid,starttime,pass);
+        CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid, "appname");
+        workflow.crawl(crawlDataList, tid, starttime, pass);
     }
 
     public static void main(String[] args) {
@@ -55,7 +55,7 @@ public class Crawl {
         String templateDir = "/SparkCrawler/templates";
         String clickregexDir = "/SparkCrawler/clickregex";
         String postregexDir = "";
-        String configpath="";
+        String configpath = "";
 
         for (int i = 0; i < args.length; i++) {
             if ("-depth".equals(args[i])) {
@@ -76,7 +76,7 @@ public class Crawl {
             } else if ("-protocolDir".equals(args[i])) {
                 protocolDir = args[i + 1];
                 i++;
-            }else if ("-type".equals(args[i])) {
+            } else if ("-type".equals(args[i])) {
                 type = args[i + 1];
                 i++;
             } else if ("-recalldepth".equals(args[i])) {
@@ -91,20 +91,20 @@ public class Crawl {
             } else if ("-postregexDir".equals(args[i])) {
                 postregexDir = args[i + 1];
                 i++;
-            }else if("-configpath".equals(args[i])){
-                configpath=args[i+1];
+            } else if ("-configpath".equals(args[i])) {
+                configpath = args[i + 1];
                 i++;
             }
 
         }
 
         try {
-            kick(depth, pass, tid, starttime,seedpath,protocolDir,postregexDir,type, recalldepth, templateDir, clickregexDir, configpath);
+            kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        JedisPoolUtils jedisPoolUtils= null;
+/*
+        JedisPoolUtils jedisPoolUtils = null;
         try {
             jedisPoolUtils = new JedisPoolUtils();
         } catch (IOException e) {
@@ -112,6 +112,6 @@ public class Crawl {
         }
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
         Map map = jedis.hgetAll("sparkcrawler::Crawled::WebmagicCrawler20160519140823");
-            System.out.println(map.get("http://www.gog.cn/zonghe/system/2016/05/18/014918062.shtml"));
+        System.out.println(map.get("http://www.gog.cn/zonghe/system/2016/05/18/014918062.shtml"));*/
     }
 }
