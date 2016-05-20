@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="490e9e3b-c032-427c-ac90-c2062ea63539" name="Default" comment="修改MysqlPipeline，适用于蜂鸟的Mysql数据库，添加蜂鸟的数据模型FengBirdModel类：2015-05-20：15:18">
+    <list default="true" id="490e9e3b-c032-427c-ac90-c2062ea63539" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gycrawlerWebmagicDemo.iws" />
@@ -1024,7 +1024,7 @@
       <workItem from="1463566847778" duration="35089000" />
       <workItem from="1463656538618" duration="263000" />
       <workItem from="1463657208148" duration="3982000" />
-      <workItem from="1463708392192" duration="12286000" />
+      <workItem from="1463708392192" duration="12294000" />
     </task>
     <task id="LOCAL-00001" summary="添加Es数据映射 2015-05-19 19:30">
       <created>1463655793303</created>
@@ -1086,11 +1086,17 @@
       <option name="project" value="LOCAL" />
       <updated>1463728723853</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改MysqlPipeline，适用于蜂鸟的Mysql数据库，添加蜂鸟的数据模型FengBirdModel类：2015-05-20：15:18">
+      <created>1463728829417</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1463728829418</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51620000" />
+    <option name="totallyTimeSpent" value="51628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="28" width="1922" height="1019" extended-state="6" />
