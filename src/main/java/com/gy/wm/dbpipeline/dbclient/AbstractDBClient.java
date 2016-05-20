@@ -1,5 +1,8 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,110 +14,23 @@ import java.util.Map;
  */
 public abstract class AbstractDBClient implements DBClient {
 
-    protected String dbHostname;
-    protected int dbPort;
-    protected String dbName;
-    protected String dbUser;
-    protected String dbPassword;
-    protected String connUrl;
-
-
-//    @Override
-//    public Connection getConnection() {
-//        return connection;
-//    }
+    protected Logger logger = LoggerFactory.getLogger(getClass());
 
     protected boolean connOpen;
-
-    protected String dbConfigFilePath;
-
     protected Connection connection;
 
-//    public Object getConnection() {
-//        return this.connection;
-//    }
-//
-//    public void closeConnection() {
-//
-//    }
 
-//    public void loadDBConfig() {
-//
-//        DBConfig.loadConfigFile(this.dbConfigFilePath);
-//    }
-
-    public String getDbHostname() {
-        return dbHostname;
+    protected void setConnOpen(boolean connOpen) {
+        this.connOpen = connOpen;
     }
 
-    public void setDbHostname(String dbHostname) {
-        this.dbHostname = dbHostname;
-    }
-
-    public int getDbPort() {
-        return dbPort;
-    }
-
-    public void setDbPort(int dbPort) {
-        this.dbPort = dbPort;
-    }
-
-    public String getDbName() {
-        return dbName;
-    }
-
-    public void setDbName(String dbName) {
-        this.dbName = dbName;
-    }
-
-    public String getDbUser() {
-        return dbUser;
-    }
-
-    public void setDbUser(String dbUser) {
-        this.dbUser = dbUser;
-    }
-
-    public String getDbPassword() {
-        return dbPassword;
-    }
-
-    public void setDbPassword(String dbPassword) {
-        this.dbPassword = dbPassword;
-    }
-
-    public String getConnUrl() {
-        return connUrl;
-    }
-
-    public void setConnUrl(String connUrl) {
-        this.connUrl = connUrl;
-    }
-
-    public String getDbConfigFilePath() {
-        return dbConfigFilePath;
-    }
-
-    public void setDbConfigFilePath(String dbConfigFilePath) {
-        this.dbConfigFilePath = dbConfigFilePath;
-    }
 
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
 
 
-//    public boolean isConnOpen() {
-//        return connOpen;
-//    }
-
-    public void setConnOpen(boolean connOpen) {
-        this.connOpen = connOpen;
-    }
-
-    class InsertSqlModel {
-
-
+    protected class InsertSqlModel {
 
         private String tableName;
         private Map<String, Object> keyValuePair;
@@ -155,13 +71,14 @@ public abstract class AbstractDBClient implements DBClient {
             return this.keyValuePair.get(key);
         }
 
-        public String getInsertSql(){
+        public String getInsertSql() {
+
             String prefix = "INSERT INTO " + this.tableName + " ";
             String attr = new String();
             String value = new String();
 
             int i = 0;
-            for (String k : keys){
+            for (String k : keys) {
                 ++i;
                 attr += k;
                 value += keyValuePair.get(k);
@@ -183,4 +100,5 @@ public abstract class AbstractDBClient implements DBClient {
             this.tableName = tableName;
         }
     }
+
 }

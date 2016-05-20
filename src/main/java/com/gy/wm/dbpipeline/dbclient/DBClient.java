@@ -6,7 +6,7 @@ package com.gy.wm.dbpipeline.dbclient;
 public interface DBClient {
 
     public  Object  getConnection();
-    public void closeConnection();
-    public int  doSetInsert();
+    public  void    closeConnection();
+    public  int     doSetInsert();
     public  boolean isConnOpen();
 }

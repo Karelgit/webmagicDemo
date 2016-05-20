@@ -12,30 +12,36 @@ import java.util.ResourceBundle;
  */
 public class DBConfig {
 
+    private  String hostname;
+    private  int port;
+    private  String DBName;
+    private  String user;
+    private  String password;
 
-    private static String hostname;
-    private static int port;
-    private static String DBName;
-    private static String user;
-    private static String password;
 
+    DBConfig(){
 
-    private static ResourceBundle rb;
-    private static BufferedInputStream inputStream;
+    }
 
-    static {
+    public static DBConfig getDBConfig(String prefix){
 
-        String proFilePath = System.getProperty("user.dir") + "/resources/dbconfig.properties";
+        String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
+
+        ResourceBundle rb;
+        BufferedInputStream inputStream;
+
+        DBConfig dbConfig = new DBConfig();
+
         try {
 
             inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
             rb = new PropertyResourceBundle(inputStream);
 
-            hostname = rb.getString("HOSTNAME");
-            port = Integer.parseInt(rb.getString("PORT"));
-            DBName = rb.getString("DBNAME");
-            user = rb.getString("USER");
-            password = rb.getString("PASSWORD");
+            dbConfig.hostname = rb.getString(prefix + "HOSTNAME");
+            dbConfig.port = Integer.parseInt(rb.getString(prefix + "PORT"));
+            dbConfig.DBName = rb.getString(prefix + "DBNAME");
+            dbConfig.user = rb.getString(prefix + "USER");
+            dbConfig.password = rb.getString(prefix + "PASSWORD");
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -46,27 +52,55 @@ public class DBConfig {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        return dbConfig;
+    }
+
+    public static ResourceBundle getResourceBundle(){
+
+        String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
+        ResourceBundle rb;
+        BufferedInputStream inputStream;
+
+        try {
+
+            inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
+            rb = new PropertyResourceBundle(inputStream);
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+
+        } catch (IOException e) {
+
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+
+        return rb;
     }
 
 
-    public static String getHostname() {
-        return hostname;
+    public  String getHostname() {
+        return this.hostname;
     }
 
-    public static int getPort() {
-        return port;
+    public  int getPort() {
+        return this.port;
     }
 
-    public static String getDBName() {
-        return DBName;
+    public  String getDBName() {
+        return this.DBName;
     }
 
-    public static String getUser() {
-        return user;
+    public  String getUser() {
+        return this.user;
     }
 
-    public static String getPassword() {
-        return password;
+    public  String getPassword() {
+        return this.password;
     }
 
 }
