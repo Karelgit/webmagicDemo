@@ -23,11 +23,11 @@ import java.util.List;
  * @author yinlei
  *         2014-3-5 下午4:27:51
  */
-public class ColumnPageProcessor implements PageProcessor {
+public class TopicPageProcessor implements PageProcessor {
     private String tid;
     private TextAnalysis textAnalysis;
 
-    public ColumnPageProcessor(String tid, TextAnalysis textAnalysis) {
+    public TopicPageProcessor(String tid, TextAnalysis textAnalysis) {
         this.tid = tid;
         this.textAnalysis = textAnalysis;
     }
