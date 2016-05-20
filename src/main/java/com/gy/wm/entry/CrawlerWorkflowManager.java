@@ -9,6 +9,7 @@ import com.gy.wm.schedular.RedisScheduler;
 import com.gy.wm.service.WholesitePageProcessor;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
+import redis.clients.jedis.Jedis;
 import us.codecraft.webmagic.Spider;
 
 import java.io.IOException;
@@ -39,10 +40,8 @@ public class CrawlerWorkflowManager {
     public void crawl(List<CrawlData> seeds, String tid, String starttime, int pass) throws IOException {
 
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
-
-        for (CrawlData seed : seeds) {
-            nextQueue.putNextUrls(seed, jedisPoolUtils, tid);
-        }
+        Jedis jedis = jedisPoolUtils.getJedis();
+         nextQueue.putNextUrls(seeds, jedis, tid);
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
     }
@@ -67,11 +66,5 @@ public class CrawlerWorkflowManager {
                 .thread(5)
                         //启动爬虫
                 .run();
-    }
-
-    protected boolean shouldContinue(JedisPoolUtils jedisPoolUtils) throws IOException {
-        boolean rs = nextQueue.hasMoreUrls(tid, jedisPoolUtils);
-        logger.logInfo("should continue: " + rs);
-        return rs;
     }
 }
