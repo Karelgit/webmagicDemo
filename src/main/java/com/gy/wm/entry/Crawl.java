@@ -2,11 +2,9 @@ package com.gy.wm.entry;
 
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.JedisPoolUtils;
-import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Administrator on 2016/5/18.
@@ -26,6 +24,7 @@ public class Crawl {
     }
 
     public static void main(String[] args) {
+        long start_time = System.currentTimeMillis();
         if (args.length < 24) {
             System.out.println("Usage:\n" +
                     "\t  -depth <退出深度>\n" +
@@ -110,8 +109,7 @@ public class Crawl {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
-        Map map = jedis.hgetAll("webmagicCrawler::ToCrawl::WholeSiteCrawler20160519140823");
-            System.out.println(map.get("http://gngj.gog.cn/system/2016/05/19/014919710.shtml"));
+        long end_time = System.currentTimeMillis();
+        System.out.println("time elapse:"+ (end_time-start_time));
     }
 }
