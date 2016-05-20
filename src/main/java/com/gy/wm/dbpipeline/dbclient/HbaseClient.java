@@ -1,6 +1,7 @@
 package com.gy.wm.dbpipeline.dbclient;
 
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.CrawlerDataUtils;
 import com.gy.wm.util.RandomUtils;
 import org.apache.hadoop.conf.Configuration;
@@ -33,10 +34,10 @@ public class HbaseClient extends AbstractDBClient {
 
     static {
         conf = HBaseConfiguration.create();
-        hostnames = DBConfig.getResourceBundle().getString("HBASE_HOSTNAMES");
-        port = DBConfig.getResourceBundle().getString("HBASE_PORT");
-        tableName = DBConfig.getResourceBundle().getString("HBASE_TABLE_NAME");
-        columnFamilyName = DBConfig.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
+        hostnames = ConfigUtils.getResourceBundle().getString("HBASE_HOSTNAMES");
+        port = ConfigUtils.getResourceBundle().getString("HBASE_PORT");
+        tableName = ConfigUtils.getResourceBundle().getString("HBASE_TABLE_NAME");
+        columnFamilyName = ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
         conf.set("hbase.zookeeper.quorum", hostnames);
         myPool = new HTablePool(conf, 100);
     }

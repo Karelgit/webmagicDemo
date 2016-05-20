@@ -2,6 +2,7 @@ package com.gy.wm.dbpipeline.dbclient;
 
 import com.alibaba.fastjson.JSON;
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.RandomUtils;
 
 import java.io.BufferedReader;
@@ -36,10 +37,10 @@ public class EsClient extends AbstractDBClient {
 
     public EsClient() {
 
-        this.hostname = DBConfig.getResourceBundle().getString("ES_HOSTNAME");
-        this.port = Integer.parseInt(DBConfig.getResourceBundle().getString("ES_PORT"));
-        this.indexName = DBConfig.getResourceBundle().getString("ES_INDEX_NAME");
-        this.typeName = DBConfig.getResourceBundle().getString("ES_TYPE_NAME");
+        this.hostname = ConfigUtils.getResourceBundle().getString("ES_HOSTNAME");
+        this.port = Integer.parseInt(ConfigUtils.getResourceBundle().getString("ES_PORT"));
+        this.indexName = ConfigUtils.getResourceBundle().getString("ES_INDEX_NAME");
+        this.typeName = ConfigUtils.getResourceBundle().getString("ES_TYPE_NAME");
 
         this.requestUrl = "http://" + this.hostname + ":" +
                 this.port + "/" + this.indexName + "/" + this.typeName + "/";

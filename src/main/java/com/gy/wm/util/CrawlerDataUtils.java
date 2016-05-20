@@ -1,7 +1,5 @@
 package com.gy.wm.util;
 
-import com.gy.wm.model.CrawlData;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -14,15 +12,15 @@ import java.util.Map;
  */
 public class CrawlerDataUtils {
 
-    private List<Map<String, Object>> infoList;
+    private List<Map<String, Object>> fieldList;
 
     private CrawlerDataUtils() {
 
-        infoList = new ArrayList();
+        fieldList = new ArrayList();
     }
 
 
-    public static CrawlerDataUtils getCrawlerDataUtils(CrawlData data) {
+    public static CrawlerDataUtils getCrawlerDataUtils(Object data) {
 
         CrawlerDataUtils utils = new CrawlerDataUtils();
         Map<String, Object> infoMap = null;
@@ -45,7 +43,7 @@ public class CrawlerDataUtils {
             else
                 infoMap.put("value", utils.getFieldValueByName(fields[i].getName(), data));
 
-            utils.infoList.add(infoMap);
+            utils.fieldList.add(infoMap);
         }
 //        System.out.println("########################################");
 
@@ -85,7 +83,7 @@ public class CrawlerDataUtils {
 
     public List<Map<String, Object>> getAttributeInfoList() {
 
-        return this.infoList;
+        return this.fieldList;
     }
 
 }

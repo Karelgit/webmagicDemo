@@ -17,6 +17,7 @@ import us.codecraft.webmagic.processor.PageProcessor;
 import java.io.IOException;
 import java.util.List;
 
+
 /**
  * 网页抓取器。
  *
@@ -107,3 +108,4 @@ public class WholesitePageProcessor implements PageProcessor {
 
 
 }
+
