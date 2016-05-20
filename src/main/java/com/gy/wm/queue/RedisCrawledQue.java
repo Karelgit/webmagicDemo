@@ -15,6 +15,6 @@ public class RedisCrawledQue {
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
         jedis.select(0);
         String crawlDataJson = JsonUtil.toJson(crawlData);
-        jedis.hset("sparkcrawler::Crawled::" + taskid, crawlData.getUrl(),crawlDataJson);
+        jedis.hset("webmagicCrawler::Crawled::" + taskid, crawlData.getUrl(),crawlDataJson);
     }
 }

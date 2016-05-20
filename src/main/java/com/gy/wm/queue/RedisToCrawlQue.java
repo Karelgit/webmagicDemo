@@ -49,7 +49,7 @@ public class RedisToCrawlQue {
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
         jedis.select(0);
         String crawlDataJson = JsonUtil.toJson(crawlData);
-        jedis.hset("webmagicCrawle::ToCrawl::" + tid, crawlData.getUrl(), crawlDataJson);
+        jedis.hset("webmagicCrawler::ToCrawl::" + tid, crawlData.getUrl(), crawlDataJson);
     }
 
 }
