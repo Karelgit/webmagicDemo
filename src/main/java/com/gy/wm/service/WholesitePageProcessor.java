@@ -73,6 +73,7 @@ public class WholesitePageProcessor implements PageProcessor {
                 } else {
                     //链接fetched为true,即文章页，添加到redis的已爬取队列
 //                    new RedisCrawledQue().putCrawledQue(crawlData, jedisPoolUtils, this.tid);
+                    if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg"))
                     page.putField("crawlerData", crawlData);
                 }
             }
