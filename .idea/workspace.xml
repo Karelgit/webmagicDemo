@@ -854,7 +854,7 @@
       <workItem from="1463566847778" duration="35089000" />
       <workItem from="1463656538618" duration="263000" />
       <workItem from="1463657208148" duration="3982000" />
-      <workItem from="1463708392192" duration="3342000" />
+      <workItem from="1463708392192" duration="3357000" />
     </task>
     <task id="LOCAL-00001" summary="添加Es数据映射 2015-05-19 19:30">
       <created>1463655793303</created>
@@ -898,11 +898,17 @@
       <option name="project" value="LOCAL" />
       <updated>1463711628711</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改DBConfig类为ConfigUtils类，并且放到了utils下面：2015-05-20：10：30">
+      <created>1463711813018</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1463711813018</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42676000" />
+    <option name="totallyTimeSpent" value="42691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="28" width="1922" height="1019" extended-state="6" />
