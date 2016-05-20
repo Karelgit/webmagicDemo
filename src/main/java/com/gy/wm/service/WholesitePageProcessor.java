@@ -70,7 +70,7 @@ public class WholesitePageProcessor implements PageProcessor {
                         page.addTargetRequest(crawlData.getUrl());
                     }
                 } else {
-                    //栏目分析fetched为true,即文章页，添加到redis的已爬取队列
+                    //全站数据fetched为true,即文章页，添加到redis的已爬取队列
                     new RedisCrawledQue().putCrawledQue(crawlData, jedisPoolUtils, this.tid);
                     page.putField("crawlerData", crawlData);
                 }

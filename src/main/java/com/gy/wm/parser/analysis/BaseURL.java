@@ -1,71 +1,22 @@
 package com.gy.wm.parser.analysis;
 
+
+import java.text.SimpleDateFormat;
+
 /**
- * Created by hadoop on 2015/11/9.
+ * Created by Administrator on 2015/11/12.
  */
+public class BaseURL
+{
+    String url = null;
+    String title = null;
+    long date = 0;
+    String html = null;
+    String text;
 
-public class BaseURL  {
-
-    private String url=null;
-    private int statcode;
-    private String rootUrl=null;
- //   private BaseWebPage webPage=null;
-    private String fromUrl=null;
-    private String text=null;
-    private String html=null;
-    private String title=null;
-    private long crawltime;
-    private long publishtime;
-    private long depthfromSeed;
-    private boolean tag;
-    private long count;
-
-
-    public BaseURL(String url,String title,String fromUrl,long date,long depthfromSeed)
+    public void setDate(long date)
     {
-
-    }
-
-    public String getUrl()
-    {
-        return url;
-    }
-
-    public void setUrl(String url)
-    {
-        this.url = url;
-    }
-
-    public int getStatcode()
-    {
-        return statcode;
-    }
-
-    public void setStatcode(int statcode)
-    {
-        this.statcode = statcode;
-    }
-
-    public String getRootUrl()
-    {
-        return rootUrl;
-    }
-
-    public void setRootUrl(String rootUrl)
-    {
-        this.rootUrl = rootUrl;
-    }
-
-
-
-    public String getFromUrl()
-    {
-        return fromUrl;
-    }
-
-    public void setFromUrl(String fromUrl)
-    {
-        this.fromUrl = fromUrl;
+        this.date = date;
     }
 
     public String getText()
@@ -78,6 +29,20 @@ public class BaseURL  {
         this.text = text;
     }
 
+
+    public BaseURL(String html)
+    {
+        this.html = html;
+    }
+
+    public BaseURL(String url, String title, long date, String html)
+    {
+        this.url = url;
+        this.title = title;
+        this.date = date;
+        this.html = html;
+    }
+
     public String getHtml()
     {
         return html;
@@ -86,6 +51,20 @@ public class BaseURL  {
     public void setHtml(String html)
     {
         this.html = html;
+    }
+
+    public long getDate()
+    {
+        return date;
+    }
+
+    public String getDateTime()
+    {
+        if (date==0) return "0";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date date = new java.util.Date();
+        String str = sdf.format(date);
+        return str;
     }
 
     public String getTitle()
@@ -98,56 +77,8 @@ public class BaseURL  {
         this.title = title;
     }
 
-    public long getCrawltime()
+    public String getUrl()
     {
-        return crawltime;
+        return url;
     }
-
-    public void setCrawltime(long crawltime)
-    {
-        this.crawltime = crawltime;
-    }
-
-    public long getPublishtime()
-    {
-        return publishtime;
-    }
-
-    public void setPublishtime(long publishtime)
-    {
-        this.publishtime = publishtime;
-    }
-
-    public long getDepthfromSeed()
-    {
-        return depthfromSeed;
-    }
-
-    public void setDepthfromSeed(long depthfromSeed)
-    {
-        this.depthfromSeed = depthfromSeed;
-    }
-
-    public boolean isTag()
-    {
-        return tag;
-    }
-
-    public void setTag(boolean tag)
-    {
-        this.tag = tag;
-    }
-
-    public long getCount()
-    {
-        return count;
-    }
-
-    public void setCount(long count)
-    {
-        this.count = count;
-    }
-
-
-
 }

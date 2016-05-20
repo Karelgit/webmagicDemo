@@ -1,7 +1,6 @@
 package com.gy.wm.parser.analysis;
 
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.parser.urljudge.HtmlSort;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -12,84 +11,56 @@ import java.util.List;
  * Created by root on 15-12-22.
  */
 public class TextAnalysis implements Serializable {
-    private List<BaseTemplate> baseTemplates;
 
-    private AnalysisArticle analysisArticle;
+    private WholeSiteAnalysis wholeSiteAnalysis;
 
-    public TextAnalysis(List<BaseTemplate> baseTemplates) {
-        this.baseTemplates = baseTemplates;
-        this.analysisArticle = new AnalysisArticle();
+    public TextAnalysis(WholeSiteAnalysis wholeSiteAnalysis) {
+        this.wholeSiteAnalysis = wholeSiteAnalysis;
     }
 
     public List<CrawlData> analysisHtml(CrawlData crawlData)   {
         List<CrawlData> crawlDataList = new ArrayList<>();
-        List<BaseAnalysisURL> baseAnalysisURLList = new ArrayList<>();
-        //初始化
-        AnalysisNavigation analysisNavigation = new AnalysisNavigation();
 
-        String url = crawlData.getUrl();
         String html = crawlData.getHtml();
-        String tid = crawlData.getTid();
-        int pass = crawlData.getPass();
-        String type = crawlData.getType();
-        String startTime = crawlData.getStartTime();
-        long depthfromSeed = crawlData.getDepthfromSeed();
 
-
-        String title = "";
-        Long date = 0L;
-
-        BaseAnalysisURL oldUrl = new BaseAnalysisURL(url, title, date, html);
-
-        //网页分类
-        int sort = HtmlSort.getHtmlSort(url, html);
-
-        //导航解析
-        if(sort ==1)    {
-            try {
-                baseAnalysisURLList = analysisNavigation.getUrlList(url,html);
-                for(BaseAnalysisURL baseAnalysisURL : baseAnalysisURLList)  {
-                    CrawlData newCrawlData = new CrawlData();
-                    newCrawlData.setTid(tid);
-                    newCrawlData.setPass(pass);
-                    newCrawlData.setType(type);
-                    newCrawlData.setStartTime(startTime);
-                    newCrawlData.setDepthfromSeed(depthfromSeed + 1);
-                    newCrawlData.setRootUrl(url);
-                    newCrawlData.setFromUrl(url);
-                    newCrawlData.setUrl(baseAnalysisURL.getUrl());
-                    newCrawlData.setTitle(baseAnalysisURL.getTitle());
-                    newCrawlData.setPublishTime(baseAnalysisURL.getDate());
-                    newCrawlData.setCrawlTime(System.currentTimeMillis());
-                    newCrawlData.setHtml(baseAnalysisURL.getHtml());
-                    newCrawlData.setText(baseAnalysisURL.getText());
-                    newCrawlData.setFetched(false);
-                    newCrawlData.setTag(false);
-
-                    crawlDataList.add(newCrawlData);
+        if(html != null || html.length() > 0) {
+            String rootUrl = crawlData.getRootUrl();
+            long depth = crawlData.getDepthfromSeed();
+            if(depth < 6 )  {
+                String fromUrl = crawlData.getUrl();
+                try {
+                    List<BaseURL> baseURLList = wholeSiteAnalysis.getUrlList(fromUrl,html);
+                    for (BaseURL baseURL : baseURLList) {
+                        CrawlData newCrawlData = createNewCrawlData(baseURL,rootUrl,depth,fromUrl,crawlData.getPass(),crawlData.getTid(),crawlData.getStartTime());
+                        crawlDataList.add(newCrawlData);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                crawlData.setFetched(true);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else {
-            //文章页解析
-            try {
-                oldUrl = analysisArticle.analysisArticle(oldUrl, baseTemplates);
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
-            crawlData.setTitle(oldUrl.getTitle());
-            crawlData.setPublishTime(oldUrl.getDate());
-            crawlData.setText(oldUrl.getText());
-            crawlData.setHtml(oldUrl.getHtml());
-            crawlData.setFetched(true);
-            crawlData.setTag(true);
-
-            crawlDataList.add(crawlData);
+            crawlData.setText(wholeSiteAnalysis.getText());
         }
+        crawlData.setFetched(true);
         return crawlDataList;
     }
+
+    public CrawlData createNewCrawlData(BaseURL baseURL, String rootURL, long depth, String fromUrl, int pass, String tid, String startTime)   {
+        CrawlData crawlData = new CrawlData();
+        if(baseURL != null) {
+            String url = baseURL.getUrl();
+            crawlData.setTid(tid);
+            crawlData.setStartTime(startTime);
+            crawlData.setRootUrl(rootURL);
+            crawlData.setDepthfromSeed(depth + 1);
+            crawlData.setFromUrl(fromUrl);
+            crawlData.setPublishTime(baseURL.getDate());
+            crawlData.setUrl(url);
+            crawlData.setPass(pass);
+            crawlData.setTitle(baseURL.getTitle());
+            crawlData.setFetched(false);
+        }
+        return crawlData;
+    }
+
 }

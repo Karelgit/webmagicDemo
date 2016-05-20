@@ -2,6 +2,7 @@ package com.gy.wm.entry;
 
 import com.gy.wm.parser.analysis.BaseTemplate;
 import com.gy.wm.parser.analysis.TextAnalysis;
+import com.gy.wm.parser.analysis.WholeSiteAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
 
@@ -23,13 +24,14 @@ public class InstanceFactory {
     private static RedisToCrawlQue REDIS_TO_CRAWL_QUE = new RedisToCrawlQue();
     private static RedisCrawledQue REDIS_CRAWLED_QUE = new RedisCrawledQue();
 
+    private static WholeSiteAnalysis WHOLE_SITE_ANALYSIS = new WholeSiteAnalysis();
+
     public InstanceFactory(InitCrawlerConfig obj)   {
         CRAWL_CONFIG = obj;
-        BASE_TEMPLATE = CRAWL_CONFIG.getListTemplate();
         POST_REGEXS = CRAWL_CONFIG.getPostRegex();
         PROTOCOLS = CRAWL_CONFIG.getProtocols();
         REGEXS = CRAWL_CONFIG.getRegexList();
-        TEXT_ANALYSIS = new TextAnalysis(BASE_TEMPLATE);
+        TEXT_ANALYSIS = new TextAnalysis(WHOLE_SITE_ANALYSIS);
     }
 
     public static InstanceFactory getInstance(final InitCrawlerConfig object) {
@@ -105,6 +107,14 @@ public class InstanceFactory {
 
     public static void setRedisCrawledQue(RedisCrawledQue redisCrawledQue) {
         REDIS_CRAWLED_QUE = redisCrawledQue;
+    }
+
+    public static WholeSiteAnalysis getWholeSiteAnalysis() {
+        return WHOLE_SITE_ANALYSIS;
+    }
+
+    public static void setWholeSiteAnalysis(WholeSiteAnalysis wholeSiteAnalysis) {
+        WHOLE_SITE_ANALYSIS = wholeSiteAnalysis;
     }
 
 
