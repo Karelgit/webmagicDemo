@@ -1,4 +1,4 @@
-package com.gy.wm.dbpipeline.dbclient;
+package com.gy.wm.util;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 /**
  * Created by TianyuanPan on 5/4/16.
  */
-public class DBConfig {
+public class ConfigUtils {
 
     private  String hostname;
     private  int port;
@@ -19,29 +19,29 @@ public class DBConfig {
     private  String password;
 
 
-    DBConfig(){
+    ConfigUtils(){
 
     }
 
-    public static DBConfig getDBConfig(String prefix){
+    public static ConfigUtils getDBConfig(String prefix){
 
         String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
 
         ResourceBundle rb;
         BufferedInputStream inputStream;
 
-        DBConfig dbConfig = new DBConfig();
+        ConfigUtils configUtils = new ConfigUtils();
 
         try {
 
             inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
             rb = new PropertyResourceBundle(inputStream);
 
-            dbConfig.hostname = rb.getString(prefix + "HOSTNAME");
-            dbConfig.port = Integer.parseInt(rb.getString(prefix + "PORT"));
-            dbConfig.DBName = rb.getString(prefix + "DBNAME");
-            dbConfig.user = rb.getString(prefix + "USER");
-            dbConfig.password = rb.getString(prefix + "PASSWORD");
+            configUtils.hostname = rb.getString(prefix + "HOSTNAME");
+            configUtils.port = Integer.parseInt(rb.getString(prefix + "PORT"));
+            configUtils.DBName = rb.getString(prefix + "DBNAME");
+            configUtils.user = rb.getString(prefix + "USER");
+            configUtils.password = rb.getString(prefix + "PASSWORD");
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -53,7 +53,7 @@ public class DBConfig {
             e.printStackTrace();
         }
 
-        return dbConfig;
+        return configUtils;
     }
 
     public static ResourceBundle getResourceBundle(){

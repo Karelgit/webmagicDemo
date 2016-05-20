@@ -1,6 +1,5 @@
 package com.gy.wm.entry;
 
-import com.gy.wm.dbpipeline.impl.HbaseEsPipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -62,7 +61,7 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new MysqlPipeline("tb_crawler"))
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
-                .addPipeline(new HbaseEsPipeline())
+//                .addPipeline(new HbaseEsPipeline())
                         //开启5个线程抓取
                 .thread(5)
                         //启动爬虫

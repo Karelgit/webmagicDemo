@@ -43,8 +43,9 @@ public class ColumnPageProcessor implements PageProcessor {
         try {
             jedisPoolUtils = new JedisPoolUtils();
             jedis = jedisPoolUtils.getJedisPool().getResource();
-            String json_crawlData = jedis.hget("webmagicCrawle::ToCrawl::" + tid, page.getRequest().getUrl());
+            String json_crawlData = jedis.hget("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
             CrawlData page_crawlData = JsonUtil.toObject(json_crawlData, CrawlData.class);
+            jedis.hdel("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
 
             int statusCode = page.getStatusCode();
             String html = page.getHtml().toString();
