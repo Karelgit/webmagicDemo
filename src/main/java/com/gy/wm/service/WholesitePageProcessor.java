@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * 网页抓取器。
  *
@@ -119,3 +120,4 @@ public class WholesitePageProcessor implements PageProcessor {
 
 
 }
+

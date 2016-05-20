@@ -21,7 +21,11 @@ public class JedisPoolUtils implements Serializable {
         makepool();
     }
 
-    public static void makepool() throws FileNotFoundException,IOException {
+    public static void makepool() throws FileNotFoundException, IOException {
+
+        String redisHost = ConfigUtils.getResourceBundle().getString("REDIS_HOSTNAME");
+        int    redisPort = Integer.parseInt(ConfigUtils.getResourceBundle().getString("REDIS_PORT"));
+
         if (pool == null) {
             JedisPoolConfig conf = new JedisPoolConfig();
             conf.setMaxTotal(-1);

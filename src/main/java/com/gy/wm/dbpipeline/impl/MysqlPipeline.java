@@ -45,16 +45,16 @@ public class MysqlPipeline extends BaseDBPipeline {
         logger.debug("MysqlPipeline resultItems size: " + resultItems.getAll().size() +
                 "\n\tTask uuid: " + task.getUUID());
 
-        List<CrawlData> crawlDataList = resultItems.get("crawlerDataList");
+        CrawlData crawlData = resultItems.get("crawlerData");
 
-        int dataSize = crawlDataList.size();
-
-        System.out.println("MysqlPipeline crwalerDataList Size: " + dataSize);
-        logger.debug("MysqlPipeline crwalerDataList Size: " + dataSize);
-
-        for (CrawlData data : crawlDataList) {
-            add(tableName, data);
+        if (crawlData == null) {
+            System.out.println("MysqlPipeline crwalerData is NULL");
+            logger.warn("MysqlPipeline crwalerData is NULL !!!");
         }
+
+//        for (CrawlData data : crawlData) {
+        add(tableName, crawlData);
+//        }
         int sum = doInsert();
         System.out.println("MysqlPipeline doInsert Successful number: " + sum);
         logger.debug("MysqlPipeline doInsert Successful number: " + sum);
