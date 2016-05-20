@@ -1,9 +1,5 @@
 package com.gy.wm.util;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
@@ -12,94 +8,90 @@ import java.util.ResourceBundle;
  */
 public class ConfigUtils {
 
-    private  String hostname;
-    private  int port;
-    private  String DBName;
-    private  String user;
-    private  String password;
+    private String hostname;
+    private int port;
+    private String dbName;
+    private String user;
+    private String password;
 
 
-    ConfigUtils(){
+    private static ResourceBundle rb;
+
+    ConfigUtils() {
 
     }
 
-    public static ConfigUtils getDBConfig(String prefix){
-
-        String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
+    public static ConfigUtils getConfigUtils(String prefix) {
 
         ResourceBundle rb;
-        BufferedInputStream inputStream;
 
         ConfigUtils configUtils = new ConfigUtils();
 
-        try {
+        rb = PropertyResourceBundle.getBundle("dbconfig");
 
-            inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
-            rb = new PropertyResourceBundle(inputStream);
+        configUtils.hostname = rb.getString(prefix + "HOSTNAME");
+        configUtils.port = Integer.parseInt(rb.getString(prefix + "PORT"));
+        configUtils.dbName = rb.getString(prefix + "DBNAME");
+        configUtils.user = rb.getString(prefix + "USER");
+        configUtils.password = rb.getString(prefix + "PASSWORD");
 
-            configUtils.hostname = rb.getString(prefix + "HOSTNAME");
-            configUtils.port = Integer.parseInt(rb.getString(prefix + "PORT"));
-            configUtils.DBName = rb.getString(prefix + "DBNAME");
-            configUtils.user = rb.getString(prefix + "USER");
-            configUtils.password = rb.getString(prefix + "PASSWORD");
-
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-
-        } catch (IOException e) {
-
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
 
         return configUtils;
     }
 
-    public static ResourceBundle getResourceBundle(){
+    public static ConfigUtils getConfigUtils(String prefix, String configName) {
 
-        String proFilePath = System.getProperty("user.dir") + "/src/main/resources/dbconfig.properties";
         ResourceBundle rb;
-        BufferedInputStream inputStream;
 
-        try {
+        ConfigUtils configUtils = new ConfigUtils();
 
-            inputStream = new BufferedInputStream(new FileInputStream(proFilePath));
-            rb = new PropertyResourceBundle(inputStream);
+        rb = PropertyResourceBundle.getBundle(configName);
 
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            return null;
+        configUtils.hostname = rb.getString(prefix + "HOSTNAME");
+        configUtils.port = Integer.parseInt(rb.getString(prefix + "PORT"));
+        configUtils.dbName = rb.getString(prefix + "DBNAME");
+        configUtils.user = rb.getString(prefix + "USER");
+        configUtils.password = rb.getString(prefix + "PASSWORD");
 
-        } catch (IOException e) {
 
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            return null;
-        }
+        return configUtils;
+    }
+
+
+
+    public static ResourceBundle getResourceBundle() {
+
+        rb = PropertyResourceBundle.getBundle("dbconfig");
+        return rb;
+    }
+
+
+    public static ResourceBundle getResourceBundle(String configName) {
+
+
+        rb = PropertyResourceBundle.getBundle(configName);
 
         return rb;
     }
 
 
-    public  String getHostname() {
+    public String getHostname() {
         return this.hostname;
     }
 
-    public  int getPort() {
+    public int getPort() {
         return this.port;
     }
 
-    public  String getDBName() {
-        return this.DBName;
+    public String getDbName() {
+        return this.dbName;
     }
 
-    public  String getUser() {
+    public String getUser() {
         return this.user;
     }
 
-    public  String getPassword() {
+    public String getPassword() {
         return this.password;
     }
 
