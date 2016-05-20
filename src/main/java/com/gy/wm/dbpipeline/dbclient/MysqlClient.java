@@ -1,6 +1,7 @@
 package com.gy.wm.dbpipeline.dbclient;
 
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.ConfigUtils;
 
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -25,7 +26,7 @@ public class MysqlClient extends AbstractDBClient {
 
     private Statement myStatement;
 
-    private DBConfig dbConfig;
+    private ConfigUtils configUtils;
 
 
     private List<InsertSqlModel> insertSqlModels;
@@ -34,12 +35,12 @@ public class MysqlClient extends AbstractDBClient {
 
         this.characterEnconding = "UTF-8";
         this.insertSqlModels = new ArrayList<>();
-        this.dbConfig = DBConfig.getDBConfig("MYSQL_");
-        this.dbHostname = dbConfig.getHostname();
-        this.dbPort = dbConfig.getPort();
-        this.dbName = dbConfig.getDBName();
-        this.dbUser = dbConfig.getUser();
-        this.dbPassword = dbConfig.getPassword();
+        this.configUtils = ConfigUtils.getConfigUtils("MYSQL_");
+        this.dbHostname = configUtils.getHostname();
+        this.dbPort = configUtils.getPort();
+        this.dbName = configUtils.getDbName();
+        this.dbUser = configUtils.getUser();
+        this.dbPassword = configUtils.getPassword();
         this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
                 "/" + dbName + "?user=" + dbUser + "&password=" +
                 dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
@@ -53,12 +54,12 @@ public class MysqlClient extends AbstractDBClient {
 
         this.characterEnconding = characterEnconding;
         this.insertSqlModels = new ArrayList<>();
-        this.dbConfig = DBConfig.getDBConfig("MYSQL_");
-        this.dbHostname = dbConfig.getHostname();
-        this.dbPort = dbConfig.getPort();
-        this.dbName = dbConfig.getDBName();
-        this.dbUser = dbConfig.getUser();
-        this.dbPassword = dbConfig.getPassword();
+        this.configUtils = ConfigUtils.getConfigUtils("MYSQL_");
+        this.dbHostname = configUtils.getHostname();
+        this.dbPort = configUtils.getPort();
+        this.dbName = configUtils.getDbName();
+        this.dbUser = configUtils.getUser();
+        this.dbPassword = configUtils.getPassword();
         this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
                 "/" + dbName + "?user=" + dbUser + "&password=" +
                 dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
