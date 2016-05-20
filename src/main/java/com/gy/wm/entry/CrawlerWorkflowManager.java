@@ -5,7 +5,7 @@ import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisScheduler;
-import com.gy.wm.service.ColumnPageProcessor;
+import com.gy.wm.service.TopicPageProcessor;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
 import us.codecraft.webmagic.Spider;
@@ -53,7 +53,7 @@ public class CrawlerWorkflowManager {
         }
         String urls = tempUrl.substring(0, tempUrl.length() - 1);
 
-        Spider.create(new ColumnPageProcessor(tid, textAnalysis))
+        Spider.create(new TopicPageProcessor(tid, textAnalysis))
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
                 .addUrl(urls)

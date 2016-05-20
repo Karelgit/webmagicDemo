@@ -22,11 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="gycrawlerWebmagicDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="gycrawlerWebmagicDemo" target="1.7" />
+      <module name="webmagicDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
