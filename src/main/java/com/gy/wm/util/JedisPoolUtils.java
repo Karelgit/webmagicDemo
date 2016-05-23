@@ -30,7 +30,7 @@ public class JedisPoolUtils implements Serializable {
             JedisPoolConfig conf = new JedisPoolConfig();
             conf.setMaxTotal(-1);
             conf.setMaxWaitMillis(60000L);
-            pool = new JedisPool(conf, "118.118.118.11", 6379,100000);
+            pool = new JedisPool(conf, redisHost, redisPort,100000);
         }
     }
 
