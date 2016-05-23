@@ -3,11 +3,12 @@ package com.gy.wm.service;
 import com.gy.wm.entry.InstanceFactory;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
+import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisBloomFilter;
 import com.gy.wm.util.BloomFilter;
+import com.gy.wm.util.JSONUtil;
 import com.gy.wm.util.JedisPoolUtils;
-import com.gy.wm.util.JsonUtil;
 import redis.clients.jedis.Jedis;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
@@ -45,7 +46,7 @@ public class WholesitePageProcessor implements PageProcessor {
             jedisPoolUtils = new JedisPoolUtils();
             jedis = jedisPoolUtils.getJedis();
             String json_crawlData = jedis.hget("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
-            CrawlData page_crawlData = JsonUtil.toObject(json_crawlData, CrawlData.class);
+            CrawlData page_crawlData = (CrawlData) JSONUtil.jackson2Object(json_crawlData, CrawlData.class);
             jedis.hdel("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
 
             int statusCode = page.getStatusCode();
@@ -61,21 +62,22 @@ public class WholesitePageProcessor implements PageProcessor {
             List<CrawlData> nextCrawlData = new ArrayList<>();
             List<CrawlData> crawledData = new ArrayList<>();
 
-            for (CrawlData crawlData : perPageCrawlDateList) {
-                if (crawlData.isFetched() == false) {
-                    //链接fetched为false,即导航页
-                    BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
-
-                    //bloomFilter判断待爬取队列没有记录
-                    if (RedisBloomFilter.notExistInBloomHash(url, jedis, bloomFilter)) {
-                        nextCrawlData.add(crawlData);
-
+            BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
+            for (CrawlData crawlData : perPageCrawlDateList.subList(0,75)) {
+                if(linkFilter(crawlData) == true)   {
+                    if (crawlData.isFetched() == false) {
+                        //链接fetched为false,即导航页
+                        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")) {}
+                        //bloomFilter判断待爬取队列没有记录
+                        boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), jedis, bloomFilter);
+                        if (isNew) {
+                            nextCrawlData.add(crawlData);
+                        }
+                    } else {
+                        //链接fetched为true,即文章页，添加到redis的已爬取队列
+                        crawledData.add(crawlData);
+                        page.putField("crawlerData", crawlData);
                     }
-                } else {
-                    //链接fetched为true,即文章页，添加到redis的已爬取队列
-//                    new RedisCrawledQue().putCrawledQue(crawlData, jedisPoolUtils, this.tid);
-                    if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg"))
-                    page.putField("crawlerData", crawlData);
                 }
             }
 
@@ -88,6 +90,10 @@ public class WholesitePageProcessor implements PageProcessor {
             for (CrawlData crawlData : nextCrawlData) {
                 page.addTargetRequest(crawlData.getUrl());
             }
+
+            //加入到已爬取队列
+            new RedisCrawledQue().putCrawledQue(crawledData, jedisPoolUtils, this.tid);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -100,14 +106,12 @@ public class WholesitePageProcessor implements PageProcessor {
         return site;
     }
 
-    public static CrawlData initCrawlData(String tid, String url, String html, int statusCode) {
-        CrawlData crawlData = new CrawlData();
-        crawlData.setTid(tid);
-        crawlData.setUrl(url);
-        crawlData.setHtml(html);
-        crawlData.setStatusCode(statusCode);
-        crawlData.setFetched(false);
-        return crawlData;
+    public boolean linkFilter(CrawlData crawlData) {
+        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public TextAnalysis getTextAnalysis() {

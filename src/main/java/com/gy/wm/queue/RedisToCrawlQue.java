@@ -1,8 +1,6 @@
 package com.gy.wm.queue;
 
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.util.JedisPoolUtils;
-import com.gy.wm.util.JsonUtil;
 import com.gy.wm.util.LogManager;
 import redis.clients.jedis.Jedis;
 
@@ -17,7 +15,7 @@ public class RedisToCrawlQue {
     public void putNextUrls(List<CrawlData> crawlData,Jedis jedis, String tid ) {
 
         for (CrawlData nextCrawlData : crawlData) {
-            String crawlDataJson = JsonUtil.toJson(nextCrawlData);
+            String crawlDataJson = JSONUtil.object2JacksonString(nextCrawlData);
             jedis.hset("webmagicCrawler::ToCrawl::" + tid, nextCrawlData.getUrl(), crawlDataJson);
         }
     }

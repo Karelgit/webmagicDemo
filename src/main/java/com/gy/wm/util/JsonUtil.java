@@ -1,89 +1,84 @@
 package com.gy.wm.util;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.databind.type.CollectionType;
-import com.fasterxml.jackson.databind.type.TypeFactory;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by TianyuanPan on 5/4/16.
+ * JSON工具类，是通过封装jackson得到，为的是更简单的使用jackson
+ * @author liguoyou
+ * @ClassName JSONUtil
+ * @date 2014-7-21 上午11:12:03
+ *
  */
-public class JsonUtil {
-
-    private static ObjectMapper objectMapper;
+public class JSONUtil {
 
     /**
+     * 对象转化为json数据
+     * @author liguoyou
+     * @date 2014-7-21 上午11:13:29
      *
-     * @param model
+     * @param object
+     * @return
+     *
+     */
+    public static String object2JacksonString(Object object) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.writeValueAsString(object);
+        }  catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("对象转化为json数据出错，可能是对象类型不匹配");
+        }
+    }
+
+    /**
+     * json数据转化为对象
+     * @author liguoyou
+     * @date 2014-7-21 上午11:13:54
+     *
+     * @param jsonString
+     * @param destClass
+     * @return
+     *
+     */
+    public static Object jackson2Object(String jsonString, Class<?> destClass) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.readValue(jsonString, destClass);
+        }  catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("json数据转化为对象时出错，可能是对象类型不匹配");
+        }
+    }
+
+    /**
+     * 将list的json串转换为list对象
+     * @Description jackson2List 是 JSONUtil 的方法
+     * @Author liguoyou
+     * @Version V1.0, 2015-3-13 下午2:52:43
+     * @Modified 初次创建jackson2List方法
+     * @param jsonString
+     * @param collectionClass
+     * @param elementClasses
      * @return
      */
-    public static  String toJson(Object model) {
-        String json = null;
+    public static List jackson2List(String jsonString, Class<?> collectionClass, Class<?> elementClasses) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        JavaType javaType = objectMapper.getTypeFactory().constructParametricType(collectionClass, elementClasses);
 
-        try {
-            // ADD ROOT
-            // Setting SerializationConfig.Feature.WRAP_ROOT_VALUE at mapper
-            // did not read annotated label properly, use withRootName
-            json = getObjectMapper().writeValueAsString(model);
-            // ApiKey needs to be wrapped in a root node without the array
-            // container, hack the standards!
-        } catch (IOException e) {
-            throw new RuntimeException("Cannot parse model to object",
-                    e);
+        List list = null;
+        try
+        {
+            list = objectMapper.readValue(jsonString, javaType);
         }
-
-        return json;
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            throw new RuntimeException("json数据转化为对象时出错，可能是对象类型不匹配");
+        }
+        return list;
     }
 
-    public static <T> List<T> toObjects(
-            String body, Class<T> clazz) throws JsonParseException,
-            JsonMappingException, IOException {
-
-        List<T> objs;
-        CollectionType collectionType = TypeFactory.defaultInstance()
-                .constructCollectionType(ArrayList.class, clazz);
-        try {
-            objs = getObjectMapper().readValue(body, collectionType);
-        } catch (IOException e) {
-            throw new RuntimeException(String.format(
-                    "转换失败 [%s] to %s.", body, clazz), e);
-        }
-
-        return objs;
-    }
-
-    public static <T> T toObject(String body,
-                                 Class<T> clazz) {
-
-        T obj;
-
-        try {
-            obj = (T) getObjectMapper().readValue(body, clazz);
-        } catch (IOException e) {
-            throw new RuntimeException(String.format(
-                    "Unable to parse [%s] to %s.", body, clazz), e);
-        }
-
-        return obj;
-    }
-
-    public static ObjectMapper getObjectMapper() {
-        if (objectMapper == null) {
-            ObjectMapper retval = new ObjectMapper();
-            retval.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-            retval.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
-            retval.configure(DeserializationFeature.FAIL_ON_IGNORED_PROPERTIES,false);
-            retval.configure(DeserializationFeature.EAGER_DESERIALIZER_FETCH,false);
-            retval.configure(SerializationFeature.EAGER_SERIALIZER_FETCH, false);
-            objectMapper = retval;
-        }
-        return objectMapper;
-    }
 }

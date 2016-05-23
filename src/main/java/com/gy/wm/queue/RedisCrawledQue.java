@@ -2,7 +2,6 @@ package com.gy.wm.queue;
 
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.JedisPoolUtils;
-import com.gy.wm.util.JsonUtil;
 import redis.clients.jedis.Jedis;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public class RedisCrawledQue {
 
         Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
         for (CrawlData data : crawlData) {
-            String crawlDataJson = JsonUtil.toJson(data);
+            String crawlDataJson = JSONUtil.object2JacksonString(data);
             jedis.hset("webmagicCrawler::Crawled::" + taskid, data.getUrl(),crawlDataJson);
         }
     }

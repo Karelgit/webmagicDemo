@@ -1,9 +1,7 @@
 package com.gy.wm.entry;
 
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.util.JedisPoolUtils;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -103,12 +101,6 @@ public class Crawl {
             e.printStackTrace();
         }
 
-        JedisPoolUtils jedisPoolUtils= null;
-        try {
-            jedisPoolUtils = new JedisPoolUtils();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         long end_time = System.currentTimeMillis();
         System.out.println("time elapse:"+ (end_time-start_time));
     }
