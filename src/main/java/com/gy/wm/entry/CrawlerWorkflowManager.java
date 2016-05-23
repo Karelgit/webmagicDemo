@@ -1,12 +1,12 @@
 package com.gy.wm.entry;
 
-import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisScheduler;
 import com.gy.wm.service.WholesitePageProcessor;
+import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
 import redis.clients.jedis.Jedis;
@@ -42,6 +42,11 @@ public class CrawlerWorkflowManager {
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
         Jedis jedis = jedisPoolUtils.getJedis();
          nextQueue.putNextUrls(seeds, jedis, tid);
+        //初始化布隆过滤hash表
+        BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
+        for (CrawlData seed : seeds) {
+            bloomFilter.add("redis:bloomfilter",seed.getUrl());
+        }
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
     }
