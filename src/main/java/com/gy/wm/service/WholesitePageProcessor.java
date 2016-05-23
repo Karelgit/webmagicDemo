@@ -66,9 +66,7 @@ public class WholesitePageProcessor implements PageProcessor {
             for (CrawlData crawlData : perPageCrawlDateList.subList(0,75)) {
                 if(linkFilter(crawlData) == true)   {
                     if (crawlData.isFetched() == false) {
-                        //链接fetched为false,即导航页
-                        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")) {}
-                        //bloomFilter判断待爬取队列没有记录
+                        //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
                         boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), jedis, bloomFilter);
                         if (isNew) {
                             nextCrawlData.add(crawlData);

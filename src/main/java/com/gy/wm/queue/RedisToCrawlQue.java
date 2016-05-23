@@ -1,6 +1,7 @@
 package com.gy.wm.queue;
 
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.JSONUtil;
 import com.gy.wm.util.LogManager;
 import redis.clients.jedis.Jedis;
 
