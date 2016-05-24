@@ -10,6 +10,7 @@ import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Spider;
 
 import java.io.IOException;
@@ -40,8 +41,15 @@ public class CrawlerWorkflowManager {
     public void crawl(List<CrawlData> seeds, String tid, String starttime, int pass) throws IOException {
 
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
-        Jedis jedis = jedisPoolUtils.getJedis();
-         nextQueue.putNextUrls(seeds, jedis, tid);
+        JedisPool pool = jedisPoolUtils.getJedisPool();
+        Jedis jedis = pool.getResource();
+
+        try {
+            nextQueue.putNextUrls(seeds, jedis, tid);
+        } finally {
+            pool.returnResource(jedis);
+        }
+
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
