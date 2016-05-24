@@ -107,7 +107,7 @@ public class WholesitePageProcessor implements PageProcessor {
     }
 
     public boolean linkFilter(CrawlData crawlData) {
-        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")) {
+        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")&&crawlData.getUrl().contains("http://www.gog.cn/")) {
             return true;
         }else {
             return false;
