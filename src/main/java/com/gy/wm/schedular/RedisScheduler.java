@@ -18,29 +18,37 @@ public class RedisScheduler implements Scheduler {
 
         Jedis jedis = null;
         try {
-            jedis = new JedisPoolUtils().getJedisPool().getResource();
+            jedis = JedisPoolUtils.getJedis();//new JedisPoolUtils().getJedisPool().getResource();
+            jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            JedisPoolUtils.cleanJedis(jedis);
         }
 
-        jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
+//        request.setMethod("GET");
+
     }
 
 
     @Override
     public Request poll(Task task) {
         Jedis jedis = null;
+        String url = null;
         try {
-            jedis = new JedisPoolUtils().getJedisPool().getResource();
+            jedis = JedisPoolUtils.getJedis();//new JedisPoolUtils().getJedisPool().getResource();
+            url = jedis.lpop(QUEUE_PREFIX+task.getUUID());
+
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            JedisPoolUtils.cleanJedis(jedis);
         }
-
-        String url = jedis.lpop(QUEUE_PREFIX+task.getUUID());
         if (url==null) {
             return null;
         } else {
             return new Request(url);
         }
+
     }
 }

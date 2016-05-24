@@ -14,35 +14,79 @@ import java.io.Serializable;
  */
 
 public class JedisPoolUtils implements Serializable {
-    private static JedisPool pool;
-    private static Jedis jedis;
+    /*    private static JedisPool pool;
+        private static Jedis jedis;
 
-    public JedisPoolUtils() throws FileNotFoundException,IOException{
-        makepool();
+        public JedisPoolUtils() throws FileNotFoundException,IOException{
+            makepool();
+        }
+
+        public static void makepool() throws FileNotFoundException, IOException {
+
+            String redisHost = ConfigUtils.getResourceBundle().getString("REDIS_HOSTNAME");
+            int    redisPort = Integer.parseInt(ConfigUtils.getResourceBundle().getString("REDIS_PORT"));
+
+            if (pool == null) {
+                JedisPoolConfig conf = new JedisPoolConfig();
+                conf.setMaxTotal(-1);
+                conf.setMaxWaitMillis(60000L);
+                pool = new JedisPool(conf, redisHost, redisPort,100000);
+            }
+        }
+
+        public  static JedisPool getJedisPool() {
+            return pool;
+        }
+
+        public static Jedis getJedis()    {
+            if(jedis == null)    {
+                jedis = getJedisPool().getResource();
+            }
+            return jedis;
+        }*/
+    private static JedisPool pool;
+    private  Jedis jedis;
+
+
+    private JedisPoolUtils() {
+
     }
 
-    public static void makepool() throws FileNotFoundException, IOException {
+
+    private static void makepool() throws FileNotFoundException, IOException {
 
         String redisHost = ConfigUtils.getResourceBundle().getString("REDIS_HOSTNAME");
-        int    redisPort = Integer.parseInt(ConfigUtils.getResourceBundle().getString("REDIS_PORT"));
+        int redisPort = Integer.parseInt(ConfigUtils.getResourceBundle().getString("REDIS_PORT"));
 
         if (pool == null) {
             JedisPoolConfig conf = new JedisPoolConfig();
             conf.setMaxTotal(-1);
             conf.setMaxWaitMillis(60000L);
-            pool = new JedisPool(conf, redisHost, redisPort,100000);
+            pool = new JedisPool(conf, redisHost, redisPort, 100000);
         }
     }
 
-    public  static JedisPool getJedisPool() {
+    public static JedisPool getJedisPool() throws FileNotFoundException, IOException {
+        if (pool == null)
+            makepool();
         return pool;
     }
 
-    public static Jedis getJedis()    {
-        if(jedis == null)    {
-            jedis = getJedisPool().getResource();
+    public static Jedis getJedis() throws FileNotFoundException, IOException{
+        JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
+        if (jedisPoolUtils.jedis == null) {
+            jedisPoolUtils.jedis = getJedisPool().getResource();
         }
-        return jedis;
+        return jedisPoolUtils.jedis;
+    }
+
+    public static void cleanAll() {
+
+        pool.close();
+    }
+
+    public static void cleanJedis(Jedis jedis) {
+        jedis.close();
     }
 }
 

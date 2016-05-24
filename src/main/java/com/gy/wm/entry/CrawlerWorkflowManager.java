@@ -1,5 +1,6 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.dbpipeline.impl.HbasePipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -39,13 +40,13 @@ public class CrawlerWorkflowManager {
 
     public void crawl(List<CrawlData> seeds, String tid, String starttime, int pass) throws IOException {
 
-        JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
-        Jedis jedis = jedisPoolUtils.getJedis();
-         nextQueue.putNextUrls(seeds, jedis, tid);
+        //JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
+        Jedis jedis = JedisPoolUtils.getJedis();//jedisPoolUtils.getJedis();
+        nextQueue.putNextUrls(seeds, jedis, tid);
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
-            bloomFilter.add("redis:bloomfilter",seed.getUrl());
+            bloomFilter.add("redis:bloomfilter", seed.getUrl());
         }
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
@@ -67,8 +68,10 @@ public class CrawlerWorkflowManager {
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
+//                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
-                .thread(5)
+                .thread(15)
+//                .thread(1)
                         //启动爬虫
                 .run();
     }

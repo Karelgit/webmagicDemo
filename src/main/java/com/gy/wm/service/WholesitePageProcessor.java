@@ -34,17 +34,17 @@ public class WholesitePageProcessor implements PageProcessor {
         this.textAnalysis = textAnalysis;
     }
 
-    private Site site = Site.me().setDomain("http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setDomain(/*"http://blog.ifeng.com/"*/"http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
 
     @Override
     public void process(Page page) {
-        JedisPoolUtils jedisPoolUtils = null;
+        //JedisPoolUtils jedisPoolUtils = null;
         Jedis jedis = null;
         String url = page.getRequest().getUrl();
 
         try {
-            jedisPoolUtils = new JedisPoolUtils();
-            jedis = jedisPoolUtils.getJedis();
+           // jedisPoolUtils = new JedisPoolUtils();
+            jedis = JedisPoolUtils.getJedis();//jedisPoolUtils.getJedis();
             String json_crawlData = jedis.hget("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
             CrawlData page_crawlData = (CrawlData) JSONUtil.jackson2Object(json_crawlData, CrawlData.class);
             jedis.hdel("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
@@ -63,7 +63,7 @@ public class WholesitePageProcessor implements PageProcessor {
             List<CrawlData> crawledData = new ArrayList<>();
 
             BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
-            for (CrawlData crawlData : perPageCrawlDateList.subList(0,75)) {
+            for (CrawlData crawlData : perPageCrawlDateList) {
                 if(linkFilter(crawlData) == true)   {
                     if (crawlData.isFetched() == false) {
                         //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
@@ -90,10 +90,12 @@ public class WholesitePageProcessor implements PageProcessor {
             }
 
             //加入到已爬取队列
-            new RedisCrawledQue().putCrawledQue(crawledData, jedisPoolUtils, this.tid);
+            new RedisCrawledQue().putCrawledQue(crawledData, jedis, this.tid);
 
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            JedisPoolUtils.cleanJedis(jedis);
         }
 
     }

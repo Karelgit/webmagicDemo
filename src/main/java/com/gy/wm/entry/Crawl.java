@@ -1,6 +1,7 @@
 package com.gy.wm.entry;
 
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.JedisPoolUtils;
 
 import java.util.List;
 
@@ -9,16 +10,16 @@ import java.util.List;
  */
 public class Crawl {
     public static void kick(int depth, int pass, String tid, String starttime, String seedpath, String protocolDir,
-                            String postregexDir, String type, int recalldepth, String templatesDir, String clickregexDir,String configpath)  throws Exception  {
+                            String postregexDir, String type, int recalldepth, String templatesDir, String clickregexDir, String configpath) throws Exception {
         //tid_startTime作为appname，即作为这个爬虫的任务名称
-        InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid+starttime,recalldepth,templatesDir,clickregexDir,protocolDir,postregexDir);
+        InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid + starttime, recalldepth, templatesDir, clickregexDir, protocolDir, postregexDir);
         InstanceFactory.getInstance(crawlerConfig);
 
         ConfigLoader configLoader = new ConfigLoader();
-        List<CrawlData> crawlDataList = configLoader.load(depth,tid,starttime,pass,seedpath,type);
+        List<CrawlData> crawlDataList = configLoader.load(depth, tid, starttime, pass, seedpath, type);
 
-        CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid,"appname");
-        workflow.crawl(crawlDataList,tid,starttime,pass);
+        CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid, "appname");
+        workflow.crawl(crawlDataList, tid, starttime, pass);
     }
 
     public static void main(String[] args) {
@@ -52,7 +53,7 @@ public class Crawl {
         String templateDir = "/SparkCrawler/templates";
         String clickregexDir = "/SparkCrawler/clickregex";
         String postregexDir = "";
-        String configpath="";
+        String configpath = "";
 
         for (int i = 0; i < args.length; i++) {
             if ("-depth".equals(args[i])) {
@@ -73,7 +74,7 @@ public class Crawl {
             } else if ("-protocolDir".equals(args[i])) {
                 protocolDir = args[i + 1];
                 i++;
-            }else if ("-type".equals(args[i])) {
+            } else if ("-type".equals(args[i])) {
                 type = args[i + 1];
                 i++;
             } else if ("-recalldepth".equals(args[i])) {
@@ -88,20 +89,22 @@ public class Crawl {
             } else if ("-postregexDir".equals(args[i])) {
                 postregexDir = args[i + 1];
                 i++;
-            }else if("-configpath".equals(args[i])){
-                configpath=args[i+1];
+            } else if ("-configpath".equals(args[i])) {
+                configpath = args[i + 1];
                 i++;
             }
 
         }
 
         try {
-            kick(depth, pass, tid, starttime,seedpath,protocolDir,postregexDir,type, recalldepth, templateDir, clickregexDir, configpath);
+            kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            JedisPoolUtils.cleanAll();
         }
 
         long end_time = System.currentTimeMillis();
-        System.out.println("time elapse:"+ (end_time-start_time));
+        System.out.println("time elapse(FenZhong):" + (end_time - start_time) / 1000 / 60);
     }
 }
