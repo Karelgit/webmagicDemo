@@ -3,13 +3,9 @@ package com.gy.wm.dbpipeline.dbclient;
 import com.alibaba.fastjson.JSON;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.ConfigUtils;
+import com.gy.wm.util.HttpUtils;
 import com.gy.wm.util.RandomUtils;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,10 +15,11 @@ import java.util.List;
  */
 public class EsClient extends AbstractDBClient {
 
-    private static final String REQUEST_POST = "POST";
-    private static final String REQUEST_GET = "GET";
-    private static final String REQUEST_DELETE = "DELETE";
-    private static final String REQUEST_PUT = "PUT";
+//    private static final String REQUEST_POST = "POST";
+//    private static final String REQUEST_GET = "GET";
+//    private static final String REQUEST_DELETE = "DELETE";
+//    private static final String REQUEST_PUT = "PUT";
+
 
     private String hostname;
     private int port;
@@ -72,10 +69,12 @@ public class EsClient extends AbstractDBClient {
 
             try {
 
-                this.doPut(this.requestUrl + RandomUtils.getRandomString(50) + "_" + new Date().getTime(), dataJson);
+                //this.doPut(this.requestUrl + RandomUtils.getRandomString(50) + "_" + new Date().getTime(), dataJson);
+                HttpUtils.doPut(this.requestUrl + RandomUtils.getRandomString(50) + "_" + new Date().getTime(), dataJson);
                 ++i;
 
             } catch (Exception ex) {
+                logger.warn("EsClient doSetInsert Exception!!! DATA IS: " + dataJson);
                 logger.warn("EsClient doSetInsert Exception!!! Message: " + ex.getMessage());
                 ex.printStackTrace();
             }
@@ -85,6 +84,23 @@ public class EsClient extends AbstractDBClient {
         return i;
     }
 
+    public int doSetInsert(String url, String data) {
+
+        try {
+
+
+            HttpUtils.doPut(url, data);
+
+
+        } catch (Exception ex) {
+            logger.warn("EsClient doSetInsert Exception!!! DATA IS: " + data);
+            logger.warn("EsClient doSetInsert Exception!!! Message: " + ex.getMessage());
+            ex.printStackTrace();
+            return 0;
+        }
+
+        return 1;
+    }
 
     public boolean isConnOpen() {
         return this.connOpen;
@@ -100,7 +116,7 @@ public class EsClient extends AbstractDBClient {
         return requestUrl;
     }
 
-    public String doPost(String urlStr, String data) throws Exception {
+/*    public String doPost(String urlStr, String data) throws Exception {
         System.out.println("EsClient.doPost Request Url: " + urlStr);
         logger.debug("EsClient.doPost Request Url: + urlStr");
         URL url = new URL(urlStr);
@@ -196,7 +212,7 @@ public class EsClient extends AbstractDBClient {
 
         return result;
 
-    }
+    }*/
 
 /*    public static void main(String[] args) {
 
@@ -210,3 +226,4 @@ public class EsClient extends AbstractDBClient {
 
 
 }
+

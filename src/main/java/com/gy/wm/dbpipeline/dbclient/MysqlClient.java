@@ -1,90 +1,56 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.model.FengBirdModel;
 import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.CrawlerDataUtils;
+import com.gy.wm.util.MySqlPoolUtils;
 
-import java.sql.DriverManager;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by TianyuanPan on 5/4/16.
  */
 public class MysqlClient extends AbstractDBClient {
 
-    protected String dbHostname;
-    protected int dbPort;
-    protected String dbName;
-    protected String dbUser;
-    protected String dbPassword;
-    protected String connUrl;
-
-    private String characterEnconding;
-
     private Statement myStatement;
-
     private ConfigUtils configUtils;
+    private MySqlPoolUtils pool;
 
 
     private List<InsertSqlModel> insertSqlModels;
 
     public MysqlClient() {
 
-        this.characterEnconding = "UTF-8";
         this.insertSqlModels = new ArrayList<>();
         this.configUtils = ConfigUtils.getConfigUtils("MYSQL_");
-        this.dbHostname = configUtils.getHostname();
-        this.dbPort = configUtils.getPort();
-        this.dbName = configUtils.getDbName();
-        this.dbUser = configUtils.getUser();
-        this.dbPassword = configUtils.getPassword();
-        this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
-                "/" + dbName + "?user=" + dbUser + "&password=" +
-                dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
+        this.pool = MySqlPoolUtils.getMySqlPoolUtils(configUtils);
         this.connection = null;
         this.myStatement = null;
         this.connOpen = false;
 
     }
 
-    public MysqlClient(String characterEnconding) {
-
-        this.characterEnconding = characterEnconding;
-        this.insertSqlModels = new ArrayList<>();
-        this.configUtils = ConfigUtils.getConfigUtils("MYSQL_");
-        this.dbHostname = configUtils.getHostname();
-        this.dbPort = configUtils.getPort();
-        this.dbName = configUtils.getDbName();
-        this.dbUser = configUtils.getUser();
-        this.dbPassword = configUtils.getPassword();
-        this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
-                "/" + dbName + "?user=" + dbUser + "&password=" +
-                dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
-        this.connection = null;
-        this.myStatement = null;
-        this.connOpen = false;
-    }
 
     @Override
     public Object getConnection() {
 
         try {
-
-            Class.forName("com.mysql.jdbc.Driver");
-
-            System.out.println("Loading jdbc Driver ....");
-            logger.debug("Loading jdbc Driver ....");
-
-            this.connection = DriverManager.getConnection(this.connUrl);
+            logger.debug("get Mysql connection ...");
+            this.connection = this.pool.getConnection();
             this.myStatement = this.connection.createStatement();
-            this.setConnOpen(true);
+            if (this.connection != null)
+                this.setConnOpen(true);
 
         } catch (Exception ex) {
 
-            logger.error("Loading jdbc Driver error!!\nException Message:\n" + ex.getMessage());
+            logger.error("get mysql connection error!! Exception Message: " + ex.getMessage());
             ex.printStackTrace();
             this.setConnOpen(false);
             return null;
@@ -98,7 +64,8 @@ public class MysqlClient extends AbstractDBClient {
 
         try {
 
-            this.connection.close();
+            this.pool.releaseConnection(this.connection);
+
             this.setConnOpen(false);
 
         } catch (Exception ex) {
@@ -194,7 +161,7 @@ public class MysqlClient extends AbstractDBClient {
                 case "long":
                     String dateString = "'" +
                             new SimpleDateFormat("YYYY-MM-dd HH:mm:ss")
-                                .format(new Date((long) m.get("value"))) + "'";
+                                    .format(new Date((long) m.get("value"))) + "'";
 
                     model.addKeyValue((String) m.get("name"), dateString);
                     break;
@@ -230,55 +197,5 @@ public class MysqlClient extends AbstractDBClient {
 
         return null;
     }
-
-
-    public String getDbHostname() {
-        return dbHostname;
-    }
-
-    public void setDbHostname(String dbHostname) {
-        this.dbHostname = dbHostname;
-    }
-
-    public int getDbPort() {
-        return dbPort;
-    }
-
-    public void setDbPort(int dbPort) {
-        this.dbPort = dbPort;
-    }
-
-    public String getDbName() {
-        return dbName;
-    }
-
-    public void setDbName(String dbName) {
-        this.dbName = dbName;
-    }
-
-    public String getDbUser() {
-        return dbUser;
-    }
-
-    public void setDbUser(String dbUser) {
-        this.dbUser = dbUser;
-    }
-
-    public String getDbPassword() {
-        return dbPassword;
-    }
-
-    public void setDbPassword(String dbPassword) {
-        this.dbPassword = dbPassword;
-    }
-
-    public String getConnUrl() {
-        return connUrl;
-    }
-
-    public void setConnUrl(String connUrl) {
-        this.connUrl = connUrl;
-    }
-
 
 }

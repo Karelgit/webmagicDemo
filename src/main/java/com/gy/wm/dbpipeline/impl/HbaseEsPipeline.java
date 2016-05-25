@@ -1,7 +1,6 @@
 package com.gy.wm.dbpipeline.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.gy.wm.dbpipeline.DatabasePipeline;
 import com.gy.wm.dbpipeline.dbclient.EsClient;
 import com.gy.wm.dbpipeline.dbclient.HbaseClient;
 import com.gy.wm.model.CrawlData;
@@ -40,7 +39,7 @@ public class HbaseEsPipeline extends BaseDBPipeline {
 
         try {
 
-           this.esClient.doPut(this.esClient.getRequestUrl() + rowkey, JSON.toJSONString(obj));
+            this.esClient.doSetInsert(this.esClient.getRequestUrl() + rowkey, JSON.toJSONString(obj));
             ++i;
         } catch (Exception ex) {
 
@@ -50,8 +49,8 @@ public class HbaseEsPipeline extends BaseDBPipeline {
 
         try {
 
-            this.hbaseClient.insertRecord(HbaseClient.getTableName(),
-                    rowkey, HbaseClient.getColumnFamilyName(), (CrawlData) obj);
+            this.hbaseClient.insertRecord(hbaseClient.getTableName(),
+                    rowkey, hbaseClient.getColumnFamilyName(), (CrawlData) obj);
             ++j;
 
         } catch (Exception ex) {
