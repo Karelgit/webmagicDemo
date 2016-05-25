@@ -4,6 +4,7 @@ import com.gy.wm.entry.InstanceFactory;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisToCrawlQue;
+import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.schedular.RedisBloomFilter;
 import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JSONUtil;
@@ -34,7 +35,7 @@ public class WholesitePageProcessor implements PageProcessor {
         this.textAnalysis = textAnalysis;
     }
 
-    private Site site = Site.me().setDomain("http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setDomain("www.gygov.gov.cn").setRetryTimes(3).setSleepTime(1000);
 
     @Override
     public void process(Page page) {
@@ -88,7 +89,7 @@ public class WholesitePageProcessor implements PageProcessor {
             //加入到待爬取队列
             nextQueue.putNextUrls(nextCrawlData, jedis, tid);
             //加入到已爬取队列
-            nextQueue.putNextUrls(nextCrawlData, jedis, tid);
+            new RedisCrawledQue().putCrawledQue(crawledData,jedis,tid);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -104,7 +105,7 @@ public class WholesitePageProcessor implements PageProcessor {
     }
 
     public boolean linkFilter(CrawlData crawlData) {
-        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")) {
+        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")&&crawlData.getUrl().contains("www.gygov.gov.cn")) {
             return true;
         }else {
             return false;
@@ -114,11 +115,5 @@ public class WholesitePageProcessor implements PageProcessor {
     public TextAnalysis getTextAnalysis() {
         return textAnalysis;
     }
-
-    public void setTextAnalysis(TextAnalysis textAnalysis) {
-        this.textAnalysis = textAnalysis;
-    }
-
-
 }
 
