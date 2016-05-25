@@ -2,6 +2,7 @@ package com.gy.wm.schedular;
 
 import com.gy.wm.util.JedisPoolUtils;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.scheduler.Scheduler;
@@ -10,45 +11,50 @@ import java.io.IOException;
 
 public class RedisScheduler implements Scheduler {
     private static final String QUEUE_PREFIX = "queue_";
-    private static final String SET_PREFIX = "set_";
-
 
     @Override
     public void push(Request request, Task task) {
 
-        Jedis jedis = null;
+        JedisPoolUtils jedisPoolUtils = null;
         try {
-            jedis = JedisPoolUtils.getJedis();//new JedisPoolUtils().getJedisPool().getResource();
-            jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
+            jedisPoolUtils = new JedisPoolUtils();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
-            JedisPoolUtils.cleanJedis(jedis);
         }
+        JedisPool pool = jedisPoolUtils.getJedisPool();
+        Jedis jedis = pool.getResource();
 
-//        request.setMethod("GET");
-
+        try {
+            jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
+        } finally {
+            pool.returnResource(jedis);
+        }
     }
 
 
     @Override
     public Request poll(Task task) {
-        Jedis jedis = null;
-        String url = null;
+        JedisPoolUtils jedisPoolUtils = null;
         try {
-            jedis = JedisPoolUtils.getJedis();//new JedisPoolUtils().getJedisPool().getResource();
-            url = jedis.lpop(QUEUE_PREFIX+task.getUUID());
-
+            jedisPoolUtils = new JedisPoolUtils();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
-            JedisPoolUtils.cleanJedis(jedis);
         }
+        JedisPool pool = jedisPoolUtils.getJedisPool();
+        Jedis jedis = pool.getResource();
+
+
+        String url = null;
+        try {
+            url = jedis.lpop(QUEUE_PREFIX+task.getUUID());
+        } finally {
+            pool.returnResource(jedis);
+        }
+
         if (url==null) {
             return null;
         } else {
             return new Request(url);
         }
-
     }
 }

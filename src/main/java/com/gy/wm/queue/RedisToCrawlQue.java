@@ -20,5 +20,4 @@ public class RedisToCrawlQue {
             jedis.hset("webmagicCrawler::ToCrawl::" + tid, nextCrawlData.getUrl(), crawlDataJson);
         }
     }
-
 }

@@ -3,13 +3,14 @@ package com.gy.wm.service;
 import com.gy.wm.entry.InstanceFactory;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
-import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
+import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.schedular.RedisBloomFilter;
 import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JSONUtil;
 import com.gy.wm.util.JedisPoolUtils;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
@@ -34,19 +35,22 @@ public class WholesitePageProcessor implements PageProcessor {
         this.textAnalysis = textAnalysis;
     }
 
-    private Site site = Site.me().setDomain(/*"http://blog.ifeng.com/"*/"http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setDomain("www.gygov.gov.cn").setRetryTimes(3).setSleepTime(1000);
 
     @Override
     public void process(Page page) {
-        //JedisPoolUtils jedisPoolUtils = null;
+        JedisPoolUtils jedisPoolUtils = null;
+        JedisPool pool = null;
         Jedis jedis = null;
-        String url = page.getRequest().getUrl();
-
         try {
-           // jedisPoolUtils = new JedisPoolUtils();
-            jedis = JedisPoolUtils.getJedis();//jedisPoolUtils.getJedis();
+            jedisPoolUtils = new JedisPoolUtils();
+            pool = jedisPoolUtils.getJedisPool();
+            jedis = pool.getResource();
+
+            CrawlData page_crawlData = null;
+
             String json_crawlData = jedis.hget("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
-            CrawlData page_crawlData = (CrawlData) JSONUtil.jackson2Object(json_crawlData, CrawlData.class);
+            page_crawlData = (CrawlData) JSONUtil.jackson2Object(json_crawlData, CrawlData.class);
             jedis.hdel("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
 
             int statusCode = page.getStatusCode();
@@ -71,6 +75,7 @@ public class WholesitePageProcessor implements PageProcessor {
                         if (isNew) {
                             nextCrawlData.add(crawlData);
                         }
+                        page.addTargetRequest(crawlData.getUrl());
                     } else {
                         //链接fetched为true,即文章页，添加到redis的已爬取队列
                         crawledData.add(crawlData);
@@ -83,21 +88,14 @@ public class WholesitePageProcessor implements PageProcessor {
 
             //加入到待爬取队列
             nextQueue.putNextUrls(nextCrawlData, jedis, tid);
-
-            //添加到待爬取的targetRequest中
-            for (CrawlData crawlData : nextCrawlData) {
-                page.addTargetRequest(crawlData.getUrl());
-            }
-
             //加入到已爬取队列
-            new RedisCrawledQue().putCrawledQue(crawledData, jedis, this.tid);
+            new RedisCrawledQue().putCrawledQue(crawledData,jedis,tid);
 
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
-            JedisPoolUtils.cleanJedis(jedis);
+            pool.returnResource(jedis);
         }
-
     }
 
 
@@ -107,7 +105,7 @@ public class WholesitePageProcessor implements PageProcessor {
     }
 
     public boolean linkFilter(CrawlData crawlData) {
-        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")&&crawlData.getUrl().contains("http://www.gog.cn/")) {
+        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")&&crawlData.getUrl().contains("www.gygov.gov.cn")) {
             return true;
         }else {
             return false;
@@ -117,11 +115,5 @@ public class WholesitePageProcessor implements PageProcessor {
     public TextAnalysis getTextAnalysis() {
         return textAnalysis;
     }
-
-    public void setTextAnalysis(TextAnalysis textAnalysis) {
-        this.textAnalysis = textAnalysis;
-    }
-
-
 }
 
