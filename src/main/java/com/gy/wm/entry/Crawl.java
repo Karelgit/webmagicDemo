@@ -101,7 +101,7 @@ public class Crawl {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JedisPoolUtils.cleanAll();
+            //JedisPoolUtils.cleanAll();
         }
 
         long end_time = System.currentTimeMillis();

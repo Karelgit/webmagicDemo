@@ -1,5 +1,6 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.dbpipeline.impl.HbasePipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -53,7 +54,7 @@ public class CrawlerWorkflowManager {
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
-            bloomFilter.add("redis:bloomfilter",seed.getUrl());
+            bloomFilter.add("redis:bloomfilter", seed.getUrl());
         }
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
@@ -75,6 +76,7 @@ public class CrawlerWorkflowManager {
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
+                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
                 .thread(5)
                         //启动爬虫

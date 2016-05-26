@@ -119,31 +119,31 @@ public class MysqlClient extends AbstractDBClient {
 
         List<Map<String, Object>> fieldList = CrawlerDataUtils.getCrawlerDataUtils(data).getAttributeInfoList();
 
-        for (Map<String, Object> m : fieldList) {
+        for (int i = 0; i < fieldList.size(); ++i) {
 
-            String field = (String) m.get("name");
+            String field = (String) fieldList.get(i).get("name");
 
             switch (field) {
                 case "tid":
-                    fengBirdModel.setTopicTaskID((String) m.get("value"));
+                    fengBirdModel.setTopicTaskID((String) fieldList.get(i).get("value"));
                     break;
                 case "url":
-                    fengBirdModel.setUrl((String) m.get("value"));
+                    fengBirdModel.setUrl((String) fieldList.get(i).get("value"));
                     break;
                 case "crawlTime":
-                    fengBirdModel.setCrawlTime((long) m.get("value"));
+                    fengBirdModel.setCrawlTime((long) fieldList.get(i).get("value"));
                     break;
                 case "publishTime":
-                    fengBirdModel.setLabelTime((long) m.get("value"));
+                    fengBirdModel.setLabelTime((long) fieldList.get(i).get("value"));
                     break;
                 case "title":
-                    fengBirdModel.setTitle((String) m.get("value"));
+                    fengBirdModel.setTitle((String) fieldList.get(i).get("value"));
                     break;
                 case "rootUrl":
-                    fengBirdModel.setRootUrl((String) m.get("value"));
+                    fengBirdModel.setRootUrl((String) fieldList.get(i).get("value"));
                     break;
                 case "fromUrl":
-                    fengBirdModel.setFromUrl((String) m.get("value"));
+                    fengBirdModel.setFromUrl((String) fieldList.get(i).get("value"));
                     break;
                 default:
                     break;
@@ -153,41 +153,28 @@ public class MysqlClient extends AbstractDBClient {
 
         fieldList = CrawlerDataUtils.getCrawlerDataUtils(fengBirdModel).getAttributeInfoList();
 
-        for (Map<String, Object> m : fieldList) {
+        for (int i = 0; i < fieldList.size(); ++i) {
 
-            String type = (String) m.get("type");
+            String type = (String) fieldList.get(i).get("type");
 
             switch (type) {
                 case "long":
                     String dateString = "'" +
                             new SimpleDateFormat("YYYY-MM-dd HH:mm:ss")
-                                    .format(new Date((long) m.get("value"))) + "'";
+                                    .format(new Date((long) fieldList.get(i).get("value"))) + "'";
 
-                    model.addKeyValue((String) m.get("name"), dateString);
+                    model.addKeyValue((String) fieldList.get(i).get("name"), dateString);
                     break;
                 case "int":
-                    model.addKeyValue((String) m.get("name"), m.get("value"));
+                    model.addKeyValue((String) fieldList.get(i).get("name"), fieldList.get(i).get("value"));
                     break;
                 default:
-                    model.addKeyValue((String) m.get("name"), "'" + m.get("value") + "'");
+                    model.addKeyValue((String) fieldList.get(i).get("name"), "'" + fieldList.get(i).get("value") + "'");
                     break;
             }
 
 
         }
-/*
-        model.addKeyValue("title", "'" + data.getTitle() + "'");
-        Long time = data.getPublishTime();
-        if (time == null) {
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date().getTime()) + "'");
-        } else
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublishTime())) + "'");
-
-        model.addKeyValue("url", "'" + data.getUrl() + "'");
-        model.addKeyValue("text", "'" + data.getText() + "'");
-        model.addKeyValue("fetched", data.isFetched());
-        model.addKeyValue("html", "'" + data.getHtml().replace("\\\'","\'").replace("\'", "\\\'") + "'");
-*/
 
         insertSqlModels.add(model);
         return model;
