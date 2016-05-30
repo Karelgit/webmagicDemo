@@ -1,5 +1,6 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -58,7 +59,7 @@ public class CrawlerWorkflowManager {
                         //从seed开始抓
                 .addUrl(urls)
                         //存入mysql
-//                .addPipeline(new MysqlPipeline("tb_crawler"))
+                .addPipeline(new MysqlPipeline("tb_crawler"))
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
