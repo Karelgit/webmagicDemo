@@ -50,6 +50,7 @@ public class WholesitePageProcessor implements PageProcessor {
             CrawlData page_crawlData = null;
 
             String json_crawlData = jedis.hget("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
+            System.out.println("page.getRequest.getUrl ==> url: " + page.getRequest().getUrl());
             page_crawlData = (CrawlData) JSONUtil.jackson2Object(json_crawlData, CrawlData.class);
             jedis.hdel("webmagicCrawler::ToCrawl::" + tid, page.getRequest().getUrl());
 
@@ -105,7 +106,7 @@ public class WholesitePageProcessor implements PageProcessor {
     }
 
     public boolean linkFilter(CrawlData crawlData) {
-        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".jpg")&&crawlData.getUrl().contains("www.gygov.gov.cn")) {
+        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".png")&&!crawlData.getUrl().endsWith(".jpg")&&!crawlData.getUrl().endsWith(".gif")&&crawlData.getUrl().contains("www.gygov.gov.cn")) {
             return true;
         }else {
             return false;

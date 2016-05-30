@@ -112,7 +112,6 @@ http://yangpeichang.blog.ifeng.com
 归档在
 <a href="http://blog.ifeng.com/category/2261088_0.html" target="_blank">
 我的博文
-浏览118596次
 评论0条
 </h5>
 </div>
@@ -239,7 +238,6 @@ ypckdg
 <div class="num1_a">
 </div>
 <div class="num1_b" id="commend_num_44766363">
-4
 </div>
 <div class="num1_c">
 </div>
@@ -451,13 +449,11 @@ ypckdg
 <a onclick="displayYear('2016');">
 2016
 <b id="count_2016">
-（9）
 </b>
 <div class="list" id="list_2016" style="display:none;">
 <div>
 <a href="http://blog.ifeng.com/archive/2261088_201605.html">
 五月
-（3）
 </div>
 <div>
 <a href="http://blog.ifeng.com/archive/2261088_201604.html">
@@ -817,44 +813,24 @@ ypckdg
 <div id="blog_main_right_link">
 <ul>
 <li>
-<a href="http://blog.ifeng.com/article/44766363.html" target="_blank">
-向德国学习：中国未来五年应至少新建三百…
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/44758279.html" target="_blank">
-德国家长如何面对“问题孩子”？
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/44681142.html" target="_blank">
-欧美企业如何巧妙实现创新？
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/44595014.html" target="_blank">
-德国房价稳定是多重合力的结果-答傅蔚…
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/44305591.html" target="_blank">
-德国房价为何能够保持长期稳定？
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/43893974.html" target="_blank">
-美国社会何以做到相互信任？
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/43790689.html" target="_blank">
-德国人究竟如何养老？
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/43293500.html" target="_blank">
-大陆该如何应对胜选后的民进党？
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/43243037.html" target="_blank">
-我被德国人当成了小偷
 </li>
 <li>
-<a href="http://blog.ifeng.com/article/40159834.html" target="_blank">
-德国工业4.0距离我们有多远？
 </li>
 </ul>
 </div>

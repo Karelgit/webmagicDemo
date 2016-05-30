@@ -66,8 +66,8 @@ public class HbaseEsPipeline extends BaseDBPipeline {
     @Override
     public void process(ResultItems resultItems, Task task) {
 
-        System.out.println("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
-                "\n\tTask uuid: " + task.getUUID());
+        /*System.out.println("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
+                "\n\tTask uuid: " + task.getUUID());*/
 
         logger.debug("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
                 "\n\tTask uuid: " + task.getUUID());
