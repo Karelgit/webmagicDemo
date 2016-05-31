@@ -81,7 +81,7 @@ public class TextAnalysis implements Serializable {
                 e.printStackTrace();
             }
 
-            crawlData.setTitle(oldUrl.getTitle());
+//            crawlData.setTitle(oldUrl.getTitle());
             crawlData.setPublishTime(oldUrl.getDate());
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());

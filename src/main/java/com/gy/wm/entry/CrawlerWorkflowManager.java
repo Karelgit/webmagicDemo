@@ -7,8 +7,11 @@ import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisScheduler;
 import com.gy.wm.service.TopicPageProcessor;
+import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Spider;
 
 import java.io.IOException;
@@ -39,10 +42,21 @@ public class CrawlerWorkflowManager {
     public void crawl(List<CrawlData> seeds, String tid, String starttime, int pass) throws IOException {
 
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
+        JedisPool pool = jedisPoolUtils.getJedisPool();
+        Jedis jedis = pool.getResource();
 
-        for (CrawlData seed : seeds) {
-            nextQueue.putNextUrls(seed, jedisPoolUtils, tid);
+        try {
+            nextQueue.putNextUrls(seeds, jedis, tid);
+        } finally {
+            pool.returnResource(jedis);
         }
+
+        //初始化布隆过滤hash表
+        BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
+        for (CrawlData seed : seeds) {
+            bloomFilter.add("redis:bloomfilter", seed.getUrl());
+        }
+
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
     }
@@ -64,14 +78,8 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
                         //开启5个线程抓取
-                .thread(5)
+                .thread(1)
                         //启动爬虫
                 .run();
-    }
-
-    protected boolean shouldContinue(JedisPoolUtils jedisPoolUtils) throws IOException {
-        boolean rs = nextQueue.hasMoreUrls(tid, jedisPoolUtils);
-        logger.logInfo("should continue: " + rs);
-        return rs;
     }
 }
