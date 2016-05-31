@@ -1,90 +1,56 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.model.FengBirdModel;
 import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.CrawlerDataUtils;
+import com.gy.wm.util.MySqlPoolUtils;
 
-import java.sql.DriverManager;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by TianyuanPan on 5/4/16.
  */
 public class MysqlClient extends AbstractDBClient {
 
-    protected String dbHostname;
-    protected int dbPort;
-    protected String dbName;
-    protected String dbUser;
-    protected String dbPassword;
-    protected String connUrl;
-
-    private String characterEnconding;
-
     private Statement myStatement;
-
     private ConfigUtils configUtils;
+    private MySqlPoolUtils pool;
 
 
     private List<InsertSqlModel> insertSqlModels;
 
     public MysqlClient() {
 
-        this.characterEnconding = "UTF-8";
         this.insertSqlModels = new ArrayList<>();
         this.configUtils = ConfigUtils.getConfigUtils("MYSQL_");
-        this.dbHostname = configUtils.getHostname();
-        this.dbPort = configUtils.getPort();
-        this.dbName = configUtils.getDbName();
-        this.dbUser = configUtils.getUser();
-        this.dbPassword = configUtils.getPassword();
-        this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
-                "/" + dbName + "?user=" + dbUser + "&password=" +
-                dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
+        this.pool = MySqlPoolUtils.getMySqlPoolUtils(configUtils);
         this.connection = null;
         this.myStatement = null;
         this.connOpen = false;
 
     }
 
-    public MysqlClient(String characterEnconding) {
-
-        this.characterEnconding = characterEnconding;
-        this.insertSqlModels = new ArrayList<>();
-        this.configUtils = ConfigUtils.getConfigUtils("MYSQL_");
-        this.dbHostname = configUtils.getHostname();
-        this.dbPort = configUtils.getPort();
-        this.dbName = configUtils.getDbName();
-        this.dbUser = configUtils.getUser();
-        this.dbPassword = configUtils.getPassword();
-        this.connUrl = "jdbc:mysql://" + dbHostname + ":" + dbPort +
-                "/" + dbName + "?user=" + dbUser + "&password=" +
-                dbPassword + "&useUnicode=true&characterEncoding=" + characterEnconding;
-        this.connection = null;
-        this.myStatement = null;
-        this.connOpen = false;
-    }
 
     @Override
     public Object getConnection() {
 
         try {
-
-            Class.forName("com.mysql.jdbc.Driver");
-
-            System.out.println("Loading jdbc Driver ....");
-            logger.debug("Loading jdbc Driver ....");
-
-            this.connection = DriverManager.getConnection(this.connUrl);
+            logger.debug("get Mysql connection ...");
+            this.connection = this.pool.getConnection();
             this.myStatement = this.connection.createStatement();
-            this.setConnOpen(true);
+            if (this.connection != null)
+                this.setConnOpen(true);
 
         } catch (Exception ex) {
 
-            logger.error("Loading jdbc Driver error!!\nException Message:\n" + ex.getMessage());
+            logger.error("get mysql connection error!! Exception Message: " + ex.getMessage());
             ex.printStackTrace();
             this.setConnOpen(false);
             return null;
@@ -98,7 +64,8 @@ public class MysqlClient extends AbstractDBClient {
 
         try {
 
-            this.connection.close();
+            this.pool.releaseConnection(this.connection);
+
             this.setConnOpen(false);
 
         } catch (Exception ex) {
@@ -120,11 +87,12 @@ public class MysqlClient extends AbstractDBClient {
             logger.warn("Warning: the connection is NOT open!!!");
             return lineSum;
         }
-        for (InsertSqlModel model : this.insertSqlModels) {
+
+        for(int i=0; i<insertSqlModels.size(); i++) {
 
             try {
 
-                String sql = model.getInsertSql();
+                String sql = insertSqlModels.get(i).getInsertSql();
                 lineSum += this.myStatement.executeUpdate(sql);
 
             } catch (Exception ex) {
@@ -134,6 +102,7 @@ public class MysqlClient extends AbstractDBClient {
 
             }
         }
+
         this.insertSqlModels.clear();
         return lineSum;
     }
@@ -152,31 +121,31 @@ public class MysqlClient extends AbstractDBClient {
 
         List<Map<String, Object>> fieldList = CrawlerDataUtils.getCrawlerDataUtils(data).getAttributeInfoList();
 
-        for (Map<String, Object> m : fieldList) {
+        for (int i = 0; i < fieldList.size(); ++i) {
 
-            String fied = (String) m.get("name");
+            String field = (String) fieldList.get(i).get("name");
 
-            switch (fied) {
+            switch (field) {
                 case "tid":
-                    fengBirdModel.setTopicTaskID((String) m.get("value"));
+                    fengBirdModel.setTopicTaskID((String) fieldList.get(i).get("value"));
                     break;
                 case "url":
-                    fengBirdModel.setUrl((String) m.get("value"));
+                    fengBirdModel.setUrl((String) fieldList.get(i).get("value"));
                     break;
                 case "crawlTime":
-                    fengBirdModel.setCrawlTime((long) m.get("value"));
+                    fengBirdModel.setCrawlTime((long) fieldList.get(i).get("value"));
                     break;
                 case "publishTime":
-                    fengBirdModel.setLabelTime((long) m.get("value"));
+                    fengBirdModel.setLabelTime((long) fieldList.get(i).get("value"));
                     break;
                 case "title":
-                    fengBirdModel.setTitle((String) m.get("value"));
+                    fengBirdModel.setTitle((String) fieldList.get(i).get("value"));
                     break;
                 case "rootUrl":
-                    fengBirdModel.setRootUrl((String) m.get("value"));
+                    fengBirdModel.setRootUrl((String) fieldList.get(i).get("value"));
                     break;
                 case "fromUrl":
-                    fengBirdModel.setFromUrl((String) m.get("value"));
+                    fengBirdModel.setFromUrl((String) fieldList.get(i).get("value"));
                     break;
                 default:
                     break;
@@ -186,41 +155,28 @@ public class MysqlClient extends AbstractDBClient {
 
         fieldList = CrawlerDataUtils.getCrawlerDataUtils(fengBirdModel).getAttributeInfoList();
 
-        for (Map<String, Object> m : fieldList) {
+        for (int i = 0; i < fieldList.size(); ++i) {
 
-            String type = (String) m.get("type");
+            String type = (String) fieldList.get(i).get("type");
 
             switch (type) {
                 case "long":
                     String dateString = "'" +
                             new SimpleDateFormat("YYYY-MM-dd HH:mm:ss")
-                                .format(new Date((long) m.get("value"))) + "'";
+                                    .format(new Date((long) fieldList.get(i).get("value"))) + "'";
 
-                    model.addKeyValue((String) m.get("name"), dateString);
+                    model.addKeyValue((String) fieldList.get(i).get("name"), dateString);
                     break;
                 case "int":
-                    model.addKeyValue((String) m.get("name"), m.get("value"));
+                    model.addKeyValue((String) fieldList.get(i).get("name"), fieldList.get(i).get("value"));
                     break;
                 default:
-                    model.addKeyValue((String) m.get("name"), "'" + m.get("value") + "'");
+                    model.addKeyValue((String) fieldList.get(i).get("name"), "'" + fieldList.get(i).get("value") + "'");
                     break;
             }
 
 
         }
-/*
-        model.addKeyValue("title", "'" + data.getTitle() + "'");
-        Long time = data.getPublishTime();
-        if (time == null) {
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date().getTime()) + "'");
-        } else
-            model.addKeyValue("publicTime", "'" + new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date(data.getPublishTime())) + "'");
-
-        model.addKeyValue("url", "'" + data.getUrl() + "'");
-        model.addKeyValue("text", "'" + data.getText() + "'");
-        model.addKeyValue("fetched", data.isFetched());
-        model.addKeyValue("html", "'" + data.getHtml().replace("\\\'","\'").replace("\'", "\\\'") + "'");
-*/
 
         insertSqlModels.add(model);
         return model;
@@ -230,55 +186,5 @@ public class MysqlClient extends AbstractDBClient {
 
         return null;
     }
-
-
-    public String getDbHostname() {
-        return dbHostname;
-    }
-
-    public void setDbHostname(String dbHostname) {
-        this.dbHostname = dbHostname;
-    }
-
-    public int getDbPort() {
-        return dbPort;
-    }
-
-    public void setDbPort(int dbPort) {
-        this.dbPort = dbPort;
-    }
-
-    public String getDbName() {
-        return dbName;
-    }
-
-    public void setDbName(String dbName) {
-        this.dbName = dbName;
-    }
-
-    public String getDbUser() {
-        return dbUser;
-    }
-
-    public void setDbUser(String dbUser) {
-        this.dbUser = dbUser;
-    }
-
-    public String getDbPassword() {
-        return dbPassword;
-    }
-
-    public void setDbPassword(String dbPassword) {
-        this.dbPassword = dbPassword;
-    }
-
-    public String getConnUrl() {
-        return connUrl;
-    }
-
-    public void setConnUrl(String connUrl) {
-        this.connUrl = connUrl;
-    }
-
 
 }

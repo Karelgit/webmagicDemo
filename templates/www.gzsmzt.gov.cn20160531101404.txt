@@ -1,0 +1,95 @@
+www.gzsmzt.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+</head>
+<body>
+<div class="top">
+<div class="layout">
+<a href="http://www.gzsmzt.gov.cn/">
+网站首页
+<a href="http://guanli.gzsmzt.gov.cn" target="_blank">
+政务信息交换平台
+<a href="http://e.weibo.com/u/3225494734" target="_blank">
+官方微博
+设为首页
+加入收藏
+<a href="http://www.gzsmzt.gov.cn/list-100-1.html">
+网站地图
+</div>
+</div>
+<div class="header">
+<div class="layout">
+<div class="logo" style="height:136px">
+<div style="float:left">
+</div>
+<div style="float:right;width:420px">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="420" height="120" hspace="0" vspace="0">
+<embed src="http://www.gzsmzt.gov.cn/statics/images/bg/top.swf" width="420" height="120" hspace="0" vspace="0" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent">
+</object>
+</div>
+</div>
+<div class="menu">
+<div class="navbox" style="width:712px;">
+<ul class="nav navrow">
+<li>
+|
+</li>
+<li>
+|
+</li>
+<li>
+|
+</li>
+<li>
+|
+</li>
+<li>
+</li>
+</ul>
+</div>
+<div class="mline">
+</div>
+<a href="http://www.gzsmzt.gov.cn/index.php" class="micon icon-network">
+<div class="mline">
+</div>
+</div>
+<div class="hdbar">
+</iframe>
+<div class="search">
+<form action="http://www.gzsmzt.gov.cn/index.php" method="get" target="_blank">
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="listmain">
+<div class="modtop">
+首页
+</div>
+<div class="modcon">
+</div>
+</div>
+<div class="footer layout">
+<div style="width:850px;float:left;">
+<a href="http://www.gzsmzt.gov.cn/list-7-1.html">
+联系我们
+|
+<a href="http://www.gzsmzt.gov.cn/list-100-1.html">
+网站地图
+|
+<a href="http://www.gzsmzt.gov.cn/index.php?m=search">
+检索中心
+办公室电话：0851-86857123信息中心电话：0851-8683333486822443电子邮箱：
+版权所有：贵州省民政厅版权声明隐私与安全声明黔ICP备05000312
+(建议使用1024×768分辨率IE6.0以上版本浏览器)
+<a href="http://webscan.360.cn/index/checkwebsite/url/www.gzsmzt.gov.cn" name="0c21c08eb5ec6c8d3b0c4f551a1dcabb">
+360网站安全检测平台
+</script>
+</div>
+<div style="float:right;width:100px">
+</div>
+</div>
+</body>
+</html>

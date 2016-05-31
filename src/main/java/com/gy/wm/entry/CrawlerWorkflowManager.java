@@ -15,6 +15,7 @@ import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Spider;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,23 +63,24 @@ public class CrawlerWorkflowManager {
     }
 
     protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis) {
-        String tempUrl = "";
+        List<String> seedList = new ArrayList<>();
         for (CrawlData crawlData : seeds) {
-            tempUrl += crawlData.getUrl() + ",";
+            seedList.add(crawlData.getUrl());
         }
-        String urls = tempUrl.substring(0, tempUrl.length() - 1);
+        String [] urlArray = seedList.toArray(new String[seedList.size()]);
+
 
         Spider.create(new TopicPageProcessor(tid, textAnalysis))
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
-                .addUrl(urls)
+                .addUrl(urlArray)
                         //存入mysql
-                .addPipeline(new MysqlPipeline("tb_crawler"))
+                .addPipeline(new MysqlPipeline("tb_fbird"))
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
                         //开启5个线程抓取
-                .thread(1)
+                .thread(4)
                         //启动爬虫
                 .run();
     }

@@ -19,7 +19,6 @@ public class JedisPoolUtils implements Serializable {
     }
 
     public static void makepool() throws IOException {
-
         String redisHost = ConfigUtils.getResourceBundle().getString("REDIS_HOSTNAME");
         int    redisPort = Integer.parseInt(ConfigUtils.getResourceBundle().getString("REDIS_PORT"));
         if (pool == null) {
