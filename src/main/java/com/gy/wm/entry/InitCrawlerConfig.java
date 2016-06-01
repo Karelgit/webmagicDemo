@@ -75,7 +75,7 @@ public class InitCrawlerConfig {
         String str;
         File files = new File(templatesDir);
 //        File files = new File("C:\\temp\\templates");
-//        File files = new File("/home/TianyuanPan/IdeaProjects/gycrawlerWebmagicDemo/templates/");
+//        File files = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/");
         File[] templateFiles = files.listFiles();
         List<File> fileList = new ArrayList<>();
         for(File templateFile : templateFiles)    {

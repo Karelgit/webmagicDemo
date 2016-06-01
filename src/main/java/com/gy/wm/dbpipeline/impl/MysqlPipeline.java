@@ -2,6 +2,7 @@ package com.gy.wm.dbpipeline.impl;
 
 import com.gy.wm.dbpipeline.dbclient.MysqlClient;
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.model.rdb.RdbModel;
 import org.apache.http.annotation.ThreadSafe;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
@@ -15,17 +16,14 @@ public class MysqlPipeline extends BaseDBPipeline {
 
     MysqlClient dbClient;
     String tableName;
+    RdbModel rdbModel;
 
-    public MysqlPipeline() {
 
-        this.dbClient = new MysqlClient();
-        this.tableName = "tb_crawler";
-    }
-
-    public MysqlPipeline(String tableName) {
+    public MysqlPipeline(String tableName, RdbModel rdbModel) {
 
         this.dbClient = new MysqlClient();
         this.tableName = tableName;
+        this.rdbModel = rdbModel;
     }
 
     @Override
@@ -47,11 +45,9 @@ public class MysqlPipeline extends BaseDBPipeline {
         if (crawlData == null) {
             System.out.println("MysqlPipeline crwalerData is NULL");
             logger.warn("MysqlPipeline crwalerData is NULL !!!");
+            return;
         }
-
-//        for (CrawlData data : crawlData) {
         add(tableName, crawlData);
-//        }
         int sum = doInsert();
         System.out.println("MysqlPipeline doInsert Successful number: " + sum);
         logger.debug("MysqlPipeline doInsert Successful number: " + sum);
@@ -60,7 +56,7 @@ public class MysqlPipeline extends BaseDBPipeline {
 
 
     public void add(String tablename, CrawlData data) {
-        this.dbClient.addItem(tablename, data);
+        this.dbClient.addItem(tablename, rdbModel, data);
     }
 
     public int doInsert() {

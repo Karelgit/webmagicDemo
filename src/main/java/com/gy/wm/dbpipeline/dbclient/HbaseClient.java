@@ -3,11 +3,10 @@ package com.gy.wm.dbpipeline.dbclient;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.CrawlerDataUtils;
+import com.gy.wm.util.HbasePoolUtils;
 import com.gy.wm.util.RandomUtils;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.client.HConnection;
 import org.apache.hadoop.hbase.client.HTableInterface;
-import org.apache.hadoop.hbase.client.HTablePool;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
 
@@ -21,26 +20,10 @@ import java.util.Map;
  */
 public class HbaseClient extends AbstractDBClient {
 
-    /**
-     * 声明静态配置
-     * 初始化配置
-     */
-    private static String hostnames;
-    private static String port;
-    private static String tableName;
-    private static String columnFamilyName;
-    private static HTablePool myPool = null;
-    public static final Configuration conf;
 
-    static {
-        conf = HBaseConfiguration.create();
-        hostnames = ConfigUtils.getResourceBundle().getString("HBASE_HOSTNAMES");
-        port = ConfigUtils.getResourceBundle().getString("HBASE_PORT");
-        tableName = ConfigUtils.getResourceBundle().getString("HBASE_TABLE_NAME");
-        columnFamilyName = ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
-        conf.set("hbase.zookeeper.quorum", hostnames);
-        myPool = new HTablePool(conf, 100);
-    }
+    private String tableName;
+    private String columnFamilyName;
+    private HTableInterface myTable;
 
 
     private List<CrawlData> dataList;
@@ -48,14 +31,15 @@ public class HbaseClient extends AbstractDBClient {
     public HbaseClient() {
 
         this.dataList = new ArrayList<>();
-
+        this.tableName = ConfigUtils.getResourceBundle().getString("HBASE_TABLE_NAME");
+        this.columnFamilyName = ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
     }
 
-    public static String getTableName() {
+    public String getTableName() {
         return tableName;
     }
 
-    public static String getColumnFamilyName() {
+    public String getColumnFamilyName() {
         return columnFamilyName;
     }
 
@@ -71,20 +55,20 @@ public class HbaseClient extends AbstractDBClient {
 
     @Override
     public int doSetInsert() {
-        int i = 0;
+        int count = 0;
 
-        for (CrawlData o : dataList) {
+        for (int i = 0; i < dataList.size(); ++i) {
 
             try {
-                i += this.insertRecord(tableName, RandomUtils.getRandomString(50) + "_" + new Date().getTime(), columnFamilyName, o);
+                count += this.insertRecord(tableName, RandomUtils.getRandomString(50) + "_" + new Date().getTime(), columnFamilyName, dataList.get(i));
             } catch (Exception ex) {
                 logger.warn("HbaseClient doSetInsert Exception!!! Message: " + ex.getMessage());
                 ex.printStackTrace();
             }
         }
-        this.dataList.clear();
+        this.dataList = new ArrayList<>();
 
-        return i;
+        return count;
     }
 
     @Override
@@ -99,38 +83,39 @@ public class HbaseClient extends AbstractDBClient {
     }
 
 
-    public int insertRecord(String tableName, String rowKey, String columnFamilyName, CrawlData data) throws Exception {
-
-        HTableInterface myTable = myPool.getTable(tableName);
-        Put put = new Put(Bytes.toBytes(rowKey));// 设置rowkey
+    public int insertRecord(String tableName, String rowKey, String columnFamilyName, CrawlData data) {
 
         String columnQualifier = null;
         String value = null;
         String type = null;
 
+        myTable = HbasePoolUtils.getHTable(tableName);
+
+        Put put = new Put(Bytes.toBytes(rowKey));// 设置rowkey
+
         CrawlerDataUtils utils = CrawlerDataUtils.getCrawlerDataUtils(data);
 
         List<Map<String, Object>> myDataList = utils.getAttributeInfoList();
-
         try {
-            for (Map<String, Object> o : myDataList) {
+
+            for (int i = 0; i < myDataList.size(); ++i) {
                 try {
-                    columnQualifier = o.get("name").toString();
-                    type = o.get("type").toString();
+                    columnQualifier = myDataList.get(i).get("name").toString();
+                    type = myDataList.get(i).get("type").toString();
 
                     switch (type) {
 
                         case "int":
-                            value = Integer.toString((int) o.get("value"));
+                            value = Integer.toString((int) myDataList.get(i).get("value"));
                             break;
                         case "long":
-                            value = Long.toString((long) o.get("value"));
+                            value = Long.toString((long) myDataList.get(i).get("value"));
                             break;
                         case "boolean":
-                            value = Boolean.toString((boolean) o.get("value"));
+                            value = Boolean.toString((boolean) myDataList.get(i).get("value"));
                             break;
                         default:
-                            value = (String) o.get("value");
+                            value = (String) myDataList.get(i).get("value");
                             break;
                     }
 
@@ -154,17 +139,28 @@ public class HbaseClient extends AbstractDBClient {
 
         } catch (Exception ex) {
 
-            myTable.close();
+            try {
+                myTable.close();
+            } catch (Exception exc) {
+                logger.warn("Hbase table is close() or connection is close() error!!! Message: " + exc.getMessage());
+                exc.printStackTrace();
+            }
+
             logger.warn("HBase Put data Exception!!! Message: " + ex.getMessage());
             ex.printStackTrace();
             return 0;
         }
 
 
-        myTable.close();
+        try {
 
-        System.out.println("add data Success!");
-        logger.debug("Insert data Success!");
+            myTable.close();
+
+        } catch (Exception ex) {
+            logger.warn("Hbase table.close() or connection,close() error!!! Message: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+
 
         return 1;
     }
