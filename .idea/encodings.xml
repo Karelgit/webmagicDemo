@@ -12,7 +12,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/InstanceFactory.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/FengBirdModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/rdb/FengBirdModel.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/AnalysisArticle.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/AnalysisNavigation.java" charset="UTF-8" />
@@ -40,7 +40,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/ConfigUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/CrawlerDataUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/HashUtils.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JSONUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/LogManager.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/LoggerUtil.java" charset="UTF-8" />

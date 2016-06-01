@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1405764424">
+  <component name="DataSourceManagerImpl" format="xml" hash="1088102278">
     <data-source source="LOCAL" name="MySQL - wifi_ac@108.108.108.8" uuid="be10d778-e9b7-4c90-a2f6-340147c89f8b">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -13,11 +13,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://D:/jarCollections/mysql-connector-java-5.1.22-bin.jar</url>
-        </library>
-      </libraries>
+      <libraries />
     </data-source>
   </component>
 </project>

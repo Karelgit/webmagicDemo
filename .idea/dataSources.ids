@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - wifi_ac@108.108.108.8" uuid="be10d778-e9b7-4c90-a2f6-340147c89f8b">
-    <database-info product="MySQL" version="5.5.39-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
     <schema name="" catalog="wifi_ac"/>
     <table name="t_cmd" schema="" catalog="wifi_ac" type="TABLE">
       <column name="cmd" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12"/>
