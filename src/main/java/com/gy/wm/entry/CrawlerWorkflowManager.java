@@ -84,5 +84,7 @@ public class CrawlerWorkflowManager {
                 .thread(4)
                         //启动爬虫
                 .run();
+
+
     }
 }
