@@ -70,7 +70,6 @@ public class CrawlerWorkflowManager {
         }
         String [] urlArray = seedList.toArray(new String[seedList.size()]);
 
-
         Spider.create(new TopicPageProcessor(tid, textAnalysis))
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
