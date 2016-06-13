@@ -16,7 +16,7 @@ public class FengBirdModel implements RdbModel{
 
     private String topicTaskID;
     private String title;
-    private long   labelTime;
+    private Date   labelTime;
     private String url;
     private String fromUrl;
     private String rootUrl;
@@ -57,11 +57,11 @@ public class FengBirdModel implements RdbModel{
         this.title = title;
     }
 
-    public long getLabelTime() {
+    public Date getLabelTime() {
         return labelTime;
     }
 
-    public void setLabelTime(long labelTime) {
+    public void setLabelTime(Date labelTime) {
         this.labelTime = labelTime;
     }
 
@@ -125,7 +125,7 @@ public class FengBirdModel implements RdbModel{
                     this.setCrawlTime((long) fieldList.get(i).get("value"));
                     break;
                 case "publishTime":
-                    this.setLabelTime((long) fieldList.get(i).get("value"));
+                    this.setLabelTime((Date) fieldList.get(i).get("value"));
                     break;
                 case "title":
                     this.setTitle((String) fieldList.get(i).get("value"));

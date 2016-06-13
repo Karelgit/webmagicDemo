@@ -8,10 +8,10 @@ import redis.clients.jedis.Jedis;
  */
 public class RedisBloomFilter {
 
-    public static boolean notExistInBloomHash(String url,Jedis jedis,BloomFilter bloomFilter) {
+    public static boolean notExistInBloomHash(String tid, String url,Jedis jedis,BloomFilter bloomFilter) {
         //如果key取得的value是空，或者url不包含在哈希地址中，可以插入
-        if(!bloomFilter.contains("redis:bloomfilter",url))    {
-            bloomFilter.add("redis:bloomfilter",url);
+        if(!bloomFilter.contains("redis:bloomfilter" + tid,url))    {
+            bloomFilter.add("redis:bloomfilter" + tid,url);
             return true;
         }else {
             return false;

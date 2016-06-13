@@ -34,7 +34,7 @@ public class TopicPageProcessor implements PageProcessor {
         this.textAnalysis = textAnalysis;
     }
 
-    private Site site = Site.me().setDomain("http://www.gog.cn").setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setRetryTimes(3).setSleepTime(1000);
 
     @Override
     public void process(Page page) {
@@ -69,7 +69,7 @@ public class TopicPageProcessor implements PageProcessor {
             for (CrawlData crawlData : perPageCrawlDateList) {
                 if (crawlData.isFetched() == false) {
                     //栏目分析fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
-                    boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), jedis, bloomFilter);
+                    boolean isNew = RedisBloomFilter.notExistInBloomHash(tid, crawlData.getUrl(), jedis, bloomFilter);
                     if (isNew) {
                         //加入到待爬取队列
                         nextCrawlData.add(crawlData);

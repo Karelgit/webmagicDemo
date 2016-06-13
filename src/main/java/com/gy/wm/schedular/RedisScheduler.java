@@ -10,8 +10,6 @@ import java.io.IOException;
 
 public class RedisScheduler implements Scheduler {
     private static final String QUEUE_PREFIX = "queue_";
-    private static final String SET_PREFIX = "set_";
-
 
     @Override
     public void push(Request request, Task task) {
@@ -42,5 +40,10 @@ public class RedisScheduler implements Scheduler {
         } else {
             return new Request(url);
         }
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println();
     }
 }

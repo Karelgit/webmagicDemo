@@ -41,6 +41,7 @@ public class CrawlerWorkflowManager {
         this.appname = appname;
     }
 
+
     public void crawl(List<CrawlData> seeds, String tid, String starttime, int pass) throws IOException {
 
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
@@ -56,11 +57,18 @@ public class CrawlerWorkflowManager {
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
-            bloomFilter.add("redis:bloomfilter", seed.getUrl());
+            bloomFilter.add("redis:bloomfilter" + tid, seed.getUrl());
         }
 
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
+
+        //结束之后清空对应任务的redis数据
+        jedis.del("redis:bloomfilter" + tid);
+        jedis.del("queue_" + tid);
+        jedis.del("webmagicCrawler::ToCrawl::" + tid);
+        jedis.del("webmagicCrawler::Crawled::" + tid);
+
     }
 
     protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis) {
@@ -70,7 +78,8 @@ public class CrawlerWorkflowManager {
         }
         String [] urlArray = seedList.toArray(new String[seedList.size()]);
 
-        Spider.create(new TopicPageProcessor(tid, textAnalysis))
+
+        Spider.create(new TopicPageProcessor(tid, textAnalysis)).setUUID(tid)
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
                 .addUrl(urlArray)

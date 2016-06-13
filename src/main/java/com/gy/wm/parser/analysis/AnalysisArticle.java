@@ -7,6 +7,7 @@ import com.gy.wm.parser.tool.JsoupHtml;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,7 +41,7 @@ public class AnalysisArticle implements Serializable{
 
     public BaseAnalysisURL analysisArticle(BaseAnalysisURL baseAnalysisURL, List<BaseTemplate> baseTemplates) throws IOException {
         BaseAnalysisURL url = baseAnalysisURL;
-        long date;
+        Date date;
         String text;
         String title;
         System.out.println("\n\r" + "analysis:  " + url.getUrl());
@@ -52,7 +53,7 @@ public class AnalysisArticle implements Serializable{
             text = getText();
             url.setText(text);
             date = getDate();
-            if (date != 0) url.setDate(date);
+            if (date != null) url.setDate(date);
             if (url.getTitle() == null || url.getTitle()=="") {
                 title = getTitle();
                 url.setTitle(title);
@@ -200,7 +201,7 @@ public class AnalysisArticle implements Serializable{
     }
 
 
-     long getDate() {
+     Date getDate() {
         String dateStr = null;
         String copydateStr=null;
         String str;

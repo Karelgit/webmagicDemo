@@ -7,6 +7,7 @@ import com.gy.wm.parser.urljudge.JudgeURL;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -117,7 +118,7 @@ public class AnalysisNavigation
      * @param date
      * @param xpath
      */
-    private void addAnsToken(String url,String title,long date,String xpath)
+    private void addAnsToken(String url,String title,Date date,String xpath)
     {
         BaseAnalysisURL baseAnalysisURL =new BaseAnalysisURL(url,title,date,null);
         ansTokens.add(baseAnalysisURL);
@@ -131,7 +132,7 @@ public class AnalysisNavigation
         //初始化
         List<String> xpathList = new ArrayList<>();
         String newToken, title, url, xpath;
-        long date;
+        Date date;
 
         int newTag = 0;
         int newLength = newTokens.size();
@@ -201,7 +202,7 @@ public class AnalysisNavigation
      * @param tag 当前标签位置
      * @return
      */
-    private long findDate(int tag)
+    private Date findDate(int tag)
     {
         //初始化
         String token;
@@ -220,7 +221,7 @@ public class AnalysisNavigation
             token=newTokens.get(nowTag);
             if (AnalysisTool.isDate(token)) return AnalysisTool.getDateFormString(token);
         }
-        return 0;
+        return null;
     }
 
 

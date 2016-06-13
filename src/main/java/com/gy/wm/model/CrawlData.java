@@ -1,6 +1,7 @@
 package com.gy.wm.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2016/4/29.
@@ -20,7 +21,7 @@ public class CrawlData implements Serializable {
     private String title;
     private String startTime;
     private long crawlTime;
-    private long publishTime;
+    private Date publishTime;
     private long depthfromSeed;//层数
     private long count;
     private boolean tag;//true：文章，fallse：导航
@@ -30,7 +31,7 @@ public class CrawlData implements Serializable {
     public CrawlData() {}
 
     public CrawlData(String url, int statusCode, int pass, String type, String rootUrl, String fromUrl, String text, String html, String title,
-                     String startTime, long crawlTime, long publishTime, long depthfromSeed, boolean tag, long count, boolean fetched)  {
+                     String startTime, long crawlTime, Date publishTime, long depthfromSeed, boolean tag, long count, boolean fetched)  {
         this.url = url;
         this.statusCode = statusCode;
         this.pass = pass;
@@ -145,11 +146,11 @@ public class CrawlData implements Serializable {
         this.crawlTime = crawlTime;
     }
 
-    public long getPublishTime() {
+    public Date getPublishTime() {
         return publishTime;
     }
 
-    public void setPublishTime(long publishTime) {
+    public void setPublishTime(Date publishTime) {
         this.publishTime = publishTime;
     }
 

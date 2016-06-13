@@ -6,6 +6,7 @@ import com.gy.wm.parser.urljudge.HtmlSort;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,7 +38,7 @@ public class TextAnalysis implements Serializable {
 
 
         String title = "";
-        Long date = 0L;
+        Date date = null;
 
         BaseAnalysisURL oldUrl = new BaseAnalysisURL(url, title, date, html);
 
@@ -60,6 +61,7 @@ public class TextAnalysis implements Serializable {
                     newCrawlData.setUrl(baseAnalysisURL.getUrl());
                     newCrawlData.setTitle(baseAnalysisURL.getTitle());
                     newCrawlData.setPublishTime(baseAnalysisURL.getDate());
+
                     newCrawlData.setCrawlTime(System.currentTimeMillis());
                     newCrawlData.setHtml(baseAnalysisURL.getHtml());
                     newCrawlData.setText(baseAnalysisURL.getText());
@@ -92,4 +94,9 @@ public class TextAnalysis implements Serializable {
         }
         return crawlDataList;
     }
+
+    public static void main(String[] args) {
+        System.out.println(Long.parseLong(null));
+    }
+
 }
