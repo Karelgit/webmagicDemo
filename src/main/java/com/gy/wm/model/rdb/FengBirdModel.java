@@ -105,6 +105,8 @@ public class FengBirdModel implements RdbModel{
         this.deleteflag = deleteflag;
     }
 
+
+
     @Override
     public Object setThisModelFields(CrawlData data) {
 
@@ -125,6 +127,7 @@ public class FengBirdModel implements RdbModel{
                     this.setCrawlTime((long) fieldList.get(i).get("value"));
                     break;
                 case "publishTime":
+
                     this.setLabelTime((Date) fieldList.get(i).get("value"));
                     break;
                 case "title":
@@ -148,6 +151,7 @@ public class FengBirdModel implements RdbModel{
 
     @Override
     public InsertSqlModel insertSqlModelBuilder(String tableName) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         InsertSqlModel model = new InsertSqlModel(tableName);
 
@@ -168,6 +172,10 @@ public class FengBirdModel implements RdbModel{
                 case "int":
                     model.addKeyValue((String) fieldList.get(i).get("name"), fieldList.get(i).get("value"));
                     break;
+                case "class java.util.Date":
+
+                    model.addKeyValue((String) fieldList.get(i).get("name"), "'" + simpleDateFormat.format(fieldList.get(i).get("value")) + "'");
+                    break;
                 default:
                     model.addKeyValue((String) fieldList.get(i).get("name"), "'" + fieldList.get(i).get("value") + "'");
                     break;
@@ -177,5 +185,4 @@ public class FengBirdModel implements RdbModel{
         }
         return model;
     }
-
 }

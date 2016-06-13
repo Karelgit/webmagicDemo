@@ -200,7 +200,6 @@ public class AnalysisArticle implements Serializable{
         return title;
     }
 
-
      Date getDate() {
         String dateStr = null;
         String copydateStr=null;

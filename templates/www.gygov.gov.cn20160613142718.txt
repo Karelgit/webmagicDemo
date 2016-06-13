@@ -1,0 +1,248 @@
+www.gygov.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center">
+<iframe height="180" marginheight="0" src="/col/col13521/index.html" frameborder="0" width="100%" allowtransparency="allowtransparency" marginwidth="0" scrolling="no">
+</iframe>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td width="8px">
+</td>
+<td width="15px" style="border-left:solid 1px #ececec; border-bottom:solid 1px #ececec; border-top:solid 1px #ececec">
+</td>
+<td valign="top" style="border-bottom:solid 1px #ececec; border-top:solid 1px #ececec">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:dashed 1px #dddddd">
+<tbody>
+<tr>
+<td width="15">
+</td>
+<td height="32px" style="padding-left:5px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="10">
+</td>
+<td>
+当前位置：
+<a href="http://www.gygov.gov.cn/index.html" class="bt_link">
+首页
+</td>
+<td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td>
+<a href="http://www.gygov.gov.cn/col/col10682/index.html" class="bt_link">
+贵阳动态
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td height="485" valign="top" style="padding:20px;">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td align="center" class="title" style="border-bottom:1px solid #ededed; color:#696969; padding-top:15px" height="35px">
+</td>
+</tr>
+<tr>
+<td align="center" style="padding-top:8px; padding-bottom:8px">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td height="30" align="center">
+</td>
+<td align="center">
+</td>
+<td align="center">
+字体：【
+<a href="">
+大
+<a href="">
+中
+<a href="">
+小
+】
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="bt_content" id="contents">
+<div id="zoom" style="line-height:24px;">
+</div>
+</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="right" height="30px">
+<a href="">
+【关闭窗口】
+【返回顶部】
+<a href="">
+【打印文章】
+</td>
+</tr>
+<tr>
+<td align="right" height="30px">
+<div class="jiathis_style" style="float:right">
+分享到：
+<a class="jiathis_button_qzone">
+QQ空间
+<a class="jiathis_button_tsina">
+新浪微博
+<a class="jiathis_button_tqq">
+腾讯微博
+<a class="jiathis_button_renren">
+人人网
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">
+更多
+<a class="jiathis_counter_style">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" id="article" cellspacing="0" cellpadding="0" align="center" style="border-top:dashed 1px #dddddd;">
+<tbody>
+<tr>
+<td align="left" style="padding:10px;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="15px" style="border-right:solid 1px #ececec; border-top:solid 1px #ececec; border-bottom:solid 1px #ececec">
+</td>
+<td width="276px" valign="top" bgcolor="#f4f4f4" style="padding:8px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td style="padding:10px;" class="red_title">
+最近更新
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td height="225" valign="top" style=" padding-left:10px; padding-right:10px; padding-bottom:10px;">
+<iframe height="235" src="/col/col13302/index.html" frameborder="0" width="100%" scrolling="no">
+</iframe>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
+<tbody>
+<tr>
+<td width="123" align="left">
+</td>
+<td align="right">
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td style="padding:10px;" class="red_title">
+热点文章
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td height="225" valign="top" style=" padding-left:10px; padding-right:10px; padding-bottom:10px;">
+<iframe height="240" src="/vc/vc/interface/styletop/arttop_interface.jsp?prev=1&amp;i_id=7&amp;i_webid=" frameborder="0" width="100%" allowtransparency="allowtransparency" scrolling="no">
+</iframe>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
+<tbody>
+<tr>
+<td width="123" align="left">
+</td>
+<td align="right">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="8px">
+</td>
+</tr>
+</tbody>
+</table>
+<table width="991" height="8" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="35px" background="/images/4/gy_index_232.gif" style="background-repeat:repeat-x">
+<tbody>
+<tr>
+<td align="center">
+</td>
+</tr>
+</tbody>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td height="100" align="center">
+</td>
+</tr>
+</tbody>
+</table>
+</iframe>
+<a href="http://www.hanweb.com" style="display:none">
+ProducedBy大汉网络大汉版通发布系统
+</body>
+</html>
