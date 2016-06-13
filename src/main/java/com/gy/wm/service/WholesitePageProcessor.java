@@ -75,8 +75,8 @@ public class WholesitePageProcessor implements PageProcessor {
                         boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), jedis, bloomFilter);
                         if (isNew) {
                             nextCrawlData.add(crawlData);
+                            page.addTargetRequest(crawlData.getUrl());
                         }
-                        page.addTargetRequest(crawlData.getUrl());
                     } else {
                         //链接fetched为true,即文章页，添加到redis的已爬取队列
                         crawledData.add(crawlData);
