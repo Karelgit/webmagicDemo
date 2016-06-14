@@ -88,14 +88,13 @@ public class MysqlClient extends AbstractDBClient {
         for (int i = 0; i < size; ++i) {
 
             try {
-
                 String sql = this.insertSqlModelList.get(i).getInsertSql();
+                System.out.println("SQL ===>> " + sql);
                 lineSum += this.myStatement.executeUpdate(sql);
-
-
             } catch (Exception ex) {
                 System.out.println("SQL excute Exception ...");
                 logger.warn("SQL excute Exception ...");
+
                 ex.printStackTrace();
 
             }

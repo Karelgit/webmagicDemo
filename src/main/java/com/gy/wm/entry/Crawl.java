@@ -1,12 +1,8 @@
 package com.gy.wm.entry;
 
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.util.JedisPoolUtils;
-import redis.clients.jedis.Jedis;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Administrator on 2016/5/18.
@@ -103,15 +99,5 @@ public class Crawl {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        JedisPoolUtils jedisPoolUtils= null;
-        try {
-            jedisPoolUtils = new JedisPoolUtils();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Jedis jedis = jedisPoolUtils.getJedisPool().getResource();
-        Map map = jedis.hgetAll("sparkcrawler::Crawled::WebmagicCrawler20160519140823");
-            System.out.println(map.get("http://www.gog.cn/zonghe/system/2016/05/18/014918062.shtml"));
     }
 }

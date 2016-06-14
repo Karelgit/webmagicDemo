@@ -21,7 +21,7 @@ public class ConfigLoader {
             // read file content from file
             StringBuffer sb= new StringBuffer("");
 
-            FileReader reader = new FileReader(projPath+"//data//seeds.txt"/*inputFilePath*/);
+            FileReader reader = new FileReader(/*projPath+"//data//seeds.txt"*/inputFilePath);
             BufferedReader br = new BufferedReader(reader);
 
             String str = null;

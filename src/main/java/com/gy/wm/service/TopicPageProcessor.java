@@ -34,7 +34,7 @@ public class TopicPageProcessor implements PageProcessor {
         this.textAnalysis = textAnalysis;
     }
 
-    private Site site = Site.me().setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setRetryTimes(3).setSleepTime(500).setRetrySleepTime(500);
 
     @Override
     public void process(Page page) {

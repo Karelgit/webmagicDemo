@@ -173,8 +173,12 @@ public class FengBirdModel implements RdbModel{
                     model.addKeyValue((String) fieldList.get(i).get("name"), fieldList.get(i).get("value"));
                     break;
                 case "class java.util.Date":
-
-                    model.addKeyValue((String) fieldList.get(i).get("name"), "'" + simpleDateFormat.format(fieldList.get(i).get("value")) + "'");
+                    Object object = fieldList.get(i).get("value");
+                    if(object != null)  {
+                        model.addKeyValue((String) fieldList.get(i).get("name"), "'" + simpleDateFormat.format(object) + "'");
+                    }else {
+                        model.addKeyValue((String) fieldList.get(i).get("name"), null);
+                    }
                     break;
                 default:
                     model.addKeyValue((String) fieldList.get(i).get("name"), "'" + fieldList.get(i).get("value") + "'");
