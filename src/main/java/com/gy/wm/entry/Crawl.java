@@ -1,7 +1,14 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.heartbeat.Heartbeart;
+import com.gy.wm.heartbeat.handler.ClientHeartbeatHandler;
+import com.gy.wm.heartbeat.model.HeartbeatMsgModel;
+import com.gy.wm.heartbeat.model.HeartbeatStatusCode;
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.ConfigUtils;
 
+import java.lang.management.ManagementFactory;
+import java.net.Inet4Address;
 import java.util.List;
 
 /**
@@ -9,17 +16,21 @@ import java.util.List;
  */
 public class Crawl {
     public static void kick(int depth, int pass, String tid, String starttime, String seedpath, String protocolDir,
-                            String postregexDir, String type, int recalldepth, String templatesDir, String clickregexDir,String configpath)  throws Exception  {
+                            String postregexDir, String type, int recalldepth, String templatesDir, String clickregexDir, String configpath) throws Exception {
         //tid_startTime作为appname，即作为这个爬虫的任务名称
-        InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid+starttime,recalldepth,templatesDir,clickregexDir,protocolDir,postregexDir);
+        InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid + starttime, recalldepth, templatesDir, clickregexDir, protocolDir, postregexDir);
         InstanceFactory.getInstance(crawlerConfig);
 
         ConfigLoader configLoader = new ConfigLoader();
-        List<CrawlData> crawlDataList = configLoader.load(depth,tid,starttime,pass,seedpath,type);
+        List<CrawlData> crawlDataList = configLoader.load(depth, tid, starttime, pass, seedpath, type);
 
-        CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid,"appname");
-        workflow.crawl(crawlDataList,tid,starttime,pass);
+        CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid, "appname");
+        workflow.crawl(crawlDataList, tid, starttime, pass);
     }
+
+    private static HeartbeatMsgModel heartbeatMsg;
+    private static Heartbeart heartbeart;
+    private static ClientHeartbeatHandler handler;
 
     public static void main(String[] args) {
         if (args.length < 24) {
@@ -51,7 +62,7 @@ public class Crawl {
         String templateDir = "/SparkCrawler/templates";
         String clickregexDir = "/SparkCrawler/clickregex";
         String postregexDir = "";
-        String configpath="";
+        String configpath = "";
 
         for (int i = 0; i < args.length; i++) {
             if ("-depth".equals(args[i])) {
@@ -72,7 +83,7 @@ public class Crawl {
             } else if ("-protocolDir".equals(args[i])) {
                 protocolDir = args[i + 1];
                 i++;
-            }else if ("-type".equals(args[i])) {
+            } else if ("-type".equals(args[i])) {
                 type = args[i + 1];
                 i++;
             } else if ("-recalldepth".equals(args[i])) {
@@ -87,17 +98,39 @@ public class Crawl {
             } else if ("-postregexDir".equals(args[i])) {
                 postregexDir = args[i + 1];
                 i++;
-            }else if("-configpath".equals(args[i])){
-                configpath=args[i+1];
+            } else if ("-configpath".equals(args[i])) {
+                configpath = args[i + 1];
                 i++;
             }
 
         }
 
         try {
-            kick(depth, pass, tid, starttime,seedpath,protocolDir,postregexDir,type, recalldepth, templateDir, clickregexDir, configpath);
+
+            String runTimeInfo = ManagementFactory.getRuntimeMXBean().getName();
+            String pid = runTimeInfo.split("@")[0];
+
+            String selfIp = ConfigUtils.getResourceBundle().getString("HEARTBEAT_HOST");
+            heartbeatMsg = new HeartbeatMsgModel();
+            heartbeatMsg.setHostname(selfIp);
+            heartbeatMsg.setPid(Integer.parseInt(pid));
+            heartbeatMsg.setTheads(5);
+            heartbeatMsg.setStatusCode(HeartbeatStatusCode.CRAWLING);
+
+            handler = new ClientHeartbeatHandler(heartbeatMsg);
+            heartbeart = new Heartbeart(handler);
+
+            new Thread(heartbeart).start();// the heartbeat thread
+
+
+            kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        heartbeatMsg.setStatusCode(HeartbeatStatusCode.FINISHED);
+        heartbeart.setFinish(true);
     }
 }
