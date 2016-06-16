@@ -1,9 +1,7 @@
 package com.gy.wm.entry;
 
 import com.gy.wm.dbpipeline.impl.HbasePipeline;
-import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.model.rdb.FengBirdModel;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;
@@ -73,12 +71,10 @@ public class CrawlerWorkflowManager {
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
                 .addUrl(urls)
-                        //存入mysql
-                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
-                        //存入elasticSearch
+//                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-//                .addPipeline(new HbasePipeline())
+                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
                 .thread(5)
                         //启动爬虫
