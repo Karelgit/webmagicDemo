@@ -45,8 +45,8 @@ public class CreateTemplate {
         String html;
         String url;
 
-        File inputFile = new File("D:\\IdeaProjects\\webmagicDemo\\data\\tempin.txt");
-//        File inputFile = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/data/tempin.txt");
+//        File inputFile = new File("D:\\IdeaProjects\\webmagicDemo\\data\\tempin.txt");
+        File inputFile = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/data/tempin.txt");
         BufferedReader htmlReader = new BufferedReader(new FileReader(inputFile));
         while ((url = htmlReader.readLine()) != null) {
             System.out.println(url);
@@ -80,15 +80,15 @@ public class CreateTemplate {
         String templateDomain;
 
         //从模版库中读取已有模版文件
-        File file = new File("D:\\IdeaProjects\\webmagicDemo\\templates\\");
-//        File file = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/");
+//        File file = new File("D:\\IdeaProjects\\webmagicDemo\\templates\\");
+        File file = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/");
         if (!file.exists() && !file.isDirectory()) {
             file.mkdir();
         }
 
 
-        File templatesParentFile = new File("D:\\IdeaProjects\\webmagicDemo\\templates\\");
-//        File templatesParentFile = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/");
+//        File templatesParentFile = new File("D:\\IdeaProjects\\webmagicDemo\\templates\\");
+        File templatesParentFile = new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/");
         File[] templateFiles = templatesParentFile.listFiles();
         if (templateFiles.length > 0) {
             for (File templateFile : templateFiles) {
@@ -107,8 +107,8 @@ public class CreateTemplate {
 
             }
         }
-        updateTemplate(newTokens, new File("D:\\IdeaProjects\\webmagicDemo\\templates\\" + domain + sdf.format(new Date()) + ".txt"), domain);
-//        updateTemplate(newTokens, new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/" + domain + sdf.format(new Date()) + ".txt"), domain);
+//        updateTemplate(newTokens, new File("D:\\IdeaProjects\\webmagicDemo\\templates\\" + domain + sdf.format(new Date()) + ".txt"), domain);
+        updateTemplate(newTokens, new File("/home/TianyuanPan/IdeaProjects/webmagicDemo/templates/" + domain + sdf.format(new Date()) + ".txt"), domain);
         return;
     }
 
