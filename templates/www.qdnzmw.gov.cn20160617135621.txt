@@ -1,0 +1,156 @@
+www.qdnzmw.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+</head>
+<body>
+<div class="bigtop">
+<div class="top1">
+<div class="top1_a">
+</div>
+<div class="top1_b">
+<div style="width:70px; float:left; ">
+天气预报：
+</div>
+</div>
+<div class="top1_c">
+设为主页
+|
+加入收藏
+</div>
+</div>
+<div class="top2">
+</div>
+<div class="top3">
+<div class="nav" style="z-index:9999;">
+<ul>
+<li class="souye">
+<a href="http://www.qdnzmw.gov.cn" title="">
+首页
+</li>
+<li id="nav1" onmouseover="change_tab('nav',1,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=6" title="机构概况">
+机构概况
+<ul class="sub" id="nav_on1" style="display:none; z-index:9999;white-space:nowrap;">
+</ul>
+</li>
+<li id="nav2" onmouseover="change_tab('nav',2,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=9" title="工作动态">
+工作动态
+<ul class="sub width" id="nav_on2" style="display:none;white-space:nowrap;">
+</ul>
+</li>
+<li id="nav3" onmouseover="change_tab('nav',3,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=11" title="民族工作">
+民族工作
+<ul class="sub" id="nav_on3" style="display:none;white-space:nowrap;">
+</ul>
+</li>
+<li id="nav1" onmouseover="change_tab('nav',4,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=12" title="宗教工作">
+宗教工作
+<ul class="sub" id="nav_on4" style="display:none;white-space:nowrap;">
+</ul>
+</li>
+<li id="nav1" onmouseover="change_tab('nav',5,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=15" title="机关建设">
+机关建设
+<ul class="sub" id="nav_on5" style="display:none;white-space:nowrap;">
+</ul>
+</li>
+<li id="nav1" onmouseover="change_tab('nav',6,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=16" title="政务公开">
+政务公开
+<ul class="sub" id="nav_on6" style="display:none; white-space:nowrap;">
+</ul>
+</li>
+<li id="nav1" onmouseover="change_tab('nav',7,9)" onmouseout="nosub('nav',9)">
+<a href="http://zzwzx.qdn.gov.cn/permissionitem/009750094.jspx" target="_blank" title="在线办事">
+在线办事
+<ul class="sub" id="nav_on7" style="display:none;white-space:nowrap;">
+</ul>
+</li>
+<li id="nav1" onmouseover="change_tab('nav',8,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=14" title="民族文化">
+民族文化
+<ul class="sub" id="nav_on8" style="display:none;white-space:nowrap;">
+<li>
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=38" style="font-size:14px;color:#f2570b;" title="民族影视">
+民族影视
+</li>
+<li>
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=39" style="font-size:14px;color:#f2570b;" title="民族音乐">
+民族音乐
+</li>
+<li>
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=40" style="font-size:14px;color:#f2570b;" title="民族摄影">
+民族摄影
+</li>
+</ul>
+</li>
+<li class="last" id="nav1" onmouseover="change_tab('nav',9,9)" onmouseout="nosub('nav',9)">
+<a href="http://www.qdnzmw.gov.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=2" title="联系我们">
+联系我们
+<ul class="sub" id="nav_on9" style="display:none;">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="lmy_a">
+<div class="lmy_a_1">
+<div class="lmy_a_2">
+您当前位置：
+<a href="http://www.qdnzmw.gov.cn">
+首页
+</div>
+<div class="lmy_a_3">
+<div class="lmy_a_5" style="float:right;">
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="nr">
+<div class="nr_a" style="height:auto;">
+<div class="nr_b">
+</div>
+<div class="nr_c">
+<div class="nr_d">
+</div>
+</div>
+<div class="nr_e">
+<div class="nr_f">
+【字体：
+<a href="">
+大
+<a href="">
+中
+<a href="">
+小
+】【
+<a href="">
+关闭本页
+】
+</div>
+</div>
+<div class="nr_g" id="zoom">
+</div>
+<div class="cl">
+</div>
+</div>
+</div>
+<div class="cl">
+</div>
+<div class="bottom">
+黔东南州民族事务委员会版权所有:黔东南州民族事务委员会黔ICP备00000000号
+联系电话:0855－8222000邮编:556000
+技术支持：
+<a href="http://www.qdn.cn" target="_blank">
+黔东南信息港
+（建设数字化的黔东南）
+</div>
+</body>
+</html>

@@ -162,7 +162,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <!--<resourcespathPrefix>resources/</resourcespathPrefix>-->
+                            <!--<resourcespathPrefix>resources/</remvnsourcespathPrefix>-->
                             <mainClass>com.gy.wm.entry.Crawl</mainClass>
                         </manifest>
                     </archive>
