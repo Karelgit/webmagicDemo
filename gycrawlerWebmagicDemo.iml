@@ -6,7 +6,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -94,9 +94,9 @@
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-common:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-annotations:2.6.0" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: jdk.tools:jdk.tools:1.6">
+      <library name="Maven: jdk.tools:jdk.tools:1.7">
         <CLASSES>
-          <root url="jar://C:/Java/jdk1.7.0_13/lib/tools.jar!/" />
+          <root url="jar://$USER_HOME$/usr/jdk1.7.0_79/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
