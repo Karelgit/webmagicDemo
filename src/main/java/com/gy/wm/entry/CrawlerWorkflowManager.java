@@ -59,7 +59,7 @@ public class CrawlerWorkflowManager {
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
 
-        //结束之后清空对应任务的redis数据
+        //结束之后清空对应任务的redis
         jedis.del("redis:bloomfilter" + tid);
         jedis.del("queue_" + tid);
         jedis.del("webmagicCrawler::ToCrawl::" + tid);
