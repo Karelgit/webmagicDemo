@@ -54,10 +54,17 @@ public class CrawlerWorkflowManager {
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
-            bloomFilter.add("redis:bloomfilter", seed.getUrl());
+            bloomFilter.add("redis:bloomfilter"+ tid, seed.getUrl());
         }
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis);
+
+        //结束之后清空对应任务的redis数据
+        jedis.del("redis:bloomfilter" + tid);
+        jedis.del("queue_" + tid);
+        jedis.del("webmagicCrawler::ToCrawl::" + tid);
+        jedis.del("webmagicCrawler::Crawled::" + tid);
+
     }
 
     protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis) {
@@ -68,7 +75,7 @@ public class CrawlerWorkflowManager {
         String urls = tempUrl.substring(0, tempUrl.length() - 1);
 
         Spider.create(new WholesitePageProcessor(tid, textAnalysis))
-                .setScheduler(new RedisScheduler())
+                .setScheduler(new RedisScheduler()).setUUID(tid)
                         //从seed开始抓
                 .addUrl(urls)
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
