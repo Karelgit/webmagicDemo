@@ -30,8 +30,8 @@ public class TextAnalysis implements Serializable {
                 String fromUrl = crawlData.getUrl();
                 try {
                     List<BaseURL> baseURLList = wholeSiteAnalysis.getUrlList(fromUrl,html);
-                    for (BaseURL baseURL : baseURLList) {
-                        CrawlData newCrawlData = createNewCrawlData(baseURL,rootUrl,depth,fromUrl,crawlData.getPass(),crawlData.getTid(),crawlData.getStartTime());
+                    for (int i=0; i<baseURLList.size(); i++) {
+                        CrawlData newCrawlData = createNewCrawlData(baseURLList.get(i),rootUrl,depth,fromUrl,crawlData.getPass(),crawlData.getTid(),crawlData.getStartTime());
                         crawlDataList.add(newCrawlData);
                     }
                 } catch (IOException e) {
