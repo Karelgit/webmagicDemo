@@ -27,7 +27,7 @@ public class ConfigUtils {
 
         ConfigUtils configUtils = new ConfigUtils();
 
-        rb = PropertyResourceBundle.getBundle("dbconfig");
+        rb = PropertyResourceBundle.getBundle("config");
 
         configUtils.hostname = rb.getString(prefix + "HOSTNAME");
         configUtils.port = Integer.parseInt(rb.getString(prefix + "PORT"));
@@ -61,7 +61,7 @@ public class ConfigUtils {
 
     public static ResourceBundle getResourceBundle() {
 
-        rb = PropertyResourceBundle.getBundle("dbconfig");
+        rb = PropertyResourceBundle.getBundle("config");
         return rb;
     }
 

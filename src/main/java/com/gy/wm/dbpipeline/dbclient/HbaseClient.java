@@ -1,5 +1,6 @@
 package com.gy.wm.dbpipeline.dbclient;
 
+import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.CrawlerDataUtils;
@@ -31,8 +32,8 @@ public class HbaseClient extends AbstractDBClient {
     public HbaseClient() {
 
         this.dataList = new ArrayList<>();
-        this.tableName = ConfigUtils.getResourceBundle().getString("HBASE_TABLE_NAME");
-        this.columnFamilyName = ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
+        this.tableName = MyHbaseUtils.getTableName();//ConfigUtils.getResourceBundle().getString("HBASE_TABLE_NAME");
+        this.columnFamilyName =MyHbaseUtils.getColumnFamilyName(); //ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
     }
 
     public String getTableName() {

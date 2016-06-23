@@ -1,8 +1,15 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.dbpipeline.MyHbaseUtils;
+import com.gy.wm.heartbeat.Heartbeart;
+import com.gy.wm.heartbeat.handler.ClientHeartbeatHandler;
+import com.gy.wm.heartbeat.model.HeartbeatMsgModel;
+import com.gy.wm.heartbeat.model.HeartbeatStatusCode;
 import com.gy.wm.model.CrawlData;
+import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.JedisPoolUtils;
 
+import java.lang.management.ManagementFactory;
 import java.util.List;
 
 /**
@@ -21,6 +28,10 @@ public class Crawl {
         CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid, "appname");
         workflow.crawl(crawlDataList, tid, starttime, pass);
     }
+
+    private static HeartbeatMsgModel heartbeatMsg;
+    private static Heartbeart heartbeart;
+    private static ClientHeartbeatHandler handler;
 
     public static void main(String[] args) {
         long start_time = System.currentTimeMillis();
@@ -96,15 +107,40 @@ public class Crawl {
 
         }
 
+        MyHbaseUtils.setTableName(tid); //hbase table info
+        MyHbaseUtils.setColumnFamilyName("crawlerData");
+
         try {
+
+
+            String runTimeInfo = ManagementFactory.getRuntimeMXBean().getName();
+            String pid = runTimeInfo.split("@")[0];
+
+            String selfIp = ConfigUtils.getResourceBundle().getString("HEARTBEAT_HOST");
+            heartbeatMsg = new HeartbeatMsgModel();
+            heartbeatMsg.setHostname(selfIp);
+            heartbeatMsg.setPid(Integer.parseInt(pid));
+            heartbeatMsg.setTheads(5);
+            heartbeatMsg.setStatusCode(HeartbeatStatusCode.CRAWLING);
+            heartbeatMsg.setTaskId(tid);
+
+            handler = new ClientHeartbeatHandler(heartbeatMsg);
+            heartbeart = new Heartbeart(handler);
+
+           // new Thread(heartbeart).start();// the heartbeat thread
+
             kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            //JedisPoolUtils.cleanAll();
+//            JedisPoolUtils.cleanAll();
         }
 
+        heartbeatMsg.setStatusCode(HeartbeatStatusCode.FINISHED);
+        heartbeart.setFinish(true);
+
         long end_time = System.currentTimeMillis();
-        System.out.println("time elapse(FenZhong):" + (end_time - start_time) / 1000 / 60);
+        System.out.println("time elapse(seconds):" + ((end_time - start_time) / 1000.00));
     }
 }

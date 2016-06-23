@@ -1,6 +1,6 @@
 package com.gy.wm.dbpipeline.impl;
 
-import com.gy.wm.dbpipeline.DatabasePipeline;
+import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.dbpipeline.dbclient.HbaseClient;
 import com.gy.wm.model.CrawlData;
 import us.codecraft.webmagic.ResultItems;
@@ -16,7 +16,7 @@ public class HbasePipeline extends BaseDBPipeline {
 
 
     public HbasePipeline() {
-
+        MyHbaseUtils.createTable();
         this.hbaseClient = new HbaseClient();
     }
 

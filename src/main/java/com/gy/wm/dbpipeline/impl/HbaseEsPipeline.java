@@ -1,6 +1,7 @@
 package com.gy.wm.dbpipeline.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.dbpipeline.dbclient.EsClient;
 import com.gy.wm.dbpipeline.dbclient.HbaseClient;
 import com.gy.wm.model.CrawlData;
@@ -24,7 +25,7 @@ public class HbaseEsPipeline extends BaseDBPipeline {
 
 
     public HbaseEsPipeline() {
-
+        MyHbaseUtils.createTable();
         this.esClient = new EsClient();
         this.hbaseClient = new HbaseClient();
         dataList = new ArrayList<>();
