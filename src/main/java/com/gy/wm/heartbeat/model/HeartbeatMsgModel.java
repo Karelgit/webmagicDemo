@@ -6,6 +6,7 @@ package com.gy.wm.heartbeat.model;
  */
 public class HeartbeatMsgModel {
 
+    private String taskId;
     private String hostname;
     private int pid;
     private int theads;
@@ -14,6 +15,7 @@ public class HeartbeatMsgModel {
 
     public HeartbeatMsgModel() {
 
+        taskId = "";
         hostname = "";
         pid = -1;
         theads = 1;
@@ -65,4 +67,16 @@ public class HeartbeatMsgModel {
         return this;
     }
 
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public HeartbeatMsgModel setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
 }
+
+
+
+

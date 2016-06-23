@@ -116,6 +116,7 @@ public class Crawl {
             heartbeatMsg.setPid(Integer.parseInt(pid));
             heartbeatMsg.setTheads(5);
             heartbeatMsg.setStatusCode(HeartbeatStatusCode.CRAWLING);
+            heartbeatMsg.setTaskId(tid);
 
             handler = new ClientHeartbeatHandler(heartbeatMsg);
             heartbeart = new Heartbeart(handler);

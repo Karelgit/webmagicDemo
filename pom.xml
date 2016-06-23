@@ -161,15 +161,10 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <!--<resourcespathPrefix>resources/</remvnsourcespathPrefix>-->
+                            <classpathPrefix>libTopicCrawler/</classpathPrefix>
                             <mainClass>com.gy.wm.entry.Crawl</mainClass>
                         </manifest>
                     </archive>
-                    <!--<excludes>
-                        <exclude>*.xml</exclude>
-                        <exclude>*.properties</exclude>
-                    </excludes>-->
                 </configuration>
 
             </plugin>
@@ -185,33 +180,12 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <outputDirectory>${project.build.directory}/libTopicCrawler</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
 
-            <!--<plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/resources</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${project.basedir}/src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
