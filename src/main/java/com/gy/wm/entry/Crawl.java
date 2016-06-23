@@ -127,7 +127,7 @@ public class Crawl {
             handler = new ClientHeartbeatHandler(heartbeatMsg);
             heartbeart = new Heartbeart(handler);
 
-           // new Thread(heartbeart).start();// the heartbeat thread
+            new Thread(heartbeart).start();// the heartbeat thread
 
             kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
 
