@@ -8,6 +8,7 @@ import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisScheduler;
 import com.gy.wm.service.WholesitePageProcessor;
 import com.gy.wm.util.BloomFilter;
+import com.gy.wm.util.GetDomain;
 import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.LogManager;
 import redis.clients.jedis.Jedis;
@@ -34,6 +35,9 @@ public class CrawlerWorkflowManager {
 
     private String appname;
 
+    private String domain;
+
+
     public CrawlerWorkflowManager(String tid, String appname) {
         this.tid = tid;
         this.appname = appname;
@@ -44,7 +48,7 @@ public class CrawlerWorkflowManager {
         JedisPoolUtils jedisPoolUtils = new JedisPoolUtils();
         JedisPool pool = jedisPoolUtils.getJedisPool();
         Jedis jedis = pool.getResource();
-
+        domain = GetDomain.getDomain(seeds.get(0).getUrl());
         try {
             nextQueue.putNextUrls(seeds, jedis, tid);
         } finally {
@@ -57,7 +61,7 @@ public class CrawlerWorkflowManager {
             bloomFilter.add("redis:bloomfilter"+ tid, seed.getUrl());
         }
         //初始化webMagic的Spider程序
-        initSpider(seeds, textAnalysis);
+        initSpider(seeds, textAnalysis, domain);
 
         //结束之后清空对应任务的redis
         jedis.del("redis:bloomfilter" + tid);
@@ -67,14 +71,14 @@ public class CrawlerWorkflowManager {
 
     }
 
-    protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis) {
+    protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis,String domain) {
         String tempUrl = "";
         for (CrawlData crawlData : seeds) {
             tempUrl += crawlData.getUrl() + ",";
         }
         String urls = tempUrl.substring(0, tempUrl.length() - 1);
 
-        Spider.create(new WholesitePageProcessor(tid, textAnalysis))
+        Spider.create(new WholesitePageProcessor(tid, textAnalysis, domain))
                 .setScheduler(new RedisScheduler()).setUUID(tid)
                         //从seed开始抓
                 .addUrl(urls)

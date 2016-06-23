@@ -7,7 +7,7 @@ import com.gy.wm.heartbeat.model.HeartbeatMsgModel;
 import com.gy.wm.heartbeat.model.HeartbeatStatusCode;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.ConfigUtils;
-import com.gy.wm.util.JedisPoolUtils;
+import com.gy.wm.util.GetDomain;
 
 import java.lang.management.ManagementFactory;
 import java.util.List;
@@ -22,8 +22,14 @@ public class Crawl {
         InitCrawlerConfig crawlerConfig = new InitCrawlerConfig(tid + starttime, recalldepth, templatesDir, clickregexDir, protocolDir, postregexDir);
         InstanceFactory.getInstance(crawlerConfig);
 
+        //种子的加载
         ConfigLoader configLoader = new ConfigLoader();
         List<CrawlData> crawlDataList = configLoader.load(depth, tid, starttime, pass, seedpath, type);
+
+        //初始化HBASE
+        String domain = GetDomain.getDomain(crawlDataList.get(0).getUrl());
+        MyHbaseUtils.setTableName(domain); //hbase table info
+        MyHbaseUtils.setColumnFamilyName("crawlerData");
 
         CrawlerWorkflowManager workflow = new CrawlerWorkflowManager(tid, "appname");
         workflow.crawl(crawlDataList, tid, starttime, pass);
@@ -107,8 +113,7 @@ public class Crawl {
 
         }
 
-        MyHbaseUtils.setTableName(tid); //hbase table info
-        MyHbaseUtils.setColumnFamilyName("crawlerData");
+
 
         try {
 

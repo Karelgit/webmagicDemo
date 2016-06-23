@@ -29,13 +29,15 @@ import java.util.List;
 public class WholesitePageProcessor implements PageProcessor {
     private String tid;
     private TextAnalysis textAnalysis;
+    private String domain;
 
-    public WholesitePageProcessor(String tid, TextAnalysis textAnalysis) {
+    public WholesitePageProcessor(String tid, TextAnalysis textAnalysis, String domain) {
         this.tid = tid;
         this.textAnalysis = textAnalysis;
+        this.domain = domain;
     }
 
-    private Site site = Site.me().setDomain("www.gygov.gov.cn").setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setDomain(domain).setRetryTimes(3).setSleepTime(1000);
 
     @Override
     public void process(Page page) {
