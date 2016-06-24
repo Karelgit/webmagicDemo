@@ -71,19 +71,17 @@ public class WholesitePageProcessor implements PageProcessor {
 
             BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
             for (CrawlData crawlData : perPageCrawlDateList) {
-                if(linkFilter(crawlData) == true)   {
-                    if (crawlData.isFetched() == false) {
-                        //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
-                        boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), tid, jedis, bloomFilter);
-                        if (isNew) {
-                            nextCrawlData.add(crawlData);
-                            page.addTargetRequest(crawlData.getUrl());
-                        }
-                    } else {
-                        //链接fetched为true,即文章页，添加到redis的已爬取队列
-                        crawledData.add(crawlData);
-                        page.putField("crawlerData", crawlData);
+                if (crawlData.isFetched() == false) {
+                    //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
+                    boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), tid, jedis, bloomFilter);
+                    if (isNew) {
+                        nextCrawlData.add(crawlData);
+                        page.addTargetRequest(crawlData.getUrl());
                     }
+                } else {
+                    //链接fetched为true,即文章页，添加到redis的已爬取队列
+                    crawledData.add(crawlData);
+                    page.putField("crawlerData", crawlData);
                 }
             }
 
@@ -105,14 +103,6 @@ public class WholesitePageProcessor implements PageProcessor {
     @Override
     public Site getSite() {
         return site;
-    }
-
-    public boolean linkFilter(CrawlData crawlData) {
-        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".png")&&!crawlData.getUrl().endsWith(".jpg")&&!crawlData.getUrl().endsWith(".gif")) {
-            return true;
-        }else {
-            return false;
-        }
     }
 
     public TextAnalysis getTextAnalysis() {

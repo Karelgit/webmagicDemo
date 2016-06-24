@@ -31,8 +31,8 @@ public class RedisScheduler implements Scheduler {
         Jedis jedis = pool.getResource();
 
         try {
-            //域名过滤
-            if(DomainFilter.matchDomain(request.getUrl(),domain))   {
+            //域名过滤和后缀过滤
+            if(DomainFilter.matchDomain(request.getUrl(),domain) && DomainFilter.linkFilter(request.getUrl()))   {
                 jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
             }
         } finally {

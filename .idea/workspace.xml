@@ -10,16 +10,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="490e9e3b-c032-427c-ac90-c2062ea63539" name="Default" comment="添加域名过滤by黄海_2016-6-24 12:01:40">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/ScanRedis.java" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\webmagicDemo\src\main\java\com\gy\wm\util\RegexTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisBloomFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisBloomFilter.java" />
+    <list default="true" id="490e9e3b-c032-427c-ac90-c2062ea63539" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/seeds.txt" afterPath="$PROJECT_DIR$/data/seeds.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -97,9 +91,12 @@
       <file leaf-file-name="WholesitePageProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.9375">
-              <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="-22.78125">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <folding>
+                <element signature="e#3642#3643#0" expanded="true" />
+                <element signature="e#3669#3670#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,17 +127,17 @@
         <entry file="file://$PROJECT_DIR$/data/seeds.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisScheduler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RedisScheduler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45867097">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="87" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
               <folding>
                 <element signature="e#508#509#0" expanded="true" />
                 <element signature="e#544#545#0" expanded="true" />
@@ -194,12 +191,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DomainFilter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DomainFilter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.6709887">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#833#834#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -274,13 +273,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisBloomFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/RegexTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" />
-        <option value="$PROJECT_DIR$/data/seeds.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/ScanRedis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" />
+        <option value="$PROJECT_DIR$/data/seeds.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java" />
       </list>
     </option>
   </component>
@@ -868,7 +867,7 @@
       <recent name="com.gy.wm.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Wholesite">
+  <component name="RunManager">
     <configuration default="false" name="Topic" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1223,8 +1222,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.ScanRedis" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DomainFilter" />
+        <item index="0" class="java.lang.String" itemvalue="Application.DomainFilter" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ScanRedis" />
         <item index="2" class="java.lang.String" itemvalue="Application.Topic" />
         <item index="3" class="java.lang.String" itemvalue="Application.GetDomain" />
       </list>
@@ -1277,7 +1276,7 @@
       <workItem from="1466650217574" duration="662000" />
       <workItem from="1466659598360" duration="618000" />
       <workItem from="1466660243855" duration="14037000" />
-      <workItem from="1466687547469" duration="11306000" />
+      <workItem from="1466687547469" duration="13604000" />
     </task>
     <task id="LOCAL-00001" summary="添加Es数据映射 2015-05-19 19:30">
       <created>1463655793303</created>
@@ -1399,11 +1398,17 @@
       <option name="project" value="LOCAL" />
       <updated>1466671948372</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="添加域名过滤by黄海_2016-6-24 12:01:40">
+      <created>1466740940864</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1466740940864</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196804000" />
+    <option name="totallyTimeSpent" value="199102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1416,7 +1421,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272059" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1517,25 +1522,13 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java</url>
           <line>408</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="109" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="110" />
+      <option name="time" value="111" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1889,7 +1882,36 @@
     <entry file="file://$PROJECT_DIR$/data/seeds.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/ScanRedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+          <folding>
+            <element signature="e#8988#9945#0" expanded="true" />
+            <element signature="e#9944#9945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1920,58 +1942,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-22.78125">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3669#3670#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/ScanRedis.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="34" column="87" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/DomainFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.5.3/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6709887">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#8988#9945#0" expanded="true" />
-            <element signature="e#9944#9945#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/WholesitePageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.9375">
-          <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45867097">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
           </folding>
         </state>
       </provider>

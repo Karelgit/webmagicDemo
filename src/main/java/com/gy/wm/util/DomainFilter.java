@@ -8,4 +8,19 @@ public class DomainFilter {
         String pattern = "(http|https)(://)(" + domain +")(.*)";
         return url.matches(pattern);
     }
+
+    public static boolean linkFilter(String url) {
+        String skip = "gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|sit|eps|wmf|zip|ppt|mpg|xls|gz|rpm|tgz|mov|MOV|exe|jpeg|JPEG|bmp|BMP";
+        String [] skipOptions = skip.split("\\|");
+        boolean skipTag = true;
+        for(int i=0; i<skipOptions.length; i++)   {
+            skipTag = skipTag&&!url.endsWith(skipOptions[i]);
+        }
+        return skipTag;
+    }
+
+    //test
+    public static void main(String[] args) {
+        System.out.println(new DomainFilter().linkFilter("www.baidu.com"));
+    }
 }
