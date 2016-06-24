@@ -1,6 +1,5 @@
 package com.gy.wm.entry;
 
-import com.gy.wm.dbpipeline.impl.HbasePipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -16,6 +15,7 @@ import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Spider;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -49,6 +49,8 @@ public class CrawlerWorkflowManager {
         JedisPool pool = jedisPoolUtils.getJedisPool();
         Jedis jedis = pool.getResource();
         domain = GetDomain.getDomain(seeds.get(0).getUrl());
+
+        System.out.println("**********domain************: " + domain);
         try {
             nextQueue.putNextUrls(seeds, jedis, tid);
         } finally {
@@ -58,34 +60,34 @@ public class CrawlerWorkflowManager {
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
-            bloomFilter.add("redis:bloomfilter"+ tid, seed.getUrl());
+            bloomFilter.add("redis:bloomfilter:"+ tid, seed.getUrl());
         }
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis, domain);
 
         //结束之后清空对应任务的redis
-        jedis.del("redis:bloomfilter" + tid);
-        jedis.del("queue_" + tid);
-        jedis.del("webmagicCrawler::ToCrawl::" + tid);
-        jedis.del("webmagicCrawler::Crawled::" + tid);
+//        jedis.del("redis:bloomfilter:" + tid);
+//        jedis.del("queue_" + tid);
+//        jedis.del("webmagicCrawler::ToCrawl::" + tid);
+//        jedis.del("webmagicCrawler::Crawled::" + tid);
 
     }
 
     protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis,String domain) {
-        String tempUrl = "";
+        List<String> seedList = new ArrayList<>();
         for (CrawlData crawlData : seeds) {
-            tempUrl += crawlData.getUrl() + ",";
+            seedList.add(crawlData.getUrl());
         }
-        String urls = tempUrl.substring(0, tempUrl.length() - 1);
+        String [] urlArray = seedList.toArray(new String[seedList.size()]);
 
         Spider.create(new WholesitePageProcessor(tid, textAnalysis, domain))
-                .setScheduler(new RedisScheduler()).setUUID(tid)
+                .setScheduler(new RedisScheduler(domain)).setUUID(tid)
                         //从seed开始抓
-                .addUrl(urls)
+                .addUrl(urlArray)
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-                .addPipeline(new HbasePipeline())
+//                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
                 .thread(5)
                         //启动爬虫

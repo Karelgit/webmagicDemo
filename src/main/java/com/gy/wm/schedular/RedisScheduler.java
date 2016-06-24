@@ -1,5 +1,6 @@
 package com.gy.wm.schedular;
 
+import com.gy.wm.util.DomainFilter;
 import com.gy.wm.util.JedisPoolUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -11,6 +12,11 @@ import java.io.IOException;
 
 public class RedisScheduler implements Scheduler {
     private static final String QUEUE_PREFIX = "queue_";
+    private String domain;
+
+    public RedisScheduler(String domain)   {
+        this.domain = domain;
+    }
 
     @Override
     public void push(Request request, Task task) {
@@ -25,7 +31,10 @@ public class RedisScheduler implements Scheduler {
         Jedis jedis = pool.getResource();
 
         try {
-            jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
+            //域名过滤
+            if(DomainFilter.matchDomain(request.getUrl(),domain))   {
+                jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
+            }
         } finally {
             pool.returnResource(jedis);
         }

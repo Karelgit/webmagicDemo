@@ -3,8 +3,8 @@ package com.gy.wm.service;
 import com.gy.wm.entry.InstanceFactory;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
-import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.queue.RedisCrawledQue;
+import com.gy.wm.queue.RedisToCrawlQue;
 import com.gy.wm.schedular.RedisBloomFilter;
 import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JSONUtil;
@@ -74,7 +74,7 @@ public class WholesitePageProcessor implements PageProcessor {
                 if(linkFilter(crawlData) == true)   {
                     if (crawlData.isFetched() == false) {
                         //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
-                        boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), jedis, bloomFilter);
+                        boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), tid, jedis, bloomFilter);
                         if (isNew) {
                             nextCrawlData.add(crawlData);
                             page.addTargetRequest(crawlData.getUrl());
@@ -108,7 +108,7 @@ public class WholesitePageProcessor implements PageProcessor {
     }
 
     public boolean linkFilter(CrawlData crawlData) {
-        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".png")&&!crawlData.getUrl().endsWith(".jpg")&&!crawlData.getUrl().endsWith(".gif")&&crawlData.getUrl().contains("www.gygov.gov.cn")) {
+        if(!crawlData.getUrl().endsWith(".css")&&!crawlData.getUrl().endsWith(".js")&&!crawlData.getUrl().endsWith(".png")&&!crawlData.getUrl().endsWith(".jpg")&&!crawlData.getUrl().endsWith(".gif")) {
             return true;
         }else {
             return false;
