@@ -1,7 +1,8 @@
 package com.gy.wm.heartbeat;
 
 
-import com.gy.wm.heartbeat.handler.SocketHandler;
+import com.gy.wm.heartbeat.model.HeartbeatMsgModel;
+import com.gy.wm.heartbeat.redisQueue.HeartbeatMsgQueue;
 import com.gy.wm.util.ConfigUtils;
 
 import java.util.concurrent.locks.Lock;
@@ -13,38 +14,25 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Heartbeart implements Runnable {
 
     private int checkInterval;
-    private SchedulerClientSocket clientSocket;
-    private SocketHandler handler;
-    private String hostname;
-    private int port;
+    private HeartbeatMsgModel heartbeatMsgModel;
+    private HeartbeatMsgQueue heartbeatMsgQueue;
     private boolean finish;
     private Lock myLock;
 
 
-    public Heartbeart(SocketHandler handler) {
+    public Heartbeart(HeartbeatMsgModel heartbeatMsgModel) {
 
-
-        try {
-
-            this.hostname = ConfigUtils.getResourceBundle().getString("SECHDULER_HOST");
-            this.port = Integer.parseInt(ConfigUtils.getResourceBundle().getString("SECHDULER_PORT"));
-            this.checkInterval = Integer.parseInt(ConfigUtils.getResourceBundle().getString("HEARTBEAT_CHECKINTERVAL"));
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-        }
-
+        this.heartbeatMsgModel = heartbeatMsgModel;
         this.finish = false;
+        this.heartbeatMsgQueue = new HeartbeatMsgQueue();
         this.myLock = new ReentrantLock();
 
-        this.handler = handler;
-//        ((ClientHeartbeatHandler) this.handler).setHeartbeatMsg(heartbeatMsg);
-        this.clientSocket = SchedulerClientSocket.getClientSocket(this.hostname, this.port);
-        this.clientSocket.registerHandler(this.handler);
-
-
+        try {
+            this.checkInterval = Integer.parseInt(ConfigUtils.getResourceBundle().getString("HEARTBEAT_CHECKINTERVAL"));
+        } catch (NumberFormatException e) {
+            this.checkInterval = 10;
+            e.printStackTrace();
+        }
     }
 
     public void setFinish(boolean finish) {
@@ -61,7 +49,9 @@ public class Heartbeart implements Runnable {
 
             try {
 
-                clientSocket.doAction();
+                this.heartbeatMsgModel.setTime(System.currentTimeMillis());
+                this.heartbeatMsgQueue.setMessage(this.heartbeatMsgModel);
+                this.heartbeatMsgQueue.pushMessage();
 
             } catch (Exception e) {
 
@@ -72,6 +62,7 @@ public class Heartbeart implements Runnable {
             if (finish) {
                 myLock.unlock();
 //                System.out.println("break =====>>> ");
+                this.heartbeatMsgQueue.pushMessage();
                 break;
             }
             myLock.unlock();

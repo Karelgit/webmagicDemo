@@ -1,10 +1,12 @@
 package com.gy.wm.heartbeat.model;
 
 
+import com.gy.wm.heartbeat.message.Message;
+
 /**
  * Created by TianyuanPan on 6/4/16.
  */
-public class HeartbeatMsgModel {
+public class HeartbeatMsgModel implements Message{
 
     private String taskId;
     private String hostname;
@@ -84,6 +86,12 @@ public class HeartbeatMsgModel {
 
     public HeartbeatMsgModel setTimeoutCount(int timeoutCount) {
         this.timeoutCount = timeoutCount;
+        return this;
+    }
+
+    @Override
+    public Message getMessage() {
+
         return this;
     }
 }

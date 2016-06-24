@@ -2,12 +2,12 @@ package com.gy.wm.entry;
 
 import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.heartbeat.Heartbeart;
-import com.gy.wm.heartbeat.handler.ClientHeartbeatHandler;
 import com.gy.wm.heartbeat.model.HeartbeatMsgModel;
 import com.gy.wm.heartbeat.model.HeartbeatStatusCode;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.GetDomain;
+import com.gy.wm.util.HbasePoolUtils;
 
 import java.lang.management.ManagementFactory;
 import java.util.List;
@@ -37,7 +37,6 @@ public class Crawl {
 
     private static HeartbeatMsgModel heartbeatMsg;
     private static Heartbeart heartbeart;
-    private static ClientHeartbeatHandler handler;
 
     public static void main(String[] args) {
         long start_time = System.currentTimeMillis();
@@ -114,7 +113,6 @@ public class Crawl {
         }
 
 
-
         try {
 
 
@@ -122,6 +120,7 @@ public class Crawl {
             String pid = runTimeInfo.split("@")[0];
 
             String selfIp = ConfigUtils.getResourceBundle().getString("HEARTBEAT_HOST");
+
             heartbeatMsg = new HeartbeatMsgModel();
             heartbeatMsg.setHostname(selfIp);
             heartbeatMsg.setPid(Integer.parseInt(pid));
@@ -129,17 +128,16 @@ public class Crawl {
             heartbeatMsg.setStatusCode(HeartbeatStatusCode.CRAWLING);
             heartbeatMsg.setTaskId(tid);
 
-            handler = new ClientHeartbeatHandler(heartbeatMsg);
-            heartbeart = new Heartbeart(handler);
+            heartbeart = new Heartbeart(heartbeatMsg);
 
-//            new Thread(heartbeart).start();// the heartbeat thread
+            new Thread(heartbeart).start();// the heartbeat thread
 
             kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
 
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-//            JedisPoolUtils.cleanAll();
+            HbasePoolUtils.cleanAll();
         }
 
         heartbeatMsg.setStatusCode(HeartbeatStatusCode.FINISHED);

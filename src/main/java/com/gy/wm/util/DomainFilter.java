@@ -10,7 +10,8 @@ public class DomainFilter {
     }
 
     public static boolean linkFilter(String url) {
-        String skip = "gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|sit|eps|wmf|zip|ppt|mpg|xls|gz|rpm|tgz|mov|MOV|exe|jpeg|JPEG|bmp|BMP";
+        String skip = "gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|sit|eps|wmf|zip|ppt|mpg|xls|gz|rpm|tgz|mov|MOV|exe|jpeg|JPEG|bmp|BMP|rar|" +
+                "js|css|pdf|JS|CSS|PDF|RAR";
         String [] skipOptions = skip.split("\\|");
         boolean skipTag = true;
         for(int i=0; i<skipOptions.length; i++)   {

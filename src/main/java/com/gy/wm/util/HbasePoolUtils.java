@@ -59,7 +59,7 @@ public class HbasePoolUtils {
         try {
             table = getHConnection().getTable(tableName);
         }catch (Exception ex){
-            System.out.println("get hconnection error!!!");
+            System.out.println("get getHTable error!!! tableName: " + tableName);
             ex.printStackTrace();
             return null;
         }
