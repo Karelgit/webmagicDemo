@@ -14,6 +14,6 @@ public class GetDomain {
 
     //test
     public static void main(String[] args) {
-        System.out.println(getDomain("http://www.gygov.cn/asdf"));
+        System.out.println(getDomain("s.gz-l-tax.gov.cn"));
     }
 }

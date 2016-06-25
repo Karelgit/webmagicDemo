@@ -37,7 +37,7 @@ public class WholesitePageProcessor implements PageProcessor {
         this.domain = domain;
     }
 
-    private Site site = Site.me().setDomain(domain).setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setDomain(domain).setRetryTimes(3).setSleepTime(1000).setTimeOut(1000);
 
     @Override
     public void process(Page page) {
