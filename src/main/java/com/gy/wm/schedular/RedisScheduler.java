@@ -1,6 +1,5 @@
 package com.gy.wm.schedular;
 
-import com.gy.wm.util.DomainFilter;
 import com.gy.wm.util.JedisPoolUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -32,9 +31,7 @@ public class RedisScheduler implements Scheduler {
 
         try {
             //域名过滤和后缀过滤
-            if(DomainFilter.matchDomain(request.getUrl(),domain) && DomainFilter.linkFilter(request.getUrl()))   {
-                jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
-            }
+            jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
         } finally {
             pool.returnResource(jedis);
         }

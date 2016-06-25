@@ -9,6 +9,7 @@ import com.gy.wm.schedular.RedisBloomFilter;
 import com.gy.wm.util.BloomFilter;
 import com.gy.wm.util.JSONUtil;
 import com.gy.wm.util.JedisPoolUtils;
+import com.gy.wm.util.URLFilter;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import us.codecraft.webmagic.Page;
@@ -74,7 +75,7 @@ public class WholesitePageProcessor implements PageProcessor {
                 if (crawlData.isFetched() == false) {
                     //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
                     boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), tid, jedis, bloomFilter);
-                    if (isNew) {
+                    if (isNew && URLFilter.linkFilter(crawlData.getUrl()) && URLFilter.matchDomain(crawlData.getUrl(),domain)) {
                         nextCrawlData.add(crawlData);
                         page.addTargetRequest(crawlData.getUrl());
                     }

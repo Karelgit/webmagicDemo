@@ -32,7 +32,7 @@ public class ScanRedis
                 String fromUrl = ((CrawlData) JSONUtil.jackson2Object(map.get(s), CrawlData.class)).getFromUrl();
                 String url = ((CrawlData) JSONUtil.jackson2Object(map.get(s), CrawlData.class)).getUrl();
                 String html = ((CrawlData) JSONUtil.jackson2Object(map.get(s), CrawlData.class)).getHtml();
-                System.out.println("rootUrl:" + rootUrl + '\t' + "fromUrl:" + fromUrl + '\t' + "rootUrl:"+ rootUrl + '\n' + "html:" + html );
+                System.out.println("rootUrl:" + rootUrl + '\t' + "fromUrl:" + fromUrl + '\t' + "url:"+ url + '\n' + "html:" + html );
             }
 
         } catch (IOException e) {

@@ -1,6 +1,5 @@
 package com.gy.wm.entry;
 
-import com.gy.wm.dbpipeline.impl.HbasePipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -88,9 +87,9 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-                .addPipeline(new HbasePipeline())
+//                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
-                .thread(5)
+                .thread(3)
                         //启动爬虫
                 .run();
     }
