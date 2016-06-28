@@ -16,7 +16,8 @@ public class HbasePipeline extends BaseDBPipeline {
 
 
     public HbasePipeline() {
-        MyHbaseUtils.createTable();
+        //MyHbaseUtils.createTable();
+        MyHbaseUtils.deleteAfterCreateTable();
         this.hbaseClient = new HbaseClient();
     }
 
@@ -38,10 +39,16 @@ public class HbasePipeline extends BaseDBPipeline {
 
         if (crawlerData != null) {
 
-            this.hbaseClient.add(crawlerData);
-            int i = this.hbaseClient.doSetInsert();
-            System.out.println("HbasePipeline doInsert Successful number: " + i);
-            logger.debug("HbasePipeline doInsert Successful number: " + i);
+            try {
+                this.hbaseClient.add(crawlerData);
+                int i = this.hbaseClient.doSetInsert();
+                System.out.println("HbasePipeline doInsert Successful number: " + i);
+                logger.debug("HbasePipeline doInsert Successful number: " + i);
+
+            } catch (Exception e) {
+
+                e.printStackTrace();
+            }
             return;
         }
 

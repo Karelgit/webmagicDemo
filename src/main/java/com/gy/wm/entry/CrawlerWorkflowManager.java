@@ -1,5 +1,6 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.dbpipeline.impl.HbasePipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -60,7 +61,7 @@ public class CrawlerWorkflowManager {
         //初始化布隆过滤hash表
         BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
         for (CrawlData seed : seeds) {
-            bloomFilter.add("redis:bloomfilter:"+ tid, seed.getUrl());
+            bloomFilter.add("redis:bloomfilter:" + tid, seed.getUrl());
         }
         //初始化webMagic的Spider程序
         initSpider(seeds, textAnalysis, domain);
@@ -73,23 +74,23 @@ public class CrawlerWorkflowManager {
 
     }
 
-    protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis,String domain) {
+    protected void initSpider(List<CrawlData> seeds, TextAnalysis textAnalysis, String domain) {
         List<String> seedList = new ArrayList<>();
         for (CrawlData crawlData : seeds) {
             seedList.add(crawlData.getUrl());
         }
-        String [] urlArray = seedList.toArray(new String[seedList.size()]);
+        String[] urlArray = seedList.toArray(new String[seedList.size()]);
 
         Spider.create(new WholesitePageProcessor(tid, textAnalysis, domain))
                 .setScheduler(new RedisScheduler(domain)).setUUID(tid)
-                        //从seed开始抓
+                //从seed开始抓
                 .addUrl(urlArray)
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-//                .addPipeline(new HbasePipeline())
+                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
-                .thread(3)
+                .thread(1)
                         //启动爬虫
                 .run();
     }

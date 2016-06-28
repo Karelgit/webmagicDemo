@@ -25,7 +25,8 @@ public class HbaseEsPipeline extends BaseDBPipeline {
 
 
     public HbaseEsPipeline() {
-        MyHbaseUtils.createTable();
+        //MyHbaseUtils.createTable();
+        MyHbaseUtils.deleteAfterCreateTable();
         this.esClient = new EsClient();
         this.hbaseClient = new HbaseClient();
         dataList = new ArrayList<>();

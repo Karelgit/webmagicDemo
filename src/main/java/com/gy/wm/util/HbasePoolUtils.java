@@ -25,6 +25,7 @@ public class HbasePoolUtils {
         port = ConfigUtils.getResourceBundle().getString("HBASE_PORT");
         conf.set("hbase.zookeeper.quorum", hostnames);
         conf.set("hbase.zookeeper.property.clientPort", port);
+//        conf.set("hbase.local.dir", "/temp/hbase.local.dir");
 //        myPool = new HTablePool(conf, 100);
     }
 

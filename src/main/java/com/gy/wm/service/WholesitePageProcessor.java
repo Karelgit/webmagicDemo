@@ -72,10 +72,10 @@ public class WholesitePageProcessor implements PageProcessor {
 
             BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
             for (CrawlData crawlData : perPageCrawlDateList) {
-                if (crawlData.isFetched() == false) {
+                if (!crawlData.isFetched()) {
                     //链接fetched为false,即导航页,bloomFilter判断待爬取队列没有记录
                     boolean isNew = RedisBloomFilter.notExistInBloomHash(crawlData.getUrl(), tid, jedis, bloomFilter);
-                    if (isNew && URLFilter.linkFilter(crawlData.getUrl()) && URLFilter.matchDomain(crawlData.getUrl(),domain)) {
+                    if (isNew && URLFilter.linkFilter(crawlData.getUrl()) && URLFilter.matchDomain(crawlData.getUrl(), domain)) {
                         nextCrawlData.add(crawlData);
                         page.addTargetRequest(crawlData.getUrl());
                     }
@@ -91,11 +91,11 @@ public class WholesitePageProcessor implements PageProcessor {
             //加入到待爬取队列
             nextQueue.putNextUrls(nextCrawlData, jedis, tid);
             //加入到已爬取队列
-            new RedisCrawledQue().putCrawledQue(crawledData,jedis,tid);
+            new RedisCrawledQue().putCrawledQue(crawledData, jedis, tid);
 
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             pool.returnResource(jedis);
         }
     }

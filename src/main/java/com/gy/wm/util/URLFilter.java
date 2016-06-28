@@ -10,8 +10,11 @@ public class URLFilter {
     }
 
     public static boolean linkFilter(String url) {
-        String skip = "gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|sit|eps|wmf|zip|ppt|mpg|xls|gz|rpm|tgz|mov|MOV|exe|jpeg|JPEG|bmp|BMP|rar|" +
-                "js|css|pdf|JS|CSS|PDF|RAR";
+        String skip = "gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|" +
+                "sit|eps|wmf|zip|ZIP|ppt|mpg|xls|gz|rpm|tgz|mov|" +
+                "MOV|exe|jpeg|JPEG|bmp|BMP|rar|mp4|MP4|doc|DOC|" +
+                "js|css|pdf|JS|CSS|PDF|RAR|docx|DOCX|mp3|MP3|wmv|WMV|" +
+                "swf|SWF";
         String [] skipOptions = skip.split("\\|");
         boolean includeTag = true;
         for(int i=0; i<skipOptions.length; i++)   {

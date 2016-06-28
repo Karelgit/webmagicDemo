@@ -114,6 +114,30 @@ public class MyHbaseUtils {
     }
 
 
+    public static boolean deleteAfterCreateTable() {
+
+        try {
+
+            HBaseAdmin hBaseAdmin = new HBaseAdmin(conf);
+
+            HTableDescriptor tableDescriptor = new HTableDescriptor(tableName);
+
+            tableDescriptor.addFamily(new HColumnDescriptor(columnFamilyName));
+
+            if (hBaseAdmin.tableExists(tableName))
+                hBaseAdmin.deleteTable(tableName);
+
+            hBaseAdmin.createTable(tableDescriptor);
+
+        } catch (Exception ex) {
+
+            ex.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
     public static String getTableName() {
 
         return tableName;

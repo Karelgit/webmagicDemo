@@ -2,11 +2,9 @@ package com.gy.wm.dbpipeline.dbclient;
 
 import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.util.ConfigUtils;
 import com.gy.wm.util.CrawlerDataUtils;
 import com.gy.wm.util.HbasePoolUtils;
 import com.gy.wm.util.RandomUtils;
-import org.apache.hadoop.hbase.client.HConnection;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -33,7 +31,7 @@ public class HbaseClient extends AbstractDBClient {
 
         this.dataList = new ArrayList<>();
         this.tableName = MyHbaseUtils.getTableName();//ConfigUtils.getResourceBundle().getString("HBASE_TABLE_NAME");
-        this.columnFamilyName =MyHbaseUtils.getColumnFamilyName(); //ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
+        this.columnFamilyName = MyHbaseUtils.getColumnFamilyName(); //ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
     }
 
     public String getTableName() {
@@ -57,8 +55,8 @@ public class HbaseClient extends AbstractDBClient {
     @Override
     public int doSetInsert() {
         int count = 0;
-
-        for (int i = 0; i < dataList.size(); ++i) {
+        int size = dataList.size();
+        for (int i = 0; i < size; ++i) {
 
             try {
                 count += this.insertRecord(tableName, RandomUtils.getRandomString(50) + "_" + new Date().getTime(), columnFamilyName, dataList.get(i));
@@ -88,7 +86,7 @@ public class HbaseClient extends AbstractDBClient {
 
         String columnQualifier = null;
         String value = null;
-        String type = null;
+        String type;
 
         myTable = HbasePoolUtils.getHTable(tableName);
 
@@ -97,9 +95,10 @@ public class HbaseClient extends AbstractDBClient {
         CrawlerDataUtils utils = CrawlerDataUtils.getCrawlerDataUtils(data);
 
         List<Map<String, Object>> myDataList = utils.getAttributeInfoList();
+        int size = myDataList.size();
         try {
 
-            for (int i = 0; i < myDataList.size(); ++i) {
+            for (int i = 0; i < size; ++i) {
                 try {
                     columnQualifier = myDataList.get(i).get("name").toString();
                     type = myDataList.get(i).get("type").toString();
