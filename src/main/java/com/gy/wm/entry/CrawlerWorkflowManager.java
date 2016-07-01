@@ -80,7 +80,6 @@ public class CrawlerWorkflowManager {
             seedList.add(crawlData.getUrl());
         }
         String[] urlArray = seedList.toArray(new String[seedList.size()]);
-
         Spider.create(new WholesitePageProcessor(tid, textAnalysis, domain))
                 .setScheduler(new RedisScheduler(domain)).setUUID(tid)
                 //从seed开始抓
@@ -91,6 +90,7 @@ public class CrawlerWorkflowManager {
                 .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
                 .thread(1)
+
                         //启动爬虫
                 .run();
     }

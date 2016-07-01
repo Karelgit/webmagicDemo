@@ -30,7 +30,6 @@ public class RedisScheduler implements Scheduler {
         Jedis jedis = pool.getResource();
 
         try {
-            //域名过滤和后缀过滤
             jedis.rpush(QUEUE_PREFIX + task.getUUID(), request.getUrl());
         } finally {
             pool.returnResource(jedis);
