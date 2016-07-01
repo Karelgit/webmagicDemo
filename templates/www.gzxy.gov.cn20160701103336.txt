@@ -1,0 +1,63 @@
+www.gzxy.gov.cn
+<html lang="zh-CN">
+<head>
+<title>
+</title>
+<script src="/js/html5shiv.min.js">
+</script>
+<script src="/js/respond.min.js">
+</script>
+</head>
+<body>
+<div class="g-wp">
+<div class="g-main newbox">
+<div class="position">
+当前位置：
+</div>
+<div class="content">
+<div class="title f-ff1">
+</div>
+<div class="other">
+发布时间：
+大
+中
+小
+】【
+<a href="">
+打印
+】【
+RSS定制
+】【
+纠错
+】
+<div class="bdsharebuttonbox">
+分享到：
+</div>
+</div>
+<div class="tex_box" id="Zoom">
+</div>
+<div class="tex_box" id="page">
+</div>
+<div id="articlesource" style="display:none">
+</div>
+<ul class="hot-list">
+<li class="tit">
+相关推荐
+</li>
+</ul>
+<ul class="pagebox">
+<li>
+上一篇：
+</li>
+<li>
+</li>
+</ul>
+<div id="uyan_frame">
+</div>
+</div>
+<div style="display:none;">
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+www.gzxy.gov.cn
+<html lang="zh-CN">
+<head>
+<title>
+栏目列表-兴义市人民政府门户网站-www.gzxy.gov.cn
+</title>
+<script src="/js/html5shiv.min.js">
+</script>
+<script src="/js/respond.min.js">
+</script>
+</head>
+<body>
+<div class="g-wp">
+<div class="g-main">
+<div class="position">
+当前位置：
+<a href="http://www.gzxy.gov.cn/">
+网站首页
+</div>
+<div class="main-left">
+</div>
+<div class="main-right">
+</div>
+</div>
+</div>
+</body>
+</html>
