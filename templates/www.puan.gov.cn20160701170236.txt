@@ -1,0 +1,399 @@
+www.puan.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+</head>
+<body>
+<div class="flash_cont">
+</div>
+<div class="Whole">
+<div class="tbg">
+<div class="con">
+<ul>
+<li>
+<a href="http://www.gov.cn/" target="_blank">
+中央人民政府
+</li>
+<li>
+<a href="http://www.gzgov.gov.cn/" target="_blank">
+贵州省人民政府
+</li>
+</ul>
+<div class="tlogin">
+<form id="mform" action="http://portal.puan.gov.cn/public/Members/login" method="post" target="_blank">
+用户名：
+密码：
+验证码：
+</form>
+</div>
+<div class="tnav">
+|
+<a href="http://portal.puan.gov.cn/public/webuser/index" target="_blank">
+个性化定制
+|
+WAP
+|
+<a href="http://www.puan.gov.cn/html/rss.shtml">
+RSS订阅
+</div>
+</div>
+</div>
+<div class="nav">
+<div class="logo">
+<a href="http://www.puan.gov.cn/html/index.shtml">
+</div>
+<div class="navtext">
+<a class="navbut01" title="首页" href="http://www.puan.gov.cn/html/index.shtml">
+<a class="navbut02" title="走进普安" href="http://www.puan.gov.cn/html/zjpa.shtml">
+<a class="navbut03" title="政务公开" href="http://www.puan.gov.cn/html/zwgk.shtml">
+<a class="navbut04" title="在线服务" href="http://www.puan.gov.cn/html/zxfw.shtml">
+<a class="navbut05" title="互动交流" href="http://www.puan.gov.cn/html/hdjl.shtml">
+<a class="navbut06" title="旅游" href="http://www.puan.gov.cn/html/lvyou.shtml">
+<a class="navbut07" title="投资" href="http://www.puan.gov.cn/html/touzi.shtml">
+<a class="navbut08" title="三农" href="http://www.puan.gov.cn/html/sannong.shtml" style="border: 0">
+</div>
+</div>
+</div>
+<div class="Weather">
+<div class="Weather_l">
+<div class="tj">
+推荐：
+</div>
+<div class="tjcon">
+<div style="margin-top: 0px;">
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/15598.shtml" title="普安县开展“明礼知耻•崇德向善”好教练好司机评选推荐活动">
+普安县开展“明礼知耻•崇德向善”好教练好司机评选推荐活动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/410/15597.shtml" title="普安县开展“明礼知耻•崇德向善”好教练好司机评选推荐活动">
+普安县开展“明礼知耻•崇德向善”好教练好司机评选推荐活动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/14987.shtml" title="普安独臂教师李治迁、“背读妈妈”侯汝彩入围第五届全省道德模范评选活动">
+普安独臂教师李治迁、“背读妈妈”侯汝彩入围第五届全省道德模范评选活动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/409/14985.shtml" title="普安独臂教师李治迁、“背读妈妈”侯汝彩入围第五届全省道德模范评选活动">
+普安独臂教师李治迁、“背读妈妈”侯汝彩入围第五届全省道德模范评选活动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/14962.shtml" title="转变职能   主动服务">
+转变职能主动服务
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/14961.shtml" title="普安县组织开展推进建筑业参加工伤保险宣传活动">
+普安县组织开展推进建筑业参加工伤保险宣传活动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/29/14900.shtml" title="普安县2016年面向高校引进重点产业人才考察公告">
+普安县2016年面向高校引进重点产业人才考察公告
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/14702.shtml" title="县人社局开展“两学一做”专题学习会">
+县人社局开展“两学一做”专题学习会
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/38/15383.shtml" title="普安县直机关工委2014年度“三公”经费一般公共预算拨款支出情况表">
+普安县直机关工委2014年度“三公”经费一般公共预算拨款支出情况表
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/14220.shtml" title="普安县水务局2015年部门预算及“三公”经费预算公开的补充说明">
+普安县水务局2015年部门预算及“三公”经费预算公开的补充说明
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/13610.shtml" title="2016年黔西南州城镇防汛责任人、技术负责人及值班人名单">
+2016年黔西南州城镇防汛责任人、技术负责人及值班人名单
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/13349.shtml" title="普安县参加第四届中国贵州人才博览会">
+普安县参加第四届中国贵州人才博览会
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/18/12907.shtml" title="普安县罗汉镇六“早”助推春耕备耕">
+普安县罗汉镇六“早”助推春耕备耕
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/11696.shtml" title="普安县城乡医保中心组织学习《黔西南州城乡居民基本医疗保险实施办法》">
+普安县城乡医保中心组织学习《黔西南州城乡居民基本医疗保险实施办法》
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/56/11050.shtml" title="这些生活用品容易着火，要注意防范">
+这些生活用品容易着火，要注意防范
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/18/11049.shtml" title="楼下镇贯彻落实中央扶贫工作会议及省、州、县党委常委（扩大）会议精神">
+楼下镇贯彻落实中央扶贫工作会议及省、州、县党委常委（扩大）会议精神
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/56/10999.shtml" title="岁末年初 安全知道多一点">
+岁末年初安全知道多一点
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/56/10940.shtml" title="人民日报：加快提升安全生产法治化水平">
+人民日报：加快提升安全生产法治化水平
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/481/10610.shtml" title="普安县民政局2015年1月至11月社会救助资金发放情况">
+普安县民政局2015年1月至11月社会救助资金发放情况
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/481/10591.shtml" title="普安县民政局2015年1月至11月社会救助资金发放情况">
+普安县民政局2015年1月至11月社会救助资金发放情况
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/486/10590.shtml" title="普安县民政局2015年1月至11月社会救助资金发放情况">
+普安县民政局2015年1月至11月社会救助资金发放情况
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/412/10584.shtml" title="普安县民政局2015年1月至11月社会救助资金发放情况">
+普安县民政局2015年1月至11月社会救助资金发放情况
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/10161.shtml" title="普安县政协组织全体干部职工学习十八届五中全会精神">
+普安县政协组织全体干部职工学习十八届五中全会精神
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/10008.shtml" title="普安教师陈美荣入围11月中国好人榜候选人">
+普安教师陈美荣入围11月中国好人榜候选人
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/9957.shtml" title="与时俱进 学习新法">
+与时俱进学习新法
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/9668.shtml" title="普安县人力资源和社会保障局认真开展环境卫生集中清扫整治行动">
+普安县人力资源和社会保障局认真开展环境卫生集中清扫整治行动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/305/9649.shtml" title="贵州省黔西南布依族苗族自治州气象台发布雷电黄色预警">
+贵州省黔西南布依族苗族自治州气象台发布雷电黄色预警
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/409/9568.shtml" title="普安举办“宣传文化干部上讲堂”宣讲比赛">
+普安举办“宣传文化干部上讲堂”宣讲比赛
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/29/9278.shtml" title="普安县人民医院2015年招聘简章">
+普安县人民医院2015年招聘简章
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/411/8794.shtml" title="普安“缤纷夏日·快乐童年”关爱留守系列活动精彩纷呈">
+普安“缤纷夏日·快乐童年”关爱留守系列活动精彩纷呈
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/366/7550.shtml" title="关于印发《普安县2015年度用人单位职业卫生基础建设活动工作方案》的通知">
+关于印发《普安县2015年度用人单位职业卫生基础建设活动工作方案》的通知
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/221/7395.shtml" title="“梦娃”系列动画视频">
+“梦娃”系列动画视频
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/212/7081.shtml" title="刺梨">
+刺梨
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/212/7080.shtml" title="剪粉">
+剪粉
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/212/7079.shtml" title="野生黑木耳">
+野生黑木耳
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/212/7078.shtml" title="鸡枞油">
+鸡枞油
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/6910.shtml" title="普安“三强化”推进元旦春节期间烟花爆竹专项整治工作">
+普安“三强化”推进元旦春节期间烟花爆竹专项整治工作
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/17/5173.shtml" title="县安监局开展“12.4”法制宣传日活动">
+县安监局开展“12.4”法制宣传日活动
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/14/4591.shtml" title="普安县安监局公告">
+普安县安监局公告
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/366/4552.shtml" title="转发关于印发贵州省煤矿矿长安全资格扣分管理办法(试行)的通知的通知">
+转发关于印发贵州省煤矿矿长安全资格扣分管理办法(试行)的通知的通知
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/56/4168.shtml" title="普安县查处2家销售非渠道进货烟花爆竹经营户">
+普安县查处2家销售非渠道进货烟花爆竹经营户
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/56/4167.shtml" title="州第一煤矿联合执法检查组到普安检查">
+州第一煤矿联合执法检查组到普安检查
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/92.shtml" title="普安县强化人口计生信息统计工作">
+普安县强化人口计生信息统计工作
+</li>
+<li style="margin:0;padding:0 4px;font-size:12px;height:26px;line-height:26px;text-align: left;overflow: hidden;white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;width:280px;">
+<a target="_self" href="http://www.puan.gov.cn/html/article/16/89.shtml" title="走进“道德讲堂”弘扬社会主义核心价值观">
+走进“道德讲堂”弘扬社会主义核心价值观
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="Weather_r">
+</div>
+<div class="search_r">
+<table width="210" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="215">
+<form id="searchForm" name="searchForm" action="http://www.puan.gov.cn/search.jsp" method="post" onsubmit="return Search();">
+<select name="select" style="display: none;">
+<option value="articleTitle" id="searChArticleTitle">
+按标题
+</option>
+<option value="articleContent" id="searchArticleContent">
+按内容
+</option>
+<option value="articleSummary" id="searchArticleSummary">
+按摘要
+</option>
+<option value="articleAuthor" id="searchArticleAuthor">
+按作者
+</option>
+<option value="articleEditor" id="articleEditor">
+按编辑
+</option>
+</select>
+<div class="ss">
+<div class="ss01">
+</div>
+<div class="ss02">
+</div>
+</div>
+</form>
+</td>
+<td width="70">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="clear:both;height:0;font-size: 1px;line-height: 0px;">
+</div>
+<div class="mid1">
+<div class="article">
+<div class="wz_box">
+<div id="positionDiv">
+当前位置：
+<a href="http://www.puan.gov.cn/" class="" target="_blank">
+首页
+</div>
+</div>
+<div class="article_cont">
+<div class="article_cont bsjCss" id="cont" type="Article">
+<div class="Article">
+<div class="Article_wz">
+<div class="Article_fbt2">
+</div>
+<div class="Article_bt">
+</div>
+<div class="Article_fbt">
+</div>
+<div class="Article_fbt3">
+</div>
+<div class="Article_lrd">
+<div class="Article_ly">
+来源:
+作者:
+编辑:
+日期:
+点击率:
+<a href="">
+[我要打印]
+<a href="">
+[关闭]
+</div>
+</div>
+<div class="Article_zy">
+摘要:
+</div>
+<div class="Article_yt">
+引题:
+</div>
+<div class="Article_gjz">
+关键字:
+</div>
+<div id="tablePrint" class="Article_zw">
+</div>
+<div class="Article_zb">
+<div class="Article_zz">
+作者:
+</div>
+<div class="Article_bj">
+编辑:
+</div>
+</div>
+<div class="Article_sx">
+<div class="Article_s">
+</div>
+<div class="Article_x">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfloat">
+</div>
+<div class="bot">
+<div class="bot_box">
+<div class="bot_tit">
+<ul>
+<li>
+<a href="http://www.puan.gov.cn/html/list/333/334.shtml">
+网站申明
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/list/333/335.shtml">
+关于我们
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/map.shtml" target="_blank">
+网站地图
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/list/333/335.shtml">
+在线帮助
+</li>
+<li>
+<a href="http://www.puan.gov.cn/statcontentnum.jsp" target="_blank">
+信息采用统计
+</li>
+<li style="background-image:none;">
+<a href="http://www.puan.gov.cn/xlog/index.jsp" target="_blank">
+站点统计
+</li>
+</ul>
+</div>
+<div class="clearfloat">
+</div>
+<div class="bot_cont">
+主办：中共普安县委县人民政府承办：普安县政府办公室
+黔ICP备15014622号-1版权所有：中共普安县委普安县人民政府电话：0859-7232127电子邮箱：paxxzx@sina.cn
+技术支持：
+<a href="http://www.60851.org" target="_blank" style="color:#3E3E3E">
+贵州佰仕佳信息工程有限公司
+(建议使用1280×720分辨率IE8.0以上版本浏览器)
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52232302000065" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+公网安备52232302000065号
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

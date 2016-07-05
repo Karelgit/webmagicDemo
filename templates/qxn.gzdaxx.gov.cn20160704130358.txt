@@ -1,0 +1,106 @@
+qxn.gzdaxx.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+</head>
+<body>
+<div id="line">
+<div id="head">
+</div>
+<div id="menu">
+<div class="menuhr01">
+</div>
+<div class="menuhr02">
+</div>
+<div class="menulist">
+<ul>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+</ul>
+</div>
+<div class="banner">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="990" height="171">
+</object>
+</div>
+</div>
+<div id="list">
+<div id="list_r1">
+<div id="list_r2">
+您当前的位置
+</div>
+<div id="list_r5">
+</div>
+<div id="list_f5">
+<ul>
+<li>
+</li>
+</ul>
+</div>
+<div id="list_r4">
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<div id="list_r">
+<div id="list_r6">
+</div>
+<div id="list_r7">
+<dl>
+<dt>
+</dt>
+<dd>
+</dd>
+<dt>
+</dt>
+<dd>
+</dd>
+<dt>
+</dt>
+<dd>
+</dd>
+<dt>
+</dt>
+<dd>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="list_c1">
+</div>
+<div id="index_r11">
+</div>
+<div id="copyright">
+联系我们
+视频列表
+下载中心
+<a href="http://www.gzdaxx.gov.cn/e/tool/qxn/?bid=7">
+在线留言
+<a href="http://www.gzdaxx.gov.cn/e/tool/qxn/?bid=8">
+业务答疑
+黔ICP备05001822号
+</div>
+</div>
+</body>
+</html>

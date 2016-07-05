@@ -55,14 +55,14 @@ public class CrawlerWorkflowManager {
             //初始化布隆过滤hash表
             BloomFilter bloomFilter = new BloomFilter(jedis, 1000, 0.001f, (int) Math.pow(2, 31));
             for (CrawlData seed : seeds) {
-                bloomFilter.add("redis:bloomfilter" + tid, seed.getUrl());
+                bloomFilter.add("redis:bloomfilter:" + tid, seed.getUrl());
             }
 
             //初始化webMagic的Spider程序
             initSpider(seeds, textAnalysis);
 
             //结束之后清空对应任务的redis数据
-            jedis.del("redis:bloomfilter" + tid);
+            jedis.del("redis:bloomfilter:" + tid);
             jedis.del("queue_" + tid);
             jedis.del("webmagicCrawler::ToCrawl::" + tid);
             jedis.del("webmagicCrawler::Crawled::" + tid);

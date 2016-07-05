@@ -84,7 +84,9 @@ public class TextAnalysis implements Serializable {
             }
 
 //            crawlData.setTitle(oldUrl.getTitle());
-//            crawlData.setPublishTime(oldUrl.getDate());
+            if(crawlData.getPublishTime() != null)  {
+                crawlData.setPublishTime(oldUrl.getDate());
+            }
             crawlData.setCrawlTime(System.currentTimeMillis());
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());

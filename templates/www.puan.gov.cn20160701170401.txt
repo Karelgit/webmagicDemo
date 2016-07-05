@@ -1,0 +1,135 @@
+www.puan.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+保障性住房专栏
+</title>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<div>
+</div>
+<div style="height: 4px;overflow: hidden;">
+</div>
+<div class="nav" align="center">
+<ul>
+<li>
+<a href="http://www.puan.gov.cn">
+网站首页
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/subject_subindex/189.shtml">
+专题首页
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/subject_sublist/189/371.shtml">
+政策法规
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/subject_sublist/189/372.shtml">
+办事指南
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/subject_sublist/189/373.shtml">
+表格下载
+</li>
+<li>
+<a href="http://www.puan.gov.cn/html/subject_sublist/189/374.shtml">
+信息公开
+</li>
+<a href="http://www.puan.gov.cn/html/subject_subarticle/371/subject_pic.jsp?itemId=189">
+专题图片
+</li>
+</ul>
+</div>
+<div class="titlt2" id="positionDiv">
+当前位置：
+<a href="http://www.puan.gov.cn/html/subject_subindex/189.shtml">
+专题首页
+<a href="http://www.puan.gov.cn/html/subject_sublist/189/371.shtml">
+政策法规
+正文
+</div>
+<div class="content">
+<div class="Article">
+<div class="Article_wz">
+<div class="Article_fbt2">
+</div>
+<div class="Article_bt">
+</div>
+<div class="Article_fbt">
+</div>
+<div class="Article_fbt3">
+</div>
+<div class="Article_lrd">
+<div class="Article_ly">
+来源:
+作者:
+编辑:
+住房和城乡建设局
+日期:
+点击率:
+<a href="">
+[我要打印]
+<a href="">
+[关闭]
+</div>
+</div>
+<div class="Article_zy">
+摘要:
+</div>
+<div class="Article_yt">
+引题:
+</div>
+<div class="Article_gjz">
+关键字:
+</div>
+<div id="tablePrint" class="Article_zw">
+</div>
+<div class="Article_zb">
+<div class="Article_zz">
+作者:
+</div>
+<div class="Article_bj">
+编辑:
+住房和城乡建设局
+</div>
+</div>
+<div class="Article_sx">
+<div class="Article_s">
+</div>
+<div class="Article_x">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="foot">
+<div class="line">
+</div>
+<div class="foot">
+<div class="info_copy_right_main">
+<center>
+<table width="550" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="550" height="98" align="center" valign="middle" class="footcopyright">
+主办：中共普安县委县人民政府承办：普安县政府办公室
+黔ICP备11001377号版权所有：中共普安县委普安县人民政府
+电话：0859-7232127电子邮箱：qxnidc@163.com
+技术支持：
+<a href="http://www.60851.org">
+贵州佰仕佳信息工程有限公司(建议使用1280×720分辨率IE8.0以上版本浏览器)
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
