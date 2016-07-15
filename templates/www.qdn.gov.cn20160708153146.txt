@@ -1,0 +1,2136 @@
+www.qdn.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+</head>
+<body>
+<div style="height:159px; border-bottom:2px solid #106636; background: #ffffff; position:fixed; width:100%; top:0; left:0;z-index:9999;">
+<div class="w1200 auto" style="position:relative;">
+<div style="position:absolute; background:url(/images/nav_bg02.png) no-repeat; width:165px; height:86px; z-index:111; bottom:0">
+</div>
+<div class="top_box" style=" height:131px;">
+<div class="logo">
+</div>
+<div class="top_right">
+<a href="http://www.qdn.gov.cn/syqt/rssdy/">
+RSS订阅
+<div class="search">
+<div class="search-box">
+搜 索
+</div>
+<div class="key-hot">
+搜索热词:
+<a href="http://www.qdn.gov.cn/search.html?keyword=60周年">
+60周年
+<a href="http://www.qdn.gov.cn/search.html?keyword=黔东南">
+黔东南
+<a href="http://www.qdn.gov.cn/search.html?keyword=姊妹节">
+姊妹节
+</div>
+</div>
+</div>
+</div>
+<div class="nav_content">
+<div class="w1200 auto">
+<div class="navBar">
+<ul class="nav clearfix">
+<li id="m1" class="m on">
+<h3 class="home">
+<a href="http://www.qdn.gov.cn/">
+<i>
+</i>
+首页
+</h3>
+</li>
+<li id="m2" class="m">
+<h3 class="news">
+<a href="http://www.qdn.gov.cn/xwzx/">
+<i>
+</i>
+新闻中心
+</h3>
+<div class="sub" style="display: none;">
+<div class="topxwzx">
+<div class="m1_left" style="margin-top:16px;">
+<div class="focusBox">
+<ul class="pic">
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201607/t20160704_880048.html" title="冯仕文州长深入榕江从江指导防汛抗洪救灾工作">
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/qdnyw/201607/t20160704_880048.html" urlisabs="true" target="_blank">
+冯仕文州长深入榕江从江指导防汛抗洪救灾工作
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201606/t20160630_850246.html" title="2016贵州•从江加榜梯田国际半程马拉松赛开始报名">
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/qdnyw/201606/t20160630_850246.html" urlisabs="true" target="_blank">
+2016贵州•从江加榜梯田国际半程马拉松赛...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201607/t20160704_880017.html" title="国家民委主任巴特尔到黔东南州调研">
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/qdnyw/201607/t20160704_880017.html" urlisabs="true" target="_blank">
+国家民委主任巴特尔到黔东南州调研
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201606/t20160627_765854.html" title="州政府副州长肖明龙带队到黎平县开展“两学一做”专题民主生活会暨“七•一”党史教育活动">
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/qdnyw/201606/t20160627_765854.html" urlisabs="true" target="_blank">
+州政府副州长肖明龙带队到黎平县开展“两...
+</li>
+</ul>
+<a class="prev" href="">
+<a class="next" href="">
+<ul class="hd">
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<div class="m1_right">
+<div class="tt">
+<h1>
+<a target="_blank" style="font-family: '微软雅黑';" href="http://www.qdn.gov.cn/xwzx/jrtt/201607/t20160705_883464.html" title="冯仕文州长深入榕江从江指导防汛抗洪救灾工作">
+冯仕文州长深入榕江从江指导防汛抗洪救...
+</h1>
+</div>
+<div class="new-ul">
+<div class="news-box f_l">
+<h2>
+<a href="http://www.qdn.gov.cn/xwzx/qdnyw/">
+黔东南要闻
+</h2>
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201607/t20160704_880048.html" title="冯仕文州长深入榕江从江指导防汛抗洪救灾工作">
+冯仕文州长深入榕江从江指导防汛抗洪救灾工作
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201607/t20160704_868759.html" title="副省长陈鸣明专题听取我州州庆系列活动筹备工作汇报">
+副省长陈鸣明专题听取我州州庆系列活动筹...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qdnyw/201607/t20160708_907677.html" title="托起苗乡侗寨小康梦——建州60周年黔东南扶贫攻坚回顾">
+托起苗乡侗寨小康梦——建州60周年黔东南...
+</li>
+</ol>
+</div>
+<div class="news-box f_r" id="s1">
+<h2>
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/">
+部门动态
+<a href="http://www.qdn.gov.cn/xwzx/xsdt/">
+县市动态
+</h2>
+<div class="list">
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/bmdt/201607/t20160707_905991.html" title="黔东南州“八措施”加强耕地保护与质量提升项目管理工作">
+黔东南州“八措施”加强耕地保护与质量提...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/bmdt/201607/t20160707_905992.html" title="黔东南州“四高一降”提升城镇居民医疗保障水平">
+黔东南州“四高一降”提升城镇居民医疗保...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/bmdt/201607/t20160707_905993.html" title="黔东南州上半年财政总收入完成84.64亿元">
+黔东南州上半年财政总收入完成84.64亿元
+</li>
+</ol>
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/xsdt/201607/t20160707_905952.html" title="凯里市：纪委派驻监督有“影子”  工作留“痕迹”">
+凯里市：纪委派驻监督有“影子”工作留...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/xsdt/201607/t20160707_905954.html" title="雷山县雷公山景区旅游基础设施建设项目开工">
+雷山县雷公山景区旅游基础设施建设项目开工
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/xsdt/201607/t20160707_905956.html" title="丹寨县“数字分红”创新合作社利益分配机制">
+丹寨县“数字分红”创新合作社利益分配机制
+</li>
+</ol>
+</div>
+</div>
+<div class="f_c">
+</div>
+<div class="news-box f_l" id="s2">
+<h2>
+<a href="http://www.qdn.gov.cn/xwzx/ldhd/">
+领导活动
+</h2>
+<div class="list">
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/ldhd/201607/t20160707_906017.html" title="黔东南州组织收看全国健康扶贫工作电视电话会议">
+黔东南州组织收看全国健康扶贫工作电视电...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/ldhd/201607/t20160706_896212.html" title="陈应勇副州长率队督促重点工业企业提升工业用电量">
+陈应勇副州长率队督促重点工业企业提升工...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/ldhd/201607/t20160706_896210.html" title="我州加强汛期安全生产工作获省督查组肯定">
+我州加强汛期安全生产工作获省督查组肯定
+</li>
+</ol>
+</div>
+</div>
+<div class="news-box f_r" id="s3">
+<h2>
+<a href="http://www.qdn.gov.cn/xwzx/qgyw/">
+全国要闻
+<a href="http://www.qdn.gov.cn/xwzx/gzyw/">
+贵州要闻
+</h2>
+<div class="list">
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qgyw/201607/t20160708_907730.html" title="国务院办公厅关于加强和改进行政应诉工作的意见">
+国务院办公厅关于加强和改进行政应诉工作...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qgyw/201607/t20160708_907731.html" title="第十八次中国欧盟领导人会晤将在北京举行">
+第十八次中国欧盟领导人会晤将在北京举行
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/qgyw/201607/t20160708_907732.html" title="习近平会见联合国秘书长潘基文">
+习近平会见联合国秘书长潘基文
+</li>
+</ol>
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/gzyw/201607/t20160708_907738.html" title="孙志刚会见中国医药集团总公司董事长郭建新一行">
+孙志刚会见中国医药集团总公司董事长郭建...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/gzyw/201607/t20160708_907740.html" title="全国人大农业与农村委员会专题调研组来黔调研">
+全国人大农业与农村委员会专题调研组来黔调研
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/xwzx/gzyw/201607/t20160708_907742.html" title="省政府办公厅转发《方案》将修复贵州省长江生态环境摆在压倒性位置">
+省政府办公厅转发《方案》将修复贵州省长...
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="m3" class="m">
+<h3 class="wifi">
+<a href="http://www.qdn.gov.cn/xxgk/">
+<i>
+</i>
+信息公开
+</h3>
+<div class="sub" style="display: none;">
+<div class="m2_left">
+<ol>
+<li>
+<i class="gkzn">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/xxgkzn/">
+信息公开指南
+</li>
+<li>
+<i class="xgzd">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/xxgkxgzd/">
+信息公开相关制度
+</li>
+<li>
+<i class="gknb">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/xxgknb/">
+信息公开年报
+</li>
+<li>
+<i class="xgzd">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/zfgb/">
+政府公报
+</li>
+<li>
+<i class="yjx">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/xxgkyjx/">
+信息公开意见箱
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/xxgk/xxgkyjx/">
+意见箱使用帮助
+|
+<a href="http://www.qdn.gov.cn/xxgk/xxgkyjx/index.html?StrURL=/xxgk/xxgkyjx/wyyj/send.html">
+我要提意见
+|
+<a href="http://www.qdn.gov.cn/xxgk/xxgkyjx/index.html?StrURL=/xxgk/xxgkyjx/wyyj/list.html">
+意见公示
+</li>
+<li>
+<i class="ysqgk">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/ysqgk/">
+依申请公开
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/xxgk/ysqgk/">
+依申请公开说明
+|
+<a href="http://www.qdn.gov.cn/xxgk/ysqgk/bgxz/">
+表格下载
+|
+<a href="http://www.qdn.gov.cn/xxgk/ysqgk/zxsq/">
+在线申请
+</li>
+<li>
+<i class="bmml">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/bmxxgk/">
+州直各部门信息公开目录
+</li>
+<li>
+<i class="qxml">
+</i>
+<a href="http://www.qdn.gov.cn/xxgk/qxxxgk/">
+各县市(区)信息公开目录
+</li>
+</ol>
+</div>
+<div class="m2_center" id="s4">
+<h2>
+<a href="http://www.qdn.gov.cn/xxgk/xxgkml/index.html?ClassInfoId=16559">
+信息公开目录
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/">
+重点信息公开
+</h2>
+<div class="list">
+<ol>
+<li>
+<strong>
+政策文件
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/gwywj/">
+国务院文件
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/szfwj/">
+省政府文件
+|
+规章制度
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/zff/">
+州府发
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/zfbf/">
+州府办发
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/zfbh/">
+州府办函
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/zcjd/">
+政策解读
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/zcwj_15810/wjxgfz/">
+文件修改废止
+</h4>
+</li>
+<li>
+<strong>
+规划计划
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/ghjh/gmjjhshfzjh/">
+国民经济和社会发展计划
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/ghjh/zfndjh/">
+政府年度计划
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/ghjh/ssjz/">
+实施进展
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/ghjh/zfgzbg/">
+政府工作报告
+</h4>
+</li>
+<li>
+<strong>
+人事信息
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/rsxx/rsrm/">
+人事任免
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/rsxx/gkzp/">
+公开招聘
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/rsxx/ksly/">
+考试录用
+</h4>
+</li>
+<li>
+<strong>
+统计信息
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/tjxx/tjsj/">
+统计数据
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/tjxx/tjfx/">
+统计分析
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/tjxx/tjnb/">
+统计年报
+</h4>
+</li>
+<li>
+<strong>
+应急管理
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/yjgl/yjya/">
+应急预案
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/yjgl/yjgg/">
+预警公告
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/yjgl/tfsj/">
+突发事件
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/yjgl/yjyl/">
+应急演练
+</h4>
+</li>
+<li>
+<strong>
+监督检查
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/jdjc/cpzl/">
+产品质量
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/jdjc/ggws/">
+公共卫生
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/jdjc/aqsc/">
+安全生产
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/jdjc/qtjg/">
+其他监管
+</h4>
+</li>
+<li>
+<strong>
+城市建设
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/cxjs/csgh/">
+城市规划
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/cxjs/csjs/">
+城市建设
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/cxjs/csgl/">
+城市管理
+</h4>
+</li>
+<li>
+<strong>
+社会公益
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/shgy/shgydt/">
+社会公益动态
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/shgy/shgyxmqk/">
+社会公益项目情况
+</h4>
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/xwfb/">
+<strong>
+新闻发布|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/ldzc/">
+<strong>
+领导之窗
+</li>
+</ol>
+<ol class="h30">
+<li>
+<strong>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/xzqlgk/">
+行政权力公开
+</li>
+<li>
+<strong>
+资金信息
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zjxx/czysjs/">
+财政预算决算
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zjxx/sgjfyjs/">
+“三公”经费预决算
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zjxx/shjzzjxx/">
+社会救助资金信息
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zjxx/jghsf/">
+价格和收费
+</h4>
+</li>
+<li>
+<strong>
+政府采购
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zfcg/zbgg/">
+招标公告
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zfcg/zbgg_15778/">
+中标公告
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zfcg/zfcgml/">
+政府采购目录
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zfcg/cght/">
+采购合同
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zfcg/qyxy/">
+企业信用
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zfcg/xzcf/">
+行政处罚
+</h4>
+</li>
+<li>
+<strong>
+公共资源配置
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/ggzypz/czzfbzajgc/">
+城镇住房保障安居工程
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/ggzypz/tdzy/">
+土地资源
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/ggzypz/fwzs/">
+房屋征收
+</h4>
+</li>
+<li>
+<strong>
+重大建设项目
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zdjsxm/xmspyhz/">
+项目审批与核准
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/zdjsxm/xmss/">
+项目实施
+</h4>
+</li>
+<li>
+<strong>
+环境保护
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/hjbh/gzdt/">
+工作动态
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/hjbh/zcwj/">
+政策文件
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/hjbh/hpsp/">
+环评审批
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/hjbh/hjzlzk/">
+环境质量状况
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/hjbh/fsaq/">
+辐射安全
+</h4>
+</li>
+<li>
+<strong>
+城市建设
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/cxjs/csgh/">
+城市规划
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/cxjs/csjs/">
+城市建设
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdgk/cxjs/csgl/">
+城市管理
+</h4>
+</li>
+<li>
+<strong>
+食品药品安全
+<h4>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/spypaq/zxjczz/">
+专项检查整治
+|
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/spypaq/wfxwcc/">
+违法行为查处
+</h4>
+</li>
+<li>
+<strong>
+社会组织、中介机构
+</li>
+</ol>
+</div>
+</div>
+<div class="m2_right" style="overflow:hidden">
+<h1>
+<a href="">
+最新信息公开
+</h1>
+<div class="list">
+<ol>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/tzgg/zbgs/201607/t20160708_907782.html" target="_blank">
+雷山县郎德非遗博物馆B幢活态馆布展工程中标公示
+07/08
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zfcg/zbgg/201607/t20160708_907668.html" target="_blank">
+黔东南州办公用房维修改造工程政府采购公告
+07/08
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zfcg/zbgg/201607/t20160708_906114.html" target="_blank">
+黔东南民族职业技术学院生物与环境系机房建设采购...
+07/08
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/tzgg/zbgs/201607/t20160707_906038.html" target="_blank">
+黄平县承办黔东南州第四届旅发大会网络电视宣传项...
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zfcg/zbgg/201607/t20160707_906039.html" target="_blank">
+关于凯里市炉山镇洛邦村九里塘砂石场采矿权协议转...
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zfcg/zbgg/201607/t20160707_906040.html" target="_blank">
+黎平县国有建设用地使用权挂牌出让公告
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zdjsxm/xmss/201607/t20160707_905806.html" target="_blank">
+2016年全省第三批重大项目集中开工
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdgk/zcwj_15810/zcjd/201607/t20160707_905801.html" target="_blank">
+图解：贵州加快推进山地特色新型城镇化建设实施方案
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/tzgg/zbgs/201607/t20160707_905522.html" target="_blank">
+贵州天柱农商银行股份有限公司白市支行营业室装修...
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zfcg/zbgg/201607/t20160707_903654.html" target="_blank">
+黔东南州电子政务网门户网站群系统硬件设备采购采...
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdxxgk/zfcg/zbgg/201607/t20160708_906142.html" target="_blank">
+凯里互联网众创产业园大数据工作站项目竞争性谈判...
+07/07
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xwzx/tzgg/zbgs/201607/t20160706_899122.html" target="_blank">
+雷山县西江景区北大门防洪堤建设项目中标公示
+07/06
+</li>
+<li>
+▪
+<a href="http://www.qdn.gov.cn/xwzx/bmdt/201607/xxgk/zdgk/ghjh/ssjz/201607/t20160707_905843.html" target="_blank">
+黔东南州小康寨建设时间任务双过半
+07/06
+</li>
+</ol>
+</div>
+</div>
+</div>
+</li>
+<li id="m4" class="m">
+<h3 class="interact">
+<a href="http://www.qdn.gov.cn/zxfw/">
+<i>
+</i>
+在线服务
+</h3>
+<ul class="sub" style="display: none;">
+<li>
+<div class="m3_left">
+<h2>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/">
+主题服务
+</h2>
+<div class="list">
+<ol>
+<li>
+<strong>
+教育服务
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/xqjy/">
+学前教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/xxjy/">
+小学教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/czjy/">
+初中教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/gzjy/">
+高中教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/gdjy/">
+高等教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/zyjy/">
+职业教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/tsjy/">
+特殊教育
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw_1/zzjhjjxj/">
+资助计划及奖学金
+</h4>
+</li>
+<li>
+<strong>
+医疗卫生
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/yygk/">
+医院概况
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/jkzxml/">
+疾控中心名录
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/ydcx/">
+药店查询
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/ypcx/">
+药品查询
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/ylxmsf/">
+医疗项目收费
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/jbyf/">
+疾病预防
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/ylws/yljz/">
+医疗救助
+</h4>
+</li>
+<li>
+<strong>
+社会保障
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/sbzc/">
+社保政策
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/ddyljgml/">
+定点医疗机构名录
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/ylbxypml/">
+医疗保险药品名录
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/sbcx/">
+社保查询
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/gsbxypml/">
+工伤保险药品目录
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/gsrdsqzn/">
+工伤认定申请指南
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/dbsqzn/">
+低保申请指南
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/shflzc/">
+社会福利政策
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/shbz/shfljgml/">
+社会福利机构名录
+</h4>
+</li>
+<li>
+<strong>
+就业服务
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/zyjnpxjg/">
+职业技能培训机构
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/bysjy/">
+毕业生就业
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/nmgjy/">
+农民工就业
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/syryzjy/">
+失业人员再就业
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/jyzc/">
+就业政策
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/zzcy/">
+自主创业
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/xedbdk/">
+小额担保贷款
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/ldgxzc/">
+劳动关系政策
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jyfw/ldhtfb/">
+劳动合同范本
+</h4>
+</li>
+<li>
+<strong>
+住房服务
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/zffw/fdczc/">
+房地产政策
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/zffw/bzxzf/">
+保障性住房
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/zffw/fwgz/">
+房屋购置
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/zffw/cqbcfajbz/">
+拆迁补偿方案及标准
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/zffw/gjjfw/">
+公积金服务
+</h4>
+</li>
+<li>
+<strong>
+交通出行
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jtcx/lkxx/">
+路况信息
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jtcx/ggcx/">
+公共出行
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jtcx/ztcx/">
+长途出行
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jtcx/czfw/">
+出租服务
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/jtcx/jyz/">
+加油站
+</h4>
+</li>
+<li>
+<strong>
+投资服务
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/zsxm/">
+招商项目
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/cyjs/">
+产业介绍
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/">
+投资动态
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzcx/">
+投资程序
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzzc/">
+投资政策
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzcb/">
+投资成本
+</h4>
+</li>
+<li>
+<strong>
+旅游服务
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/lyts/">
+旅游提示
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/lydt/">
+旅游动态
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/lyjd/">
+旅游景点
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/lyxl/">
+旅游线路
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/msjs/">
+美食介绍
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/yxsml/">
+旅行社名录
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/jdml/">
+酒店名录
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/ylcsml/">
+娱乐场所名录
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/lyfw/csml/">
+超市名录
+</h4>
+</li>
+<li>
+<strong>
+三农服务
+<h4>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/snfw/nzscjg/">
+农资市场价格
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/snfw/nykjfw/">
+农业科技服务
+|
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/snfw/ncpgq/">
+农产品供求
+</h4>
+</li>
+</ol>
+</div>
+</div>
+<div class="m3_right">
+<h2>
+<a href="http://www.qdn.gov.cn/zxfw/ythfwzy/bgxz_15949/">
+在线办事
+</h2>
+<div class="list">
+<ol>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ythfwzy/bgxz_15949/">
+<strong>
+表格下载
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/cjsfwdt/">
+<strong>
+场景式服务大厅
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/xxgk/zdxxgk/xzqlgk/">
+<strong>
+行政权力公开
+</li>
+<li>
+<a href="http://www.gzegn.gov.cn/qlqdTj.jspx?areaId=522600" target="_blank">
+<strong>
+在线申报
+</li>
+<li>
+<a href="http://www.gzegn.gov.cn/businessinfolist.jspx?areaId=522600">
+<strong>
+状态查询及结果公示
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ythfwzy/bscjwt/">
+<strong>
+办事常见问题
+</li>
+</ol>
+</div>
+<div class="m3_right">
+<h2 style="margin-left:12px;">
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/rdfw/">
+热点服务
+</h2>
+<div class="list">
+<ol>
+<li style="font-size:14px;padding-left:20px;text-align: left;color: #046337;">
+<a style="color: #046337;" target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/rdfw/lnryd/" title="">
+老年人优待
+</li>
+<li style="font-size:14px;padding-left:20px;text-align: left;color: #046337;">
+<a style="color: #046337;" target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/rdfw/cjrfw/" title="">
+残疾人服务
+</li>
+<li style="font-size:14px;padding-left:20px;text-align: left;color: #046337;">
+<a style="color: #046337;" target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/rdfw/jdcjszbl/" title="">
+机动车驾驶证办理
+</li>
+<li style="font-size:14px;padding-left:20px;text-align: left;color: #046337;">
+<a style="color: #046337;" target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/rdfw/ssdj/" title="">
+商事登记
+</li>
+<li style="font-size:14px;padding-left:20px;text-align: left;color: #046337;">
+<a style="color: #046337;" target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/rdfw/gatxzhz_526/" title="">
+港澳通行证护照
+</li>
+</ol>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li id="m5" class="m">
+<h3 class="service">
+<a href="http://www.qdn.gov.cn/gzcy/">
+<i>
+</i>
+公众参与
+</h3>
+<div class="sub" style="display: none;">
+<div class="m4_left">
+<ol>
+<li>
+<i class="zzxx">
+</i>
+州长信箱
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/gzcy/zzxx/xxxz/">
+写信须知
+|
+<a href="http://www.qdn.gov.cn/gzcy/zzxx/xxxz/">
+我要写信
+|
+<a href="http://www.qdn.gov.cn/gzcy/zzxx/wyxx/list.html">
+信件公示
+|
+<a href="http://www.qdn.gov.cn/gzcy/zzxx/wyxx/search.html">
+信件查询
+</li>
+<li>
+<i class="wsdc">
+</i>
+网上调查
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/bqdc/">
+正在调查
+|
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/wqdc/">
+往期调查
+</li>
+<li>
+<i class="wszj">
+</i>
+网上征集
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/gzcy/wszj/bqzj/">
+征集活动
+|
+<a href="http://www.qdn.gov.cn/gzcy/wszj/wqzj/">
+结果反馈
+</li>
+<li>
+<i class="zxft">
+</i>
+在线访谈
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/gzcy/zxft/bqft/">
+本期访谈
+|
+<a href="http://www.qdn.gov.cn/gzcy/zxft/wqft/">
+往期访谈
+</li>
+<li>
+<i class="xmt">
+</i>
+新媒体
+</li>
+<li class="other">
+微信公众号|
+<a href="http://weibo.com/qdnzf" target="_blank">
+政务微博
+</li>
+</ol>
+</div>
+<div class="m4_center">
+<div class="box">
+<h2>
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/bqdc/">
+调查问卷
+</h2>
+<div class="list">
+<ol>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/bqdc/201607/t20160705_881828.html" target="_blank">
+对黔东南州旅游开发建设的问卷调查
+2016/07/05
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/bqdc/201606/t20160614_583791.html" target="_blank">
+州政府新版网站改版情况调查
+2016/06/22
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/wqdc/201605/t20160522_437458.html" target="_blank">
+食品药品监管工作调查问卷
+2015/05/22
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wsdc/wqdc/201605/t20160522_437455.html" target="_blank">
+关于2016年信息公开工作开展情况的调查问卷
+2016/04/01
+</li>
+</ol>
+</div>
+</div>
+<div class="clearfix">
+</div>
+<div class="box mgT15">
+<h2>
+</h2>
+<div class="list">
+<ol>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wszj/wqzj/201607/t20160707_905969.html" target="_blank">
+关于《贵州三峡能源有限公司凯里至铜仁天然气支线管道建...
+2016/06/23
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wszj/bqzj/201607/t20160705_881909.html" target="_blank">
+“喜迎建州60年--寄语黔东南”有奖留言征集启事
+2016/07/20
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wszj/bqzj/201606/t20160629_794715.html" target="_blank">
+《巴拉河流域综合规划（2016-2030年）》公示征求意见
+2016/07/29
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/gzcy/wszj/wqzj/201606/t20160629_794523.html" target="_blank">
+黔东南州本级征集2016年高校毕业生就业见习岗位结果反馈
+2016/06/24
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="m4_right">
+<div class="box">
+<h2>
+<a href="http://www.qdn.gov.cn/gzcy/zxft/">
+在线访谈
+</h2>
+<div class="list">
+<a target="_blank" href="http://www.qdn.gov.cn/gzcy/zxft/bqft/201606/t20160621_632913.html" title="黔东南苗族侗族自治州副州长、旅发委主任肖明龙做客人民网">
+主题：
+<a href="http://www.qdn.gov.cn/gzcy/zxft/bqft/201606/t20160621_632913.html" title="黔东南苗族侗族自治州副州长、旅发委主任肖明龙做客人民网" target="_blank">
+黔东南苗族侗族自治州副州长、旅发委主...
+时间：2016年6月21日10:00:00
+嘉宾：肖明龙副州长
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="m6" class="m">
+<h3 class="tourism">
+<a href="http://www.qdn.gov.cn/dmqdn/">
+<i>
+</i>
+大美黔东南
+</h3>
+<div class="sub" style="display: none;background: #fff;">
+<div class="m5_left">
+<ol>
+<li>
+<a href="http://www.qdn.gov.cn/dmqdn/qdngk/">
+<i class="gktou">
+</i>
+黔东南概况
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/dmqdn/sjyc/">
+<i class="sjyctou">
+</i>
+世界遗产
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/dmqdn/gjjfwzwhyc/">
+<i class="fsjyctou">
+</i>
+国家级非物质文化遗产
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/dmqdn/tshd/">
+<i class="tshdtou">
+</i>
+特色活动
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/dmqdn/lyxx/jdjs/">
+<i class="jdjstou">
+</i>
+景点介绍
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/dmqdn/lswh/">
+<i class="lswhtou">
+</i>
+历史文化
+</li>
+<li class="other">
+<a href="http://www.qdn.gov.cn/dmqdn/lswh/ctcl/">
+传统村落
+|
+<a href="http://www.qdn.gov.cn/dmqdn/lswh/mfxs/">
+世居民族
+</li>
+</ol>
+</div>
+<div class="m5_right">
+<h2 style="font-size:14px;">
+<a href="http://www.qdn.gov.cn/dmqdn/qdngk/">
+黔东南概况
+<a href="http://www.qdn.gov.cn/dmqdn/tshd/">
+特色活动
+<a href="http://www.qdn.gov.cn/dmqdn/sjyc/">
+世界遗产
+<a href="http://www.qdn.gov.cn/dmqdn/lswh/">
+历史文化
+<a href="http://www.qdn.gov.cn/dmqdn/lyxx/">
+旅游休闲
+</h2>
+<div class="dmqdn_img_list">
+<div class="gk">
+<script type="text/javascript">
+varstr="";varstr_1="./dmqdn/qdngk/201605/t20160530_479905.html";varstr_2="黔东南州情简介";varstr_4="黔东南州情简介";if(str==""||str=="null"){document.write('
+');}else{document.write('
+');}
+</script>
+<script>
+varimgTitle="黔东南州情简介";var_imgURL="";if(_imgURL==""||_imgURL==null){}formatImgUrl(_imgURL,"327","194",imgTitle);_imgURL="";
+</script>
+<div class="txt">
+（2015）自治州成立于1956年7月23日，州府所在地设于凯里市。全州辖凯里市和麻江、丹寨、黄平、施秉、镇远、岑巩、三穗、天柱、锦屏、黎平、从江、榕江、雷山、台江、剑河15个县，凯里、炉碧、金钟、洛贯、黔东、台江、三穗、岑巩、锦屏、黎平10个省级经济开发区。
+<a  href="http://www.qdn.gov.cn/dmqdn/qdngk/201605/t20160530_479905.html" class="more">
+查看详细
+</div>
+</div>
+<div class="tshd">
+<ol>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/tshd/201605/t20160527_475302.html" title="苗族姊妹节">
+<script>
+varimgTitle="苗族姊妹节";var_imgURL="";if(_imgURL==""||_imgURL==null){_imgURL="/material/20160527/W020160527813292559163.jpg";}formatImgUrl(_imgURL,"135","95",imgTitle);_imgURL="";
+</script>
+<div class="txt">
+<h1>
+苗族姊妹节
+</h1>
+苗族姊妹节又称"姊妹饭节"，是贵州省台江县老屯、施洞一带苗族人民的一个传统节日，每年农历三月十五日至十七日举行。届时苗族青年男女穿上节日的盛装，聚集...
+<a href="http://www.qdn.gov.cn/dmqdn/tshd/201605/t20160527_475302.html" class="more">
+查看详细
+</div>
+</li>
+</ol>
+</div>
+<div class="txt-list">
+<ol>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/sjyc/201605/t20160527_475266.html" title="侗族大歌——人类非物质文化遗产">
+侗族大歌——人类非物质文化遗产
+05/27
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/sjyc/201605/t20160520_423015.html" title="施秉喀斯特世界自然遗产简介">
+施秉喀斯特世界自然遗产简介
+05/20
+</li>
+</ol>
+</div>
+<div class="txt-list">
+<ol>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394935.html" title="庄豪">
+庄豪
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394934.html" title="周  瑛">
+周瑛
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394933.html" title="周万顺">
+周万顺
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394932.html" title="周达文">
+周达文
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394931.html" title="杨光贵">
+杨光贵
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394930.html" title="吴敬梓">
+吴敬梓
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394929.html" title="王阳明">
+王阳明
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394928.html" title="汪炳璈">
+汪炳璈
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394927.html" title="田景贤">
+田景贤
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394926.html" title="谭钧培">
+谭钧培
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394925.html" title="苏元春">
+苏元春
+08/25
+</li>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lswh/rwgs/201605/t20160518_394924.html" title="舒万龄">
+舒万龄
+08/25
+</li>
+</ol>
+</div>
+<div class="txt-list">
+<ol>
+<li>
+<a TARGET="_blank" href="http://www.qdn.gov.cn/dmqdn/lyxx/201605/t20160506_309108.html" title="秘境天堂—黔东南">
+秘境天堂—黔东南
+05/05
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="focusBoxdmh" style="margin:0 auto">
+<ul class="picdmh" style="margin-left: 0px !important;left:0;">
+<li>
+</li>
+</ul>
+<a class="prev" href="">
+<a class="next" href="">
+<ul class="hdhdy">
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+</ul>
+</div>
+</div>
+jQuery(".dmqdn_nav").slide({titCell:"h2a",mainCell:".dmqdn_img_list"});
+</script>
+</div>
+</li>
+<li id="m7" class="m">
+<h3 class="invest">
+<a href="http://www.qdn.gov.cn/tzqdn/">
+<i>
+</i>
+投资黔东南
+</h3>
+<div class="sub" style="display: none;">
+<div class="m6_left">
+<ol>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/zsxm/">
+<i class="zsxm">
+</i>
+招商项目
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/cyjs/">
+<i class="cyjs">
+</i>
+产业介绍
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzcb/">
+<i class="tzcb">
+</i>
+投资成本
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/">
+<i class="tzdt">
+</i>
+投资动态
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzcx/">
+<i class="tzcx">
+</i>
+投资程序
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/tzqdn/fwjg/">
+<i class="fwjg">
+</i>
+服务机构
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzzc/">
+<i class="tzzc">
+</i>
+投资政策
+</li>
+</ol>
+</div>
+<div class="m6_center" style="width:420px;">
+<div class="focusBox">
+<ul class="pic" style="margin-top:14px;width: 420px;">
+<li style="width: 420px;" class="xg">
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzdt_15979/201606/t20160612_576273.html" title="黔东南州大数据暨工业专题招商推介会在贵阳召开">
+黔东南州大数据暨工业专题招商推介会在贵...
+</li>
+<li style="width: 420px;" class="xg">
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzdt_15979/201605/t20160518_390707.html" title="黔东南州审计局主动适应新常态加强政府投资审计培训">
+黔东南州审计局主动适应新常态加强政府投...
+</li>
+<li style="width: 420px;" class="xg">
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzdt_15979/201605/t20160518_390700.html" title="北京赛伯乐投资集团龚树峰总经理一行赴我州项目考察">
+北京赛伯乐投资集团龚树峰总经理一行赴我...
+</li>
+<li style="width: 420px;" class="xg">
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzdt_15979/201605/t20160518_390694.html" title="省投资项目在线审批监管平台培训工作如期推进">
+省投资项目在线审批监管平台培训工作如期推进
+</li>
+</ul>
+<a class="prev" href="">
+<a class="next" href="">
+<ul class="hd" style="width: 420px;*margin-top:5px;">
+<li style="width: 95px;">
+</li>
+<li style="width: 95px;">
+</li>
+<li style="width: 95px;">
+</li>
+<li style="width: 95px;">
+</li>
+</ul>
+</div>
+</div>
+<div class="m6_right" style="width:590px;">
+<div class="news-box f_l">
+<h2>
+<a href="http://www.qdn.gov.cn/tzqdn/zsxm_15976/">
+最新项目
+</h2>
+<div class="list">
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/zsxm_15976/201606/t20160616_594737.html" title="黔东南州交通重大招商项目简介">
+黔东南州交通重大招商项目简介
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/zsxm_15976/201605/t20160520_426661.html" title="2016年黔东南州招商项目册">
+2016年黔东南州招商项目册
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/zsxm_15976/201605/t20160518_390947.html" title="2016中国（贵州）国际民间工艺品博览会暨第五届凯里银饰刺绣博览会招商招展">
+2016中国（贵州）国际民间工艺品博览会暨...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/zsxm_15976/201605/t20160518_390946.html" title="凯里经济开发区大健康医药产业园再添一新军">
+凯里经济开发区大健康医药产业园再添一新军
+</li>
+</ol>
+</div>
+</div>
+<div class="news-box f_r">
+<h2>
+<a href="http://www.qdn.gov.cn/tzqdn/tzzn/">
+投资指南
+</h2>
+<div class="list">
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzzn/201605/t20160518_401245.html" title="丹寨县投资指南">
+丹寨县投资指南
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzzn/201605/t20160518_401244.html" title="黔东南州重点招商引资项目">
+黔东南州重点招商引资项目
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/tzqdn/tzzn/201605/t20160518_401243.html" title="新医药大健康产业投资指南">
+新医药大健康产业投资指南
+</li>
+</ol>
+</div>
+</div>
+<div class="news-box f_l">
+<h2>
+<a href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/">
+投资动态
+</h2>
+<div class="list">
+<ol>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/201607/t20160707_906004.html" title="三穗县投资4.8亿元建设商贸物流综合市场">
+三穗县投资4.8亿元建设商贸物流综合市场
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/201607/t20160707_906002.html" title="2016年全省第二批骨干水源工程集中开工黔东南州项目中个数最多、投资最大">
+2016年全省第二批骨干水源工程集中开工黔...
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/201606/t20160630_850243.html" title="广州碳汇机构到黔东南州寻求合作机遇">
+广州碳汇机构到黔东南州寻求合作机遇
+</li>
+<li>
+<a target="_blank" href="http://www.qdn.gov.cn/zxfw/ztfw/tzfw/tzdt/201606/t20160630_850244.html" title="黔东南州与台湾企业进行商贸与产业项目对接">
+黔东南州与台湾企业进行商贸与产业项目对接
+</li>
+</ol>
+</div>
+</div>
+<div class="box-list f_r">
+<h2>
+<a href="">
+招商热线
+</h2>
+<ol>
+<li>
+州投资促进局 ：0855-8275333
+</li>
+<li>
+州招商引资热线：4008-799-399
+</li>
+</ol>
+</div>
+</div>
+</div>
+</li>
+<li id="m8" class="m">
+<h3 class="jinping">
+<a href="http://www.qdn.gov.cn/ztzl/">
+<i>
+</i>
+专题专栏
+</h3>
+<div class="sub" style="display: none;">
+<div class="m7_box">
+<h2>
+<a href="http://www.qdn.gov.cn/ztzl/">
+专题专栏
+<a href="http://www.qdn.gov.cn/ztzl/">
+</h2>
+<ol>
+<li>
+建州60周年成就展
+</li>
+<li>
+信息采用通报
+</li>
+<li>
+黔东南州大健康产业专栏
+</li>
+<li>
+惠民政策
+</li>
+<li>
+学习贯彻十八届三中全会精神
+</li>
+<li>
+州政府网站内容和服务保障情况通报
+</li>
+<li>
+书记州长交流直通车
+</li>
+<li>
+打击赌博犯罪活动专题
+</li>
+</ol>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="*height:0px;">
+</div>
+<div class="main-box">
+<div class="main-content">
+<div class="newsMarp">
+您所在的位置:
+首页部门动态
+</div>
+<div class="box">
+<div class="xxgk_xl">
+<div class="bt">
+<ul>
+<li>
+</li>
+<li>
+</li>
+<li class="toolbar">
+字体：
+小
+中
+大
+</li>
+<li class="dyby" onclick="javascript:window.print()" style="cursor:hand">
+打印本页
+</li>
+</ul>
+</div>
+<div align="center">
+</div>
+<div id="Zoom">
+</div>
+<div style="width:520px;height:30px;margin: 10px auto; position: absolute; left: 150px;">
+<div class="bdsharebuttonbox">
+分享到：
+QQ空间
+新浪微博
+腾讯微博
+人人网
+微信
+</div>
+</div>
+<div class="gjz">
+<div class="dz">
+</div>
+</div>
+<div style="text-align: left;width:1140px;line-height: 36px;">
+<div id="prevpage">
+上一篇：
+<a href="" id="no1">
+无
+</div>
+<div id="prevpage">
+下一篇：
+<a href="" id="no2">
+无
+</div>
+</div>
+<div class="tjyd">
+推荐阅读
+<div class="tjyd-main">
+<div class="tjyd-nr">
+</div>
+<div class="tjyd-nr">
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="fbox">
+<ul>
+<li class="fboxLi">
+</li>
+<li>
+<a href="http://www.gov.cn/" target="_blank">
+中国政府网
+</li>
+<li class="line">
+|
+</li>
+<li>
+<a href="http://www.gzgov.gov.cn/" target="_blank">
+贵州省政府网
+</li>
+<li class="fboxLi" style="display:none;">
+<a href="">
+国家部委
+</li>
+<li class="line">
+|
+</li>
+<li class="fboxLi">
+<a href="">
+各省市政府
+</li>
+<li class="line">
+|
+</li>
+<li class="fboxLi">
+<a href="">
+州政府各部门
+</li>
+<li class="line">
+|
+</li>
+<li class="fboxLi">
+<a href="">
+各县市政府
+</li>
+</ul>
+<div class="footLink">
+<dl class="fboxsub" style="height: 0;padding:0;">
+</dl>
+<dl class="fboxsub">
+<dt>
+<a target="_blank" href="http://www.hebei.gov.cn/" title="河北">
+河北
+</dt>
+<dt>
+<a target="_blank" href="http://www.shandong.gov.cn/" title="山东">
+山东
+</dt>
+<dt>
+<a target="_blank" href="http://www.jiangxi.gov.cn/" title="江西">
+江西
+</dt>
+<dt>
+<a target="_blank" href="http://www.fujian.gov.cn/" title="福建">
+福建
+</dt>
+<dt>
+<a target="_blank" href="http://www.ah.gov.cn/" title="安徽">
+安徽
+</dt>
+<dt>
+<a target="_blank" href="http://www.zhejiang.gov.cn/" title="浙江">
+浙江
+</dt>
+<dt>
+<a target="_blank" href="http://www.jiangsu.gov.cn/" title="江苏">
+江苏
+</dt>
+<dt>
+<a target="_blank" href="http://www.shanghai.gov.cn/" title="上海">
+上海
+</dt>
+<dt>
+<a target="_blank" href="http://www.hlj.gov.cn/" title="黑龙江">
+黑龙江
+</dt>
+<dt>
+<a target="_blank" href="http://www.jl.gov.cn/" title="吉林">
+吉林
+</dt>
+<dt>
+<a target="_blank" href="http://www.ln.gov.cn/" title="辽宁">
+辽宁
+</dt>
+<dt>
+<a target="_blank" href="http://www.shanxigov.cn/" title="山西">
+山西
+</dt>
+<dt>
+<a target="_blank" href="http://www.tj.gov.cn/" title="天津">
+天津
+</dt>
+<dt>
+<a target="_blank" href="http://www.beijing.gov.cn/" title="北京">
+北京
+</dt>
+<dt>
+<a target="_blank" href="http://www.chinataiwan.org/" title="台湾">
+台湾
+</dt>
+<dt>
+<a target="_blank" href="http://portal.gov.mo/web/guest/welcomepage" title="澳门">
+澳门
+</dt>
+<dt>
+<a target="_blank" href="http://www.gov.hk/sc/residents/" title="香港">
+香港
+</dt>
+<dt>
+<a target="_blank" href="http://www.nmg.gov.cn/" title="内蒙古">
+内蒙古
+</dt>
+<dt>
+<a target="_blank" href="http://www.xj.gov.cn/" title="新疆">
+新疆
+</dt>
+<dt>
+<a target="_blank" href="http://www.qh.gov.cn/" title="青海">
+青海
+</dt>
+<dt>
+<a target="_blank" href="http://www.nx.gov.cn/" title="宁夏">
+宁夏
+</dt>
+<dt>
+<a target="_blank" href="http://www.gansu.gov.cn/" title="甘肃">
+甘肃
+</dt>
+<dt>
+<a target="_blank" href="http://www.shaanxi.gov.cn/" title="陕西">
+陕西
+</dt>
+<dt>
+<a target="_blank" href="http://www.xizang.gov.cn/" title="西藏">
+西藏
+</dt>
+<dt>
+<a target="_blank" href="http://www.yn.gov.cn/" title="云南">
+云南
+</dt>
+<dt>
+<a target="_blank" href="http://www.gzgov.gov.cn/" title="贵州">
+贵州
+</dt>
+<dt>
+<a target="_blank" href="http://www.sc.gov.cn/" title="四川">
+四川
+</dt>
+<dt>
+<a target="_blank" href="http://www.cq.gov.cn/" title="重庆">
+重庆
+</dt>
+<dt>
+<a target="_blank" href="http://www.hainan.gov.cn/" title="海南">
+海南
+</dt>
+<dt>
+<a target="_blank" href="http://www.gxi.gov.cn/" title="广西">
+广西
+</dt>
+<dt>
+<a target="_blank" href="http://www.gd.gov.cn/" title="广东">
+广东
+</dt>
+<dt>
+<a target="_blank" href="http://www.hunan.gov.cn/" title="湖南">
+湖南
+</dt>
+<dt>
+<a target="_blank" href="http://www.hubei.gov.cn/" title="湖北">
+湖北
+</dt>
+<dt>
+<a target="_blank" href="http://www.henan.gov.cn/" title="河南">
+河南
+</dt>
+</dl>
+<dl class="fboxsub">
+<dt>
+<a target="_blank" href="http://www.qdnzfgw.gov.cn/" title="州发改委">
+州发改委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnedu.com/" title="州教育局">
+州教育局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnkj.gov.cn/" title="州科技局">
+州科技局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnaj.gov.cn/" title="州安监局">
+州安监局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdntour.gov.cn/" title="州旅发委">
+州旅发委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnsjj.gov.cn/" title="州审计局">
+州审计局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnws.gov.cn/" title="州卫计委">
+州卫计委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzmw.gov.cn/" title="州民宗委">
+州民宗委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnly.gov.cn/" title="州林业局">
+州林业局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzslj.gov.cn/" title="州水利局">
+州水利局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnny.gov.cn/" title="州农委">
+州农委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzjj.gov.cn/" title="州住建局">
+州住建局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnhb.gov.cn/" title="州环保局">
+州环保局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdngtzy.gov.cn/" title="州国土局">
+州国土局
+</dt>
+<dt>
+<a target="_blank" href="http://gzqdn.lss.gov.cn/" title="州人社局">
+州人社局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzczj.gov.cn/" title="州财政局">
+州财政局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnsf.gov.cn/" title="州司法局">
+州司法局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnmz.gov.cn/" title="州民政局">
+州民政局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzjw.gov.cn/" title="州监察局">
+州监察局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdngxw.gov.cn/" title="州工信委">
+州工信委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnfda.gov.cn/" title="州食药监局">
+州食药监局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzsyz.com/" title="黔东南招商引资网">
+黔东南招商引资网
+</dt>
+<dt>
+<a target="_blank" href="http://gzqdn.spb.gov.cn/" title="黔东南州邮政管理局">
+黔东南州邮政管理局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnpt.com/" title="黔东南州职院">
+黔东南州职院
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnmlxc.gov.cn/" title="黔东南州新农村建设网">
+黔东南州新农村建设网
+</dt>
+<dt>
+<a target="_blank" href="http://qdn.gz-n-tax.gov.cn/" title="州国税局">
+州国税局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdngsl.com/" title="州工商联">
+州工商联
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnqx.cn/" title="州气象局">
+州气象局
+</dt>
+<dt>
+<a target="_blank" href="http://qdn.gz-l-tax.gov.cn/" title="州地税局">
+州地税局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnbwb.gov.cn/" title="州编委办">
+州编委办
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdngx.cn/" title="州供销社">
+州供销社
+</dt>
+<dt>
+<a target="_blank" href="http://www.gzegn.gov.cn/index.jspx?areaId=522600" title="州政务服务中心">
+州政务服务中心
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnggzy.cn/qdnztb/" title="州公共资源交易中心">
+州公共资源交易中心
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzsyz.com/" title="州投促局">
+州投促局
+</dt>
+<dt>
+<a target="_blank" href="http://qdn.gzdaxx.gov.cn/" title="州档案局">
+州档案局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnfp.cn/" title="州扶贫办">
+州扶贫办
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzgzw.gov.cn/" title="州国资委">
+州国资委
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnzj.gov.cn/" title="州质监局">
+州质监局
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnhd.gov.cn/" title="州工商局">
+州工商局
+</dt>
+</dl>
+<dl class="fboxsub">
+<dt>
+<a target="_blank" href="http://www.lp.gov.cn" title="黎平县">
+黎平县
+</dt>
+<dt>
+<a target="_blank" href="http://www.kaili.gov.cn/" title="凯里市">
+凯里市
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdndz.gov.cn/" title="丹寨县">
+丹寨县
+</dt>
+<dt>
+<a target="_blank" href="http://www.majiang.gov.cn/" title="麻江县">
+麻江县
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnhp.gov.cn/" title="黄平县">
+黄平县
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdnsb.gov.cn/" title="施秉县">
+施秉县
+</dt>
+<dt>
+<a target="_blank" href="http://www.zygov.gov.cn/" title="镇远县">
+镇远县
+</dt>
+<dt>
+<a target="_blank" href="http://www.qdncg.gov.cn/" title="岑巩县">
+岑巩县
+</dt>
+<dt>
+<a target="_blank" href="http://www.gzss.gov.cn/" title="三穗县">
+三穗县
+</dt>
+<dt>
+<a target="_blank" href="http://www.tianzhu.gov.cn/" title="天柱县">
+天柱县
+</dt>
+<dt>
+<a target="_blank" href="http://www.jpzf.gov.cn/" title="锦屏县">
+锦屏县
+</dt>
+<dt>
+<a target="_blank" href="http://www.congjiang.gov.cn/" title="从江县">
+从江县
+</dt>
+<dt>
+<a target="_blank" href="http://www.rongjiang.gov.cn/" title="榕江县">
+榕江县
+</dt>
+<dt>
+<a target="_blank" href="http://www.leishan.gov.cn/" title="雷山县">
+雷山县
+</dt>
+<dt>
+<a target="_blank" href="http://www.gztaijiang.gov.cn/" title="台江县">
+台江县
+</dt>
+<dt>
+<a target="_blank" href="http://www.jhx.gov.cn/" title="剑河县">
+剑河县
+</dt>
+<dt>
+<a target="_blank" href="http://www.klkfq.gov.cn/" title="凯里经济开发区">
+凯里经济开发区
+</dt>
+<dt>
+<a target="_blank" href="http://www.klxhq.com/" title="炉碧经济开发区">
+炉碧经济开发区
+</dt>
+</dl>
+</div>
+</div>
+<div class="bobox">
+<div class="box-logs">
+<a href="http://bszs.conac.cn/sitename?method=show&amp;id=08A9E33616F67524E053022819ACEA79" target="_blank">
+</div>
+<div class="box-b">
+<div class="box-c">
+<ul>
+<li>
+<a href="http://www.qdn.gov.cn/syqt/gywm/201605/t20160518_400827.html">
+关于我们
+</li>
+<a href="http://www.qdn.gov.cn/syqt/gywm/">
+关于我们
+</li>
+<li class="line">
+|
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/syqt/wzbz/">
+网站帮助
+</li-->
+<li>
+<a href="http://www.qdn.gov.cn/syqt/wzbz/201605/t20160518_400527.html">
+网站帮助
+</li>
+<li class="line">
+|
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/syqt/wzdt/">
+网站地图
+</li>
+<li class="line">
+|
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/syqt/wzjc/">
+网站纠错
+</li>
+<li class="line">
+|
+</li>
+<li>
+<a href="http://www.qdn.gov.cn/syqt/lxfs/201605/t20160518_400525.html">
+联系方式
+</li>
+<li style="margin-top:0px;">
+<a href="http://weibo.com/qdnzf" target="_blank">
+</li>
+<li style="margin-top:0px;">
+</li>
+</ul>
+</div>
+<div class="box-z">
+主办：黔东南州人民政府办公室
+ICP备案号：黔ICP备05000359号-1
+</div>
+</div>
+</div>
+</div>
+<noscript>
+</noscript>
+<div id="2016wxs" style="position: fixed; bottom:15px; left:48%; display:none;">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

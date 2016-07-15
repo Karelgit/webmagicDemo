@@ -25,6 +25,8 @@ public class URLFilter {
 
     //test
     public static void main(String[] args) {
-        System.out.println(new URLFilter().linkFilter("http://www.gzqxnkj.gov.cn/d/file/f/2016-03-22/242ca4cd8b052229ab61ec80063e7ec4.jpg"));
+//        System.out.println(new URLFilter().linkFilter("http://www.gzqxnkj.gov.cn/d/file/f/2016-03-22/242ca4cd8b052229ab61ec80063e7ec4.jpg"));
+        String match  = "http://www.xxx.com/people\\d*.htm";
+        System.out.println("http://www.xxx.com/people1234.htm".matches(match));
     }
 }
