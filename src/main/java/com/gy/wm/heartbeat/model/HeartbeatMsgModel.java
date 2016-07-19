@@ -1,10 +1,12 @@
 package com.gy.wm.heartbeat.model;
 
 
+import com.gy.wm.heartbeat.message.Message;
+
 /**
  * Created by TianyuanPan on 6/4/16.
  */
-public class HeartbeatMsgModel {
+public class HeartbeatMsgModel implements Message{
 
     private String taskId;
     private String hostname;
@@ -12,14 +14,25 @@ public class HeartbeatMsgModel {
     private int theads;
     private long time;
     private int statusCode;
+    private int    timeoutCount;
 
     public HeartbeatMsgModel() {
 
-        taskId = "";
+        hostname = "";
         hostname = "";
         pid = -1;
         theads = 1;
         statusCode = -1;
+        timeoutCount = 0;
+    }
+
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public HeartbeatMsgModel setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
     }
 
     public String getHostname() {
@@ -67,16 +80,18 @@ public class HeartbeatMsgModel {
         return this;
     }
 
-    public String getTaskId() {
-        return taskId;
+    public int getTimeoutCount() {
+        return timeoutCount;
     }
 
-    public HeartbeatMsgModel setTaskId(String taskId) {
-        this.taskId = taskId;
+    public HeartbeatMsgModel setTimeoutCount(int timeoutCount) {
+        this.timeoutCount = timeoutCount;
+        return this;
+    }
+
+    @Override
+    public Message getMessage() {
+
         return this;
     }
 }
-
-
-
-
