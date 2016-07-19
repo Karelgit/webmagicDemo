@@ -14,7 +14,7 @@ public class BloomFilter {
 
     private int bitSize;
 
-    private String defaultKey = "redis:bloomfilter";
+    private String defaultKey = "redis:bloomfilter:";
 
     public BloomFilter(Jedis jedis, int timeout, float errorRate, int maxKey) {
         this.maxKey = maxKey;

@@ -340,14 +340,12 @@ public class AnalysisNavigation
         if (matcher.find())
         {
             //拼接url
+//            url = AnalysisTool.joinUrl(fromURL, matcher.group(2));
             url = AnalysisTool.joinUrl(fromURL, matcher.group(2));
             if (!AnalysisTool.getDomain(url).equals(domain)) url = null;
         }
         return url;
     }
-
-
-
 
     //获取最终导航页信息
     private void getAnsList()

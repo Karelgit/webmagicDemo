@@ -59,7 +59,7 @@ public class MysqlPipeline extends BaseDBPipeline {
         this.dbClient.addItem(tablename, rdbModel, data);
     }
 
-    public int doInsert() {
+    public synchronized int  doInsert() {
         this.dbClient.getConnection();
         int sum = this.dbClient.doSetInsert();
         this.dbClient.closeConnection();

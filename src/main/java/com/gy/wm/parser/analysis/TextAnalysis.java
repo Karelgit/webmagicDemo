@@ -2,9 +2,11 @@ package com.gy.wm.parser.analysis;
 
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.urljudge.HtmlSort;
+import com.gy.wm.util.TimeJudger;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -36,7 +38,6 @@ public class TextAnalysis implements Serializable {
         String startTime = crawlData.getStartTime();
         long depthfromSeed = crawlData.getDepthfromSeed();
 
-
         String title = "";
         Date date = null;
 
@@ -45,6 +46,7 @@ public class TextAnalysis implements Serializable {
         //网页分类
         int sort = HtmlSort.getHtmlSort(url, html);
 
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         //导航解析
         if(sort ==1)    {
             try {
@@ -84,7 +86,9 @@ public class TextAnalysis implements Serializable {
             }
 
 //            crawlData.setTitle(oldUrl.getTitle());
-//            crawlData.setPublishTime(oldUrl.getDate());
+            if(crawlData.getPublishTime() == null)  {
+                crawlData.setPublishTime(TimeJudger.validTime(oldUrl.getDate(),sdf));
+            }
             crawlData.setCrawlTime(System.currentTimeMillis());
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());
