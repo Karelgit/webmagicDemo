@@ -85,7 +85,7 @@ public class MysqlClient extends AbstractDBClient {
             return lineSum;
         }
         int size = this.insertSqlModelList.size();
-        for (int i = 0; i < size; ++i) {
+        for (int i = 0; i < size; i++) {
 
             try {
                 String sql = this.insertSqlModelList.get(i).getInsertSql();

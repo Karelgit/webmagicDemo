@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class GetHtml implements Serializable,PageProcessor
 {
     private String htmlSrc;
-    private Site site = Site.me().setRetryTimes(3).setSleepTime(1000);
+    private Site site = Site.me().setRetryTimes(10).setSleepTime(1000*10).setTimeOut(1000*600);
 
     @Override
     public void process(Page page) {
