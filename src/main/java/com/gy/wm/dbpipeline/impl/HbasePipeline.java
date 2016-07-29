@@ -11,6 +11,10 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Created by TianyuanPan on 5/18/16.
  */
+
+/**
+ * Hbase Pipeline 类
+ */
 public class HbasePipeline extends BaseDBPipeline {
 
 

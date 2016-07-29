@@ -6,26 +6,30 @@ import java.util.Date;
 /**
  * Created by Administrator on 2016/4/29.
  */
+
+/**
+ * 爬取得到的数据实体类
+ */
 public class CrawlData implements Serializable {
 //    private final static long serialVersionUID = -2344403674643228206L;
 
-    private String tid;
-    private String url;
-    private int statusCode;
-    private int pass;//遍数;
-    private String type;
-    private String rootUrl;
-    private String fromUrl;
-    private String text;
-    private String html;
-    private String title;
-    private String startTime;
-    private long crawlTime;
-    private Date publishTime;
-    private long depthfromSeed;//层数
-    private long count;
-    private boolean tag;//true：文章，fallse：导航
-    private boolean fetched;
+    private String tid;     // 任务ID
+    private String url;     // 本页面的 URL
+    private int statusCode; // 状态码
+    private int pass;       // 爬取遍数;
+    private String type;    // 类型
+    private String rootUrl; // 根 URL，（入口URL）
+    private String fromUrl; // 父 URL，（本也的上层URL）
+    private String text;    // 不带任何格式标记的文本
+    private String html;    // HTML源码
+    private String title;   // 标题
+    private String startTime; // 开始时间
+    private long crawlTime;   // 爬取时间
+    private Date publishTime; // 发布时间（对于文章页面而言）
+    private long depthfromSeed; // 爬取层数（从入口URL到此页的深度）
+    private long count;         // 统计
+    private boolean tag;        // 标签； true：文章； false：导航
+    private boolean fetched;    // 抽取标识
 
 
     public CrawlData() {}

@@ -11,13 +11,17 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Created by TianyuanPan on 6/15/16.
  */
+
+/**
+ * 心跳类，实现 Runnable 接口，用于开启心跳线程
+ */
 public class Heartbeart implements Runnable {
 
-    private int checkInterval;
-    private HeartbeatMsgModel heartbeatMsgModel;
-    private HeartbeatMsgQueue heartbeatMsgQueue;
-    private boolean finish;
-    private Lock myLock;
+    private int checkInterval; // 心跳间隔
+    private HeartbeatMsgModel heartbeatMsgModel; // 心跳消息
+    private HeartbeatMsgQueue heartbeatMsgQueue; // 心跳消息队列
+    private boolean finish;  // 完成标识
+    private Lock myLock;     // 同步锁
 
 
     public Heartbeart(HeartbeatMsgModel heartbeatMsgModel) {
@@ -43,15 +47,18 @@ public class Heartbeart implements Runnable {
     }
 
 
+    /**
+     * 心跳线程循环
+     */
     public void run() {
 
         while (true) {
 
             try {
 
-                this.heartbeatMsgModel.setTime(System.currentTimeMillis());
-                this.heartbeatMsgQueue.setMessage(this.heartbeatMsgModel);
-                this.heartbeatMsgQueue.pushMessage();
+                this.heartbeatMsgModel.setTime(System.currentTimeMillis()); // 设置心跳消息时间
+                this.heartbeatMsgQueue.setMessage(this.heartbeatMsgModel);  // 设置消息
+                this.heartbeatMsgQueue.pushMessage(); // 把消息压入队列
 
             } catch (Exception e) {
 

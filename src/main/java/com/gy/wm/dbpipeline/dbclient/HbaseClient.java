@@ -18,6 +18,10 @@ import java.util.Map;
 /**
  * Created by TianyuanPan on 5/18/16.
  */
+
+/**
+ * Hbase 数据库客户端类
+ */
 public class HbaseClient extends AbstractDBClient {
 
 
@@ -35,10 +39,18 @@ public class HbaseClient extends AbstractDBClient {
         this.columnFamilyName = ConfigUtils.getResourceBundle().getString("HBASE_COLUMNFAMILY_NAME");
     }
 
+    /**
+     * 获取Hbase数据库的表名
+     * @return String 类型的表名
+     */
     public String getTableName() {
         return tableName;
     }
 
+    /**
+     * 获取Hbase数据库的列族名
+     * @return String 类型的列族名
+     */
     public String getColumnFamilyName() {
         return columnFamilyName;
     }
@@ -53,6 +65,10 @@ public class HbaseClient extends AbstractDBClient {
 
     }
 
+    /**
+     * 数据集插入
+     * @return int 插入的条数
+     */
     @Override
     public int doSetInsert() {
         int count = 0;
@@ -77,12 +93,24 @@ public class HbaseClient extends AbstractDBClient {
     }
 
 
+    /**
+     * 添加数据到待插入数据列表
+     * @param data 爬取的数据对象
+     */
     public void add(CrawlData data) {
 
         this.dataList.add(data);
     }
 
 
+    /**
+     * 插入单条数据
+     * @param tableName  表名
+     * @param rowKey     行键
+     * @param columnFamilyName  列族名
+     * @param data  爬取的数据对象
+     * @return int  插入成功返回 1， 否则返回 0.
+     */
     public int insertRecord(String tableName, String rowKey, String columnFamilyName, CrawlData data) {
 
         String columnQualifier = null;

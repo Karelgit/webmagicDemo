@@ -13,12 +13,16 @@ import java.util.List;
 /**
  * Created by TianyuanPan on 5/9/16.
  */
+
+/**
+ * ES索引数据客户端
+ */
 public class EsClient extends AbstractDBClient {
 
-    private String hostname;
-    private int port;
-    private String indexName;
-    private String typeName;
+    private String hostname;  // ES服务器主机
+    private int port;         // ES服务器端口号
+    private String indexName; // ES索引名
+    private String typeName;  // ES类型名
 
 
     private List<CrawlData> dataList;
@@ -53,6 +57,10 @@ public class EsClient extends AbstractDBClient {
     }
 
 
+    /**
+     * 数据集插入
+     * @return int 受影响的函数
+     */
     public int doSetInsert() {
 
         int count = 0;
@@ -78,6 +86,12 @@ public class EsClient extends AbstractDBClient {
         return count;
     }
 
+    /**
+     * 数据集插入
+     * @param url  ES服务器数据插入接口 URL
+     * @param data 待插入的 json 数据
+     * @return int  成功返回 1， 否则返回 0。
+     */
     public int doSetInsert(String url, String data) {
 
         try {
@@ -100,11 +114,19 @@ public class EsClient extends AbstractDBClient {
         return this.connOpen;
     }
 
+    /**
+     * 添加数据到待插入数据列表
+     * @param data 爬取的数据对象
+     */
     public void add(CrawlData data) {
 
         this.dataList.add(data);
     }
 
+    /**
+     * 获取ES服务器的请求URL
+     * @return string 请求URL
+     */
     public String getRequestUrl() {
 
         return requestUrl;

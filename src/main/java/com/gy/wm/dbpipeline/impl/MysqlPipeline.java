@@ -14,6 +14,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * Created by TianyuanPan on 5/4/16.
  */
 
+/**
+ * Mysql Pipeline
+ */
 @ThreadSafe
 public class MysqlPipeline extends BaseDBPipeline {
 
@@ -36,6 +39,11 @@ public class MysqlPipeline extends BaseDBPipeline {
         return 0;
     }
 
+    /**
+     * 数据的持久化处理方法
+     * @param resultItems 结果条目对象
+     * @param task 任务对象
+     */
     @Override
     public void process(ResultItems resultItems, Task task) {
 
@@ -73,10 +81,19 @@ public class MysqlPipeline extends BaseDBPipeline {
     }
 
 
+    /**
+     * 添加数据
+     * @param tablename  数据库表名
+     * @param data       爬取的数据
+     */
     public void add(String tablename, CrawlData data) {
         this.dbClient.addItem(tablename, rdbModel, data);
     }
 
+    /**
+     * 插入数据操作
+     * @return
+     */
     public int doInsert() {
         this.dbClient.getConnection();
         int sum = this.dbClient.doSetInsert();

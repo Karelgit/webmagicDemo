@@ -6,8 +6,16 @@ import java.util.ResourceBundle;
 /**
  * Created by TianyuanPan on 5/4/16.
  */
+
+/**
+ * 配置工具类
+ */
 public class ConfigUtils {
 
+    /**
+     * 下面这五个字段，是数据库的配置字段(MySQL数据库)
+     * 字段分别为： 数据库主机名，端口，数据库名，数据库用户名，数据库用户密码。
+     */
     private String hostname;
     private int port;
     private String dbName;
@@ -21,6 +29,11 @@ public class ConfigUtils {
 
     }
 
+    /**
+     * 获取配置连接工具对象
+     * @param prefix  配置项的前缀
+     * @return 返回配置工具对象
+     */
     public static ConfigUtils getConfigUtils(String prefix) {
 
         ResourceBundle rb;
@@ -39,6 +52,12 @@ public class ConfigUtils {
         return configUtils;
     }
 
+    /**
+     * 获取配置连接工具对象
+     * @param prefix  配置项前缀
+     * @param configName  配置文件名
+     * @return  返回配置工具对象
+     */
     public static ConfigUtils getConfigUtils(String prefix, String configName) {
 
         ResourceBundle rb;
@@ -58,7 +77,10 @@ public class ConfigUtils {
     }
 
 
-
+    /**
+     * 获取 ResourceBundle 对象
+     * @return  ResourceBundle 对象
+     */
     public static ResourceBundle getResourceBundle() {
 
         rb = PropertyResourceBundle.getBundle("dbconfig");

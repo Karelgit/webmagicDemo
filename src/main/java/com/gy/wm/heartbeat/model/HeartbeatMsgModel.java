@@ -6,15 +6,19 @@ import com.gy.wm.heartbeat.message.Message;
 /**
  * Created by TianyuanPan on 6/4/16.
  */
+
+/**
+ * 心跳模型类
+ */
 public class HeartbeatMsgModel implements Message{
 
-    private String taskId;
-    private String hostname;
-    private int pid;
-    private int theads;
-    private long time;
-    private int statusCode;
-    private int    timeoutCount;
+    private String taskId; // 任务ID
+    private String hostname; // 进程所在的主机IP地址或能被调度端解析的主机名，建议用IP地址
+    private int pid;         // 进程pid
+    private int theads;      // 进程的线程数量
+    private long time;       // long 类型的时间
+    private int statusCode;  // 心跳状态码
+    private int    timeoutCount; // 超时统计
 
     public HeartbeatMsgModel() {
 

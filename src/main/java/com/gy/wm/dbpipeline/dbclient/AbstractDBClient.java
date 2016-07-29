@@ -12,6 +12,10 @@ import java.util.Map;
 /**
  * Created by TianyuanPan on 5/4/16.
  */
+
+/**
+ * 数据库客户端抽象类
+ */
 public abstract class AbstractDBClient implements DBClient {
 
     protected Logger logger = LoggerFactory.getLogger(getClass());

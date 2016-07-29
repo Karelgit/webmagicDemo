@@ -14,15 +14,19 @@ import java.io.IOException;
 /**
  * Created by TianyuanPan on 6/4/16.
  */
+
+/**
+ * 心跳消息队列类
+ */
 public class HeartbeatMsgQueue implements MessageQueue {
 
 
-    private static final String QUEUE_KEY = QueueKeys.QUEUE_KEY_HEARTBEAT_MESSAGE;
-    private static final int dbIndex = 7;
+    private static final String QUEUE_KEY = QueueKeys.QUEUE_KEY_HEARTBEAT_MESSAGE; // redis 的键名
+    private static final int dbIndex = 7;   // 索引号（数据库号）
 
     private Jedis jedis;
     private JedisPool jedisPool;
-    private HeartbeatMsgModel heartbeat;
+    private HeartbeatMsgModel heartbeat; // 心跳消息模型
 
     public HeartbeatMsgQueue() {
 
@@ -41,12 +45,21 @@ public class HeartbeatMsgQueue implements MessageQueue {
     }
 
 
+    /**
+     * 设置心跳消息
+     * @param message  心跳消息对象
+     * @return 此消息队列对象
+     */
     @Override
     public MessageQueue setMessage(Message message) {
         this.heartbeat = (HeartbeatMsgModel) message;
         return this;
     }
 
+    /**
+     * 把消息压入redis队列
+     * @return 返回压入的消息对象
+     */
     @Override
     public Message pushMessage() {
 
@@ -70,6 +83,10 @@ public class HeartbeatMsgQueue implements MessageQueue {
     }
 
 
+    /**
+     * 取出redis队列中的消息
+     * @return 取出的消息，异常时返回 null。
+     */
     @Override
     public Message popMessage() {
 

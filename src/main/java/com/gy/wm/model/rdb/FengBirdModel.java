@@ -12,6 +12,10 @@ import java.util.Map;
 /**
  * Created by TianyuanPan on 5/20/16.
  */
+
+/**
+ * 蜂鸟系统中，栏目更新表的数据结构模型类
+ */
 public class FengBirdModel implements RdbModel{
 
     private String topicTaskID;
@@ -28,6 +32,10 @@ public class FengBirdModel implements RdbModel{
         this.deleteflag = 0;
     }
 
+    /**
+     * 构造方法，用爬取数据初始化。
+     * @param crawlData 爬取的数据对象
+     */
     public FengBirdModel(CrawlData crawlData) {
 
         this.topicTaskID = crawlData.getTid();
@@ -106,13 +114,19 @@ public class FengBirdModel implements RdbModel{
     }
 
 
-
+    /**
+     * 配置数据字段：
+     *            由于不同的数据库表，所需存储的爬取数据不同，因而装配的字段不同。
+     * @param data 数据对象
+     * @return 返回本模型对象
+     */
     @Override
     public Object setThisModelFields(CrawlData data) {
 
         List<Map<String, Object>> fieldList = CrawlerDataUtils.getCrawlerDataUtils(data).getAttributeInfoList();
 
-        for (int i = 0; i < fieldList.size(); ++i) {
+        int size = fieldList.size();
+        for (int i = 0; i < size; i++) {
 
             String field = (String) fieldList.get(i).get("name");
 
@@ -149,6 +163,11 @@ public class FengBirdModel implements RdbModel{
 
     }
 
+    /**
+     * 构建插入SQL模型
+     * @param tableName 数据库表名
+     * @return
+     */
     @Override
     public InsertSqlModel insertSqlModelBuilder(String tableName) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");

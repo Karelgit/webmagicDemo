@@ -14,6 +14,10 @@ import java.util.List;
 /**
  * Created by TianyuanPan on 5/4/16.
  */
+
+/**
+ * Mysql数据库客户端类
+ */
 public class MysqlClient extends AbstractDBClient {
 
     private Statement myStatement;
@@ -21,6 +25,9 @@ public class MysqlClient extends AbstractDBClient {
     private MySqlPoolUtils pool;
 
 
+    /**
+     * 此成员生成SQL语句和相关数据。
+     */
     private List<InsertSqlModel> insertSqlModelList;
 
     public MysqlClient() {
@@ -35,6 +42,10 @@ public class MysqlClient extends AbstractDBClient {
     }
 
 
+    /**
+     * 获取数据库连接，在操作数据库前，先调用此方法打开数据库连接
+     * @return
+     */
     @Override
     public Object getConnection() {
 
@@ -56,6 +67,9 @@ public class MysqlClient extends AbstractDBClient {
         return this.connection;
     }
 
+    /**
+     * 关闭数据库连接
+     */
     @Override
     public void closeConnection() {
 
@@ -76,6 +90,10 @@ public class MysqlClient extends AbstractDBClient {
 
     }
 
+    /**
+     * 数据集插入
+     * @return int 受影响的函数
+     */
     @Override
     public int doSetInsert() {
         int lineSum = 0;
@@ -103,12 +121,22 @@ public class MysqlClient extends AbstractDBClient {
         return lineSum;
     }
 
+    /**
+     * 获取数据库连接状态
+     */
     @Override
     public boolean isConnOpen() {
         return this.connOpen;
     }
 
 
+    /**
+     * 添加要插入的数据
+     * @param tableName  数据库表名
+     * @param rdbModel  关系模型对象
+     * @param data      要插入的爬虫数据对象
+     * @return SQL 插入模型对象（InsertSQLModel）
+     */
     public Object addItem(String tableName, RdbModel rdbModel, CrawlData data) {
 
         rdbModel.setThisModelFields(data);

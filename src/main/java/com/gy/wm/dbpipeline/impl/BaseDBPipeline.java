@@ -9,6 +9,10 @@ import us.codecraft.webmagic.Task;
 /**
  * Created by TianyuanPan on 5/19/16.
  */
+
+/**
+ * 数据库 Pipeline 基类
+ */
 public class BaseDBPipeline implements DatabasePipeline{
 
     protected Logger logger = LoggerFactory.getLogger(getClass());
