@@ -90,7 +90,7 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
                         //开启5个线程抓取
-                .thread(5)
+                .thread(1)
                         //启动爬虫
                 .run();
 
