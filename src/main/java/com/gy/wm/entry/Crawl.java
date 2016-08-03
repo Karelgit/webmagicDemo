@@ -109,13 +109,9 @@ public class Crawl {
                 configpath = args[i + 1];
                 i++;
             }
-
         }
 
-
         try {
-
-
             String runTimeInfo = ManagementFactory.getRuntimeMXBean().getName();
             String pid = runTimeInfo.split("@")[0];
 

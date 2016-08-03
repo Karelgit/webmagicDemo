@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/DatabasePipeline.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/AbstractDBClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/DBClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/EsClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/HbaseClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/dbpipeline/dbclient/MysqlClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/ConfigLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/Crawl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/CrawlerWorkflowManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/entry/InstanceFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/CrawlData.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/model/rdb/FengBirdModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/AnalysisArticle.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/AnalysisNavigation.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseAnalysisURL.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseTemplate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/BaseURL.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/Templates.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/TextAnalysis.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/WholeSiteAnalysis.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/analysis/WholeSiteAnalysisNavigation.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/AnalysisTool.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/CreateTemplate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/GetHtml.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/JsoupHtml.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/tool/NormalTokens.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/urljudge/HtmlSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/urljudge/JudgeDensity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/parser/urljudge/JudgeURL.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisCrawledQue.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/queue/RedisToCrawlQue.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisBloomFilter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/schedular/RedisScheduler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/service/TopicPageProcessor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/BloomFilter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/ConfigUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/CrawlerDataUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/HashUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/JedisPoolUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/LogManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/LoggerUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/MySqlPoolUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/RandomUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/RegexTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/gy/wm/util/Test.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

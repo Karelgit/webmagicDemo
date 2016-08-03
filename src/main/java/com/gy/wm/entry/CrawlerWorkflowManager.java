@@ -67,10 +67,10 @@ public class CrawlerWorkflowManager {
         initSpider(seeds, textAnalysis, domain);
 
         //结束之后清空对应任务的redis
-//        jedis.del("redis:bloomfilter:" + tid);
-//        jedis.del("queue_" + tid);
-//        jedis.del("webmagicCrawler::ToCrawl::" + tid);
-//        jedis.del("webmagicCrawler::Crawled::" + tid);
+        jedis.del("redis:bloomfilter:" + tid);
+        jedis.del("queue_" + tid);
+        jedis.del("webmagicCrawler::ToCrawl::" + tid);
+        jedis.del("webmagicCrawler::Crawled::" + tid);
 
     }
 
@@ -87,9 +87,9 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-                .addPipeline(new HbasePipeline())
+//                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
-                .thread(1)
+                .thread(5)
 
                         //启动爬虫
                 .run();
