@@ -1,5 +1,6 @@
 package com.gy.wm.entry;
 
+import com.gy.wm.dbpipeline.PipelineBloomFilter;
 import com.gy.wm.dbpipeline.impl.HbasePipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
@@ -80,6 +81,8 @@ public class CrawlerWorkflowManager {
             seedList.add(crawlData.getUrl());
         }
         String[] urlArray = seedList.toArray(new String[seedList.size()]);
+        /* set the pipeline filter key */
+        PipelineBloomFilter.setKeyInRedis(tid);
 
         Spider.create(new WholesitePageProcessor(tid, textAnalysis, domain))
                 .setScheduler(new RedisScheduler(domain)).setUUID(tid)
