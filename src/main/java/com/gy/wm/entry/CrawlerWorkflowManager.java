@@ -67,10 +67,10 @@ public class CrawlerWorkflowManager {
         initSpider(seeds, textAnalysis, domain);
 
         //结束之后清空对应任务的redis
-        jedis.del("redis:bloomfilter:" + tid);
-        jedis.del("queue_" + tid);
-        jedis.del("webmagicCrawler::ToCrawl::" + tid);
-        jedis.del("webmagicCrawler::Crawled::" + tid);
+//        jedis.del("redis:bloomfilter:" + tid);
+//        jedis.del("queue_" + tid);
+//        jedis.del("webmagicCrawler::ToCrawl::" + tid);
+//        jedis.del("webmagicCrawler::Crawled::" + tid);
 
     }
 
@@ -80,6 +80,9 @@ public class CrawlerWorkflowManager {
             seedList.add(crawlData.getUrl());
         }
         String[] urlArray = seedList.toArray(new String[seedList.size()]);
+        /* set the pipeline filter key */
+        PipelineBloomFilter.setKeyInRedis(tid);
+
         Spider.create(new WholesitePageProcessor(tid, textAnalysis, domain))
                 .setScheduler(new RedisScheduler(domain)).setUUID(tid)
                 //从seed开始抓
@@ -87,10 +90,9 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-//                .addPipeline(new HbasePipeline())
+                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
-                .thread(5)
-
+                .thread(1)
                         //启动爬虫
                 .run();
     }
