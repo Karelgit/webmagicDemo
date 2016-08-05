@@ -80,7 +80,6 @@ public class MysqlPipeline extends BaseDBPipeline {
 
     }
 
-
     /**
      * 添加数据
      * @param tablename  数据库表名
