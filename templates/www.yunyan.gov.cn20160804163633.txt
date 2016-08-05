@@ -1,0 +1,518 @@
+www.yunyan.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+</title>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js">
+</script>
+<script type="text/javascript">
+DD_belatedPNG.fix('*');
+</script>
+</head>
+<body>
+﻿
+<div class="header">
+<div class="yy_bar">
+<div class="warp">
+<h1 class="bar_logo_ym fb fl f14">
+中国云岩
+</h1>
+<div class="login fl">
+<li>
+用户名
+</li>
+<li>
+密码
+</li>
+<li>
+验证码
+</li>
+<li>
+</li>
+<script type="text/javascript" src="http://yunyan.gywb.cn/cs/sink/js/jquery.easyaccordion.js">
+</script>
+<li>
+</li>
+</ul>
+<iframe src="http://fun.gywb.cn/user/login_bar.aspx" frameborder="0" height="100%" style="width:400px;height:30px;" scrolling="no">
+</iframe>
+</div>
+<ul class="banb_ul fr" style="width:120px;">
+旧版
+</li>
+<li>
+<a href="" s');" class="zh_click" id="zh_click_s">
+简体
+</li>
+<li>
+<a href="" t');" class="zh_click" id="zh_click_t">
+繁體
+</li>
+RSS订阅
+</li>
+</ul>
+</div>
+</div>
+<div class="nav_bg">
+<div class="warp">
+<h1 class="logo" title="LOGO">
+</h1>
+<div class="weather fl">
+贵阳
+5~11℃东北风
+2014-3-13
+星期四
+农历二月十三
+<iframe allowtransparency="true" frameborder="0" width="160" height="26" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=3&amp;z=2&amp;t=0&amp;v=0&amp;d=3&amp;k=&amp;f=1&amp;q=1&amp;e=1&amp;a=1&amp;c=57816&amp;w=160&amp;h=26">
+</iframe>
+</div>
+<li class="hov">
+政务站
+</li>
+<li>
+党建站
+</li>
+<li>
+市民站
+</li>
+<li>
+文化旅游
+</li>
+</ul>
+<div class="clr">
+</div>
+</div>
+<div class="nav">
+<div class="warp">
+<ul class="nav_ul" id="tags">
+<li class="home">
+<a href="http://www.yunyan.gov.cn/../" title="" class="home_a">
+本站首页
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/index.html" target="_blank" title="贵中云岩" class="nav_hov" onmouseover="selectTag('tagContent0',this)">
+贵中云岩
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/index.html" target="_blank" title="云岩新闻" onmouseover="selectTag('tagContent1',this)">
+云岩新闻
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/index.html" target="_blank" title="热点专题" onmouseover="selectTag('tagContent2',this)">
+热点专题
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/index.html" target="_blank" title="信息公开" onmouseover="selectTag('tagContent3',this)">
+信息公开
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/index.html" target="_blank" title="公共服务" onmouseover="selectTag('tagContent4',this)">
+公共服务
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_wsbs/index.html" target="_blank" title="网上办事" onmouseover="selectTag('tagContent5',this)">
+网上办事
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzcy/index.html" target="_blank" title="公众参与" onmouseover="selectTag('tagContent6',this)">
+公众参与
+</li>
+</ul>
+< a.length; i++) {  			var href = a.eq(i).attr("href");  			href = "http://" + window.location.host + href.replace(/../,"");  			a.eq(i).attr({"href": href});  		}  	})(jQuery);  </script>
+</div>
+</div>
+</div>
+<div class="warp" id="tagContent">
+<ul class="nav_sub selectTag" id="tagContent0">
+<li>
+<a href="http://www.yunyan.gov.cn/content/2012-05/04/content_667777.htm" target="_blank">
+云岩概况
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/content/2008-10/16/content_667783.htm" target="_blank">
+历史沿革
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/content/2012-05/04/content_667791.htm" target="_blank">
+人口现状
+|
+</li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/node_1681.htm" target="_blank" class="">
+自然经济
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/node_1682.htm" target="_blank" class="">
+国民经济
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/node_1683.htm" target="_blank" class="">
+区域经济
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/node_1684.htm" target="_blank" class="">
+自然资源
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/node_1685.htm" target="_blank" class="">
+视云岩
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzyy/node_1686.htm" target="_blank" class="">
+图片云岩
+</li>
+</ul>
+<ul class="nav_sub" id="tagContent1">
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1701.htm" target="_blank" class="">
+要闻
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1700.htm" target="_blank" class="">
+今日云岩
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1699.htm" target="_blank" class="">
+经济动态
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1698.htm" target="_blank" class="">
+社会民生
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1697.htm" target="_blank" class="">
+公告公示
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1696.htm" target="_blank" class="">
+便民资讯
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1695.htm" target="_blank" class="">
+部门动态
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_yynews/node_1694.htm" target="_blank" class="">
+乡镇社区
+</li>
+</ul>
+<ul class="nav_sub" id="tagContent2">
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/node_3575.htm" target="_blank" class="">
+国防双拥
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/node_2044.htm" target="_blank" class="">
+深入开展“两严一降”
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/node_3492.htm" target="_blank" class="">
+“禁毒，让生活更美好
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/node_2046.htm" target="_blank" class="">
+“东线片区”开发
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/node_2047.htm" target="_blank" class="">
+“三马片区”开发
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_rdzt/node_2048.htm" target="_blank" class="">
+“154”行动报道
+</li>
+</ul>
+<ul class="nav_sub" id="tagContent3">
+领导之窗
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1720" target="_blank">
+新闻发言
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1745" target="_blank">
+人事信息
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1736" target="_blank">
+规划计划
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1735" target="_blank">
+重大项目
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1732" target="_blank">
+行政权力
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1729" target="_blank">
+应急管理
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1723" target="_blank">
+财政信息
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1710" target="_blank">
+公示公告
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1763" target="_blank">
+政府公报
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1757" target="_blank">
+监督检查
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/" "pd_xxgk ode_2001.htm?flag="1707&quot;" target="_blank">
+城乡建设
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1752" target="_blank">
+政府采购
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/node_2001.htm?flag=1748" target="_blank">
+统计信息
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_xxgk/index.html" target="_blank" class="">
+更多»
+</li>
+价格和收费
+</li>
+</ul>
+<ul class="nav_sub" id="tagContent4">
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1775" target="_blank">
+教育服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1814" target="_blank">
+医疗卫生
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1818" target="_blank">
+社保服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1830" target="_blank">
+就业服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1842" target="_blank">
+住房服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1861" target="_blank">
+交通服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1863" target="_blank">
+计划生育
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1687" target="_blank">
+旅游服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1872" target="_blank">
+招商引资
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1878" target="_blank">
+社区服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1890" target="_blank">
+证件办理
+|
+</li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1897" target="_blank">
+三农服务
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/node_3283.htm?flag=1900" target="_blank">
+温馨提示
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_ggfw/index.html" target="_blank" class="">
+更多»
+</li>
+</ul>
+<ul class="nav_sub" id="tagContent5">
+</ul>
+<ul class="nav_sub" id="tagContent6">
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzcy/gzcy_myzj.html" target="_blank" class="">
+民意征集
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzcy/node_1963.htm" target="_blank" class="">
+在线访谈
+|
+</li>
+<li>
+<a href="http://www.yunyan.gov.cn/pd_gzcy/gzcy_wsdc.html" target="_blank" class="">
+网上调查
+</li>
+</ul>
+</div>
+</div>
+<div class="warp">
+<div class="Breadcrumb">
+<a href="http://www.yunyan.gov.cn/index.html" target="_blank" class="">
+首页
+</div>
+<div class="news_content">
+<div class="news_c_top">
+</div>
+<div class="news_c_c">
+中国云岩政府门户网站WWW.YUNYAN.GOV.CN
+【字体：
+<a href="">
+大
+<a href="">
+中
+<a href="">
+小
+】
+打印本页
+<a href="http://www.yunyan.gov.cn/content_error.html" target="_blank">
+内容纠错
+<a target="_self" href="" onclick="try {window.external.addFavorite('http://www.yunyan.gov.cn', '中国·云岩');}catch(e){try {window.sidebar.addPanel('中国·云岩', 'http://www.yunyan.gov.cn','');}catch (e){}}">
+加入收藏
+<div id="content">
+第一次开会
+<iframe frameborder=0 src="http://v.qq.com/iframe/player.html?vid=h0126eu33bs&tiny=0" allowfullscreen>
+</iframe>
+</div>
+<P class="text_no fb">
+中共中央总书记
+</P>
+自4月9日以来，中共中央总书记、国家主席、中央军委主席习近平在北京视察、调研军警部队，整整一周时间内三次重点强调“国家安全”。
+自4月9日以来，中共中央总书记、国家主席、中央军委主席习近平在北京视察、调研军警部队，整整一周时间内三次重点强调“国家安全”。
+<div style="margin:20px auto;">
+</div>
+<date>
+</date>
+<author>
+<title>
+</title>
+<keyword>
+</keyword>
+<subtitle>
+</subtitle>
+<introtitle>
+</introtitle>
+<siteid>
+43
+</siteid>
+<nodeid>
+</nodeid>
+<nodename>
+</nodename>
+<nodesearchname>
+</nodesearchname>
+<div class="clr">
+</div>
+</div>
+<div class="new_close">
+<a href="">
+【关闭窗口】
+<a href="" id="gotop">
+【返回顶部】
+<a href="" id="btnPrint">
+【打印文章】
+</div>
+<div class="new_Share">
+<div class="jiathis_style fr" style="width:300px;">
+<div class="bdsharebuttonbox">
+分享到：
+</div>
+</div>
+</script>
+</div>
+<div class="new_page">
+<div width="100%">
+</div>
+</div>
+附件：
+</div>
+<div class="new_page">
+</div>
+<div class="new_cor">
+相关链接
+<ul class="new_cor_list">
+</ul>
+</div>
+</div>
+<div class="news_c_bot">
+</div>
+</div>
+</div>
+<div class="footer" style="height:200px;">
+Copyright2008-2011allRightsReserved
+贵州省贵阳市云岩区政府版权所有webmaster@yunyan.gov.cn黔ICP备15004243号
+地址:贵阳市新添大道南段299号
+邮政编码:550004电话：0851-86679351
+</div>
+<div class="fixright fixbox">
+<div class="ewm">
+<a href="">
+</div>
+<div class="tenxun_weibo" style="margin-top:5px;">
+<a href="http://t.qq.com/yyqwxcb" target="_blank">
+</div>
+</div>
+<div class="toTop">
+</div>
+</body>
+</html>
