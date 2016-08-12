@@ -39,6 +39,7 @@ public class RedisScheduler implements Scheduler {
 
     @Override
     public Request poll(Task task) {
+
         JedisPoolUtils jedisPoolUtils = null;
         try {
             jedisPoolUtils = new JedisPoolUtils();

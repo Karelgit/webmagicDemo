@@ -74,7 +74,7 @@ public class InitCrawlerConfig {
         listTemplate = new ArrayList<>();
         String str;
 //        File files = new File("C:\\temp\\templates");
-        File files = new File(System.getProperty("user.dir")+"/"+templatesDir);
+        File files = new File(System.getProperty("user.dir") + templatesDir);
 //        File files = new File("/home/TianyuanPan/Desktop/TEMPLATES");
         File[] templateFiles = files.listFiles();
         List<File> fileList = new ArrayList<>();

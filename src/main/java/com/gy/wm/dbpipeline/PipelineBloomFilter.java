@@ -42,7 +42,7 @@ public class PipelineBloomFilter {
             jedis.setbit(this.keyInRedis, i, true);
         }
 
-        jedis.save();
+//        jedis.save();
     }
 
     /**
