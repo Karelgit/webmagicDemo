@@ -1,0 +1,440 @@
+whj.gygov.gov.cn
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+贵阳市文化局
+</title>
+</head>
+<body>
+<table width="950" height="165" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/whjbanner.jpg">
+<tbody>
+<tr>
+<td valign="top">
+</td>
+</tr>
+</tbody>
+</table>
+<table width="950" height="34" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/menubg.jpg" style="margin-top:1px">
+<tbody>
+<tr>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:5px">
+<tbody>
+<tr>
+<td width="253" valign="top">
+<table width="250" border="0" cellpadding="0" cellspacing="0" bgcolor="#F3F3F3">
+<tbody>
+<tr>
+<td valign="top">
+<table width="239" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:5px">
+<tbody>
+<tr>
+<td width="239" height="32" valign="bottom" background="/TLimages/gygroup/whj/whj_list_1.jpg">
+<table width="200" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td height="27">
+<font style="font-size:14px" color="#FFFF99">
+<b>
+信息公开目录
+</b>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td background="/TLimages/gygroup/whj/whj_list_2.jpg">
+<table width="230" border="0" align="center" cellpadding="0" cellspacing="4">
+<tbody>
+<tr>
+<td width="109" height="38">
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234067989664104448" target="_blank">
+领导之窗
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="109">
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234069089175732224" target="_blank">
+机构设置
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="38">
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234070188687360000" target="_blank">
+工作动态
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234071288198987776" target="_blank">
+公示公告
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="38">
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234072387710615552">
+建议提案公开
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234075686245498880" target="_blank">
+财政公开
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="38">
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234076785757126656" target="_blank">
+计划规划
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234077885268754432" target="_blank">
+工作总结
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="38">
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234073487222243328" target="_blank">
+人事任免
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table width="106" height="32" border="0" align="center" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/gfjyw_list_bar.jpg">
+<tbody>
+<tr>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234081183803637760" target="_blank">
+依申请公开
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="239" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:5px">
+<tbody>
+<tr>
+<td width="239" height="32" valign="bottom" background="/TLimages/gygroup/whj/whj_list_1.jpg">
+<table width="200" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td height="27">
+<font style="font-size:14px" color="#FFFF99">
+<b>
+办事服务
+</b>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td background="/TLimages/gygroup/whj/whj_list_2.jpg">
+<table width="190" border="0" align="center" cellpadding="0" cellspacing="3" class="bs">
+<tbody>
+<tr>
+<td height="30" align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234351663664070656" target="_blank">
+网上申报
+</td>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234350564152442880" target="_blank">
+表格下载
+</td>
+</tr>
+<tr>
+<td height="30" align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234352763175698432" target="_blank">
+状态查询
+</td>
+<td align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234354962198953984" target="_blank">
+办事咨询
+</td>
+</tr>
+</tbody>
+</table>
+<table width="190" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td height="42" align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234629840105897984" target="_blank">
+</td>
+</tr>
+<tr>
+<td height="42" align="center">
+<a href="http://whj.gygov.gov.cn/whj/2234911315082608640" target="_blank">
+</td>
+</tr>
+<tr>
+<td height="42" align="center">
+<a href="http://whj.gygov.gov.cn/whj/2237726064849715200" target="_blank">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="697" valign="top">
+<table width="697" border="0" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/whj_list_5.jpg">
+<tbody>
+<tr>
+<td width="36" height="48" align="center">
+</td>
+<td width="661">
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<font color="" face="??" style="font-size: 12px">
+您的位置：
+</font>
+<font color="#5D5D5D" face="??" style="font-size:12px">
+</font>
+<font color="#5D5D5D" face="??" style="font-size:12px">
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="697" border="0" cellpadding="0" cellspacing="0" background="/TLimages/gygroup/whj/whj_list_10.jpg">
+<tbody>
+<tr>
+<td height="500">
+<table width="685" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td height="593" align="left" valign="top">
+<table width="92%" border="0" align="center" cellpadding="0" cellspacing="4" style="border-bottom:1px #999999 solid" xmlns="http://www.w3.org/TR/xhtml1/strict">
+<tbody>
+<tr>
+<td align="center" valign="middle" style="line-height:38px;" class="tit">
+<div id="articleTitle" style="color:red; font-size:22px;">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="92%" border="0" align="center" cellpadding="0" cellspacing="0" style="border-top:#ffffff solid 1px" xmlns="http://www.w3.org/TR/xhtml1/strict">
+<tbody>
+<tr>
+<td height="25" align="center" bgcolor="#F3F3F3" class="gray">
+</td>
+</tr>
+</tbody>
+</table>
+<table width="92%" border="0" align="center" cellpadding="0" cellspacing="0" style="border-bottom:#CCCCCC 1px solid" xmlns="http://www.w3.org/TR/xhtml1/strict">
+<tbody>
+<tr>
+<td height="30" align="center" class="m33">
+字号：
+【大】
+【中】
+【小】
+【
+打印本页
+】【
+<a href="">
+关闭窗口
+】
+</td>
+</tr>
+</tbody>
+</table>
+<table width="92%" border="0" align="center" cellpadding="0" cellspacing="5" style="margin-top:8px" xmlns="http://www.w3.org/TR/xhtml1/strict">
+<tbody>
+<tr>
+<td class="contentcss" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="300">
+<tbody>
+<tr>
+<td align="right" height="20">
+</td>
+</tr>
+<tr>
+<td valign="top">
+<div id="zoom" class="content">
+</div>
+</td>
+</tr>
+<tr>
+<td align="right" height="20">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="697" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px">
+<tbody>
+<tr>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px">
+<tbody>
+<tr>
+<td height="25" align="center">
+<a href="http://whj.gygov.gov.cn/whj/2235196088594202624" target="_blank">
+网站地图
+|
+设为首页
+|
+<a target="_top" href="" http: whj.gygov.gov.cn','贵阳市文化局')">
+添加收藏
+|
+<a href="http://mail.gygov.gov.cn/cgi-bin/mailbox.cgi" target="_blank">
+公务邮箱
+|
+<a href="http://whj.gygov.gov.cn/whj/2235197188105830400" target="_blank">
+联系我们
+|
+</td>
+</tr>
+<tr>
+<td height="25" align="center">
+Copyright1999-2011http://whj.gygov.gov.cnAllRightsReserved
+</td>
+</tr>
+<tr>
+<td height="25" align="center">
+贵阳市文化广播电影电视局（贵阳市新闻出版局、贵阳市版权局）主办
+</td>
+</tr>
+<tr>
+<td height="65" align="center">
+<a href="http://www.gygov.gov.cn" target="_blank">
+</td>
+</tr>
+<tr>
+<td height="25" align="center">
+开发单位：贵阳市信息中心
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
