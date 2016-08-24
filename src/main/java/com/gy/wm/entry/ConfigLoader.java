@@ -13,7 +13,6 @@ import java.util.List;
  * Created by Administrator on 2016/5/3.
  */
 public class ConfigLoader {
-
     public List<String> loadSeedConfig(String inputFilePath)    {
         String projPath = System.getProperty("user.dir");
         List<String> seedsList = new ArrayList<>();
@@ -22,7 +21,7 @@ public class ConfigLoader {
             StringBuffer sb= new StringBuffer("");
 
             FileReader reader = new FileReader(projPath + inputFilePath);
-//           FileReader reader = new FileReader(projPath+"/data/seeds.txt");
+//            FileReader reader = new FileReader(inputFilePath);
             BufferedReader br = new BufferedReader(reader);
 
             String str = null;

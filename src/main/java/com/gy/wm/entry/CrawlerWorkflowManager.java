@@ -91,9 +91,9 @@ public class CrawlerWorkflowManager {
 //                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())
-//                .addPipeline(new HbasePipeline())
+                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
-                .thread(20)
+                .thread(10)
                         //启动爬虫
                 .run();
     }

@@ -23,7 +23,7 @@ public class LinkUnAvailService {
     public void init(String tablename) {
         hbConfig = new Configuration();
         JedisPoolConfig config = new JedisPoolConfig();
-        hbConfig.addResource("hbase-site.xml");
+        hbConfig.addResource("hbase-site.xml.test");
     }
 
 

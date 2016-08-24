@@ -1,5 +1,6 @@
 package com.gy.wm.dbpipeline.impl;
 
+import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.dbpipeline.PipelineBloomFilter;
 import com.gy.wm.dbpipeline.dbclient.HbaseClient;
 import com.gy.wm.model.CrawlData;
@@ -19,7 +20,7 @@ public class HbasePipeline extends BaseDBPipeline {
 
 
     public HbasePipeline() {
-        //MyHbaseUtils.createTable();
+        MyHbaseUtils.createTable();
         //MyHbaseUtils.deleteAfterCreateTable();
         this.hbaseClient = new HbaseClient();
         pipelineBloomFilter = new PipelineBloomFilter(JedisPoolUtils.getJedisPool().getResource(), 0.001f, (int) Math.pow(2, 31));

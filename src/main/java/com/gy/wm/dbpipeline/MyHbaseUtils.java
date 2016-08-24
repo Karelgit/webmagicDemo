@@ -50,7 +50,6 @@ public class MyHbaseUtils {
 
         if (isThisTableExist(tableName))
             return false;
-
         try {
 
             HBaseAdmin hBaseAdmin = new HBaseAdmin(conf);
