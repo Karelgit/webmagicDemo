@@ -19,7 +19,7 @@ public class CrawlData implements Serializable {
     private int pass;       // 爬取遍数;
     private String type;    // 类型
     private String rootUrl; // 根 URL，（入口URL）
-    private String fromUrl; // 父 URL，（本也的上层URL）
+    private String fromUrl; // 父 URL，（本页的上层URL）
     private String text;    // 不带任何格式标记的文本
     private String html;    // HTML源码
     private String title;   // 标题
