@@ -9,11 +9,11 @@ public class GetDomain {
         String part_last = array_all[1];
         String [] array_last = part_last.split("/");
         String result = array_last[0];
-        return  result;
+        return  result/*.replace("www.","")*/;
     }
 
     //test
     public static void main(String[] args) {
-        System.out.println(getDomain("s.gz-l-tax.gov.cn"));
+        System.out.println(getDomain("http://www.gog.cn/"));
     }
 }
