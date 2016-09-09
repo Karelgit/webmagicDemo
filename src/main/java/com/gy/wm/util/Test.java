@@ -52,8 +52,6 @@ public class Test {
                             Bytes.toString(kv.getFamily()) +  ";\nqualifier: " +
                             Bytes.toString(kv.getQualifier()) + ";\nvalue: " +
                             Bytes.toString(kv.getValue()));
-
-
                 }
                 System.out.println("-------------------------------------------");
                 System.out.println(i);
