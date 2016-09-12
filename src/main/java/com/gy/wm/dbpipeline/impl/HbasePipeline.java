@@ -4,6 +4,7 @@ import com.gy.wm.dbpipeline.dbclient.HbaseClient;
 import com.gy.wm.model.CrawlData;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
+import us.codecraft.webmagic.pipeline.Pipeline;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -15,7 +16,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Hbase Pipeline 类
  */
-public class HbasePipeline extends BaseDBPipeline {
+public class HbasePipeline implements Pipeline {
 
 
     private HbaseClient hbaseClient;
@@ -28,7 +29,6 @@ public class HbasePipeline extends BaseDBPipeline {
         this.mylock = new ReentrantLock();
     }
 
-    @Override
     public int insertRecord(Object obj) {
         return 0;
     }
@@ -43,9 +43,6 @@ public class HbasePipeline extends BaseDBPipeline {
             System.out.println("HbasePipeline resultItems size: " + resultItems.getAll().size() +
                     "\n\tTask uuid: " + task.getUUID());
 
-            logger.debug("HbasePipeline resultItems size: " + resultItems.getAll().size() +
-                    "\n\tTask uuid: " + task.getUUID());
-
             CrawlData crawlerData = resultItems.get("crawlerData");
 
             if (crawlerData != null) {
@@ -53,12 +50,10 @@ public class HbasePipeline extends BaseDBPipeline {
                 this.hbaseClient.add(crawlerData);
                 int i = this.hbaseClient.doSetInsert();
                 System.out.println("HbasePipeline doInsert Successful number: " + i);
-                logger.debug("HbasePipeline doInsert Successful number: " + i);
                 return;
             }
 
             System.out.println("at HbasePipeline, crawler data IS NULL !!!");
-            logger.debug("at HbasePipeline, crawler data IS NULL !!!");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

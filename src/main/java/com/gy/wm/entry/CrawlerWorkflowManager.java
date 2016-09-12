@@ -2,7 +2,7 @@ package com.gy.wm.entry;
 
 import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.model.CrawlData;
-import com.gy.wm.model.rdb.FengBirdModel;
+import com.gy.wm.model.FengBirdModel;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
 import com.gy.wm.queue.RedisToCrawlQue;

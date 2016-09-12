@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * ES索引数据客户端
  */
-public class EsClient extends AbstractDBClient {
+public class EsClient {
 
     private String hostname;  // ES服务器主机
     private int port;         // ES服务器端口号
@@ -42,7 +42,6 @@ public class EsClient extends AbstractDBClient {
 
         this.dataList = new ArrayList<>();
 
-        this.connOpen = false;
     }
 
 
@@ -76,8 +75,6 @@ public class EsClient extends AbstractDBClient {
                 ++count;
 
             } catch (Exception ex) {
-                logger.warn("EsClient doSetInsert Exception!!! DATA IS: " + dataJson);
-                logger.warn("EsClient doSetInsert Exception!!! Message: " + ex.getMessage());
                 ex.printStackTrace();
             }
         }
@@ -101,17 +98,11 @@ public class EsClient extends AbstractDBClient {
 
 
         } catch (Exception ex) {
-            logger.warn("EsClient doSetInsert Exception!!! DATA IS: " + data);
-            logger.warn("EsClient doSetInsert Exception!!! Message: " + ex.getMessage());
             ex.printStackTrace();
             return 0;
         }
 
         return 1;
-    }
-
-    public boolean isConnOpen() {
-        return this.connOpen;
     }
 
     /**

@@ -7,6 +7,7 @@ import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.RandomUtils;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
+import us.codecraft.webmagic.pipeline.Pipeline;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,7 +18,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Created by TianyuanPan on 5/18/16.
  */
-public class HbaseEsPipeline extends BaseDBPipeline {
+public class HbaseEsPipeline implements Pipeline {
 
     private EsClient esClient;
     private HbaseClient hbaseClient;
@@ -35,7 +36,6 @@ public class HbaseEsPipeline extends BaseDBPipeline {
         this.myLock = new ReentrantLock();
     }
 
-    @Override
     public int insertRecord(Object obj) {
 
         int i = 0, j = 0;
@@ -47,9 +47,7 @@ public class HbaseEsPipeline extends BaseDBPipeline {
             this.esClient.doSetInsert(this.esClient.getRequestUrl() + rowkey, JSON.toJSONString(obj));
             ++i;
         } catch (Exception ex) {
-
-            logger.warn("HbaseEsPipeline EsClient.doPut Exception!!! Message:" + ex.getMessage());
-//            ex.printStackTrace();
+            ex.printStackTrace();
         }
 
         try {
@@ -59,9 +57,7 @@ public class HbaseEsPipeline extends BaseDBPipeline {
             ++j;
 
         } catch (Exception ex) {
-
-            logger.warn("HbaseEsPipeline HbaseClient.insertRecord Exception!!! Message:" + ex.getMessage());
-//            ex.printStackTrace();
+            ex.printStackTrace();
         }
 
 
@@ -73,11 +69,6 @@ public class HbaseEsPipeline extends BaseDBPipeline {
 
         try {
             myLock.lock();
-        /*System.out.println("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
-                "\n\tTask uuid: " + task.getUUID());*/
-
-            logger.debug("HbaseEsPipeline resultItems size: " + resultItems.getAll().size() +
-                    "\n\tTask uuid: " + task.getUUID());
 
             CrawlData crawlerData = resultItems.get("crawlerData");
 
@@ -85,12 +76,10 @@ public class HbaseEsPipeline extends BaseDBPipeline {
 
                 int i = this.insertRecord(crawlerData);
                 System.out.println("HbaseEsPipeline doInsert Successful number: " + i);
-                logger.debug("HbaseEsPipeline doInsert Successful number: " + i);
                 return;
             }
 
             System.out.println("at HbaseEsPipeline, crawler data IS NULL !!!");
-            logger.debug("at HbaseEsPipeline, crawler data IS NULL !!!");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

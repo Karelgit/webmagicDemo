@@ -146,7 +146,9 @@ public class CrawlData implements Serializable {
         return crawlTime;
     }
 
-    public void setCrawlTime(long crawlTime) {
+    public void
+
+    setCrawlTime(long crawlTime) {
         this.crawlTime = crawlTime;
     }
 
