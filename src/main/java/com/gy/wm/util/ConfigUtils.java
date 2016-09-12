@@ -83,7 +83,7 @@ public class ConfigUtils {
      */
     public static ResourceBundle getResourceBundle() {
 
-        rb = PropertyResourceBundle.getBundle("dbconfig");
+        rb = PropertyResourceBundle.getBundle("config");
         return rb;
     }
 

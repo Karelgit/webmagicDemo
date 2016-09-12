@@ -15,13 +15,12 @@ import java.util.List;
 public class ConfigLoader {
 
     public static List<String> loadSeedConfig(String inputFilePath)    {
-        String projPath = System.getProperty("user.dir");
         List<String> seedsList = new ArrayList<>();
         try {
             // read file content from file
             StringBuffer sb= new StringBuffer("");
 
-            FileReader reader = new FileReader(/*projPath+"//data//seeds.txt"*/inputFilePath);
+            FileReader reader = new FileReader(inputFilePath);
             BufferedReader br = new BufferedReader(reader);
 
             String str = null;
@@ -62,10 +61,4 @@ public class ConfigLoader {
         }
         return crawlDataList;
     }
-
-    //测试
-    public static void main(String[] args) {
-        loadSeedConfig("C:\\temp\\seeds\\gzsmzt.txt");
-    }
-
 }

@@ -24,7 +24,7 @@ public class CrawlData implements Serializable {
     private String html;    // HTML源码
     private String title;   // 标题
     private String startTime; // 开始时间
-    private long crawlTime;   // 爬取时间
+    private Date crawlTime;   // 爬取时间
     private Date publishTime; // 发布时间（对于文章页面而言）
     private long depthfromSeed; // 爬取层数（从入口URL到此页的深度）
     private long count;         // 统计
@@ -35,7 +35,7 @@ public class CrawlData implements Serializable {
     public CrawlData() {}
 
     public CrawlData(String url, int statusCode, int pass, String type, String rootUrl, String fromUrl, String text, String html, String title,
-                     String startTime, long crawlTime, Date publishTime, long depthfromSeed, boolean tag, long count, boolean fetched)  {
+                     String startTime, Date crawlTime, Date publishTime, long depthfromSeed, boolean tag, long count, boolean fetched)  {
         this.url = url;
         this.statusCode = statusCode;
         this.pass = pass;
@@ -142,13 +142,13 @@ public class CrawlData implements Serializable {
         this.startTime = startTime;
     }
 
-    public long getCrawlTime() {
+    public Date getCrawlTime() {
         return crawlTime;
     }
 
     public void
 
-    setCrawlTime(long crawlTime) {
+    setCrawlTime(Date crawlTime) {
         this.crawlTime = crawlTime;
     }
 

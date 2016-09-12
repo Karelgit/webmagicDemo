@@ -64,7 +64,7 @@ public class TextAnalysis implements Serializable {
                     newCrawlData.setTitle(baseAnalysisURL.getTitle());
                     newCrawlData.setPublishTime(baseAnalysisURL.getDate());
 
-                    newCrawlData.setCrawlTime(System.currentTimeMillis());
+                    newCrawlData.setCrawlTime(new Date(System.currentTimeMillis()));
                     newCrawlData.setHtml(baseAnalysisURL.getHtml());
                     newCrawlData.setText(baseAnalysisURL.getText());
                     newCrawlData.setFetched(false);
@@ -89,7 +89,7 @@ public class TextAnalysis implements Serializable {
             if(crawlData.getPublishTime() == null)  {
                 crawlData.setPublishTime(TimeJudger.validTime(oldUrl.getDate(),sdf));
             }
-            crawlData.setCrawlTime(System.currentTimeMillis());
+            crawlData.setCrawlTime(new Date(System.currentTimeMillis()));
             crawlData.setText(oldUrl.getText());
             crawlData.setHtml(oldUrl.getHtml());
             crawlData.setFetched(true);

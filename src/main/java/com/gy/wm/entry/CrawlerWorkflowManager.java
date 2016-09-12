@@ -79,13 +79,12 @@ public class CrawlerWorkflowManager {
         }
         String [] urlArray = seedList.toArray(new String[seedList.size()]);
 
-        String MYSQL_TABLE_NAME = ConfigUtils.getResourceBundle().getString("MYSQL_TABLE_NAME");
         Spider.create(new TopicPageProcessor(tid, textAnalysis)).setUUID(tid)
                 .setScheduler(new RedisScheduler())
                         //从seed开始抓
                 .addUrl(urlArray)
                         //存入mysql
-                .addPipeline(new MysqlPipeline(MYSQL_TABLE_NAME, new FengBirdModel()))
+                .addPipeline(new MysqlPipeline())
                         //存入elasticSearch
 //                .addPipeline(new EsPipeline())
 //                .addPipeline(new HbaseEsPipeline())

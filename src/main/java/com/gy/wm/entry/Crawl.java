@@ -103,7 +103,7 @@ public class Crawl {
         }
 
         try {
-
+/*
             String runTimeInfo = ManagementFactory.getRuntimeMXBean().getName();
             String pid = runTimeInfo.split("@")[0];
 
@@ -117,7 +117,7 @@ public class Crawl {
 
             heartbeart = new Heartbeart(heartbeatMsg);
 
-            new Thread(heartbeart).start();// the heartbeat thread
+            new Thread(heartbeart).start();// the heartbeat thread*/
 
             kick(depth, pass, tid, starttime, seedpath, protocolDir, postregexDir, type, recalldepth, templateDir, clickregexDir, configpath);
 
@@ -125,7 +125,7 @@ public class Crawl {
             e.printStackTrace();
         }
 
-        heartbeatMsg.setStatusCode(HeartbeatStatusCode.FINISHED);
-        heartbeart.setFinish(true);
+        /*heartbeatMsg.setStatusCode(HeartbeatStatusCode.FINISHED);
+        heartbeart.setFinish(true);*/
     }
 }
