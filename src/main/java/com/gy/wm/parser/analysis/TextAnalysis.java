@@ -4,7 +4,9 @@ import com.gy.wm.model.CrawlData;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,6 +21,7 @@ public class TextAnalysis implements Serializable {
     }
 
     public List<CrawlData> analysisHtml(CrawlData crawlData)   {
+
         List<CrawlData> crawlDataList = new ArrayList<>();
 
         String html = crawlData.getHtml();
@@ -58,6 +61,7 @@ public class TextAnalysis implements Serializable {
             crawlData.setPublishTime(baseURL.getDate());
             crawlData.setUrl(url);
             crawlData.setPass(pass);
+            crawlData.setCrawlTime(System.currentTimeMillis());
             crawlData.setTitle(baseURL.getTitle());
             crawlData.setFetched(false);
         }

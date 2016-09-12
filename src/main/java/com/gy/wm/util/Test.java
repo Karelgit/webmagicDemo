@@ -1,24 +1,15 @@
 package com.gy.wm.util;
 
-import com.gy.wm.model.People;
-import com.gy.wm.model.People_mapper;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
+import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.apache.hadoop.hbase.KeyValue;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Administrator on 2016/5/18.
@@ -65,7 +56,7 @@ public class Test {
 
     public static void main(String args[]) throws IOException {
 
-        Reader reader = Resources.getResourceAsReader("SqlMapConfig.xml");
+       /* Reader reader = Resources.getResourceAsReader("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         SqlSession session = sqlSessionFactory.openSession();
         session.getConfiguration().addMapper(People_mapper.class);
@@ -76,14 +67,14 @@ public class Test {
         People people = new People();
 
         //Set the values
-        people.setId(1);
-        people.setName("www.ibatis.com");
+        people.setId(13);
+        people.setName("大象mvn");
 
         //Insert student data
         mapper.insert(people);
         System.out.println("record inserted successfully");
         session.commit();
-        session.close();
+        session.close();*/
 
     }
 

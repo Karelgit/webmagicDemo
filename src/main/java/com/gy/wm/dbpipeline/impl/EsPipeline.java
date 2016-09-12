@@ -6,11 +6,12 @@ import com.gy.wm.model.CrawlData;
 import com.gy.wm.util.JedisPoolUtils;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
+import us.codecraft.webmagic.pipeline.Pipeline;
 
 /**
  * Created by TianyuanPan on 5/9/16.
  */
-public class EsPipeline extends BaseDBPipeline {
+public class EsPipeline implements Pipeline {
 
     private EsClient esClient;
 
@@ -24,10 +25,6 @@ public class EsPipeline extends BaseDBPipeline {
     }
 
 
-    @Override
-    public int insertRecord(Object obj) {
-        return 0;
-    }
 
     @Override
     public void process(ResultItems resultItems, Task task) {

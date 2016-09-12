@@ -1,6 +1,7 @@
 package com.gy.wm.dbpipeline.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.gy.wm.dbpipeline.DatabasePipeline;
 import com.gy.wm.dbpipeline.MyHbaseUtils;
 import com.gy.wm.dbpipeline.PipelineBloomFilter;
 import com.gy.wm.dbpipeline.dbclient.EsClient;
@@ -10,6 +11,7 @@ import com.gy.wm.util.JedisPoolUtils;
 import com.gy.wm.util.RandomUtils;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
+import us.codecraft.webmagic.pipeline.Pipeline;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,7 +20,7 @@ import java.util.List;
 /**
  * Created by TianyuanPan on 5/18/16.
  */
-public class HbaseEsPipeline extends BaseDBPipeline {
+public class HbaseEsPipeline implements Pipeline {
 
     private EsClient esClient;
     private HbaseClient hbaseClient;
@@ -37,7 +39,6 @@ public class HbaseEsPipeline extends BaseDBPipeline {
         pipelineBloomFilter = new PipelineBloomFilter(JedisPoolUtils.getJedisPool().getResource(), 0.001f, (int) Math.pow(2, 31));
     }
 
-    @Override
     public int insertRecord(Object obj) {
 
         int i = 0, j = 0;
@@ -49,9 +50,7 @@ public class HbaseEsPipeline extends BaseDBPipeline {
             this.esClient.doSetInsert(this.esClient.getRequestUrl() + rowkey, JSON.toJSONString(obj));
             ++i;
         } catch (Exception ex) {
-
-            logger.warn("HbaseEsPipeline EsClient.doPut Exception!!! Message:" + ex.getMessage());
-//            ex.printStackTrace();
+            ex.printStackTrace();
         }
 
         try {
@@ -61,9 +60,7 @@ public class HbaseEsPipeline extends BaseDBPipeline {
             ++j;
 
         } catch (Exception ex) {
-
-            logger.warn("HbaseEsPipeline HbaseClient.insertRecord Exception!!! Message:" + ex.getMessage());
-//            ex.printStackTrace();
+            ex.printStackTrace();
         }
 
 

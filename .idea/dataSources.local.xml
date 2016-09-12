@@ -7,5 +7,11 @@
       <introspection-scope>wifi_ac:*</introspection-scope>
       <resolve-scope>wifi_ac:*</resolve-scope>
     </data-source>
+    <data-source name="MySQL - datastory@localhost" uuid="ae5b7e8e-dc3e-4d44-b4ab-afc8fefad97c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>datastory:</introspection-scope>
+      <resolve-scope>crawlerdata:*|datastory:</resolve-scope>
+    </data-source>
   </component>
 </project>

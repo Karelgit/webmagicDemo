@@ -4,6 +4,7 @@ import com.gy.wm.dbpipeline.PipelineBloomFilter;
 import com.gy.wm.dbpipeline.impl.EsPipeline;
 import com.gy.wm.dbpipeline.impl.HbaseEsPipeline;
 import com.gy.wm.dbpipeline.impl.HbasePipeline;
+import com.gy.wm.dbpipeline.impl.MysqlPipeline;
 import com.gy.wm.model.CrawlData;
 import com.gy.wm.parser.analysis.TextAnalysis;
 import com.gy.wm.queue.RedisCrawledQue;
@@ -70,10 +71,10 @@ public class CrawlerWorkflowManager {
         initSpider(seeds, textAnalysis, domain);
 
         //结束之后清空对应任务的redis
-//        jedis.del("redis:bloomfilter:" + tid);
-//        jedis.del("queue_" + tid);
-//        jedis.del("webmagicCrawler::ToCrawl::" + tid);
-//        jedis.del("webmagicCrawler::Crawled::" + tid);
+        jedis.del("redis:bloomfilter:" + tid);
+        jedis.del("queue_" + tid);
+        jedis.del("webmagicCrawler::ToCrawl::" + tid);
+        jedis.del("webmagicCrawler::Crawled::" + tid);
 
     }
 
@@ -90,10 +91,10 @@ public class CrawlerWorkflowManager {
                 .setScheduler(new RedisScheduler(domain)).setUUID(tid)
                 //从seed开始抓
                 .addUrl(urlArray)
-//                .addPipeline(new MysqlPipeline("tb_fbird", new FengBirdModel()))
-                .addPipeline(new EsPipeline())
-                .addPipeline(new HbaseEsPipeline())
-                .addPipeline(new HbasePipeline())
+                .addPipeline(new MysqlPipeline())
+//                .addPipeline(new EsPipeline())
+//                .addPipeline(new HbaseEsPipeline())
+//                .addPipeline(new HbasePipeline())
                         //开启5个线程抓取
                 .thread(10)
                         //启动爬虫
