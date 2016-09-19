@@ -15,4 +15,7 @@
             </dataSource>
         </environment>
     </environments>
+    <mappers>
+        <mapper class="com.gy.wm.model.CrawlDataMapper"></mapper>
+    </mappers>
 </configuration>

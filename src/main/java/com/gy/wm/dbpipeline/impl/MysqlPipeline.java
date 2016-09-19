@@ -13,7 +13,6 @@ import us.codecraft.webmagic.pipeline.Pipeline;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Date;
 
 /**
  * Created by TianyuanPan on 5/4/16.
@@ -45,8 +44,6 @@ public class MysqlPipeline implements Pipeline {
         }
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         SqlSession session = sqlSessionFactory.openSession();
-        session.getConfiguration().addMapper(CrawlDataMapper.class);
-
         CrawlDataMapper mapper = session.getMapper(CrawlDataMapper.class);
         mapper.saveToMysql(crawlData);
         session.commit();
